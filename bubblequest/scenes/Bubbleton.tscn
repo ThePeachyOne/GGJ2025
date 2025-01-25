@@ -1,13 +1,748 @@
-[gd_scene load_steps=2 format=3 uid="uid://beu4ays7fse4n"]
+[gd_scene load_steps=29 format=3 uid="uid://beu4ays7fse4n"]
+
+[ext_resource type="PackedScene" uid="uid://dpsy06y08shnc" path="res://scenes/player.tscn" id="1_s3dw0"]
+[ext_resource type="PackedScene" uid="uid://cvn7ciptxkatl" path="res://scenes/lamp.tscn" id="2_wnjaa"]
+[ext_resource type="Texture2D" uid="uid://c7edfmkff8vge" path="res://assets/textures/cloud.png" id="3_3gdcf"]
+[ext_resource type="Shader" path="res://DogsToolkit/dither.gdshader" id="4_nrptl"]
+[ext_resource type="PackedScene" uid="uid://btvgogf85adqn" path="res://scenes/bubble_spout.tscn" id="5_ful0u"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xivfm"]
+sky_top_color = Color(0.320077, 0.47232, 0.983131, 1)
+sky_horizon_color = Color(0.992157, 0.992157, 0.992157, 1)
+ground_bottom_color = Color(0.653358, 0.792306, 1, 1)
+ground_horizon_color = Color(0.990887, 0.991197, 0.991689, 1)
+
+[sub_resource type="Sky" id="Sky_bb735"]
+sky_material = SubResource("ProceduralSkyMaterial_xivfm")
+
+[sub_resource type="Environment" id="Environment_ip5cs"]
+background_mode = 2
+sky = SubResource("Sky_bb735")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f1rum"]
+shader = ExtResource("4_nrptl")
+shader_parameter/fog_color = null
+shader_parameter/resolution_downsampling = 2.0
+shader_parameter/bit_depth = 32.0
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_563v4"]
 height = 1.0
+radius = 200.0
 
-[node name="Bubbleton" type="Node3D"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fx4ey"]
+albedo_color = Color(1, 1, 0.682353, 1)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[sub_resource type="CylinderMesh" id="CylinderMesh_b6ua2"]
+material = SubResource("StandardMaterial3D_fx4ey")
+top_radius = 200.0
+bottom_radius = 200.0
+height = 1.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a7lak"]
+transparency = 4
+albedo_texture = ExtResource("3_3gdcf")
+
+[sub_resource type="QuadMesh" id="QuadMesh_p8u5b"]
+material = SubResource("StandardMaterial3D_a7lak")
+size = Vector2(3, 3)
+orientation = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mjph8"]
+albedo_color = Color(1, 0.976471, 0.898039, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wqdl8"]
+material = SubResource("StandardMaterial3D_mjph8")
+size = Vector2(31.8, 3.205)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_f3cp8"]
+material = SubResource("StandardMaterial3D_mjph8")
+size = Vector2(20.665, 3.205)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_qb6lv"]
+material = SubResource("StandardMaterial3D_mjph8")
+size = Vector2(17.805, 3.205)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_3y6pe"]
+radius = 20.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_qaycd"]
+radius = 20.0
+height = 40.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3asv5"]
+size = Vector3(30, 5, 15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2pgqr"]
+size = Vector3(30, 5, 15)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p6epy"]
+size = Vector3(15, 20, 15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_od6jf"]
+size = Vector3(15, 20, 15)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pvwgg"]
+size = Vector3(30, 10, 15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ql27f"]
+size = Vector3(30, 10, 15)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yulhv"]
+size = Vector3(30, 50, 15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_l0trm"]
+size = Vector3(30, 50, 15)
+
+[node name="Bubbleton" type="WorldEnvironment"]
+environment = SubResource("Environment_ip5cs")
+
+[node name="Dither" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_f1rum")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Ground" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
 shape = SubResource("CylinderShape3D_563v4")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+mesh = SubResource("CylinderMesh_b6ua2")
+
+[node name="player_root" parent="." instance=ExtResource("1_s3dw0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Clouds" type="Node" parent="."]
+
+[node name="Cloud" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.46793, 0, -0.883766, 0, 1, 0, 0.883766, 0, 0.46793, -2.64584, 0.509093, 3.41169)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud2" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.947768, 0, 0.318959, 0.0491263, 0.988068, 0.145976, -0.315153, 0.154021, -0.936459, -4.75937, 0.465335, 4.08601)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud3" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.267238, 0, -0.963631, -0.249406, 0.965926, -0.0691664, 0.930796, 0.258819, 0.258132, -6.65099, 0.519887, 3.7699)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud4" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.976672, 2.5835e-10, 0.214735, 0.0330737, 0.988068, -0.150428, -0.212173, 0.154021, 0.965018, -8.74564, 0.488907, 3.93478)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud5" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.857167, 0, -0.515038, -0.133302, 0.965926, 0.221851, 0.497489, 0.258819, -0.82796, -10.9277, 0.533098, 3.72059)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud6" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.965926, 3.8567e-09, -0.258819, -0.0398635, 0.988068, -0.148772, 0.255731, 0.154021, 0.9544, -13.0294, 0.541031, 3.6004)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud7" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.947768, 0, -0.318959, -0.0825527, 0.965926, 0.245301, 0.308091, 0.258819, -0.915474, -15.1685, 0.504615, 3.82689)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud8" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.46793, 0, 0.883766, 0.136118, 0.988068, -0.0720709, -0.87322, 0.154021, 0.462346, -17.2105, 0.525734, 3.69853)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud9" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.161604, 0, -0.986856, -0.255417, 0.965926, 0.0418262, 0.953229, 0.258819, -0.156097, -19.3106, 0.487896, 3.88929)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud10" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.939693, 0, -0.34202, -0.0526781, 0.988068, -0.144732, 0.337939, 0.154021, 0.92848, -21.4086, 0.51534, 3.76522)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud14" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.947768, 9.78407e-09, -0.318959, 0.0491263, 0.988068, 0.145976, 0.315153, -0.154021, 0.936459, -21.6247, 0.465333, -4.83994)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud15" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.267238, 3.36801e-08, 0.963631, -0.249406, 0.965926, -0.0691664, -0.930796, -0.258819, -0.258132, -19.733, 0.519885, -4.52383)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud16" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.976672, 1.32066e-08, -0.214735, 0.0330737, 0.988068, -0.150428, 0.212173, -0.154021, -0.965018, -17.6384, 0.488906, -4.68872)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud17" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.857167, 2.211e-08, 0.515038, -0.133302, 0.965926, 0.221851, -0.497488, -0.258819, 0.82796, -15.4564, 0.533097, -4.47453)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud18" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.965926, -7.41024e-09, 0.258819, -0.0398635, 0.988068, -0.148772, -0.255731, -0.154021, -0.9544, -13.3546, 0.54103, -4.35433)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud19" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.947768, 2.26267e-08, 0.318959, -0.0825527, 0.965926, 0.245301, -0.308091, -0.258819, 0.915474, -11.2156, 0.504614, -4.58083)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud20" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.46793, 2.08266e-08, -0.883766, 0.136118, 0.988068, -0.0720709, 0.87322, -0.154021, -0.462346, -9.17348, 0.525733, -4.45246)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud21" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.161604, 1.877e-08, 0.986856, -0.255417, 0.965926, 0.0418262, -0.953229, -0.258819, 0.156097, -7.0734, 0.487895, -4.64322)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud22" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.939693, 1.34649e-08, 0.34202, -0.0526782, 0.988068, -0.144732, -0.337939, -0.154021, -0.92848, -4.97544, 0.515338, -4.51915)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud23" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.315153, 0.154021, -0.936459, 0.0491263, 0.988068, 0.145976, 0.947768, 1.65165e-08, -0.318959, -35.2252, 0.465333, -9.78996)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud24" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.930796, 0.258819, 0.258132, -0.249406, 0.965926, -0.0691664, -0.267238, 4.31943e-08, 0.963631, -35.5413, 0.519885, -7.89833)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud25" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.212173, 0.154021, 0.965018, 0.0330737, 0.988068, -0.150428, -0.976672, 5.21566e-09, -0.214735, -35.3764, 0.488906, -5.80368)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud26" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.857167, 2.211e-08, 0.515038, -0.133302, 0.965926, 0.221851, -0.497488, -0.258819, 0.82796, -34.1385, 0.533097, -4.47453)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud27" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.965926, -7.41024e-09, 0.258819, -0.0398635, 0.988068, -0.148772, -0.255731, -0.154021, -0.9544, -32.0367, 0.54103, -4.35433)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud28" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.947768, 2.26267e-08, 0.318959, -0.0825527, 0.965926, 0.245301, -0.308091, -0.258819, 0.915474, -29.8977, 0.504614, -4.58083)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud29" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.46793, 2.08266e-08, -0.883766, 0.136118, 0.988068, -0.0720709, 0.87322, -0.154021, -0.462346, -27.8556, 0.525733, -4.45246)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud30" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.161604, 1.877e-08, 0.986856, -0.255417, 0.965926, 0.0418262, -0.953229, -0.258819, 0.156097, -25.7555, 0.487895, -4.64322)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud31" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.939693, 1.34649e-08, 0.34202, -0.0526782, 0.988068, -0.144732, -0.337939, -0.154021, -0.92848, -23.6575, 0.515338, -4.51915)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud11" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.0524528, 0.243378, 0.968512, -0.0131616, 0.969932, -0.243022, -0.998537, 0, 0.0540789, -22.777, 0.553685, 5.00116)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="Cloud13" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.717856, 0.154452, 0.678843, 0.112221, 0.988, -0.106122, -0.687088, -7.22655e-09, -0.726575, -23.0151, 0.55688, 7.37746)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../..")
+
+[node name="SideWalk" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5669, 0.501154, -6.1625)
+mesh = SubResource("PlaneMesh_wqdl8")
+skeleton = NodePath("../..")
+
+[node name="SideWalk2" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.661, 0.501155, 5.19649)
+mesh = SubResource("PlaneMesh_f3cp8")
+skeleton = NodePath("../..")
+
+[node name="Cloud12" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.315153, 0.154021, -0.936459, 0.0491263, 0.988068, 0.145976, 0.947769, -2.14558e-08, -0.318959, -22.2094, 0.465335, 9.05389)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud32" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.930796, 0.258819, 0.258132, -0.249406, 0.965926, -0.0691664, -0.267238, 3.08007e-09, 0.963631, -22.5255, 0.519887, 10.9455)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud33" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.212173, 0.154021, 0.965018, 0.0330737, 0.988068, -0.150428, -0.976672, 7.73255e-09, -0.214735, -22.3606, 0.488907, 13.0402)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud34" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.497489, 0.258819, -0.82796, -0.133302, 0.965926, 0.221851, 0.857167, 3.08008e-09, 0.515038, -22.5748, 0.533098, 15.2222)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud35" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.255731, 0.154021, 0.9544, -0.0398635, 0.988068, -0.148772, -0.965926, -2.57889e-08, 0.258819, -22.695, 0.541031, 17.3239)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud36" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.308091, 0.258819, -0.915474, -0.0825527, 0.965926, 0.245301, 0.947768, -1.13133e-08, 0.318959, -22.4685, 0.504615, 19.463)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud37" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.87322, 0.154021, 0.462346, 0.136118, 0.988068, -0.0720709, -0.46793, -3.96095e-09, -0.883766, -22.5969, 0.525734, 21.5051)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud38" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.953229, 0.258819, -0.156097, -0.255417, 0.965926, 0.0418262, 0.161604, -2.75059e-08, 0.986856, -22.4061, 0.487896, 23.6052)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="SideWalk3" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21.0989, 0.501155, 15.5504)
+mesh = SubResource("PlaneMesh_qb6lv")
+skeleton = NodePath("../..")
+
+[node name="Cloud39" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.687087, 7.445e-10, -0.726575, 0.112221, 0.988, -0.106122, 0.717856, -0.154452, -0.678843, -21.479, 0.556881, 25.0668)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud40" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.947769, -2.45074e-08, -0.318959, 0.0491263, 0.988068, 0.145976, 0.315153, -0.154021, 0.936459, -19.8026, 0.465335, 24.2611)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud41" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.267238, 4.36097e-09, 0.963631, -0.249406, 0.965926, -0.0691664, -0.930796, -0.258819, -0.258133, -17.9109, 0.519888, 24.5772)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud42" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.976672, 1.57235e-08, -0.214735, 0.0330737, 0.988068, -0.150428, 0.212173, -0.154021, -0.965018, -15.8163, 0.488908, 24.4123)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud43" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.857167, 6.67685e-09, 0.515038, -0.133302, 0.965926, 0.221851, -0.497489, -0.258819, 0.82796, -13.6343, 0.533099, 24.6265)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud44" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.965926, -3.02263e-08, 0.258819, -0.0398635, 0.988068, -0.148772, -0.255731, -0.154021, -0.9544, -11.5325, 0.541032, 24.7467)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud45" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.947769, -3.65034e-08, 0.318959, -0.0825527, 0.965926, 0.245301, -0.308091, -0.258819, 0.915474, -9.39347, 0.504616, 24.5202)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud46" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.46793, -4.24106e-09, -0.883766, 0.136118, 0.988068, -0.0720709, 0.87322, -0.154021, -0.462346, -7.35139, 0.525735, 24.6486)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud47" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.161604, -4.91645e-08, 0.986856, -0.255417, 0.965926, 0.0418262, -0.953229, -0.258819, 0.156097, -5.2513, 0.487897, 24.4578)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud48" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.0524527, -0.243378, -0.968512, -0.0131616, 0.969932, -0.243022, 0.998537, 6.55394e-08, -0.0540788, -1.52323, 0.553687, 23.3503)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud49" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.642109, -0.0253733, -0.766193, -0.0239707, 0.999628, -0.013015, 0.766239, 0.0100091, -0.642478, -2.83292, 0.543005, 24.7685)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="SideWalk4" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -11.901, 0.501156, 23.1506)
+mesh = SubResource("PlaneMesh_f3cp8")
+skeleton = NodePath("../..")
+
+[node name="Cloud50" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.315153, -0.154021, 0.936459, 0.0491263, 0.988068, 0.145976, -0.947769, -2.14558e-08, 0.318959, -1.82179, 0.465334, 21.8049)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud51" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.930796, -0.258819, -0.258132, -0.249406, 0.965926, -0.0691664, 0.267238, 3.08007e-09, -0.963631, -1.50568, 0.519886, 19.9132)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud52" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.212173, -0.154021, -0.965018, 0.0330737, 0.988068, -0.150428, 0.976672, 8.24925e-09, 0.214735, -1.67057, 0.488906, 17.8186)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud53" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.497489, -0.258819, 0.82796, -0.133302, 0.965926, 0.221851, -0.857167, 3.08008e-09, -0.515038, -1.45638, 0.533097, 15.6365)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud54" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.255731, -0.154021, -0.9544, -0.0398635, 0.988068, -0.148772, 0.965926, -1.71227e-08, -0.258819, -1.33618, 0.54103, 13.5348)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud55" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.308091, -0.258819, 0.915474, -0.0825527, 0.965926, 0.245301, -0.947768, -1.13133e-08, -0.318959, -1.56268, 0.504614, 11.3958)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud56" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.87322, -0.154021, -0.462346, 0.136118, 0.988068, -0.0720709, 0.46793, -9.50396e-09, 0.883766, -1.43432, 0.525734, 9.35368)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud57" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.953229, -0.258819, 0.156097, -0.255417, 0.965926, 0.0418262, -0.161604, -2.75059e-08, -0.986856, -1.62507, 0.487895, 7.25359)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud58" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.337939, -0.154021, -0.92848, -0.0526782, 0.988068, -0.144732, 0.939693, -2.14228e-09, -0.34202, -1.501, 0.515339, 5.15563)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud59" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.998537, -3.86379e-08, -0.0540789, -0.0131616, 0.969932, -0.243022, 0.0524529, 0.243378, 0.968512, -2.73694, 0.553684, 3.78724)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="SideWalk5" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.93227, 0.501154, 13.9033)
+mesh = SubResource("PlaneMesh_f3cp8")
+skeleton = NodePath("../..")
+
+[node name="Cloud60" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.947768, -7.6163e-09, 0.318959, 0.0491263, 0.988068, 0.145976, -0.315153, 0.154021, -0.936459, -16.0763, 0.465333, -25.1962)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud61" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.267238, -4.55117e-08, -0.96363, -0.249406, 0.965926, -0.0691664, 0.930796, 0.258819, 0.258132, -17.968, 0.519885, -25.5123)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud62" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.976672, 2.77524e-09, 0.214735, 0.0330737, 0.988068, -0.150428, -0.212173, 0.154021, 0.965018, -20.0626, 0.488906, -25.3475)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud63" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.857167, 1.9517e-08, -0.515038, -0.133302, 0.965926, 0.221851, 0.497488, 0.258819, -0.82796, -22.2447, 0.533097, -25.5617)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud64" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.965926, 1.42117e-08, -0.258819, -0.0398635, 0.988068, -0.148772, 0.255731, 0.154021, 0.9544, -24.3464, 0.54103, -25.6818)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud65" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.947768, -5.24501e-08, -0.318959, -0.0825527, 0.965926, 0.245301, 0.308091, 0.258819, -0.915474, -26.4854, 0.504614, -25.4554)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud66" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.46793, -3.7063e-08, 0.883766, 0.136118, 0.988068, -0.0720708, -0.87322, 0.154021, 0.462346, -28.5275, 0.525733, -25.5837)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud67" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.161604, -1.81988e-08, -0.986856, -0.255417, 0.965926, 0.0418262, 0.953229, 0.258819, -0.156098, -30.6276, 0.487895, -25.393)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud68" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.939693, -4.16532e-08, -0.34202, -0.0526782, 0.988068, -0.144732, 0.337939, 0.154021, 0.92848, -32.7256, 0.515338, -25.517)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud69" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.930796, -0.258819, -0.258132, -0.249406, 0.965926, -0.0691664, 0.267238, -3.85749e-08, -0.96363, -2.15971, 0.519885, -22.1379)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud70" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.212173, -0.154021, -0.965018, 0.0330737, 0.988068, -0.150428, 0.976672, -3.95721e-09, 0.214735, -2.32459, 0.488906, -24.2325)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud71" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.857167, 1.9517e-08, -0.515038, -0.133302, 0.965926, 0.221851, 0.497488, 0.258819, -0.82796, -3.56256, 0.533097, -25.5617)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud72" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.965926, 1.42117e-08, -0.258819, -0.0398635, 0.988068, -0.148772, 0.255731, 0.154021, 0.9544, -5.66429, 0.54103, -25.6818)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud73" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.947768, -5.24501e-08, -0.318959, -0.0825527, 0.965926, 0.245301, 0.308091, 0.258819, -0.915474, -7.80335, 0.504614, -25.4554)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud74" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.46793, -3.7063e-08, 0.883766, 0.136118, 0.988068, -0.0720708, -0.87322, 0.154021, 0.462346, -9.84543, 0.525733, -25.5837)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud75" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.161604, -1.81988e-08, -0.986856, -0.255417, 0.965926, 0.0418262, 0.953229, 0.258819, -0.156098, -11.9455, 0.487895, -25.393)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud76" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.939693, -4.16532e-08, -0.34202, -0.0526782, 0.988068, -0.144732, 0.337939, 0.154021, 0.92848, -14.0435, 0.515338, -25.517)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="SideWalk6" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -18.1341, 0.501154, -23.8737)
+mesh = SubResource("PlaneMesh_wqdl8")
+skeleton = NodePath("../..")
+
+[node name="Cloud77" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.46793, 0, -0.883766, 0, 1, 0, 0.883766, 0, 0.46793, -3.1009, 0.509092, -25.191)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud78" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.0524527, -0.243378, -0.968512, -0.0131616, 0.969932, -0.243022, 0.998537, 6.55394e-08, -0.0540788, -1.97828, 0.553686, -5.25245)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud79" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.642109, -0.0253733, -0.766193, -0.0239707, 0.999628, -0.013015, 0.766239, 0.0100091, -0.642478, -3.28797, 0.543004, -3.83424)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud80" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.315153, -0.154021, 0.936459, 0.0491263, 0.988068, 0.145976, -0.947769, -2.14558e-08, 0.318959, -2.27684, 0.465333, -6.79785)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud81" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.930796, -0.258819, -0.258132, -0.249406, 0.965926, -0.0691664, 0.267238, 3.08007e-09, -0.963631, -1.96074, 0.519885, -8.68948)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud82" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.212173, -0.154021, -0.965018, 0.0330737, 0.988068, -0.150428, 0.976672, 8.24925e-09, 0.214735, -2.12562, 0.488906, -10.7841)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud83" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.497489, -0.258819, 0.82796, -0.133302, 0.965926, 0.221851, -0.857167, 3.08008e-09, -0.515038, -1.91143, 0.533097, -12.9662)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud84" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.255731, -0.154021, -0.9544, -0.0398635, 0.988068, -0.148772, 0.965926, -1.71227e-08, -0.258819, -1.79124, 0.54103, -15.0679)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud85" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.308091, -0.258819, 0.915474, -0.0825527, 0.965926, 0.245301, -0.947768, -1.13133e-08, -0.318959, -2.01773, 0.504614, -17.207)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud86" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.87322, -0.154021, -0.462346, 0.136118, 0.988068, -0.0720709, 0.46793, -9.50396e-09, 0.883766, -1.88937, 0.525733, -19.249)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud87" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.953229, -0.258819, 0.156097, -0.255417, 0.965926, 0.0418262, -0.161604, -2.75059e-08, -0.986856, -2.08013, 0.487895, -21.3491)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud88" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.337939, -0.154021, -0.92848, -0.0526782, 0.988068, -0.144732, 0.939693, -2.14228e-09, -0.34202, -1.95605, 0.515338, -23.4471)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="SideWalk7" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.38732, 0.501154, -14.6994)
+mesh = SubResource("PlaneMesh_f3cp8")
+skeleton = NodePath("../..")
+
+[node name="Cloud89" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.46793, 0, 0.883766, 0, 1, 0, -0.883766, 0, -0.46793, -35.0662, 0.50909, -4.60895)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud90" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.0524527, 0.243378, 0.968512, -0.0131616, 0.969932, -0.243022, -0.998537, -8.68162e-08, 0.0540788, -36.1888, 0.553684, -24.5475)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud91" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.642109, 0.0253733, 0.766193, -0.0239707, 0.999628, -0.013015, -0.766239, -0.0100091, 0.642478, -34.8791, 0.543002, -25.9657)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud92" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.315153, 0.154021, -0.936459, 0.0491263, 0.988068, 0.145976, 0.947769, 1.16717e-08, -0.318959, -35.8902, 0.465331, -23.0021)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud93" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.930796, 0.258819, 0.258132, -0.249406, 0.965926, -0.0691664, -0.267238, -1.46533e-08, 0.963631, -36.2063, 0.519883, -21.1105)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud94" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.212173, 0.154021, 0.965018, 0.0330737, 0.988068, -0.150428, -0.976672, -2.17142e-08, -0.214735, -36.0414, 0.488904, -19.0158)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud95" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.497489, 0.258819, -0.82796, -0.133302, 0.965926, 0.221851, 0.857167, -4.72969e-08, 0.515038, -36.2556, 0.533095, -16.8338)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud96" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.255731, 0.154021, 0.9544, -0.0398635, 0.988068, -0.148772, -0.965926, -7.38474e-09, 0.258819, -36.3758, 0.541028, -14.7321)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud97" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.308091, 0.258819, -0.915474, -0.0825527, 0.965926, 0.245301, 0.947768, -1.851e-08, 0.318959, -36.1493, 0.504612, -12.593)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud98" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-0.87322, 0.154021, 0.462346, 0.136118, 0.988068, -0.0720709, -0.46793, -6.73246e-09, -0.883766, -36.2777, 0.525731, -10.5509)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud99" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.953229, 0.258819, -0.156097, -0.255417, 0.965926, 0.0418262, 0.161604, 4.87925e-09, 0.986856, -36.0869, 0.487893, -8.45085)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud100" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(0.337939, 0.154021, 0.92848, -0.0526782, 0.988068, -0.144732, -0.939693, -1.86843e-08, 0.34202, -36.211, 0.515336, -6.35289)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="SideWalk8" type="MeshInstance3D" parent="Clouds"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -34.7797, 0.501152, -15.1005)
+mesh = SubResource("PlaneMesh_f3cp8")
+skeleton = NodePath("../..")
+
+[node name="Lamps" type="Node" parent="."]
+
+[node name="Lamp" parent="Lamps" instance=ExtResource("2_wnjaa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6068, 2.40691, 3.38804)
+
+[node name="Lamp2" parent="Lamps" instance=ExtResource("2_wnjaa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.2814, 2.40691, -5.19875)
+
+[node name="Lamp3" parent="Lamps" instance=ExtResource("2_wnjaa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.7258, 2.40691, 17.0116)
+
+[node name="BubbleHouses" type="Node" parent="."]
+
+[node name="BubbleHouse" type="StaticBody3D" parent="BubbleHouses"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.0105, 0, -25.2738)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BubbleHouses/BubbleHouse"]
+shape = SubResource("SphereShape3D_3y6pe")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BubbleHouses/BubbleHouse"]
+mesh = SubResource("SphereMesh_qaycd")
+
+[node name="BubbleHouse2" type="StaticBody3D" parent="BubbleHouses"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.9895, 0, 45.7262)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BubbleHouses/BubbleHouse2"]
+shape = SubResource("SphereShape3D_3y6pe")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BubbleHouses/BubbleHouse2"]
+mesh = SubResource("SphereMesh_qaycd")
+
+[node name="BoxHouses" type="Node" parent="."]
+
+[node name="BoxHouse" type="StaticBody3D" parent="BoxHouses"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.9793, 3, -14.9679)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BoxHouses/BoxHouse"]
+shape = SubResource("BoxShape3D_3asv5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BoxHouses/BoxHouse"]
+mesh = SubResource("BoxMesh_2pgqr")
+
+[node name="BoxHouse2" type="StaticBody3D" parent="BoxHouses"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9793, 10, 14.0321)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BoxHouses/BoxHouse2"]
+shape = SubResource("BoxShape3D_p6epy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BoxHouses/BoxHouse2"]
+mesh = SubResource("BoxMesh_od6jf")
+
+[node name="BoxHouse3" type="StaticBody3D" parent="BoxHouses"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -42.9793, 5, 22.0321)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BoxHouses/BoxHouse3"]
+shape = SubResource("BoxShape3D_pvwgg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BoxHouses/BoxHouse3"]
+mesh = SubResource("BoxMesh_ql27f")
+
+[node name="BoxHouse4" type="StaticBody3D" parent="BoxHouses"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -71.7072, 5, 0.457233)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BoxHouses/BoxHouse4"]
+shape = SubResource("BoxShape3D_pvwgg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BoxHouses/BoxHouse4"]
+mesh = SubResource("BoxMesh_ql27f")
+
+[node name="BoxHouse5" type="StaticBody3D" parent="BoxHouses"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.9793, 10, -14.9679)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BoxHouses/BoxHouse5"]
+shape = SubResource("BoxShape3D_p6epy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BoxHouses/BoxHouse5"]
+mesh = SubResource("BoxMesh_od6jf")
+
+[node name="BoxHouse6" type="StaticBody3D" parent="BoxHouses"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0207, 25, -62.9679)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BoxHouses/BoxHouse6"]
+shape = SubResource("BoxShape3D_yulhv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BoxHouses/BoxHouse6"]
+mesh = SubResource("BoxMesh_l0trm")
+
+[node name="BubbleSpout" parent="." instance=ExtResource("5_ful0u")]

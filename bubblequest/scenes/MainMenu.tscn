@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b7grgf8ndq2cf"]
 
-[ext_resource type="Script" path="res://DogsToolkit/BaseMenu.gd" id="1_sjwns"]
-[ext_resource type="PackedScene" uid="uid://c5ubnkj0caq0a" path="res://scenes/main.tscn" id="2_h73kp"]
+[ext_resource type="Script" path="res://DogsToolkit/BaseMenu.gd" id="1_fbf4g"]
+[ext_resource type="PackedScene" uid="uid://beu4ays7fse4n" path="res://scenes/Bubbleton.tscn" id="2_7vbfr"]
 
 [node name="BaseMenu" type="Control"]
 process_mode = 3
@@ -11,6 +11,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_sjwns")
+script = ExtResource("1_fbf4g")
 HeaderText = "BubbleQuest"
-NextScene = ExtResource("2_h73kp")
+NextScene = ExtResource("2_7vbfr")
