@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c5ubnkj0caq0a"]
+[gd_scene load_steps=9 format=3 uid="uid://c5ubnkj0caq0a"]
 
 [ext_resource type="PackedScene" uid="uid://dpsy06y08shnc" path="res://scenes/player.tscn" id="1_viqq0"]
 
@@ -21,11 +21,13 @@ albedo_color = Color(0.756863, 1, 1, 1)
 material = SubResource("StandardMaterial3D_mqfii")
 size = Vector3(20, 1, 20)
 
+[sub_resource type="CylinderMesh" id="CylinderMesh_yowjt"]
+
 [node name="Node3D" type="WorldEnvironment"]
 environment = SubResource("Environment_7crbi")
 
 [node name="player_root" parent="." instance=ExtResource("1_viqq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.67867, 1.77451, 2.91354)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.67867, 1.50621, 2.91354)
 
 [node name="RigidBody3D" type="StaticBody3D" parent="."]
 
@@ -35,3 +37,7 @@ shape = SubResource("BoxShape3D_ab02i")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
 mesh = SubResource("BoxMesh_iiy35")
 skeleton = NodePath("")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.335127, 0)
+mesh = SubResource("CylinderMesh_yowjt")
