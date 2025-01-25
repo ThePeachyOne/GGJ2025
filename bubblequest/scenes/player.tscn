@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dpsy06y08shnc"]
+[gd_scene load_steps=5 format=3 uid="uid://dpsy06y08shnc"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ia6qt"]
-[ext_resource type="Script" path="res://DogsToolkit/SpatializedCamera3D.gd" id="2_mngw6"]
-[ext_resource type="Script" path="res://DogsToolkit/BaseMenu.gd" id="2_ydbub"]
+[ext_resource type="Script" path="res://DogsToolkit/BaseMenu.gd" id="2_pm1x2"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xf067"]
 
@@ -19,10 +18,9 @@ mesh = SubResource("CapsuleMesh_3y102")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.619315, 0)
-script = ExtResource("2_mngw6")
 
 [node name="BaseMenu" type="Control" parent="."]
-process_mode = 3
+process_mode = 2
 visible = false
 layout_mode = 3
 anchors_preset = 15
@@ -33,7 +31,3 @@ offset_bottom = -608.0
 script = ExtResource("2_pm1x2")
 MenuStyle = 1
 PauseUseNextAsMain = true
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("2_ydbub")
-MenuStyle = 1

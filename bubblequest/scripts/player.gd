@@ -11,15 +11,11 @@ var rot_y: float
 #viewbob constants
 var bob_frequency
 var bob_amplitude
-var camera_default
-var bob_level = 0
-var bob_direction = 1
 
 
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	camera_default = $Camera3D.position
 
 func _unhandled_input(event):
 	match event.get_class():
@@ -60,11 +56,7 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 		
-	if velocity != Vector3(0,0,0):
-		bob_level += .1 * bob_direction
-		if bob_level > 2 or bob_level < -2:
-			bob_direction *= 1
-		$Camera3D.position.y = sin(bob_level * 2) * .05 
-	
+	#if velocity != 0:
+		#if
 
 	move_and_slide()
