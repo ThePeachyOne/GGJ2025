@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvn7ciptxkatl"]
+
+[ext_resource type="Texture2D" uid="uid://degdiji2vpnbe" path="res://assets/textures/lamp.png" id="1_1euht"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_88f25"]
+transparency = 4
+albedo_texture = ExtResource("1_1euht")
+texture_repeat = false
+billboard_mode = 2
+
+[sub_resource type="QuadMesh" id="QuadMesh_8fvb1"]
+material = SubResource("StandardMaterial3D_88f25")
+size = Vector2(4, 4)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2u4gw"]
+radius = 0.1
+height = 4.0
+
+[node name="Lamp" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.40691, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("QuadMesh_8fvb1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_2u4gw")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65937, 0)
+light_color = Color(1, 0.946408, 0.786112, 1)
+omni_range = 10.0
