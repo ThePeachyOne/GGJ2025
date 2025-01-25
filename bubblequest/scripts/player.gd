@@ -4,7 +4,7 @@ extends CharacterBody3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
-@export var ROTATE_ADJUST = 0.003
+@export var ROTATE_ADJUST = 0.007
 var rot_x: float
 var rot_y: float
 
@@ -27,8 +27,9 @@ func _unhandled_input(event):
 				rot_x += event.relative.y * (ROTATE_ADJUST/2)
 				rot_x = clamp(rot_x, -PI/2, PI/2)
 				transform.basis = Basis() # reset rotation
-				rotate_object_local(Vector3(0, 1, 0), -rot_y) #Always gonna be the global y axis.
-				rotate_object_local(Vector3(1, 0, 0), -rot_x)
+				rotate_object_local(Vector3(0,1,0),-rot_y) #Always gonna be the global y axis.
+				#rotate_object_local(Vector3(1, 0, 0), -rot_x)
+				
 		#"InputEventKey":
 			#if Input.is_action_just_pressed("Escape"):
 			#	get_tree().quit()
