@@ -18,8 +18,8 @@ func _process(delta):
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
-	var target = $NavigationAgent3D.get_next_path_position() - self.position
-	var direction = (transform.basis * Vector3(target.x, 0, target.z)).normalized()
+	var direction = $NavigationAgent3D.get_next_path_position() - self.position
+	direction = (transform.basis * Vector3(direction.x, 0, direction.z)).normalized()
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
@@ -29,10 +29,12 @@ func _process(delta):
 		
 		
 	move_and_slide()
-	print(distance(self.position, target))
-	if distance(self.position, target) < 9:
+	print(distance(self.position, $NavigationAgent3D.target_position))
+	print($NavigationAgent3D.target_position)
+	print("How far? " + str(distance(self.position, $NavigationAgent3D.target_position)))
+	if distance(self.position, $NavigationAgent3D.target_position) < 2:
 		print("funky")
 		$NavigationAgent3D.target_position = Vector3(randi_range(-20,20), 0, randi_range(-20,20))
-		print("How far? " + str(distance(self.position, $NavigationAgent3D.target_position)))
-		print($NavigationAgent3D.target_position)
+		
+		
 	

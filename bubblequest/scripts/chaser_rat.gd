@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-var SPEED = 7.0
+var SPEED = 6.8
 var chase_object
 
 # Called when the node enters the scene tree for the first time.
