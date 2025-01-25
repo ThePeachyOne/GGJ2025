@@ -1,4 +1,4 @@
-@tool
+#@tool
 extends Control
 class_name BaseMenu
 
@@ -122,7 +122,7 @@ func add_button(scene:PackedScene, button_text:String="button"):
 
 func toggle_pause():
 	visible = !visible
-	get_tree().paused = !visible
+	get_tree().paused = visible
 	if visible:
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		if MenuStyle==MenuType.MAIN:
