@@ -28,13 +28,7 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-<<<<<<< HEAD
-offset_right = -1112.0
-offset_bottom = -608.0
-=======
->>>>>>> c2a637a42753177ff0b8781ff594db93a1e1165b
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_pm1x2")
 MenuStyle = 1
-PauseUseNextAsMain = true
