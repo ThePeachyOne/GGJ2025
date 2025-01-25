@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://i1v15jcmect3"]
+
+[ext_resource type="Texture2D" uid="uid://ddwwik8nw84k1" path="res://assets/textures/rock.png" id="1_yhvpw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g3thy"]
+transparency = 4
+albedo_texture = ExtResource("1_yhvpw")
+billboard_mode = 2
+
+[sub_resource type="QuadMesh" id="QuadMesh_bybrb"]
+material = SubResource("StandardMaterial3D_g3thy")
+size = Vector2(5, 5)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0ftwl"]
+height = 4.72103
+
+[node name="bigRock" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+mesh = SubResource("QuadMesh_bybrb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+shape = SubResource("CapsuleShape3D_0ftwl")

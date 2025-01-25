@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0xupv7ix3i40"]
+
+[ext_resource type="Texture2D" uid="uid://c5q7pjekeobf3" path="res://assets/textures/fencePost.png" id="1_xm6nq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tkvwh"]
+transparency = 4
+albedo_texture = ExtResource("1_xm6nq")
+billboard_mode = 2
+
+[sub_resource type="QuadMesh" id="QuadMesh_faf76"]
+material = SubResource("StandardMaterial3D_tkvwh")
+size = Vector2(2.5, 2.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x8ypp"]
+size = Vector3(0.688, 2.5, 0.25)
+
+[node name="fencePost" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("QuadMesh_faf76")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0126953, 0, 0)
+shape = SubResource("BoxShape3D_x8ypp")

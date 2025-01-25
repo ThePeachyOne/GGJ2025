@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://beauq4tow3u1h"]
+
+[ext_resource type="Texture2D" uid="uid://brgt44a3dgj4y" path="res://assets/textures/treeWall.png" id="1_y1ean"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f3nwd"]
+transparency = 4
+albedo_texture = ExtResource("1_y1ean")
+uv1_offset = Vector3(0.5, 0.5, 0)
+uv1_triplanar = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_jwu5w"]
+material = SubResource("StandardMaterial3D_f3nwd")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dxami"]
+size = Vector3(1, 1, 0.0821533)
+
+[node name="Node3D" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("QuadMesh_jwu5w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0262869)
+shape = SubResource("BoxShape3D_dxami")
