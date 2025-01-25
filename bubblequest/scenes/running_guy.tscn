@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbhh10qk8cld5"]
+
+[ext_resource type="Script" path="res://scripts/running_guy.gd" id="1_m7ie0"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_dnxus"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_imuyl"]
+
+[node name="running_guy_root" type="CharacterBody3D"]
+script = ExtResource("1_m7ie0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_dnxus")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+avoidance_enabled = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_imuyl")

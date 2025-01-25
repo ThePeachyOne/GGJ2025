@@ -15,6 +15,8 @@ var camera_default
 var bob_level = 0
 var bob_direction = 1
 
+func get_rotate_adjust():
+	return ROTATE_ADJUST
 
 
 func _ready():
