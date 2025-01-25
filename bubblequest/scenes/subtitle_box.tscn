@@ -29,8 +29,37 @@ offset_top = -1.0
 grow_horizontal = 2
 grow_vertical = 0
 
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Option 1" type="Label" parent="MarginContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Option 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Option 2" type="Label" parent="MarginContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Option 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Option 3" type="Label" parent="MarginContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Option 3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Label" type="Label" parent="MarginContainer"]
 layout_mode = 2
+text = "This is some default text"
 horizontal_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="."]

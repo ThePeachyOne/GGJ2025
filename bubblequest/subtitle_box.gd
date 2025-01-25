@@ -36,6 +36,7 @@ var char_tick: int = 0
 ## Toggle for if we're ready to choose our path.
 var is_selecting_path: bool = false
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if toggle_type_by_char:
@@ -45,7 +46,12 @@ func _ready():
 	else:
 		textBox.text = dialogList[0]
 	#print(dialogList)
-
+	
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+	
+	
 ## Everything here should be moved to a higher-level handler later.
 func _unhandled_key_input(event: InputEvent):
 	if not is_selecting_path and event.is_pressed():
@@ -63,24 +69,22 @@ func _unhandled_key_input(event: InputEvent):
 				selected_option = 1
 			KEY_3:
 				selected_option = 2
-			_:
-				selected_option = -1
-		if selected_option >= 0: 
-			choose_path(selected_option)
+		choose_path(selected_option) if \
+			(selected_option >= 0 and selected_option < dialogOptions.size() ) else choose_path(-1)
 		
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-	
 
+	
 ## Change the text box to the next String in dialogList.
 func advance_text():
 	dialog_tick += 1
+	
+	# Another piece that exists exclusively to prevent flying past array bounds if skipping fast.
 	if not $Timer.is_stopped():
 		$Timer.stop()
 	# This method of switching paths is subject to change with a global handler.
 	if (dialog_tick >= dialogList.size()):
 		is_selecting_path = true
+		display_options()
 		return
 	
 	if toggle_type_by_char:
@@ -91,16 +95,46 @@ func advance_text():
 		
 	textBox.text = dialogList[dialog_tick]
 
+## Advance the text box by individual characters. This is never called if toggled off.
+##
+## Control of the speed of typing is done via an abstracted slider. I could just make it an input 
+## box if that would be preferable.
+##
 func advance_char():
 	if toggle_type_by_char and char_tick < dialogList[dialog_tick].length():
 		textBox.text += dialogList[dialog_tick][char_tick]
 		$Timer.start( type_speed/50.0 )
 		char_tick += 1
 	else:
+		# If you don't do this, you can go past the array bounds for number of text boxes
+		# if you skip too fast.
 		$Timer.stop()
+
+## Toggle between the two label holders to display the options that the player can select.
+##
+## This will dynamically scale the size of the text boxes based on how many options are presented.
+##
+func display_options():
+	$MarginContainer/Label.visible = false
+	$MarginContainer/HBoxContainer.visible = true
+	
+	var optionLabels = $MarginContainer/HBoxContainer.get_children()
+	for i in range(dialogOptions.size()):
+		optionLabels[i].visible = 1
+		
+		
 	
 ## Set the dialog onto a chosen path.
 func choose_path(option: int):
+	if option < 0: return
+	
+	$MarginContainer/Label.visible = true
+	$MarginContainer/HBoxContainer.visible = false
+	
+	var optionLabels = $MarginContainer/HBoxContainer.get_children()
+	for l in optionLabels:
+		l.visible = false
+		
 	var temp = dialogOptions[option].strip_edges()
 	temp = temp.split("\n")
 	#print("Options: ")
@@ -116,14 +150,24 @@ func choose_path(option: int):
 func load_file():
 	var file = FileAccess.open(sourceTextPath, FileAccess.READ)
 	var content = file.get_as_text()
+	
+	var label_parser: RegEx = RegEx.new()
+	label_parser.compile("[^{]+(?=})")
+	var labels = label_parser.search_all(content)
+	for i in range(labels.size()):
+		$MarginContainer/HBoxContainer.get_child(i).text = labels[i].get_string()
+		#print(l.get_string())
+		
 	var dialog = content.get_slice("<SPLIT>", 0)
 	dialog = dialog.strip_edges()
 	dialog = dialog.split("\n")
-	print(dialog.size())
+	#print(dialog.size())
 	
 	
 	# Find the choices and split them up accordingly.
-	var temp_options = content.get_slice( "</SPLIT>", 0)
+	label_parser.compile("({.*})")
+	var temp_options = label_parser.sub(content, "", true)
+	temp_options = temp_options.get_slice( "</SPLIT>", 0)
 	temp_options = temp_options.get_slice( "<SPLIT>", 1)
 	temp_options = temp_options.split("<CHOICE>")
 	#var split_options: Array[PackedStringArray]

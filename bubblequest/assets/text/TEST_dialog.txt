@@ -6,11 +6,14 @@ Your words are as empty as your soul! Mankind ill needs a savior such as you!
 WHAT IS A MAN? A MISERABLE LITTLE PILE OF SECRETS!
 But enough talk, have at you!
 <SPLIT>
+{This is some text.}
 HERE'S TRUE POWER!
 *Fireball Sounds*
 <CHOICE>
+{This is some different text.}
 HOH HOH HOH
 *Teleport Sounds*
 <CHOICE>
+{Your mother.}
 Gonna look stupid if this breaks.
 </SPLIT>
