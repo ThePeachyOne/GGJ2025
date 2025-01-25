@@ -29,9 +29,9 @@ func _unhandled_input(event):
 				transform.basis = Basis() # reset rotation
 				rotate_object_local(Vector3(0, 1, 0), -rot_y) #Always gonna be the global y axis.
 				rotate_object_local(Vector3(1, 0, 0), -rot_x)
-		"InputEventKey":
-			if Input.is_action_just_pressed("Escape"):
-				get_tree().quit()
+		#"InputEventKey":
+			#if Input.is_action_just_pressed("Escape"):
+			#	get_tree().quit()
 		
 	
 
@@ -56,7 +56,7 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 		
-	if velocity != 0:
+	#if velocity != 0:
 		#if
 
 	move_and_slide()
