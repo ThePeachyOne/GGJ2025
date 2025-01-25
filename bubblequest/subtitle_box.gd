@@ -76,11 +76,16 @@ func _process(delta):
 ## Change the text box to the next String in dialogList.
 func advance_text():
 	dialog_tick += 1
+	if not $Timer.is_stopped():
+		$Timer.stop()
 	# This method of switching paths is subject to change with a global handler.
 	if (dialog_tick >= dialogList.size()):
 		is_selecting_path = true
 		return
-	elif toggle_type_by_char:
+	
+	if toggle_type_by_char:
+		textBox.text = ""
+		char_tick = 0
 		advance_char()
 		return
 		
@@ -92,7 +97,7 @@ func advance_char():
 		$Timer.start( type_speed/50.0 )
 		char_tick += 1
 	else:
-		char_tick = 0
+		$Timer.stop()
 	
 ## Set the dialog onto a chosen path.
 func choose_path(option: int):
@@ -112,7 +117,10 @@ func load_file():
 	var file = FileAccess.open(sourceTextPath, FileAccess.READ)
 	var content = file.get_as_text()
 	var dialog = content.get_slice("<SPLIT>", 0)
+	dialog = dialog.strip_edges()
 	dialog = dialog.split("\n")
+	print(dialog.size())
+	
 	
 	# Find the choices and split them up accordingly.
 	var temp_options = content.get_slice( "</SPLIT>", 0)
