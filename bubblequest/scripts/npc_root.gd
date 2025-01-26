@@ -15,6 +15,7 @@ var canActivateDialog = true
 @export var IMAGE = [] 
 var imageCount = 0
 var speakCount = 0 
+@export var MAX_lines = 50
 
 @export var audioList = []
 var audioCount = 0
@@ -86,6 +87,8 @@ func dialogAdvanced():
 	$speakTimer.start()
 	
 	audioCount+=1
+	if audioCount > MAX_lines:
+		audioCount = MAX_lines
 	$npcSpeak.stream = audioList[audioCount]
 	$npcSpeak.play()		#figure out how to advance the audio index in the playlist
 	
