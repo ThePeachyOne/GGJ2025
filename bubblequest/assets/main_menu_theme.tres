@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=12 format=3 uid="uid://dxasabt0bo5no"]
+[gd_resource type="Theme" load_steps=12 format=3 uid="uid://dpg2x1a15e835"]
 
 [ext_resource type="FontFile" uid="uid://ckbpaw5l5m7nw" path="res://assets/text/Modak-Regular.ttf" id="1_08nxp"]
 [ext_resource type="FontFile" uid="uid://bs0ihnwet2u1r" path="res://assets/text/Matemasie-Regular.ttf" id="1_tkmo1"]
@@ -45,12 +45,32 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 20
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cvils"]
+content_margin_left = 34.0
+content_margin_top = 16.0
+content_margin_right = 34.0
+content_margin_bottom = 16.0
+bg_color = Color(0.709895, 0.403474, 0.850209, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0.923341, 0.836092, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6pu78"]
 content_margin_left = 20.0
 content_margin_top = 20.0
 content_margin_right = 20.0
 content_margin_bottom = 20.0
-bg_color = Color(0.286565, 0.2479, 0.37, 1)
+bg_color = Color(0.220745, 0.0867, 0.51, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
 corner_radius_top_left = 1024
 corner_radius_top_right = 1024
 corner_radius_bottom_right = 1024
@@ -63,18 +83,6 @@ content_margin_top = 20.0
 content_margin_right = 20.0
 content_margin_bottom = 20.0
 bg_color = Color(0.731113, 0.647215, 0.914358, 1)
-corner_radius_top_left = 1024
-corner_radius_top_right = 1024
-corner_radius_bottom_right = 1024
-corner_radius_bottom_left = 1024
-corner_detail = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f3e27"]
-content_margin_left = 20.0
-content_margin_top = 20.0
-content_margin_right = 20.0
-content_margin_bottom = 20.0
-bg_color = Color(0.286565, 0.2479, 0.37, 1)
 corner_radius_top_left = 1024
 corner_radius_top_right = 1024
 corner_radius_bottom_right = 1024
@@ -105,10 +113,14 @@ Button/styles/hover = SubResource("StyleBoxFlat_dklev")
 Button/styles/normal = SubResource("StyleBoxFlat_0rcdn")
 Button/styles/pressed = SubResource("StyleBoxFlat_yes2v")
 CheckBox/constants/h_separation = 10
+CreditsLabel/base_type = &"Label"
+CreditsLabel/font_sizes/font_size = 21
+CreditsLabel/fonts/font = ExtResource("1_tkmo1")
+CreditsLabel/styles/normal = SubResource("StyleBoxFlat_cvils")
 Exit/base_type = &"Button"
 Exit/styles/hover = SubResource("StyleBoxFlat_6pu78")
 Exit/styles/normal = SubResource("StyleBoxFlat_hi1mv")
-Exit/styles/pressed = SubResource("StyleBoxFlat_f3e27")
+Exit/styles/pressed = SubResource("StyleBoxFlat_6pu78")
 HSlider/icons/grabber = ExtResource("2_x1gyo")
 HSlider/icons/grabber_disabled = null
 HSlider/icons/grabber_highlight = ExtResource("2_x1gyo")

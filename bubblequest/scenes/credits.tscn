@@ -1,0 +1,247 @@
+[gd_scene load_steps=6 format=3 uid="uid://uwym8ux2q6ic"]
+
+[ext_resource type="Theme" uid="uid://dpg2x1a15e835" path="res://assets/main_menu_theme.tres" id="1_8lswo"]
+[ext_resource type="Script" path="res://scripts/credits.gd" id="2_q0grp"]
+[ext_resource type="Texture2D" uid="uid://b6418glnpc7wt" path="res://assets/textures/countryside.png" id="3_juxd1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_67f6k"]
+texture = ExtResource("3_juxd1")
+expand_margin_top = 45.0
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6dfet"]
+
+[node name="Credits" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_8lswo")
+script = ExtResource("2_q0grp")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_67f6k")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+size_flags_stretch_ratio = 2.0
+
+[node name="HSplitContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+theme_override_constants/separation = 20
+
+[node name="Programmers" type="Label" parent="VBoxContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Programmers"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Artists" type="Label" parent="VBoxContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Artists
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HSplitContainer/Artists"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -134.0
+offset_top = -81.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_right = 9
+theme_override_constants/margin_bottom = 9
+
+[node name="Guests!" type="Button" parent="VBoxContainer/HSplitContainer/Artists/MarginContainer"]
+layout_mode = 2
+theme_type_variation = &"Exit"
+theme_override_font_sizes/font_size = 27
+text = "Guests!"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+material = SubResource("CanvasItemMaterial_6dfet")
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+theme_override_constants/separation = 15
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 25
+
+[node name="ProgrammerContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CreditsLabel"
+
+[node name="Logan" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer/ProgrammerContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+theme_type_variation = &"CreditsLabel"
+text = "Logan Brown - Dialog Systems, UI"
+vertical_alignment = 1
+
+[node name="David" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer/ProgrammerContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+theme_type_variation = &"CreditsLabel"
+text = "David McCool - Level Design, Programmer"
+
+[node name="Zach" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer/ProgrammerContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+theme_type_variation = &"CreditsLabel"
+text = "Zach Smith - Level Design, Programmer"
+
+[node name="Label4" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer/ProgrammerContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+theme_type_variation = &"CreditsLabel"
+text = "Connor Adkins - Level Design, Programmer"
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 15
+
+[node name="ArtistContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Alex" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer2/ArtistContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 6
+theme_type_variation = &"CreditsLabel"
+text = "Alexandria Pontius - Art Director"
+
+[node name="Kylie" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer2/ArtistContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 6
+theme_type_variation = &"CreditsLabel"
+text = "Kylie Kouba - Writer, Character Artist"
+vertical_alignment = 1
+
+[node name="Emily" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer2/ArtistContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 6
+theme_type_variation = &"CreditsLabel"
+text = "Emily Kouba - 3D Artist
+"
+
+[node name="Nick" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer2/ArtistContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 6
+theme_type_variation = &"CreditsLabel"
+text = "Caleb - 3D Artist
+"
+
+[node name="Nick2" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer2/ArtistContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 6
+theme_type_variation = &"CreditsLabel"
+text = "Nick Harris - Writer, Visual Editor"
+
+[node name="GuestBox" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 70
+theme_override_constants/margin_top = 70
+theme_override_constants/margin_right = 70
+theme_override_constants/margin_bottom = 70
+
+[node name="Bonus!" type="Label" parent="GuestBox"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_type_variation = &"CreditsLabel"
+text = "Featuring the vocal talents of our whole team!
+
+THE Jorb (Cameo from Trash Panda Party Pack by East Coast Rats)
+
+Catfish (Cameo from Catfish by Women Making Games)
+
+Fieldalism Cow Bros (Cameo from Fieldalism by Dustin n’ Co.)
+
+Puppet Guy (Cameo from Puppet Show by Women Making Games)
+
+Cursor-kun (Cameo from MS Date | A MS-Paint Visual Novel by Black Hole Ending)
+
+With Guest VAs:
+     Avery Beaumont
+     Gage Koudelka
+"
+
+[node name="MarginContainer" type="MarginContainer" parent="GuestBox/Bonus!"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -54.0
+offset_bottom = 74.0
+grow_horizontal = 0
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = -6
+theme_override_constants/margin_right = -23
+theme_override_constants/margin_bottom = 0
+
+[node name="close" type="Button" parent="GuestBox/Bonus!/MarginContainer"]
+layout_mode = 2
+theme_type_variation = &"Exit"
+text = "X"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 9
+theme_override_constants/margin_top = 9
+
+[node name="back" type="Button" parent="MarginContainer"]
+layout_mode = 2
+theme_type_variation = &"Exit"
+text = "X"
+
+[connection signal="pressed" from="VBoxContainer/HSplitContainer/Artists/MarginContainer/Guests!" to="." method="_on_guests_pressed"]
+[connection signal="pressed" from="GuestBox/Bonus!/MarginContainer/close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="MarginContainer/back" to="." method="_on_back_pressed"]

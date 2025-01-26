@@ -59,12 +59,19 @@ func _ready():
 	
 	one_file_box._ready()
 	
-	option_chosen.connect(one_file_box.choose_path)
+	if not option_chosen.is_connected(one_file_box.choose_path):
+		option_chosen.connect(one_file_box.choose_path)
 	
-	one_file_box.hit_branch.connect(display_options)
-	one_file_box.out_of_dialog.connect(end_cutscene)
+	if not one_file_box.hit_branch.is_connected(display_options):
+		one_file_box.hit_branch.connect(display_options)
+	if not one_file_box.out_of_dialog.is_connected(end_cutscene):
+		one_file_box.out_of_dialog.connect(end_cutscene)
 	
 	var file = FileAccess.open(option_text_file, FileAccess.READ)
+	if file == null:
+		var temp_error_arr = PackedStringArray()
+		temp_error_arr.append("[FILE WAS NULL]")
+		return 
 	var temp_dialog_options = file.get_as_text().split("~")
 	for o in temp_dialog_options:
 		dialog_options.append(o.strip_edges())

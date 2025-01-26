@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c10dmkwyh6vct"
-path.s3tc="res://.godot/imported/rich_child3.png-87f48df3bfa2a134ba5bfe79495f5bd8.s3tc.ctex"
+uid="uid://calqlh0t7ymfj"
+path.s3tc="res://.godot/imported/THEJORB.png-14ab85cfcbc77f2d16200b38ee68d8e4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/characters/charlotte/models/rich_child3.png"
-dest_files=["res://.godot/imported/rich_child3.png-87f48df3bfa2a134ba5bfe79495f5bd8.s3tc.ctex"]
+source_file="res://assets/textures/THEJORB.png"
+dest_files=["res://.godot/imported/THEJORB.png-14ab85cfcbc77f2d16200b38ee68d8e4.s3tc.ctex"]
 
 [params]
 

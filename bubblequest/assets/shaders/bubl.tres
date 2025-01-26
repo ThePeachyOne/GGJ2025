@@ -1,11 +1,14 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://b3gxcek3iadhq"]
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://b3gxcek3iadhq"]
 
 [ext_resource type="Shader" path="res://assets/shaders/bubble.gdshader" id="1_sr72p"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_8otpn"]
+
 [resource]
-render_priority = 0
+render_priority = 1
+next_pass = SubResource("CanvasItemMaterial_8otpn")
 shader = ExtResource("1_sr72p")
-shader_parameter/fuwafuwa_speed = 1.5
+shader_parameter/fuwafuwa_speed = 1.445
 shader_parameter/fuwafuwa_size = 0.05
 shader_parameter/outline_color = Vector4(0.45, 0.7, 1, 1)
 shader_parameter/outline_ratio = 1.0

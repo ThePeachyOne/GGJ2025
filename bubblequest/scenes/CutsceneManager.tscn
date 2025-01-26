@@ -8,7 +8,6 @@
 [node name="CutsceneManager" type="Node"]
 script = ExtResource("1_ox8f1")
 toggle_type_by_char = true
-option_text_file = "res://assets/text/TEST_choices.txt"
 
 [node name="Richter" parent="." instance=ExtResource("2_xsq5q")]
 text_color = Color(0.0867468, 0.241061, 0.999986, 1)
