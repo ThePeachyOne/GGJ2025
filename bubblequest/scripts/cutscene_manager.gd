@@ -40,6 +40,9 @@ var is_awaiting_selection: bool = false
 ## The actor that is currently speaking. This is probably only going to be used internally.
 var speaking_actor: Actor = null
 
+## Does what it says.
+var block_keyboard_input: bool = true
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if load_dialog_by_actor:
@@ -49,7 +52,6 @@ func _ready():
 	get_tree().call_group("Actor", "lose_subtitle_focus")
 	
 	# Initialize the master text box.
-	one_file_box.visible = true
 	one_file_box.sourceTextPath = universal_dialog_file
 	one_file_box.toggle_type_by_char = toggle_type_by_char
 	one_file_box.type_speed = type_speed
@@ -72,6 +74,8 @@ func _ready():
 	for i in range(dialog_options.size()):
 		optionLabels[i].visible = true
 		optionLabels[i].text = dialog_options[i]
+	
+	activate_dialog()
 
 ## I did a very foolish thing and wasted a lot of time making something that worked really well.
 func _ready_by_actor():
@@ -114,6 +118,9 @@ func _process(delta):
 
 ## The majority of this is just for testing purposes.
 func _unhandled_key_input(event: InputEvent):
+	if block_keyboard_input:
+		return
+		
 	if not is_awaiting_selection and event.is_pressed():
 		match event.keycode:
 			KEY_Q:
@@ -141,6 +148,13 @@ func _unhandled_key_input(event: InputEvent):
 			is_awaiting_selection = false
 			if not load_dialog_by_actor:
 				one_file_box.visible = true
+
+## Allow the dialog to proceed.
+func activate_dialog():
+	if not load_dialog_by_actor:
+		one_file_box.visible = true
+		one_file_box.activate()
+	block_keyboard_input = false
 	
 ## Toggle between the two label holders to display the options that the player can select.
 ##

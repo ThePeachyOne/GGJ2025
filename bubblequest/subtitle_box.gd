@@ -59,18 +59,21 @@ func _ready():
 	
 	$Panel/MarginContainer/Label.label_settings = LabelSettings.new()
 	$Panel/MarginContainer/Label.label_settings.resource_local_to_scene = true
+	#print(dialogList)
+	
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+## Activate this text box.
+func activate():
 	if toggle_type_by_char:
 		textBox.text = ""
 		$Timer.timeout.connect(advance_char)
 		advance_char()
 	else:
 		textBox.text = dialogList[0]
-	#print(dialogList)
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-	
+		
 ## Change the text box to the next String in dialogList.
 func advance_text():
 	dialog_tick += 1
