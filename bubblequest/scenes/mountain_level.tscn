@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dpsy06y08shnc" path="res://scenes/player.tscn" id="1_x8gkx"]
 [ext_resource type="PackedScene" uid="uid://dmy2bu2572wqd" path="res://scenes/boulder.tscn" id="2_36i5k"]
-[ext_resource type="Material" path="res://assets/mountain_mat.tres" id="3_25e3v"]
+[ext_resource type="Material" uid="uid://dkn6kb1sta4ma" path="res://assets/mountain_mat.tres" id="3_25e3v"]
 [ext_resource type="PackedScene" uid="uid://rl3rca7sfkns" path="res://scenes/big_ol_scissors.tscn" id="3_teu3d"]
 [ext_resource type="Shader" path="res://DogsToolkit/dither.gdshader" id="4_hijfi"]
 

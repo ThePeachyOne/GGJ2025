@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://rl3rca7sfkns"]
 
 [ext_resource type="Material" uid="uid://chc7drbjwl82p" path="res://assets/textures/barnroof.tres" id="1_fhllk"]
-[ext_resource type="Material" path="res://assets/scissors.tres" id="2_c0bsg"]
+[ext_resource type="Material" uid="uid://b41sfi0eelusl" path="res://assets/scissors.tres" id="2_c0bsg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_og7sd"]
 
