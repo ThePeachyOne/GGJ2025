@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://i8nivtxo5lvm"]
+[gd_scene load_steps=8 format=3 uid="uid://i8nivtxo5lvm"]
 
 [ext_resource type="Script" path="res://scripts/npc_root.gd" id="1_b5o2r"]
+[ext_resource type="PackedScene" uid="uid://bmhon2p6ohvc3" path="res://scenes/CutsceneManager.tscn" id="2_brwsu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sqtds"]
 transparency = 4
@@ -13,6 +14,14 @@ size = Vector2(2.5, 2.5)
 [sub_resource type="BoxShape3D" id="BoxShape3D_613h4"]
 size = Vector3(5, 1, 5)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7rcnc"]
+shading_mode = 0
+billboard_mode = 1
+
+[sub_resource type="TextMesh" id="TextMesh_3qkh2"]
+material = SubResource("StandardMaterial3D_7rcnc")
+text = "Press E to interact with "
+
 [node name="npcRoot" type="Area3D"]
 script = ExtResource("1_b5o2r")
 
@@ -24,4 +33,15 @@ mesh = SubResource("QuadMesh_mihvy")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
 shape = SubResource("BoxShape3D_613h4")
 
+[node name="npcInteractText" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.67892, 0)
+visible = false
+mesh = SubResource("TextMesh_3qkh2")
+
+[node name="MODEL_HERE" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
+
+[node name="CutsceneManager" parent="." instance=ExtResource("2_brwsu")]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
