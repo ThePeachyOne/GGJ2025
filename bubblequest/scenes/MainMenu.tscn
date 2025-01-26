@@ -81,6 +81,15 @@ layout_mode = 2
 text = "Play
 "
 
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 18
+
+[node name="Credits" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+text = "Credits
+"
+
 [node name="Quit" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 use_parent_material = true
 layout_mode = 2
@@ -97,4 +106,5 @@ size_flags_horizontal = 3
 theme_override_styles/separator = SubResource("StyleBoxEmpty_sl20y")
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/MarginContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/MarginContainer2/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

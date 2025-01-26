@@ -63,17 +63,22 @@ text = "Artists
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Guests!" type="Button" parent="VBoxContainer/HSplitContainer/Artists"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HSplitContainer/Artists"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -34.0
-offset_top = -34.0
+offset_left = -134.0
+offset_top = -81.0
 grow_horizontal = 0
 grow_vertical = 0
+theme_override_constants/margin_right = 9
+theme_override_constants/margin_bottom = 9
+
+[node name="Guests!" type="Button" parent="VBoxContainer/HSplitContainer/Artists/MarginContainer"]
+layout_mode = 2
 theme_type_variation = &"Exit"
 theme_override_font_sizes/font_size = 27
 text = "Guests!"
@@ -174,7 +179,6 @@ theme_type_variation = &"CreditsLabel"
 text = "Nick Harris - Writer, Visual Editor"
 
 [node name="GuestBox" type="MarginContainer" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -207,7 +211,7 @@ With Guest VAs:
      Gage Koudelka
 "
 
-[node name="close" type="Button" parent="GuestBox/Bonus!"]
+[node name="MarginContainer" type="MarginContainer" parent="GuestBox/Bonus!"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -215,16 +219,28 @@ anchor_right = 1.0
 offset_left = -54.0
 offset_bottom = 74.0
 grow_horizontal = 0
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = -6
+theme_override_constants/margin_right = -23
+theme_override_constants/margin_bottom = 0
+
+[node name="close" type="Button" parent="GuestBox/Bonus!/MarginContainer"]
+layout_mode = 2
 theme_type_variation = &"Exit"
 text = "X"
 
-[node name="back" type="Button" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
-offset_right = 34.0
-offset_bottom = 34.0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 9
+theme_override_constants/margin_top = 9
+
+[node name="back" type="Button" parent="MarginContainer"]
+layout_mode = 2
 theme_type_variation = &"Exit"
 text = "X"
 
-[connection signal="pressed" from="VBoxContainer/HSplitContainer/Artists/Guests!" to="." method="_on_guests_pressed"]
-[connection signal="pressed" from="GuestBox/Bonus!/close" to="." method="_on_close_pressed"]
-[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="VBoxContainer/HSplitContainer/Artists/MarginContainer/Guests!" to="." method="_on_guests_pressed"]
+[connection signal="pressed" from="GuestBox/Bonus!/MarginContainer/close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="MarginContainer/back" to="." method="_on_back_pressed"]
