@@ -35,6 +35,7 @@ shader_parameter/resolution_downsampling = 2.0
 shader_parameter/bit_depth = 32.0
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_y1c3m"]
+material = ExtResource("3_25e3v")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_suk7u"]
 size = Vector3(6.90308, 59.8139, 72.0299)
