@@ -1,4 +1,4 @@
-[gd_scene load_steps=158 format=3 uid="uid://beu4ays7fse4n"]
+[gd_scene load_steps=182 format=3 uid="uid://beu4ays7fse4n"]
 
 [ext_resource type="Script" path="res://scenes/bubbleton.gd" id="1_j5pd1"]
 [ext_resource type="PackedScene" uid="uid://dpsy06y08shnc" path="res://scenes/player.tscn" id="1_s3dw0"]
@@ -12,10 +12,13 @@
 [ext_resource type="PackedScene" uid="uid://5y4y5gnt3qgo" path="res://scenes/side_walk.tscn" id="9_ab0kg"]
 [ext_resource type="Shader" path="res://assets/shaders/bubble.gdshader" id="9_jq0ns"]
 [ext_resource type="PackedScene" uid="uid://hyk6v0l227wm" path="res://scenes/bordercloud.tscn" id="10_wy4ro"]
+[ext_resource type="Texture2D" uid="uid://dlxq86oocrrbg" path="res://assets/textures/glassbuilding.png" id="12_0kym7"]
 [ext_resource type="PackedScene" uid="uid://b2lftkpk7ayju" path="res://scenes/pole.tscn" id="12_7bki5"]
 [ext_resource type="Texture2D" uid="uid://fn6c11062dmo" path="res://assets/textures/water.png" id="12_355e8"]
+[ext_resource type="Texture2D" uid="uid://ctg1s50kfcg8e" path="res://assets/textures/windowedbuilding.png" id="12_jug7b"]
 [ext_resource type="Texture2D" uid="uid://dcja4nenv1st5" path="res://assets/textures/water2.png" id="13_t3exq"]
 [ext_resource type="Texture2D" uid="uid://d1n4rnlpltote" path="res://assets/textures/water3.png" id="14_i64op"]
+[ext_resource type="Texture2D" uid="uid://ckxtsknl4l0g7" path="res://assets/textures/vertwindowbuilding.png" id="14_jgf1o"]
 [ext_resource type="Material" uid="uid://cjl3tguv7smdx" path="res://assets/outline.tres" id="15_n2c3r"]
 [ext_resource type="Texture2D" uid="uid://5j2kbweccm2k" path="res://assets/textures/fountain.png" id="16_j2qko"]
 [ext_resource type="Texture2D" uid="uid://w2eyaau118ax" path="res://assets/textures/fountain2.png" id="17_0sa0v"]
@@ -32,7 +35,15 @@
 [ext_resource type="PackedScene" uid="uid://d0t1bub4kejlp" path="res://scenes/fence_segment.tscn" id="32_fd55a"]
 [ext_resource type="Texture2D" uid="uid://do8oyyttkjs3c" path="res://assets/textures/gateway.png" id="33_k4kh4"]
 [ext_resource type="Script" path="res://scenes/gateway.gd" id="33_q4km1"]
+[ext_resource type="Texture2D" uid="uid://cg28ewbarlmm5" path="res://assets/textures/door.png" id="34_87btl"]
 [ext_resource type="Texture2D" uid="uid://b6418glnpc7wt" path="res://assets/textures/countryside.png" id="34_416b5"]
+[ext_resource type="Texture2D" uid="uid://lnv1d3n7upco" path="res://assets/textures/doubledoor.png" id="35_61r3e"]
+[ext_resource type="QuadMesh" uid="uid://dtfhm3612fnea" path="res://assets/models/doubledoor.tres" id="35_spnnr"]
+[ext_resource type="Texture2D" uid="uid://4bcyxhmupxbg" path="res://assets/textures/glassdoor.png" id="36_ro3kc"]
+[ext_resource type="Texture2D" uid="uid://cgx08odp42f20" path="res://assets/textures/window.png" id="38_xjabr"]
+[ext_resource type="Texture2D" uid="uid://cv73cyb6bhp3y" path="res://assets/textures/roundwindow.png" id="39_qcjc0"]
+[ext_resource type="Texture2D" uid="uid://bj4kltknbuu2" path="res://assets/textures/fun.png" id="43_p5lfm"]
+[ext_resource type="Texture2D" uid="uid://ds0tmooe8dhrx" path="res://assets/textures/trashcan.png" id="44_0gbll"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xivfm"]
 sky_top_color = Color(0.320077, 0.47232, 0.983131, 1)
@@ -218,35 +229,35 @@ shader = ExtResource("5_edj2h")
 shader_parameter/color = Color(0, 0, 0, 1)
 shader_parameter/size = 1.01
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rrli7"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tr100"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.932934, 0.902295, 0.694079, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fbko2"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vqk6l"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.530961, 0.429109, 0.517072, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ub325"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lfea5"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.957896, 0.338717, 0.876763, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7j6nv"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5qgqp"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.341542, 0.735164, 0.356238, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0jlm8"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8airk"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.351437, 0.655716, 0.943383, 1)
 albedo_texture = ExtResource("7_rumpl")
@@ -265,238 +276,241 @@ material = SubResource("StandardMaterial3D_jjuka")
 size = Vector2(3, 3)
 orientation = 1
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ijeij"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_78iuw"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.878353, 0.538072, 0.314552, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bj02u"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o24lv"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.878353, 0.538072, 0.314552, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5j7eg"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pxftw"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.878353, 0.538072, 0.314552, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xkbge"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wssjg"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.878353, 0.538072, 0.314552, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tqa12"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c2fi0"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.875904, 0.561795, 0.989407, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_py4ar"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_182c8"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.506077, 0.722398, 0.987234, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xsri3"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l2i2j"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.20025, 0.634496, 0.54183, 1)
-albedo_texture = ExtResource("7_rumpl")
+albedo_texture = ExtResource("12_0kym7")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x6poy"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wq8f6"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.20025, 0.634496, 0.54183, 1)
-albedo_texture = ExtResource("7_rumpl")
+albedo_texture = ExtResource("12_0kym7")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h5tc6"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tpue4"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.942686, 0.867617, 0, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xr2n"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uty4y"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.997466, 0.537965, 0.721485, 1)
-albedo_texture = ExtResource("7_rumpl")
-uv1_scale = Vector3(0.3, 0.3, 0.3)
+albedo_texture = ExtResource("12_jug7b")
+uv1_scale = Vector3(0.145, 0.145, 0.145)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sg2sr"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m1j6c"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.984049, 0.610741, 3.85046e-07, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3xcfy"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_doedn"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.368624, 0.798852, 0.682019, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cdtx7"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_msid3"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.744753, 0.650461, 0.934603, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2wvo8"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pbdhn"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.744753, 0.650461, 0.934603, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bs71x"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_utrnj"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.971454, 0.60373, 0.39902, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6jyfa"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hwbyd"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.962157, 0.614806, 0.33833, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6ocd7"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fv2at"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0, 0.855984, 0.163987, 1)
-albedo_texture = ExtResource("7_rumpl")
-uv1_scale = Vector3(0.3, 0.3, 0.3)
+albedo_texture = ExtResource("12_jug7b")
+uv1_scale = Vector3(0.06, 0.06, 0.06)
+uv1_offset = Vector3(-0.145, -0.045, 0)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jld5j"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ost53"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.744753, 0.650461, 0.934603, 1)
-albedo_texture = ExtResource("7_rumpl")
-uv1_scale = Vector3(0.3, 0.3, 0.3)
+albedo_texture = ExtResource("12_jug7b")
+uv1_scale = Vector3(0.075, 0.075, 0.075)
+uv1_offset = Vector3(0, 0.01, 0)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c7krr"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2kyiu"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(1, 0.268368, 0.726714, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_px8tw"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8n3ym"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0, 0.71015, 0.638877, 1)
-albedo_texture = ExtResource("7_rumpl")
+albedo_texture = ExtResource("14_jgf1o")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ge6j4"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pr2cu"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0, 0.855984, 0.163987, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rcgyw"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_28g7d"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1rtbd"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hwx4b"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7tahi"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_06t0t"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3nx4l"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_23yy7"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tn0ly"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5d43g"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a2564"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rbxmm"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.499184, 0.172677, 1, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_38v7u"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y7kfa"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
-albedo_color = Color(0.626548, 0.158899, 0.341145, 1)
-albedo_texture = ExtResource("7_rumpl")
+albedo_color = Color(0.898039, 0.933333, 0.988235, 1)
+albedo_texture = ExtResource("14_jgf1o")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jf10h"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kal8c"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
-albedo_color = Color(0.626548, 0.158899, 0.341145, 1)
-albedo_texture = ExtResource("7_rumpl")
+albedo_color = Color(0.898039, 0.933333, 0.988235, 1)
+albedo_texture = ExtResource("14_jgf1o")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_141ni"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bjcjm"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.80568, 0.676586, 0.625601, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u4jae"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ueyj"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.58734, 0.779334, 0.373638, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ty0ly"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bxe2i"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.309169, 0.684084, 0.870579, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iqe6w"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f6njf"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.676495, 0.720712, 0.744886, 1)
-albedo_texture = ExtResource("7_rumpl")
-uv1_scale = Vector3(0.3, 0.3, 0.3)
+albedo_texture = ExtResource("12_jug7b")
+uv1_scale = Vector3(0.13, 0.13, 0.13)
+uv1_offset = Vector3(0, -0.02, 0)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aoend"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pysrf"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.783385, 0.721766, 7.70092e-07, 1)
 albedo_texture = ExtResource("7_rumpl")
@@ -514,6 +528,13 @@ disable_receive_shadows = true
 material = SubResource("StandardMaterial3D_15476")
 size = Vector2(3, 3)
 orientation = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_41bgl"]
+next_pass = SubResource("ShaderMaterial_b0ii5")
+albedo_color = Color(0.506077, 0.722398, 0.987234, 1)
+albedo_texture = ExtResource("12_0kym7")
+uv1_scale = Vector3(0.3, 0.3, 0.3)
+uv1_triplanar = true
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_waufu"]
 height = 10.0
@@ -634,50 +655,43 @@ orientation = 1
 [sub_resource type="BoxShape3D" id="BoxShape3D_658em"]
 size = Vector3(1.9259, 1.47217, 1.26086)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_epukt"]
-next_pass = SubResource("ShaderMaterial_b0ii5")
-albedo_color = Color(0.506077, 0.722398, 0.987234, 1)
-albedo_texture = ExtResource("7_rumpl")
-uv1_scale = Vector3(0.3, 0.3, 0.3)
-uv1_triplanar = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mkuky"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_djxea"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_texture = ExtResource("25_5n0fn")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rn317"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2fxe4"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_texture = ExtResource("25_5n0fn")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8j5o7"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f2w2w"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_texture = ExtResource("25_5n0fn")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qvobg"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f6xm6"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_texture = ExtResource("25_5n0fn")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tw8qt"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l1fab"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_texture = ExtResource("25_5n0fn")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k0h08"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bwknr"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_texture = ExtResource("25_5n0fn")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x4w73"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rm5rg"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_texture = ExtResource("25_5n0fn")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
@@ -823,6 +837,51 @@ size = Vector2(28.65, 25)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_jp2ms"]
 radius = 30.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vi4i5"]
+transparency = 4
+albedo_texture = ExtResource("34_87btl")
+
+[sub_resource type="QuadMesh" id="QuadMesh_uidnk"]
+material = SubResource("StandardMaterial3D_vi4i5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_acx4q"]
+transparency = 4
+albedo_texture = ExtResource("43_p5lfm")
+
+[sub_resource type="QuadMesh" id="QuadMesh_uyclj"]
+material = SubResource("StandardMaterial3D_acx4q")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dkqog"]
+transparency = 4
+albedo_texture = ExtResource("38_xjabr")
+
+[sub_resource type="QuadMesh" id="QuadMesh_r8mhw"]
+material = SubResource("StandardMaterial3D_dkqog")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ku2bp"]
+transparency = 4
+albedo_texture = ExtResource("39_qcjc0")
+
+[sub_resource type="QuadMesh" id="QuadMesh_t6qus"]
+material = SubResource("StandardMaterial3D_ku2bp")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_42hhy"]
+transparency = 4
+albedo_texture = ExtResource("38_xjabr")
+
+[sub_resource type="QuadMesh" id="QuadMesh_r4i36"]
+material = SubResource("StandardMaterial3D_42hhy")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_seqaw"]
+transparency = 4
+albedo_texture = ExtResource("36_ro3kc")
+
+[sub_resource type="QuadMesh" id="QuadMesh_qamlc"]
+material = SubResource("StandardMaterial3D_seqaw")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_3hg7v"]
+height = 1.48929
 
 [node name="Bubbleton" type="WorldEnvironment"]
 environment = SubResource("Environment_ip5cs")
@@ -2716,12 +2775,12 @@ skeleton = NodePath("../../../../..")
 [node name="StaticBody3D" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7553, 0, 12.4538)
 size = Vector3(16, 20, 16)
-material = SubResource("StandardMaterial3D_rrli7")
+material = SubResource("StandardMaterial3D_tr100")
 
 [node name="StaticBody3D13" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.14866, 0, 39.4538)
 size = Vector3(16, 7, 16)
-material = SubResource("StandardMaterial3D_fbko2")
+material = SubResource("StandardMaterial3D_vqk6l")
 color = Color(0.530961, 0.429109, 0.517072, 1)
 
 [node name="pole" parent="BoxHouses/StaticBody3D13" instance=ExtResource("12_7bki5")]
@@ -2733,19 +2792,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.0599, 2.48223, 0.0825043)
 [node name="StaticBody3D14" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.14866, 0, 51.5312)
 size = Vector3(16, 10, 8)
-material = SubResource("StandardMaterial3D_ub325")
+material = SubResource("StandardMaterial3D_lfea5")
 color = Color(0.957896, 0.338717, 0.876763, 1)
 
 [node name="StaticBody3D15" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.14866, 0, 59.5312)
 size = Vector3(16, 10, 8)
-material = SubResource("StandardMaterial3D_7j6nv")
+material = SubResource("StandardMaterial3D_5qgqp")
 color = Color(0.341542, 0.735164, 0.356238, 1)
 
 [node name="StaticBody3D16" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.14866, 0, 70.5312)
 size = Vector3(16, 10, 8)
-material = SubResource("StandardMaterial3D_0jlm8")
+material = SubResource("StandardMaterial3D_8airk")
 color = Color(0.351437, 0.655716, 0.943383, 1)
 
 [node name="pole" parent="BoxHouses/StaticBody3D16" instance=ExtResource("12_7bki5")]
@@ -2762,211 +2821,217 @@ skeleton = NodePath("../../..")
 [node name="StaticBody3D17" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.14866, 0, 78.5312)
 size = Vector3(16, 15, 8)
-material = SubResource("StandardMaterial3D_ijeij")
+material = SubResource("StandardMaterial3D_78iuw")
 color = Color(0.878353, 0.538072, 0.314552, 1)
 
 [node name="StaticBody3D19" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.148661, 0, 89.5312)
 size = Vector3(16, 15, 8)
-material = SubResource("StandardMaterial3D_bj02u")
+material = SubResource("StandardMaterial3D_o24lv")
 color = Color(0.878353, 0.538072, 0.314552, 1)
 
 [node name="StaticBody3D34" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, -123.779, 7.62939e-06, 19.6691)
 size = Vector3(16, 15, 8)
-material = SubResource("StandardMaterial3D_5j7eg")
+material = SubResource("StandardMaterial3D_pxftw")
 color = Color(0.878353, 0.538072, 0.314552, 1)
 
 [node name="StaticBody3D35" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -133.369, 7.62939e-06, 26.3799)
 size = Vector3(16, 15, 8)
-material = SubResource("StandardMaterial3D_xkbge")
+material = SubResource("StandardMaterial3D_wssjg")
 color = Color(0.878353, 0.538072, 0.314552, 1)
 
 [node name="StaticBody3D2" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9862, 0, -14.9368)
 size = Vector3(30, 10, 16)
-material = SubResource("StandardMaterial3D_tqa12")
+material = SubResource("StandardMaterial3D_c2fi0")
 color = Color(0.875904, 0.561795, 0.989407, 1)
 
 [node name="StaticBody3D3" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.5278, 0, 22.2091)
 size = Vector3(15, 10, 30)
-material = SubResource("StandardMaterial3D_py4ar")
+material = SubResource("StandardMaterial3D_182c8")
 color = Color(0.506077, 0.722398, 0.987234, 1)
 
 [node name="StaticBody3D18" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.5278, 0, 62.2091)
 size = Vector3(15, 30, 30)
-material = SubResource("StandardMaterial3D_xsri3")
+material = SubResource("StandardMaterial3D_l2i2j")
 color = Color(0.20025, 0.634496, 0.54183, 1)
 
 [node name="StaticBody3D24" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -48.0725, 0, 70.2091)
 size = Vector3(15, 30, 30)
-material = SubResource("StandardMaterial3D_x6poy")
+material = SubResource("StandardMaterial3D_wq8f6")
 color = Color(0.20025, 0.634496, 0.54183, 1)
 
 [node name="StaticBody3D20" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.4253, 0, 95.9279)
 size = Vector3(15, 10, 30)
-material = SubResource("StandardMaterial3D_h5tc6")
+material = SubResource("StandardMaterial3D_tpue4")
 color = Color(0.942686, 0.867617, 0, 1)
 
 [node name="StaticBody3D4" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.6399, 0, -14.4024)
 size = Vector3(15, 20, 15)
-material = SubResource("StandardMaterial3D_0xr2n")
+material = SubResource("StandardMaterial3D_uty4y")
 color = Color(0.997466, 0.537965, 0.721485, 1)
 
 [node name="StaticBody3D5" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72.0059, 0, 0.586279)
 size = Vector3(15, 10, 30)
-material = SubResource("StandardMaterial3D_sg2sr")
+material = SubResource("StandardMaterial3D_m1j6c")
 color = Color(0.984049, 0.610741, 3.85046e-07, 1)
 
 [node name="StaticBody3D6" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -82.9735, 0, -46.8892)
 size = Vector3(15, 7, 30)
-material = SubResource("StandardMaterial3D_3xcfy")
+material = SubResource("StandardMaterial3D_doedn")
 color = Color(0.368624, 0.798852, 0.682019, 1)
 
 [node name="StaticBody3D7" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
-transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -90.7176, 0, -33.0459)
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -89.6649, 0, -33.1837)
 size = Vector3(7, 10, 7)
-material = SubResource("StandardMaterial3D_cdtx7")
+material = SubResource("StandardMaterial3D_msid3")
 color = Color(0.744753, 0.650461, 0.934603, 1)
 
 [node name="StaticBody3D28" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -124.475, 0, -94.3848)
 size = Vector3(8, 10, 8)
-material = SubResource("StandardMaterial3D_2wvo8")
+material = SubResource("StandardMaterial3D_pbdhn")
 color = Color(0.744753, 0.650461, 0.934603, 1)
 
 [node name="StaticBody3D30" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -112.247, 0, -106.926)
 size = Vector3(30, 20, 8)
-material = SubResource("StandardMaterial3D_bs71x")
+material = SubResource("StandardMaterial3D_utrnj")
 color = Color(0.971454, 0.60373, 0.39902, 1)
 
 [node name="StaticBody3D8" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -96.2308, 0, -53.4831)
 size = Vector3(7, 10, 10)
-material = SubResource("StandardMaterial3D_6jyfa")
+material = SubResource("StandardMaterial3D_hwbyd")
 color = Color(0.962157, 0.614806, 0.33833, 1)
 
 [node name="StaticBody3D9" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -106.562, 0, -50.9304)
 size = Vector3(14, 12, 10)
-material = SubResource("StandardMaterial3D_6ocd7")
+material = SubResource("StandardMaterial3D_fv2at")
 color = Color(0, 0.855984, 0.163987, 1)
 
 [node name="StaticBody3D36" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.54187, 0, 0.840463, 0, 1, 0, -0.840463, 0, 0.54187, -99.4352, 0, 86.6364)
 size = Vector3(7, 10, 7)
-material = SubResource("StandardMaterial3D_jld5j")
+material = SubResource("StandardMaterial3D_ost53")
 color = Color(0.744753, 0.650461, 0.934603, 1)
 
 [node name="StaticBody3D38" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.54187, 0, 0.840463, 0, 1, 0, -0.840463, 0, 0.54187, -92.2026, 0, 96.7441)
 size = Vector3(16, 10, 16)
-material = SubResource("StandardMaterial3D_c7krr")
+material = SubResource("StandardMaterial3D_2kyiu")
 color = Color(1, 0.268368, 0.726714, 1)
 
 [node name="StaticBody3D39" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.54187, 0, 0.840463, 0, 1, 0, -0.840463, 0, 0.54187, -75.7825, -9.53674e-07, 97.1696)
 size = Vector3(12, 15, 12)
-material = SubResource("StandardMaterial3D_px8tw")
+material = SubResource("StandardMaterial3D_8n3ym")
 color = Color(0, 0.71015, 0.638877, 1)
 
 [node name="StaticBody3D37" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.54187, 0, 0.840463, 0, 1, 0, -0.840463, 0, 0.54187, -105.486, 0, 80.1048)
 size = Vector3(14, 15, 10)
-material = SubResource("StandardMaterial3D_ge6j4")
+material = SubResource("StandardMaterial3D_pr2cu")
 color = Color(0, 0.855984, 0.163987, 1)
 
 [node name="StaticBody3D11" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -106.712, -4.29153e-06, 4.1485)
 size = Vector3(14, 12, 10)
-material = SubResource("StandardMaterial3D_rcgyw")
+material = SubResource("StandardMaterial3D_28g7d")
 color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 
 [node name="StaticBody3D12" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, -75.6693, -4.29153e-06, -81.0399)
 size = Vector3(20, 12, 15)
-material = SubResource("StandardMaterial3D_1rtbd")
+material = SubResource("StandardMaterial3D_hwx4b")
 color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 
 [node name="StaticBody3D21" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -90.7728, -4.29153e-06, -76.4715)
 size = Vector3(20, 12, 15)
-material = SubResource("StandardMaterial3D_7tahi")
+material = SubResource("StandardMaterial3D_06t0t")
 color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 
 [node name="StaticBody3D22" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -88.6264, -3.33786e-06, -91.3269)
 size = Vector3(20, 12, 15)
-material = SubResource("StandardMaterial3D_3nx4l")
+material = SubResource("StandardMaterial3D_23yy7")
 color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 
 [node name="StaticBody3D23" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(-0.188119, 0, -0.982146, 0, 1, 0, 0.982146, 0, -0.188119, -94.1836, -3.33786e-06, -84.2923)
 size = Vector3(10, 12, 15)
-material = SubResource("StandardMaterial3D_tn0ly")
+material = SubResource("StandardMaterial3D_5d43g")
 color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 
 [node name="StaticBody3D25" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(-0.944623, 0, -0.328157, 0, 1, 0, 0.328157, 0, -0.944623, -122.95, -1.43051e-06, -63.5941)
 size = Vector3(10, 8, 7)
-material = SubResource("StandardMaterial3D_a2564")
+material = SubResource("StandardMaterial3D_rbxmm")
 color = Color(0.499184, 0.172677, 1, 1)
 
 [node name="StaticBody3D26" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.328157, 0, -0.944623, 0, 1, 0, 0.944623, 0, 0.328157, -137.349, -3.33786e-06, -75.8029)
 size = Vector3(20, 24, 30)
-material = SubResource("StandardMaterial3D_38v7u")
-color = Color(0.626548, 0.158899, 0.341145, 1)
+material = SubResource("StandardMaterial3D_y7kfa")
+color = Color(0.898039, 0.933333, 0.988235, 1)
 
 [node name="StaticBody3D27" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.944623, 0, 0.328157, 0, 1, 0, -0.328157, 0, 0.944623, -142.869, -3.33786e-06, -68.3505)
 size = Vector3(15, 24, 30)
-material = SubResource("StandardMaterial3D_jf10h")
+material = SubResource("StandardMaterial3D_kal8c")
 color = Color(0.626548, 0.158899, 0.341145, 1)
 
 [node name="StaticBody3D10" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -116.317, 0, -32.5115)
 size = Vector3(14, 15, 40)
-material = SubResource("StandardMaterial3D_141ni")
+material = SubResource("StandardMaterial3D_bjcjm")
 color = Color(0.80568, 0.676586, 0.625601, 1)
 
 [node name="StaticBody3D29" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -147.075, 3.8147e-06, -40.8665)
 size = Vector3(14, 10, 20)
-material = SubResource("StandardMaterial3D_u4jae")
+material = SubResource("StandardMaterial3D_4ueyj")
 color = Color(0.58734, 0.779334, 0.373638, 1)
 
 [node name="StaticBody3D31" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -141.412, 3.8147e-06, -27.0144)
 size = Vector3(10, 7, 10)
-material = SubResource("StandardMaterial3D_ty0ly")
+material = SubResource("StandardMaterial3D_bxe2i")
 color = Color(0.309169, 0.684084, 0.870579, 1)
 
 [node name="StaticBody3D33" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -138.869, 3.8147e-06, -17.4102)
 size = Vector3(10, 7, 10)
-material = SubResource("StandardMaterial3D_iqe6w")
+material = SubResource("StandardMaterial3D_f6njf")
 color = Color(0.676495, 0.720712, 0.744886, 1)
 
 [node name="StaticBody3D32" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -135.389, 3.8147e-06, 1.92549)
 size = Vector3(15, 12, 15)
-material = SubResource("StandardMaterial3D_aoend")
+material = SubResource("StandardMaterial3D_pysrf")
 color = Color(0.783385, 0.721766, 7.70092e-07, 1)
 
 [node name="Cloud138" type="MeshInstance3D" parent="BoxHouses"]
 transform = Transform3D(3.66219, -0.829678, 0, 0.829678, 3.66219, 0, 0, 0, 3.755, -14.1421, 5.21449, 36.5134)
 mesh = SubResource("QuadMesh_oqx6o")
 skeleton = NodePath("../../..")
+
+[node name="StaticBody3D40" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -109.652, 0, -79.1573)
+size = Vector3(15, 50, 30)
+material = SubResource("StandardMaterial3D_41bgl")
+color = Color(0.506077, 0.722398, 0.987234, 1)
 
 [node name="fountain" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.9811, 0.501154, -57.8459)
@@ -3608,6 +3673,63 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.6189, 1.273, 3.93163)
 [node name="BubbleSpout2" parent="spouts" instance=ExtResource("5_ful0u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.2155, 1.273, -36.7208)
 
+[node name="BubbleSpout7" parent="spouts" instance=ExtResource("5_ful0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.2638, 1.273, 26.7857)
+
+[node name="BubbleSpout8" parent="spouts" instance=ExtResource("5_ful0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -89.0062, 1.273, 6.118)
+
+[node name="BubbleSpout9" parent="spouts" instance=ExtResource("5_ful0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -133.958, 1.273, -10.5262)
+
+[node name="BubbleSpout10" parent="spouts" instance=ExtResource("5_ful0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -116.369, 1.273, -7.8994)
+
+[node name="BubbleSpout11" parent="spouts" instance=ExtResource("5_ful0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -109.835, 1.273, -60.7515)
+
+[node name="BubbleSpout15" parent="spouts" instance=ExtResource("5_ful0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.5299, 1.273, -38.8851)
+
+[node name="BubbleSpout16" parent="spouts" instance=ExtResource("5_ful0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108.703, 1.273, -42.3085)
+
+[node name="BubbleSpout17" parent="spouts" instance=ExtResource("5_ful0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.5346, 1.273, 31.662)
+
+[node name="BubbleSpout18" parent="spouts" instance=ExtResource("5_ful0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.7766, 1.273, 59.6566)
+
+[node name="BubbleSpout19" parent="spouts" instance=ExtResource("5_ful0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -77.0309, 1.273, 88.2598)
+
+[node name="BubbleSpout20" parent="spouts" instance=ExtResource("5_ful0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3409, 1.273, 82.7537)
+
+[node name="BubbleSpout21" parent="spouts" instance=ExtResource("5_ful0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.8236, 1.273, 67.1216)
+
+[node name="BubbleSpout22" parent="spouts" instance=ExtResource("5_ful0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.5089, 1.273, 62.4883)
+
+[node name="BubbleSpout23" parent="spouts" instance=ExtResource("5_ful0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.9616, 1.273, 23.331)
+
+[node name="BubbleSpout24" parent="spouts" instance=ExtResource("5_ful0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.2628, 1.273, -88.6689)
+
+[node name="BubbleSpout25" parent="spouts" instance=ExtResource("5_ful0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5009, 1.27301, -100.299)
+
+[node name="BubbleSpout12" parent="spouts" instance=ExtResource("5_ful0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104.525, 1.273, -100.344)
+
+[node name="BubbleSpout13" parent="spouts" instance=ExtResource("5_ful0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.901, 1.273, -101.057)
+
+[node name="BubbleSpout14" parent="spouts" instance=ExtResource("5_ful0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -116.701, 1.273, -72.3996)
+
 [node name="BubbleSpout3" parent="spouts" instance=ExtResource("5_ful0u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.50689, 1.273, -54.6015)
 
@@ -3620,52 +3742,46 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.5425, 1.273, -71.3775)
 [node name="BubbleSpout6" parent="spouts" instance=ExtResource("5_ful0u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.3534, 1.273, -36.9652)
 
-[node name="StaticBody3D3" parent="." instance=ExtResource("6_bd1tb")]
-transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -109.652, 0, -79.1573)
-size = Vector3(15, 50, 30)
-material = SubResource("StandardMaterial3D_epukt")
-color = Color(0.506077, 0.722398, 0.987234, 1)
-
 [node name="libary" parent="." instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -140.998, -9.53674e-07, 56.9955)
 size = Vector3(32, 20, 32)
-material = SubResource("StandardMaterial3D_mkuky")
+material = SubResource("StandardMaterial3D_djxea")
 color = Color(1, 1, 1, 1)
 
 [node name="StaticBody3D37" parent="libary" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1978, 0, -0.20076)
 size = Vector3(20, 1, 20)
-material = SubResource("StandardMaterial3D_rn317")
+material = SubResource("StandardMaterial3D_2fxe4")
 color = Color(1, 1, 1, 1)
 
 [node name="StaticBody3D38" parent="libary" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1978, 0.673466, -0.20076)
 size = Vector3(19, 1, 19)
-material = SubResource("StandardMaterial3D_8j5o7")
+material = SubResource("StandardMaterial3D_f2w2w")
 color = Color(1, 1, 1, 1)
 
 [node name="StaticBody3D39" parent="libary" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1978, 1.46601, -0.20076)
 size = Vector3(18, 1, 18)
-material = SubResource("StandardMaterial3D_qvobg")
+material = SubResource("StandardMaterial3D_f6xm6")
 color = Color(1, 1, 1, 1)
 
 [node name="StaticBody3D40" parent="libary" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1978, 11.8094, -0.20076)
 size = Vector3(24, 1, 24)
-material = SubResource("StandardMaterial3D_tw8qt")
+material = SubResource("StandardMaterial3D_l1fab")
 color = Color(1, 1, 1, 1)
 
 [node name="StaticBody3D41" parent="libary" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1978, 12.4829, -0.20076)
 size = Vector3(23, 1, 23)
-material = SubResource("StandardMaterial3D_k0h08")
+material = SubResource("StandardMaterial3D_bwknr")
 color = Color(1, 1, 1, 1)
 
 [node name="StaticBody3D42" parent="libary" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1978, 13.2754, -0.20076)
 size = Vector3(22, 1, 22)
-material = SubResource("StandardMaterial3D_x4w73")
+material = SubResource("StandardMaterial3D_rm5rg")
 color = Color(1, 1, 1, 1)
 
 [node name="column" type="StaticBody3D" parent="libary"]
@@ -4462,5 +4578,801 @@ skeleton = NodePath("../../..")
 transform = Transform3D(-3.88497, -5.81089, 27.8115, -5.7208, 25.362, 4.35447, -17.8417, -6.86679, -7.45207, 2.61, 28.68, 18.741)
 mesh = SubResource("QuadMesh_xxarf")
 skeleton = NodePath("../../..")
+
+[node name="doors and windows" type="Node3D" parent="."]
+
+[node name="Door" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.606931, 0, -2.2651, 0, 2.345, 0, 2.2651, 0, 0.606931, -125.379, 5.42368, 53.2058)
+texture = ExtResource("34_87btl")
+
+[node name="Door4" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(1.16944, 0, -0.760548, 0, 1.395, 0, 0.760548, 0, 1.16944, -88.2256, 2.27391, 89.7693)
+texture = ExtResource("34_87btl")
+
+[node name="Door9" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.0285093, 0, 1.39471, 0, 1.395, 0, -1.39471, 0, 0.0285093, -12.1884, 2.27391, 70.5133)
+texture = ExtResource("34_87btl")
+
+[node name="Door107" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(1.39471, 0, -0.0285094, 0, 1.395, 0, 0.0285094, 0, 1.39471, -17.8322, 2.27391, 88.3928)
+texture = ExtResource("34_87btl")
+
+[node name="Door28" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(1.39471, 0, -0.0285093, 0, 1.395, 0, 0.0285093, 0, 1.39471, -51.6596, 2.27391, -21.9704)
+texture = ExtResource("34_87btl")
+
+[node name="Door29" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(1.39471, 0, -0.0285093, 0, 1.395, 0, 0.0285093, 0, 1.39471, -51.6596, 2.27391, -6.86033)
+texture = ExtResource("34_87btl")
+
+[node name="Door100" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(1.39471, 0, -0.0285093, 0, 1.395, 0, 0.0285093, 0, 1.39471, -51.6596, 2.27391, 62.6397)
+texture = ExtResource("35_61r3e")
+
+[node name="Door101" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(-0.0285094, 0, -1.39471, 0, 1.395, 0, 1.39471, 0, -0.0285094, -32.9588, 2.27391, 52.2817)
+texture = ExtResource("35_61r3e")
+
+[node name="Door102" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(-0.0285094, 0, -1.39471, 0, 1.395, 0, 1.39471, 0, -0.0285094, -32.9993, 2.27391, 32.6412)
+texture = ExtResource("36_ro3kc")
+
+[node name="Door103" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(-0.0285094, 0, -1.39471, 0, 1.395, 0, 1.39471, 0, -0.0285094, -48.0813, 2.27391, 10.417)
+texture = ExtResource("36_ro3kc")
+
+[node name="Door104" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(-0.0170356, 0, -3.04995, 0, 3.05, 0, 3.04995, 0, -0.0170356, -48.0813, 5.19868, 16.0186)
+texture = ExtResource("39_qcjc0")
+
+[node name="Door129" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(-2.01757, 0, -0.545439, 0, 2.09, 0, 0.545439, 0, -2.01757, -88.7986, 6.9662, -29.7306)
+texture = ExtResource("39_qcjc0")
+
+[node name="Door110" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(-3.04995, 0, 0.0170358, 0, 3.05, 0, -0.0170358, 0, -3.04995, -42.2882, 5.19868, 7.17217)
+texture = ExtResource("39_qcjc0")
+
+[node name="Door105" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(-0.0170356, 0, -3.04995, 0, 3.05, 0, 3.04995, 0, -0.0170356, -48.0813, 5.19868, 24.0718)
+texture = ExtResource("39_qcjc0")
+
+[node name="Door106" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(-0.0170356, 0, -3.04995, 0, 3.05, 0, 3.04995, 0, -0.0170356, -48.0813, 5.19868, 31.9239)
+texture = ExtResource("39_qcjc0")
+
+[node name="Door111" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(-0.0170356, 0, -3.04995, 0, 3.05, 0, 3.04995, 0, -0.0170356, -32.9727, 5.19868, 11.5267)
+texture = ExtResource("39_qcjc0")
+
+[node name="Door112" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(-0.0170356, 0, -3.04995, 0, 3.05, 0, 3.04995, 0, -0.0170356, -32.9727, 5.19868, 19.5799)
+texture = ExtResource("39_qcjc0")
+
+[node name="Door113" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(-0.0170356, 0, -3.04995, 0, 3.05, 0, 3.04995, 0, -0.0170356, -32.9727, 5.19868, 27.432)
+texture = ExtResource("39_qcjc0")
+
+[node name="Door55" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(1.35456, 0, 0.33344, 0, 1.395, 0, -0.33344, 0, 1.35456, -108.3, 2.27391, -45.1659)
+texture = ExtResource("34_87btl")
+
+[node name="Door56" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(1.35456, 0, 0.33344, 0, 1.395, 0, -0.33344, 0, 1.35456, -110.432, 2.27391, -55.1425)
+texture = ExtResource("34_87btl")
+
+[node name="Door94" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(1.35456, 0, 0.33344, 0, 1.395, 0, -0.33344, 0, 1.35456, -121.783, 2.27391, -51.7942)
+texture = ExtResource("34_87btl")
+
+[node name="Door99" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.333439, 0, -1.35456, 0, 1.395, 0, 1.35456, 0, 0.333439, -118.836, 2.27391, -14.6424)
+texture = ExtResource("34_87btl")
+
+[node name="Door57" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(1.35456, 0, 0.33344, 0, 1.395, 0, -0.33344, 0, 1.35456, -96.2647, 2.27391, -58.7108)
+texture = ExtResource("36_ro3kc")
+
+[node name="Door89" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(1.35456, 0, 0.33344, 0, 1.395, 0, -0.33344, 0, 1.35456, -94.8471, 7.22432, -48.6332)
+texture = ExtResource("39_qcjc0")
+
+[node name="Door58" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(1.35456, 0, 0.33344, 0, 1.395, 0, -0.33344, 0, 1.35456, -90.5827, 2.27391, -60.4266)
+texture = ExtResource("36_ro3kc")
+
+[node name="Door59" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.342274, 0, -1.35236, 0, 1.395, 0, 1.35236, 0, 0.342274, -78.7432, 2.27391, -60.172)
+texture = ExtResource("36_ro3kc")
+
+[node name="Door65" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.00837484, 0, -1.39498, 0, 1.395, 0, 1.39498, 0, 0.00837484, -64.4929, 2.27391, 0.822243)
+texture = ExtResource("35_61r3e")
+
+[node name="Door82" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(-1.34946, 0, -0.353545, 0, 1.395, 0, 0.353545, 0, -1.34946, -104.972, 2.27391, 8.92875)
+texture = ExtResource("36_ro3kc")
+
+[node name="Door128" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(-1.34946, 0, -0.353545, 0, 1.395, 0, 0.353545, 0, -1.34946, -106.219, 2.27391, -1.20048)
+texture = ExtResource("36_ro3kc")
+
+[node name="Door66" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.00837484, 0, -1.39498, 0, 1.395, 0, 1.39498, 0, 0.00837484, -64.4929, 3.64868, 4.55023)
+texture = ExtResource("39_qcjc0")
+
+[node name="Door67" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.00837484, 0, -1.39498, 0, 1.395, 0, 1.39498, 0, 0.00837484, -64.4929, 7.35586, 4.55023)
+texture = ExtResource("39_qcjc0")
+
+[node name="Door68" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.00837484, 0, -1.39498, 0, 1.395, 0, 1.39498, 0, 0.00837484, -64.4929, 3.64868, 9.15362)
+texture = ExtResource("39_qcjc0")
+
+[node name="Door69" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.00837484, 0, -1.39498, 0, 1.395, 0, 1.39498, 0, 0.00837484, -64.4929, 7.35586, 9.15362)
+texture = ExtResource("39_qcjc0")
+
+[node name="Door70" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.00837484, 0, -1.39498, 0, 1.395, 0, 1.39498, 0, 0.00837484, -64.4929, 3.64868, -7.52463)
+texture = ExtResource("39_qcjc0")
+
+[node name="Door71" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.00837484, 0, -1.39498, 0, 1.395, 0, 1.39498, 0, 0.00837484, -64.4929, 7.35586, -7.52463)
+texture = ExtResource("39_qcjc0")
+
+[node name="Door72" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.00837484, 0, -1.39498, 0, 1.395, 0, 1.39498, 0, 0.00837484, -64.4929, 3.64868, -2.92123)
+texture = ExtResource("39_qcjc0")
+
+[node name="Door73" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.00837484, 0, -1.39498, 0, 1.395, 0, 1.39498, 0, 0.00837484, -64.4929, 7.35586, -2.92123)
+texture = ExtResource("39_qcjc0")
+
+[node name="Door74" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.00837484, 0, -1.39498, 0, 1.395, 0, 1.39498, 0, 0.00837484, -79.5532, 3.64868, 4.55023)
+texture = ExtResource("39_qcjc0")
+
+[node name="Door75" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.00837484, 0, -1.39498, 0, 1.395, 0, 1.39498, 0, 0.00837484, -79.5532, 7.35586, 4.55023)
+texture = ExtResource("39_qcjc0")
+
+[node name="Door76" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.00837484, 0, -1.39498, 0, 1.395, 0, 1.39498, 0, 0.00837484, -79.5532, 3.64868, 9.15362)
+texture = ExtResource("39_qcjc0")
+
+[node name="Door77" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.00837484, 0, -1.39498, 0, 1.395, 0, 1.39498, 0, 0.00837484, -79.5532, 7.35586, 9.15362)
+texture = ExtResource("39_qcjc0")
+
+[node name="Door78" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.00837484, 0, -1.39498, 0, 1.395, 0, 1.39498, 0, 0.00837484, -79.5532, 3.64868, -7.52463)
+texture = ExtResource("39_qcjc0")
+
+[node name="Door79" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.00837484, 0, -1.39498, 0, 1.395, 0, 1.39498, 0, 0.00837484, -79.5532, 7.35586, -7.52463)
+texture = ExtResource("39_qcjc0")
+
+[node name="Door80" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.00837484, 0, -1.39498, 0, 1.395, 0, 1.39498, 0, 0.00837484, -79.5532, 3.64868, -2.92123)
+texture = ExtResource("39_qcjc0")
+
+[node name="Door81" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.00837484, 0, -1.39498, 0, 1.395, 0, 1.39498, 0, 0.00837484, -79.5532, 7.35586, -2.92123)
+texture = ExtResource("39_qcjc0")
+
+[node name="Door60" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.359218, 0, -1.34796, 0, 1.395, 0, 1.34796, 0, 0.359218, -77.5324, 2.80486, -55.5774)
+texture = ExtResource("38_xjabr")
+
+[node name="Door108" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(-1.94457, 0, -3.35753, 0, 3.88, 0, 3.35753, 0, -1.94457, -71.2535, 7.61707, -73.1049)
+texture = ExtResource("38_xjabr")
+
+[node name="Door114" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(-3.88, 0, 0.00528455, 0, 3.88, 0, -0.00528455, 0, -3.88, -29.2355, 6.05994, -22.9643)
+texture = ExtResource("38_xjabr")
+
+[node name="Door115" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(-3.88, 0, 0.00528455, 0, 3.88, 0, -0.00528455, 0, -3.88, -19.762, 6.05994, -22.9643)
+texture = ExtResource("38_xjabr")
+
+[node name="Door116" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(-3.88, 0, 0.00528455, 0, 3.88, 0, -0.00528455, 0, -3.88, -10.4995, 6.05994, -22.9643)
+texture = ExtResource("38_xjabr")
+
+[node name="Door118" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(-3.88, 0, 0.00528455, 0, 3.88, 0, -0.00528455, 0, -3.88, -29.2355, 6.05994, -6.88805)
+texture = ExtResource("38_xjabr")
+
+[node name="Door119" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(-3.88, 0, 0.00528455, 0, 3.88, 0, -0.00528455, 0, -3.88, -19.762, 6.05994, -6.88805)
+texture = ExtResource("38_xjabr")
+
+[node name="Door120" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(-3.88, 0, 0.00528455, 0, 3.88, 0, -0.00528455, 0, -3.88, -10.4995, 6.05994, -6.88805)
+texture = ExtResource("38_xjabr")
+
+[node name="Door117" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.00528472, 0, 3.88, 0, 3.88, 0, -3.88, 0, 0.00528472, -4.91555, 6.05994, -14.6298)
+texture = ExtResource("38_xjabr")
+
+[node name="Door109" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(-1.94457, 0, -3.35753, 0, 3.88, 0, 3.35753, 0, -1.94457, -66.9063, 7.61707, -81.0295)
+texture = ExtResource("38_xjabr")
+
+[node name="Door61" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.359218, 0, -1.34796, 0, 1.395, 0, 1.34796, 0, 0.359218, -76.6878, 2.80486, -52.4352)
+texture = ExtResource("38_xjabr")
+
+[node name="Door62" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.359218, 0, -1.34796, 0, 1.395, 0, 1.34796, 0, 0.359218, -75.8256, 2.80486, -49.3407)
+texture = ExtResource("38_xjabr")
+
+[node name="Door63" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.359218, 0, -1.34796, 0, 1.395, 0, 1.34796, 0, 0.359218, -73.8317, 2.80486, -41.8122)
+texture = ExtResource("38_xjabr")
+
+[node name="Door64" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.359218, 0, -1.34796, 0, 1.395, 0, 1.34796, 0, 0.359218, -72.9695, 2.80486, -38.7177)
+texture = ExtResource("38_xjabr")
+
+[node name="Door130" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(-1.34796, 0, -0.359218, 0, 1.395, 0, 0.359218, 0, -1.34796, -77.4983, 2.80486, -32.8081)
+texture = ExtResource("38_xjabr")
+
+[node name="Door131" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(-1.34796, 0, -0.359218, 0, 1.395, 0, 0.359218, 0, -1.34796, -80.5928, 2.80486, -31.9459)
+texture = ExtResource("38_xjabr")
+
+[node name="Door26" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.0285093, 0, 1.39471, 0, 1.395, 0, -1.39471, 0, 0.0285093, -12.1884, 2.27391, 59.4852)
+texture = ExtResource("35_61r3e")
+
+[node name="Door121" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.0285093, 0, 1.39471, 0, 1.395, 0, -1.39471, 0, 0.0285093, 3.90597, 2.27391, 51.0709)
+texture = ExtResource("35_61r3e")
+
+[node name="Door27" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.0285093, 0, 1.39471, 0, 1.395, 0, -1.39471, 0, 0.0285093, -12.1884, 2.27391, 49.8896)
+texture = ExtResource("36_ro3kc")
+
+[node name="Door10" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.0285093, 0, 1.39471, 0, 1.395, 0, -1.39471, 0, 0.0285093, -12.1884, 7.57495, 70.5133)
+texture = ExtResource("38_xjabr")
+
+[node name="Door14" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.0285093, 0, 1.39471, 0, 1.395, 0, -1.39471, 0, 0.0285093, -12.1884, 7.19296, 76.9518)
+texture = ExtResource("38_xjabr")
+
+[node name="Door15" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.0285093, 0, 1.39471, 0, 1.395, 0, -1.39471, 0, 0.0285093, -12.1884, 7.19296, 79.8972)
+texture = ExtResource("38_xjabr")
+
+[node name="Door16" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.0285093, 0, 1.39471, 0, 1.395, 0, -1.39471, 0, 0.0285093, -12.1884, 3.70467, 76.9518)
+texture = ExtResource("38_xjabr")
+
+[node name="Door17" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.0285093, 0, 1.39471, 0, 1.395, 0, -1.39471, 0, 0.0285093, -12.1884, 3.70467, 79.8972)
+texture = ExtResource("38_xjabr")
+
+[node name="Door18" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.0285093, 0, 1.39471, 0, 1.395, 0, -1.39471, 0, 0.0285093, -4.23619, 7.19296, 85.1634)
+texture = ExtResource("38_xjabr")
+
+[node name="Door19" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.0285093, 0, 1.39471, 0, 1.395, 0, -1.39471, 0, 0.0285093, -4.23619, 7.19296, 88.1087)
+texture = ExtResource("38_xjabr")
+
+[node name="Door20" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.0285093, 0, 1.39471, 0, 1.395, 0, -1.39471, 0, 0.0285093, -4.23619, 3.70467, 85.1634)
+texture = ExtResource("38_xjabr")
+
+[node name="Door21" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.0285093, 0, 1.39471, 0, 1.395, 0, -1.39471, 0, 0.0285093, -4.23619, 3.70467, 88.1087)
+texture = ExtResource("38_xjabr")
+
+[node name="Door22" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.0285093, 0, 1.39471, 0, 1.395, 0, -1.39471, 0, 0.0285093, -4.23619, 7.19296, 91.3712)
+texture = ExtResource("38_xjabr")
+
+[node name="Door23" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.0285093, 0, 1.39471, 0, 1.395, 0, -1.39471, 0, 0.0285093, -4.23619, 7.19296, 94.3165)
+texture = ExtResource("38_xjabr")
+
+[node name="Door24" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.0285093, 0, 1.39471, 0, 1.395, 0, -1.39471, 0, 0.0285093, -4.23619, 3.70467, 91.3712)
+texture = ExtResource("38_xjabr")
+
+[node name="Door25" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.0285093, 0, 1.39471, 0, 1.395, 0, -1.39471, 0, 0.0285093, -4.23619, 3.70467, 94.3165)
+texture = ExtResource("38_xjabr")
+
+[node name="Door13" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(-0.0315437, 0, 2.17477, 0, 2.175, 0, -2.17477, 0, -0.0315437, -12.1884, 11.4138, 78.5588)
+texture = ExtResource("39_qcjc0")
+
+[node name="Door11" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.0412822, 0, 2.01958, 0, 2.02, 0, -2.01958, 0, 0.0412822, -12.3072, 3.86686, 43.5074)
+texture = ExtResource("38_xjabr")
+
+[node name="Door12" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(0.0310638, 0, 1.51968, 0, 1.52, 0, -1.51968, 0, 0.0310638, -12.3072, 2.39901, 36.3898)
+texture = ExtResource("35_61r3e")
+
+[node name="Door5" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(1.16944, 0, -0.760548, 0, 1.395, 0, 0.760548, 0, 1.16944, -91.565, 5.45573, 87.4431)
+texture = ExtResource("38_xjabr")
+
+[node name="Door6" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(1.16944, 0, -0.760548, 0, 1.395, 0, 0.760548, 0, 1.16944, -87.294, 5.45573, 90.2567)
+texture = ExtResource("38_xjabr")
+
+[node name="Door7" type="Sprite3D" parent="doors and windows"]
+transform = Transform3D(1.16944, 0, -0.760548, 0, 1.395, 0, 0.760548, 0, 1.16944, -83.3849, 5.45573, 92.8768)
+texture = ExtResource("38_xjabr")
+
+[node name="Door2" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(-3.36525, 0, 2.16219, 0, 4, 0, -2.16219, 0, -3.36525, -101.375, 2.49366, 74.3365)
+mesh = ExtResource("35_spnnr")
+skeleton = NodePath("../..")
+
+[node name="Door30" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(-1.02091, 0, 3.86752, 0, 4, 0, -3.86752, 0, -1.02091, -119.855, 2.49366, 18.7042)
+mesh = ExtResource("35_spnnr")
+skeleton = NodePath("../..")
+
+[node name="Door83" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(-1.02091, 0, 3.86752, 0, 4, 0, -3.86752, 0, -1.02091, -134.003, 2.49366, -18.6478)
+mesh = ExtResource("35_spnnr")
+skeleton = NodePath("../..")
+
+[node name="Door84" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(-1.02091, 0, 3.86752, 0, 4, 0, -3.86752, 0, -1.02091, -127.696, 2.49366, 1.46137)
+mesh = SubResource("QuadMesh_uidnk")
+skeleton = NodePath("../..")
+
+[node name="Door132" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(1.02091, 0, -3.86752, 0, 4, 0, 3.86752, 0, 1.02091, -143.866, 2.49366, -0.528447)
+mesh = SubResource("QuadMesh_uidnk")
+skeleton = NodePath("../..")
+
+[node name="Door133" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(1.73427, 0, -6.56996, 0, 6.795, 0, 6.56996, 0, 1.73427, -141.908, 4.59013, 6.64552)
+mesh = SubResource("QuadMesh_uyclj")
+skeleton = NodePath("../..")
+
+[node name="Door85" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(-1.02091, 0, 3.86752, 0, 4, 0, -3.86752, 0, -1.02091, -136.443, 2.49366, -28.162)
+mesh = SubResource("QuadMesh_uidnk")
+skeleton = NodePath("../..")
+
+[node name="Door87" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(-1.02091, 0, 3.86752, 0, 4, 0, -3.86752, 0, -1.02091, -135.928, 4.83041, -26.0102)
+mesh = SubResource("QuadMesh_r8mhw")
+skeleton = NodePath("../..")
+
+[node name="Door88" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(-1.02091, 0, 3.86752, 0, 4, 0, -3.86752, 0, -1.02091, -137.053, 4.83041, -30.2636)
+mesh = SubResource("QuadMesh_r8mhw")
+skeleton = NodePath("../..")
+
+[node name="Door90" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(-1.02091, 0, 3.86752, 0, 4, 0, -3.86752, 0, -1.02091, -140.628, 4.83041, -43.9479)
+mesh = SubResource("QuadMesh_r8mhw")
+skeleton = NodePath("../..")
+
+[node name="Door91" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(-1.02091, 0, 3.86752, 0, 4, 0, -3.86752, 0, -1.02091, -141.753, 4.83041, -48.2014)
+mesh = SubResource("QuadMesh_r8mhw")
+skeleton = NodePath("../..")
+
+[node name="Door92" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(1.02091, 0, -3.86752, 0, 4, 0, 3.86752, 0, 1.02091, -127.669, 12.2313, -47.3951)
+mesh = SubResource("QuadMesh_r8mhw")
+skeleton = NodePath("../..")
+
+[node name="Door93" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(1.02091, 0, -3.86752, 0, 4, 0, 3.86752, 0, 1.02091, -126.543, 12.2313, -43.1417)
+mesh = SubResource("QuadMesh_r8mhw")
+skeleton = NodePath("../..")
+
+[node name="Door95" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(1.02091, 0, -3.86752, 0, 4, 0, 3.86752, 0, 1.02091, -123.947, 12.2313, -33.7249)
+mesh = SubResource("QuadMesh_r8mhw")
+skeleton = NodePath("../..")
+
+[node name="Door96" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(1.02091, 0, -3.86752, 0, 4, 0, 3.86752, 0, 1.02091, -122.822, 12.2313, -29.4715)
+mesh = SubResource("QuadMesh_r8mhw")
+skeleton = NodePath("../..")
+
+[node name="Door97" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(1.02091, 0, -3.86752, 0, 4, 0, 3.86752, 0, 1.02091, -121.725, 12.2313, -25.3374)
+mesh = SubResource("QuadMesh_r8mhw")
+skeleton = NodePath("../..")
+
+[node name="Door98" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(1.02091, 0, -3.86752, 0, 4, 0, 3.86752, 0, 1.02091, -120.6, 12.2313, -21.084)
+mesh = SubResource("QuadMesh_r8mhw")
+skeleton = NodePath("../..")
+
+[node name="Door122" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(-1.02091, 0, 3.86752, 0, 4, 0, -3.86752, 0, -1.02091, -104.957, 12.2313, -17.5296)
+mesh = SubResource("QuadMesh_r8mhw")
+skeleton = NodePath("../..")
+
+[node name="Door123" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(-1.02091, 0, 3.86752, 0, 4, 0, -3.86752, 0, -1.02091, -106.082, 12.2313, -21.7831)
+mesh = SubResource("QuadMesh_r8mhw")
+skeleton = NodePath("../..")
+
+[node name="Door124" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(-1.02091, 0, 3.86752, 0, 4, 0, -3.86752, 0, -1.02091, -108.679, 12.2313, -31.1998)
+mesh = SubResource("QuadMesh_r8mhw")
+skeleton = NodePath("../..")
+
+[node name="Door125" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(-1.02091, 0, 3.86752, 0, 4, 0, -3.86752, 0, -1.02091, -109.804, 12.2313, -35.4532)
+mesh = SubResource("QuadMesh_r8mhw")
+skeleton = NodePath("../..")
+
+[node name="Door126" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(-1.02091, 0, 3.86752, 0, 4, 0, -3.86752, 0, -1.02091, -110.9, 12.2313, -39.5873)
+mesh = SubResource("QuadMesh_r8mhw")
+skeleton = NodePath("../..")
+
+[node name="Door127" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(-1.02091, 0, 3.86752, 0, 4, 0, -3.86752, 0, -1.02091, -112.025, 12.2313, -43.8407)
+mesh = SubResource("QuadMesh_r8mhw")
+skeleton = NodePath("../..")
+
+[node name="Door86" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(-1.02091, 0, 3.86752, 0, 4, 0, -3.86752, 0, -1.02091, -139.022, 2.49366, -38.159)
+mesh = SubResource("QuadMesh_uidnk")
+skeleton = NodePath("../..")
+
+[node name="Door53" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(-1.47777, 0, 5.59824, 0, 5.79, 0, -5.59824, 0, -1.47777, -119.005, 9.31221, 21.9281)
+mesh = SubResource("QuadMesh_t6qus")
+skeleton = NodePath("../..")
+
+[node name="Door54" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(-1.47777, 0, 5.59824, 0, 5.79, 0, -5.59824, 0, -1.47777, -120.786, 9.31221, 15.2051)
+mesh = SubResource("QuadMesh_t6qus")
+skeleton = NodePath("../..")
+
+[node name="Door31" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(3.86729, 0, 1.02179, 0, 4, 0, -1.02179, 0, 3.86729, -120.885, 4.88381, 27.1843)
+mesh = SubResource("QuadMesh_r4i36")
+skeleton = NodePath("../..")
+
+[node name="Door32" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(3.86729, 0, 1.02179, 0, 4, 0, -1.02179, 0, 3.86729, -124.376, 4.88381, 28.1571)
+mesh = SubResource("QuadMesh_r4i36")
+skeleton = NodePath("../..")
+
+[node name="Door33" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(3.86729, 0, 1.02179, 0, 4, 0, -1.02179, 0, 3.86729, -120.885, 7.0069, 27.1843)
+mesh = SubResource("QuadMesh_r4i36")
+skeleton = NodePath("../..")
+
+[node name="Door34" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(3.86729, 0, 1.02179, 0, 4, 0, -1.02179, 0, 3.86729, -124.376, 7.0069, 28.1571)
+mesh = SubResource("QuadMesh_r4i36")
+skeleton = NodePath("../..")
+
+[node name="Door35" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(3.86729, 0, 1.02179, 0, 4, 0, -1.02179, 0, 3.86729, -120.885, 10.3165, 27.1843)
+mesh = SubResource("QuadMesh_r4i36")
+skeleton = NodePath("../..")
+
+[node name="Door36" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(3.86729, 0, 1.02179, 0, 4, 0, -1.02179, 0, 3.86729, -124.376, 10.3165, 28.1571)
+mesh = SubResource("QuadMesh_r4i36")
+skeleton = NodePath("../..")
+
+[node name="Door37" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(3.86729, 0, 1.02179, 0, 4, 0, -1.02179, 0, 3.86729, -120.885, 12.4396, 27.1843)
+mesh = SubResource("QuadMesh_r4i36")
+skeleton = NodePath("../..")
+
+[node name="Door38" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(3.86729, 0, 1.02179, 0, 4, 0, -1.02179, 0, 3.86729, -124.376, 12.4396, 28.1571)
+mesh = SubResource("QuadMesh_r4i36")
+skeleton = NodePath("../..")
+
+[node name="Door39" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(3.86729, 0, 1.02179, 0, 4, 0, -1.02179, 0, 3.86729, -133.507, 10.3165, 30.6115)
+mesh = SubResource("QuadMesh_r4i36")
+skeleton = NodePath("../..")
+
+[node name="Door40" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(3.86729, 0, 1.02179, 0, 4, 0, -1.02179, 0, 3.86729, -136.998, 10.3165, 31.5844)
+mesh = SubResource("QuadMesh_r4i36")
+skeleton = NodePath("../..")
+
+[node name="Door41" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(3.86729, 0, 1.02179, 0, 4, 0, -1.02179, 0, 3.86729, -133.507, 12.4396, 30.6115)
+mesh = SubResource("QuadMesh_r4i36")
+skeleton = NodePath("../..")
+
+[node name="Door42" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(3.86729, 0, 1.02179, 0, 4, 0, -1.02179, 0, 3.86729, -136.998, 12.4396, 31.5844)
+mesh = SubResource("QuadMesh_r4i36")
+skeleton = NodePath("../..")
+
+[node name="Door43" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(3.86729, 0, 1.02179, 0, 4, 0, -1.02179, 0, 3.86729, -129.891, 10.3165, 29.6354)
+mesh = SubResource("QuadMesh_r4i36")
+skeleton = NodePath("../..")
+
+[node name="Door44" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(3.86729, 0, 1.02179, 0, 4, 0, -1.02179, 0, 3.86729, -133.382, 10.3165, 30.6082)
+mesh = SubResource("QuadMesh_r4i36")
+skeleton = NodePath("../..")
+
+[node name="Door45" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(3.86729, 0, 1.02179, 0, 4, 0, -1.02179, 0, 3.86729, -129.891, 12.4396, 29.6354)
+mesh = SubResource("QuadMesh_r4i36")
+skeleton = NodePath("../..")
+
+[node name="Door46" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(3.86729, 0, 1.02179, 0, 4, 0, -1.02179, 0, 3.86729, -133.382, 12.4396, 30.6082)
+mesh = SubResource("QuadMesh_r4i36")
+skeleton = NodePath("../..")
+
+[node name="Door47" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(3.86729, 0, 1.02179, 0, 4, 0, -1.02179, 0, 3.86729, -136.998, 6.12827, 31.5844)
+mesh = SubResource("QuadMesh_r4i36")
+skeleton = NodePath("../..")
+
+[node name="Door48" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(3.86729, 0, 1.02179, 0, 4, 0, -1.02179, 0, 3.86729, -136.998, 8.25136, 31.5844)
+mesh = SubResource("QuadMesh_r4i36")
+skeleton = NodePath("../..")
+
+[node name="Door49" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(3.86729, 0, 1.02179, 0, 4, 0, -1.02179, 0, 3.86729, -129.891, 6.12827, 29.6354)
+mesh = SubResource("QuadMesh_r4i36")
+skeleton = NodePath("../..")
+
+[node name="Door50" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(3.86729, 0, 1.02179, 0, 4, 0, -1.02179, 0, 3.86729, -133.382, 6.12827, 30.6082)
+mesh = SubResource("QuadMesh_r4i36")
+skeleton = NodePath("../..")
+
+[node name="Door51" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(3.86729, 0, 1.02179, 0, 4, 0, -1.02179, 0, 3.86729, -129.891, 8.25136, 29.6354)
+mesh = SubResource("QuadMesh_r4i36")
+skeleton = NodePath("../..")
+
+[node name="Door52" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(3.86729, 0, 1.02179, 0, 4, 0, -1.02179, 0, 3.86729, -133.382, 8.25136, 30.6082)
+mesh = SubResource("QuadMesh_r4i36")
+skeleton = NodePath("../..")
+
+[node name="Door8" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(-3.36525, 0, 2.16219, 0, 4, 0, -2.16219, 0, -3.36525, -71.7292, 2.49366, 92.4265)
+mesh = ExtResource("35_spnnr")
+skeleton = NodePath("../..")
+
+[node name="Door3" type="MeshInstance3D" parent="doors and windows"]
+transform = Transform3D(-3.36525, 0, 2.16219, 0, 4, 0, -2.16219, 0, -3.36525, -97.3865, 2.49366, 83.7523)
+mesh = SubResource("QuadMesh_qamlc")
+skeleton = NodePath("../..")
+
+[node name="trash cans" type="Node3D" parent="."]
+
+[node name="trashcan" type="StaticBody3D" parent="trash cans"]
+transform = Transform3D(0.999791, 0, -0.0204368, 0, 1, 0, 0.0204368, 0, 0.999791, -60.6855, 1.79451, -19.1772)
+
+[node name="Trash" type="Sprite3D" parent="trash cans/trashcan"]
+billboard = 2
+texture = ExtResource("44_0gbll")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trash cans/trashcan"]
+shape = SubResource("CylinderShape3D_3hg7v")
+
+[node name="trashcan2" type="StaticBody3D" parent="trash cans"]
+transform = Transform3D(0.999791, 0, -0.0204368, 0, 1, 0, 0.0204368, 0, 0.999791, -65.8392, 1.79451, -14.9571)
+
+[node name="Trash" type="Sprite3D" parent="trash cans/trashcan2"]
+billboard = 2
+texture = ExtResource("44_0gbll")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trash cans/trashcan2"]
+shape = SubResource("CylinderShape3D_3hg7v")
+
+[node name="trashcan3" type="StaticBody3D" parent="trash cans"]
+transform = Transform3D(0.999791, 0, -0.0204368, 0, 1, 0, 0.0204368, 0, 0.999791, -92.4246, 1.79451, -47.6211)
+
+[node name="Trash" type="Sprite3D" parent="trash cans/trashcan3"]
+billboard = 2
+texture = ExtResource("44_0gbll")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trash cans/trashcan3"]
+shape = SubResource("CylinderShape3D_3hg7v")
+
+[node name="trashcan4" type="StaticBody3D" parent="trash cans"]
+transform = Transform3D(0.999791, 0, -0.0204368, 0, 1, 0, 0.0204368, 0, 0.999791, -98.4968, 1.79451, -47.0698)
+
+[node name="Trash" type="Sprite3D" parent="trash cans/trashcan4"]
+billboard = 2
+texture = ExtResource("44_0gbll")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trash cans/trashcan4"]
+shape = SubResource("CylinderShape3D_3hg7v")
+
+[node name="trashcan5" type="StaticBody3D" parent="trash cans"]
+transform = Transform3D(0.999791, 0, -0.0204368, 0, 1, 0, 0.0204368, 0, 0.999791, -91.7383, 1.79451, -37.3589)
+
+[node name="Trash" type="Sprite3D" parent="trash cans/trashcan5"]
+billboard = 2
+texture = ExtResource("44_0gbll")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trash cans/trashcan5"]
+shape = SubResource("CylinderShape3D_3hg7v")
+
+[node name="trashcan6" type="StaticBody3D" parent="trash cans"]
+transform = Transform3D(0.999791, 0, -0.0204368, 0, 1, 0, 0.0204368, 0, 0.999791, -99.2231, 1.79451, -0.579773)
+
+[node name="Trash" type="Sprite3D" parent="trash cans/trashcan6"]
+billboard = 2
+texture = ExtResource("44_0gbll")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trash cans/trashcan6"]
+shape = SubResource("CylinderShape3D_3hg7v")
+
+[node name="trashcan7" type="StaticBody3D" parent="trash cans"]
+transform = Transform3D(0.999791, 0, -0.0204368, 0, 1, 0, 0.0204368, 0, 0.999791, -129.161, 1.79451, 19.7998)
+
+[node name="Trash" type="Sprite3D" parent="trash cans/trashcan7"]
+billboard = 2
+texture = ExtResource("44_0gbll")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trash cans/trashcan7"]
+shape = SubResource("CylinderShape3D_3hg7v")
+
+[node name="trashcan8" type="StaticBody3D" parent="trash cans"]
+transform = Transform3D(0.999791, 0, -0.0204368, 0, 1, 0, 0.0204368, 0, 0.999791, -143.575, 1.79451, 2.65905)
+
+[node name="Trash" type="Sprite3D" parent="trash cans/trashcan8"]
+billboard = 2
+texture = ExtResource("44_0gbll")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trash cans/trashcan8"]
+shape = SubResource("CylinderShape3D_3hg7v")
+
+[node name="trashcan9" type="StaticBody3D" parent="trash cans"]
+transform = Transform3D(0.999791, 0, -0.0204368, 0, 1, 0, 0.0204368, 0, 0.999791, -143.496, 1.79451, -13.329)
+
+[node name="Trash" type="Sprite3D" parent="trash cans/trashcan9"]
+billboard = 2
+texture = ExtResource("44_0gbll")
+
+[node name="Trash2" type="Sprite3D" parent="trash cans/trashcan9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8469, 0, -6.22365)
+billboard = 2
+texture = ExtResource("44_0gbll")
+
+[node name="Trash3" type="Sprite3D" parent="trash cans/trashcan9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.3867, 1.90735e-06, 14.5441)
+billboard = 2
+texture = ExtResource("44_0gbll")
+
+[node name="Trash4" type="Sprite3D" parent="trash cans/trashcan9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2729, 1.90735e-06, 49.0987)
+billboard = 2
+texture = ExtResource("44_0gbll")
+
+[node name="Trash5" type="Sprite3D" parent="trash cans/trashcan9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.3693, 3.8147e-06, 105.088)
+billboard = 2
+texture = ExtResource("44_0gbll")
+
+[node name="Trash6" type="Sprite3D" parent="trash cans/trashcan9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 136.086, 6.19888e-06, 104.576)
+billboard = 2
+texture = ExtResource("44_0gbll")
+
+[node name="Trash7" type="Sprite3D" parent="trash cans/trashcan9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135.135, 6.19888e-06, 101.919)
+billboard = 2
+texture = ExtResource("44_0gbll")
+
+[node name="Trash8" type="Sprite3D" parent="trash cans/trashcan9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 150.854, 6.19888e-06, 102.11)
+billboard = 2
+texture = ExtResource("44_0gbll")
+
+[node name="Trash9" type="Sprite3D" parent="trash cans/trashcan9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 150.781, 6.19888e-06, 98.6818)
+billboard = 2
+texture = ExtResource("44_0gbll")
+
+[node name="Trash10" type="Sprite3D" parent="trash cans/trashcan9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 154.655, 6.19888e-06, 99.0292)
+billboard = 2
+texture = ExtResource("44_0gbll")
+
+[node name="Trash11" type="Sprite3D" parent="trash cans/trashcan9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 149.809, 6.19888e-06, 68.0955)
+billboard = 2
+texture = ExtResource("44_0gbll")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trash cans/trashcan9"]
+shape = SubResource("CylinderShape3D_3hg7v")
+
+[node name="trashcan10" type="StaticBody3D" parent="trash cans"]
+transform = Transform3D(0.999791, 0, -0.0204368, 0, 1, 0, 0.0204368, 0, 0.999791, -150.848, 1.79451, -24.5585)
+
+[node name="Trash" type="Sprite3D" parent="trash cans/trashcan10"]
+billboard = 2
+texture = ExtResource("44_0gbll")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trash cans/trashcan10"]
+shape = SubResource("CylinderShape3D_3hg7v")
+
+[node name="trashcan14" type="StaticBody3D" parent="trash cans"]
+transform = Transform3D(0.999791, 0, -0.0204368, 0, 1, 0, 0.0204368, 0, 0.999791, -15.7579, 1.79451, -51.5646)
+
+[node name="Trash" type="Sprite3D" parent="trash cans/trashcan14"]
+billboard = 2
+texture = ExtResource("44_0gbll")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trash cans/trashcan14"]
+shape = SubResource("CylinderShape3D_3hg7v")
+
+[node name="trashcan15" type="StaticBody3D" parent="trash cans"]
+transform = Transform3D(0.999791, 0, -0.0204368, 0, 1, 0, 0.0204368, 0, 0.999791, -79.5932, 1.79451, -70.2299)
+
+[node name="Trash" type="Sprite3D" parent="trash cans/trashcan15"]
+billboard = 2
+texture = ExtResource("44_0gbll")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trash cans/trashcan15"]
+shape = SubResource("CylinderShape3D_3hg7v")
+
+[node name="trashcan16" type="StaticBody3D" parent="trash cans"]
+transform = Transform3D(0.999791, 0, -0.0204368, 0, 1, 0, 0.0204368, 0, 0.999791, -117.526, 1.79451, -75.6341)
+
+[node name="Trash" type="Sprite3D" parent="trash cans/trashcan16"]
+billboard = 2
+texture = ExtResource("44_0gbll")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trash cans/trashcan16"]
+shape = SubResource("CylinderShape3D_3hg7v")
+
+[node name="trashcan11" type="StaticBody3D" parent="trash cans"]
+transform = Transform3D(0.999791, 0, -0.0204368, 0, 1, 0, 0.0204368, 0, 0.999791, -146.855, 1.79451, -22.0491)
+
+[node name="Trash" type="Sprite3D" parent="trash cans/trashcan11"]
+billboard = 2
+texture = ExtResource("44_0gbll")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trash cans/trashcan11"]
+shape = SubResource("CylinderShape3D_3hg7v")
+
+[node name="trashcan12" type="StaticBody3D" parent="trash cans"]
+transform = Transform3D(0.999791, 0, -0.0204368, 0, 1, 0, 0.0204368, 0, 0.999791, -149.884, 1.79451, -20.5455)
+
+[node name="Trash" type="Sprite3D" parent="trash cans/trashcan12"]
+billboard = 2
+texture = ExtResource("44_0gbll")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trash cans/trashcan12"]
+shape = SubResource("CylinderShape3D_3hg7v")
+
+[node name="trashcan13" type="StaticBody3D" parent="trash cans"]
+transform = Transform3D(2.48948, 0, -0.0508875, 0, 2.49, 0, 0.0508875, 0, 2.48948, -148.473, 3.65652, -26.3959)
+
+[node name="Trash" type="Sprite3D" parent="trash cans/trashcan13"]
+billboard = 2
+texture = ExtResource("44_0gbll")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trash cans/trashcan13"]
+shape = SubResource("CylinderShape3D_3hg7v")
 
 [connection signal="body_entered" from="gateway" to="gateway" method="_on_body_entered"]
