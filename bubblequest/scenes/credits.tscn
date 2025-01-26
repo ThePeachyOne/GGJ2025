@@ -1,0 +1,177 @@
+[gd_scene load_steps=4 format=3 uid="uid://uwym8ux2q6ic"]
+
+[ext_resource type="Theme" uid="uid://dpg2x1a15e835" path="res://assets/main_menu_theme.tres" id="1_8lswo"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="2_xi5vb"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6dfet"]
+
+[node name="Credits" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_8lswo")
+script = ExtResource("2_xi5vb")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 70
+theme_override_constants/margin_top = 70
+theme_override_constants/margin_right = 70
+theme_override_constants/margin_bottom = 70
+
+[node name="Bonus!" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_type_variation = &"CreditsLabel"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+size_flags_stretch_ratio = 2.0
+
+[node name="HSplitContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+theme_override_constants/separation = 20
+
+[node name="Programmers" type="Label" parent="VBoxContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Programmers"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Artists" type="Label" parent="VBoxContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Artists
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer/HSplitContainer/Artists"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -34.0
+offset_top = -34.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_type_variation = &"Exit"
+theme_override_font_sizes/font_size = 27
+text = "Guests!"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+material = SubResource("CanvasItemMaterial_6dfet")
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+theme_override_constants/separation = 15
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 25
+
+[node name="ProgrammerContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CreditsLabel"
+
+[node name="Logan" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer/ProgrammerContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+theme_type_variation = &"CreditsLabel"
+text = "Logan Brown - Dialog Systems, UI"
+vertical_alignment = 1
+
+[node name="David" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer/ProgrammerContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+theme_type_variation = &"CreditsLabel"
+text = "David McCool - Level Design, Programmer"
+
+[node name="Zach" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer/ProgrammerContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+theme_type_variation = &"CreditsLabel"
+text = "Zach Smith - Level Design, Programmer"
+
+[node name="Label4" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer/ProgrammerContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+theme_type_variation = &"CreditsLabel"
+text = "Connor Adkins - Level Design, Programmer"
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 15
+
+[node name="ArtistContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Alex" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer2/ArtistContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 6
+theme_type_variation = &"CreditsLabel"
+text = "Alexandria Pontius - Art Director"
+
+[node name="Kylie" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer2/ArtistContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 6
+theme_type_variation = &"CreditsLabel"
+text = "Kylie Kouba - Writer, Character Artist"
+vertical_alignment = 1
+
+[node name="Emily" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer2/ArtistContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 6
+theme_type_variation = &"CreditsLabel"
+text = "Emily Kouba - 3D Artist
+"
+
+[node name="Nick" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer2/ArtistContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 6
+theme_type_variation = &"CreditsLabel"
+text = "Caleb - 3D Artist
+"
+
+[node name="Nick2" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer2/ArtistContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 6
+theme_type_variation = &"CreditsLabel"
+text = "Nick Harris - Writer, Visual Editor"
