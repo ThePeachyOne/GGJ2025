@@ -100,7 +100,6 @@ size_flags_horizontal = 3
 theme_override_styles/separator = SubResource("StyleBoxEmpty_nle7x")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -137,4 +136,5 @@ justification_flags = 161
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
+theme_type_variation = &"Exit"
 text = "X"
