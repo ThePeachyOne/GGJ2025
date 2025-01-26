@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmhon2p6ohvc3"]
+
+[ext_resource type="Script" path="res://scripts/cutscene_manager.gd" id="1_ox8f1"]
+[ext_resource type="PackedScene" uid="uid://l3s1w32bk73d" path="res://scenes/Actor.tscn" id="2_xsq5q"]
+
+[node name="CutsceneManager" type="Node"]
+script = ExtResource("1_ox8f1")
+option_text_file = "res://assets/text/TEST_choices.txt"
+
+[node name="Richter" parent="." instance=ExtResource("2_xsq5q")]
+text_color = Color(0.0867468, 0.241061, 0.999986, 1)
+
+[node name="Dracula" parent="." instance=ExtResource("2_xsq5q")]
+sourceTextPath = "res://assets/text/TEST_dracula_dialog.txt"
+text_color = Color(0.699171, 0, 0.170923, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Option 1" type="Label" parent="MarginContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "This is some text."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Option 2" type="Label" parent="MarginContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "This is some different text."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Option 3" type="Label" parent="MarginContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Your mother."
+horizontal_alignment = 1
+vertical_alignment = 1

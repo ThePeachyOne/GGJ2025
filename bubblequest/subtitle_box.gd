@@ -1,8 +1,12 @@
+class_name SubtitleBox
 extends Control
 #Programmed and FULLY DOCUMENTED by Foxlord.
 
-## A list of Strings separated by what text box they will appear in.
-@onready var dialogList: PackedStringArray = load_file()
+signal out_of_dialog
+
+signal hit_branch
+
+signal dialog_box_advanced
 
 ## The path to the dialog file that will be used by this text box.
 @export_file("*.txt") var sourceTextPath: String
@@ -15,6 +19,9 @@ extends Control
 
 ## The Label corresponding to this SubtitleBox
 @onready var textBox: Label = $MarginContainer/Label
+
+## A list of Strings separated by what text box they will appear in.
+var dialogList: PackedStringArray
 
 ## Text for the potential routes that can be taken when a dialog path is chosen.
 ##
@@ -39,6 +46,11 @@ var is_selecting_path: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	dialogList = load_base_dialog()
+	dialogOptions = load_branch_dialog()
+	
+	$MarginContainer/Label.label_settings = LabelSettings.new()
+	$MarginContainer/Label.label_settings.resource_local_to_scene = true
 	if toggle_type_by_char:
 		textBox.text = ""
 		$Timer.timeout.connect(advance_char)
@@ -51,29 +63,6 @@ func _ready():
 func _process(delta):
 	pass
 	
-	
-## Everything here should be moved to a higher-level handler later.
-func _unhandled_key_input(event: InputEvent):
-	if not is_selecting_path and event.is_pressed():
-		match event.keycode:
-			KEY_Q:
-				advance_text()
-	
-	# This should be moved to a higher-level handler to be distributed to all relevant classes eventually.
-	if is_selecting_path and event.is_action_pressed("Select_Number"):
-		var selected_option: int
-		match event.keycode:
-			KEY_1:
-				selected_option = 0
-			KEY_2:
-				selected_option = 1
-			KEY_3:
-				selected_option = 2
-		choose_path(selected_option) if \
-			(selected_option >= 0 and selected_option < dialogOptions.size() ) else choose_path(-1)
-		
-
-	
 ## Change the text box to the next String in dialogList.
 func advance_text():
 	dialog_tick += 1
@@ -84,7 +73,7 @@ func advance_text():
 	# This method of switching paths is subject to change with a global handler.
 	if (dialog_tick >= dialogList.size()):
 		is_selecting_path = true
-		display_options()
+		#display_options()
 		return
 	
 	if toggle_type_by_char:
@@ -144,11 +133,49 @@ func choose_path(option: int):
 	dialog_tick = -1
 	advance_text()
 	
+func load_base_dialog() -> PackedStringArray:
+	var file = FileAccess.open(sourceTextPath, FileAccess.READ)
+	if file == null:
+		var temp_error_arr = PackedStringArray()
+		temp_error_arr.append("[FILE WAS NULL]")
+		return temp_error_arr
+	var content = file.get_as_text()
+		
+	var dialog = content.get_slice("<SPLIT>", 0)
+	dialog = dialog.strip_edges()
+	dialog = dialog.split("\n")
+	
+	file.close()
+	return dialog
+	
+func load_branch_dialog() -> PackedStringArray:
+	var file = FileAccess.open(sourceTextPath, FileAccess.READ)
+	if file == null:
+		var temp_error_arr = PackedStringArray()
+		temp_error_arr.append("[FILE WAS NULL]")
+		return temp_error_arr
+	var content = file.get_as_text()
+	
+	if not content.contains("<SPLIT>"):
+		var temp_error_arr = PackedStringArray()
+		temp_error_arr.append("[FILE CONTAINED NO BRANCHING DIALOG]")
+		return temp_error_arr
+	# Find the choices and split them up accordingly.
+	var temp_options = content.get_slice( "</SPLIT>", 0)
+	temp_options = temp_options.get_slice( "<SPLIT>", 1)
+	temp_options = temp_options.split("<CHOICE>")
+	
+	return temp_options
+
+	
 ## Look at the .txt file given and split on newline.
 ##
 ## Subject to adding further functionality.
 func load_file():
 	var file = FileAccess.open(sourceTextPath, FileAccess.READ)
+	if file == null:
+		dialogOptions.append("[FAILED TO LOAD FILE]")
+		return dialogOptions
 	var content = file.get_as_text()
 	
 	var label_parser: RegEx = RegEx.new()
@@ -181,3 +208,7 @@ func load_file():
 	#print("Options: ")
 	#print(split_options)
 	return dialog
+	
+## A helper function to change the color of the text in the textbox.
+func set_text_color(color: Color):
+	$MarginContainer/Label.label_settings.font_color = color

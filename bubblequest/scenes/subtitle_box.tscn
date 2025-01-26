@@ -38,7 +38,7 @@ layout_mode = 2
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Option 1"
+text = "This is some text."
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -46,7 +46,7 @@ vertical_alignment = 1
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Option 2"
+text = "This is some different text."
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -54,13 +54,13 @@ vertical_alignment = 1
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Option 3"
+text = "Your mother."
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label" type="Label" parent="MarginContainer"]
 layout_mode = 2
-text = "This is some default text"
+text = "Die Monster! You don't belong in this world!"
 horizontal_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -74,3 +74,4 @@ grow_vertical = 0
 texture = SubResource("GradientTexture1D_ykarv")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
