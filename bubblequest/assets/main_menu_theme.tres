@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=9 format=3 uid="uid://dpg2x1a15e835"]
+[gd_resource type="Theme" load_steps=12 format=3 uid="uid://dpg2x1a15e835"]
 
 [ext_resource type="FontFile" uid="uid://ckbpaw5l5m7nw" path="res://assets/text/Modak-Regular.ttf" id="1_08nxp"]
 [ext_resource type="FontFile" uid="uid://bs0ihnwet2u1r" path="res://assets/text/Matemasie-Regular.ttf" id="1_tkmo1"]
@@ -45,6 +45,42 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 20
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6pu78"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(0.286565, 0.2479, 0.37, 1)
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hi1mv"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(0.731113, 0.647215, 0.914358, 1)
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f3e27"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(0.286565, 0.2479, 0.37, 1)
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+corner_detail = 20
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_43lr6"]
 bg_color = Color(0.279966, 0.722874, 0.691716, 1)
 border_width_left = 30
@@ -66,6 +102,11 @@ Button/styles/focus = SubResource("StyleBoxEmpty_uqywr")
 Button/styles/hover = SubResource("StyleBoxFlat_dklev")
 Button/styles/normal = SubResource("StyleBoxFlat_0rcdn")
 Button/styles/pressed = SubResource("StyleBoxFlat_yes2v")
+CheckBox/constants/h_separation = 10
+Exit/base_type = &"Button"
+Exit/styles/hover = SubResource("StyleBoxFlat_6pu78")
+Exit/styles/normal = SubResource("StyleBoxFlat_hi1mv")
+Exit/styles/pressed = SubResource("StyleBoxFlat_f3e27")
 HSlider/icons/grabber = ExtResource("2_x1gyo")
 HSlider/icons/grabber_disabled = null
 HSlider/icons/grabber_highlight = ExtResource("2_x1gyo")

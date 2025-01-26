@@ -3,6 +3,7 @@ extends Node
 signal choosing_option
 signal option_chosen
 signal change_speaker(new_speaker: Actor)
+signal bubbled
 
 @export_category("Record of my Shame")
 ## Nothing here is used if this is toggled off.
@@ -137,6 +138,8 @@ func _unhandled_key_input(event: InputEvent):
 			KEY_1:
 				selected_option = 0
 			KEY_2:
+				# Not in any way intended to be permanent. 
+				bubbled.emit()
 				selected_option = 1
 			KEY_3:
 				selected_option = 2

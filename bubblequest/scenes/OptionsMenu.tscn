@@ -1,10 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://sd7y6y3icpsn"]
+[gd_scene load_steps=6 format=3 uid="uid://sd7y6y3icpsn"]
 
 [ext_resource type="Theme" uid="uid://dpg2x1a15e835" path="res://assets/main_menu_theme.tres" id="1_mb4mj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7u7ms"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nle7x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_udod4"]
+bg_color = Color(0.460904, 0.0027758, 0.87446, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.77, 0.754857, 0.3157, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_brnnt"]
 
 [node name="OptionsMenu" type="Control"]
 layout_mode = 3
@@ -57,6 +71,7 @@ alignment = 1
 
 [node name="CheckBox" type="CheckBox" parent="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
+text = "Enable Sheep"
 
 [node name="CheckButton" type="CheckButton" parent="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -71,6 +86,9 @@ layout_mode = 2
 layout_mode = 2
 text = "Spawn Your Mother"
 
+[node name="MenuButton" type="MenuButton" parent="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
 [node name="VSeparator2" type="VSeparator" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -80,3 +98,43 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_7u7ms")
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/separator = SubResource("StyleBoxEmpty_nle7x")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 70
+theme_override_constants/margin_top = 70
+theme_override_constants/margin_right = 70
+theme_override_constants/margin_bottom = 70
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_udod4")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_right = 35
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_brnnt")
+text = "My name is Yoshikage Kira. I’m 33 years old. My house is in the northeast section of Morioh, where all the villas are, and I am not married. I work as an employee for the Kame Yu department stores, and I get home every day by 8 PM at the latest. I don’t smoke, but I occasionally drink. I’m in bed by 11 PM, and make sure I get eight hours of sleep, no matter what. After having a glass of warm milk and doing about twenty minutes of stretches before going to bed, I usually have no problems sleeping until morning. Just like a baby, I wake up without any fatigue or stress in the morning.
+
+I was told there were no issues at my last check-up. I’m trying to explain that I’m a person who wishes to live a very quiet life. I take care not to trouble myself with any enemies, like winning and losing, that would cause me to lose sleep at night. That is how I deal with society, and I know that is what brings me happiness. Although, if I were to fight I wouldn’t lose to anyone."
+horizontal_alignment = 1
+vertical_alignment = 3
+autowrap_mode = 2
+justification_flags = 161
+
+[node name="Exit" type="Button" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "X"
