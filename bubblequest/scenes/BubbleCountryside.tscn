@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://dbevkw7ic4o6f"]
+[gd_scene load_steps=35 format=3 uid="uid://dbevkw7ic4o6f"]
 
 [ext_resource type="PackedScene" uid="uid://dpsy06y08shnc" path="res://scenes/player.tscn" id="1_mjvoc"]
 [ext_resource type="PackedScene" uid="uid://boweijfs0ysdy" path="res://scenes/rock.tscn" id="2_fpxtt"]
@@ -10,10 +10,12 @@
 [ext_resource type="PackedScene" uid="uid://bnds675i6pmgw" path="res://scenes/barn.tscn" id="7_mekcm"]
 [ext_resource type="PackedScene" uid="uid://i1v15jcmect3" path="res://scenes/big_rock.tscn" id="8_47pxs"]
 [ext_resource type="PackedScene" uid="uid://biogpwdm4mp1k" path="res://scenes/npc_root.tscn" id="10_aakfw"]
-[ext_resource type="Texture2D" uid="uid://d0m0g5r24gu5r" path="res://icon.svg" id="11_8dfdf"]
-[ext_resource type="AudioStream" uid="uid://c3cx41n7l4fwq" path="res://assets/audio/eeaaooeeaa.ogg" id="12_35png"]
-[ext_resource type="AudioStream" uid="uid://mlmxf5cs831r" path="res://assets/audio/oobbeebboo.ogg" id="13_w6i7s"]
+[ext_resource type="Texture2D" uid="uid://dhpflyxs7mjbt" path="res://assets/characters/poppy_star/models/poppy_star1.png" id="12_7pa34"]
+[ext_resource type="Texture2D" uid="uid://dfaw6deuiirea" path="res://assets/characters/charlotte/models/rich_child1.png" id="13_h6u7r"]
+[ext_resource type="Texture2D" uid="uid://xg21r6dbi4m6" path="res://assets/characters/mr_beef/models/Office-Cow.png" id="14_k0sgn"]
 [ext_resource type="Texture2D" uid="uid://beem6y1x8v12p" path="res://assets/textures/tree.png" id="14_ynajd"]
+[ext_resource type="Texture2D" uid="uid://sstkeebfmpsm" path="res://assets/characters/mr_beef/models/Suitless-Cow.png" id="15_eoewa"]
+[ext_resource type="Texture2D" uid="uid://d3mfjr61nygg" path="res://assets/characters/mr_beef/models/Office-Cow-Alt.png" id="16_40i7f"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sg2e6"]
 
@@ -802,14 +804,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.6183, 0.748153, -33.751)
 [node name="bush61" parent="bushes" instance=ExtResource("6_jk55g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.1818, 0.748153, -42.6068)
 
-[node name="fisshica" parent="." instance=ExtResource("10_aakfw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.107, 0.748155, -101.56)
-NAMEHERE = "fishman"
-DIALOGFILE = "res://assets/text/Fishicca.txt"
-CHOICEFILE = "res://assets/text/Fishicca Choices.txt"
-IMAGE = ExtResource("11_8dfdf")
-audioList = [ExtResource("12_35png"), ExtResource("13_w6i7s")]
-
 [node name="trees" type="Node3D" parent="."]
 
 [node name="tree" type="StaticBody3D" parent="trees"]
@@ -1097,3 +1091,37 @@ skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="trees/tree26"]
 shape = SubResource("CapsuleShape3D_eynjq")
+
+[node name="Poppy Star" parent="." instance=ExtResource("10_aakfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.6686, 0.748155, 37.6652)
+NAMEHERE = "Poppy Star"
+DIALOGFILE = "res://assets/characters/poppy_star/text_files/Erin (PoppyStar).txt"
+CHOICEFILE = "res://assets/characters/poppy_star/text_files/Erin Choices (PoppyStar).txt"
+IMAGE = ExtResource("12_7pa34")
+
+[node name="Charolette" parent="." instance=ExtResource("10_aakfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5633, 0.748155, -100.727)
+DIALOGFILE = "res://assets/characters/charlotte/text_files/Charlotte (frogmode).txt"
+CHOICEFILE = "res://assets/characters/charlotte/text_files/Charlotte Choices (frogmode).txt"
+IMAGE = ExtResource("13_h6u7r")
+
+[node name="Potato Guy" parent="." instance=ExtResource("10_aakfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.958, 0.748155, 15.4419)
+
+[node name="Rock Guy" parent="." instance=ExtResource("10_aakfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.3838, 0.748155, 111.721)
+
+[node name="Cow Gang Leader" parent="." instance=ExtResource("10_aakfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.4693, 0.748155, -18.4828)
+NAMEHERE = "Cow Trio"
+DIALOGFILE = "res://assets/characters/mr_beef/text_files/cow trio.txt"
+CHOICEFILE = "res://assets/characters/mr_beef/text_files/cow trio Choices.txt"
+IMAGE = ExtResource("14_k0sgn")
+
+[node name="npcRoot" parent="." instance=ExtResource("10_aakfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.4818, 0.748155, -18.5862)
+IMAGE = ExtResource("15_eoewa")
+
+[node name="npcRoot2" parent="." instance=ExtResource("10_aakfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.5048, 0.748155, -19.021)
+IMAGE = ExtResource("16_40i7f")
