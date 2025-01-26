@@ -1,4 +1,4 @@
-[gd_scene load_steps=195 format=3 uid="uid://beu4ays7fse4n"]
+[gd_scene load_steps=206 format=3 uid="uid://beu4ays7fse4n"]
 
 [ext_resource type="Script" path="res://scenes/bubbleton.gd" id="1_j5pd1"]
 [ext_resource type="PackedScene" uid="uid://dpsy06y08shnc" path="res://scenes/player.tscn" id="1_s3dw0"]
@@ -39,20 +39,31 @@
 [ext_resource type="Script" path="res://scenes/gateway.gd" id="33_q4km1"]
 [ext_resource type="Texture2D" uid="uid://cg28ewbarlmm5" path="res://assets/textures/door.png" id="34_87btl"]
 [ext_resource type="Texture2D" uid="uid://b6418glnpc7wt" path="res://assets/textures/countryside.png" id="34_416b5"]
+[ext_resource type="AudioStream" uid="uid://cu0qi0a8085dx" path="res://assets/audio/bubblequest-fan-001.ogg" id="34_nd3ks"]
 [ext_resource type="Texture2D" uid="uid://dfaw6deuiirea" path="res://assets/characters/charlotte/models/rich_child1.png" id="34_xoqws"]
 [ext_resource type="Texture2D" uid="uid://lnv1d3n7upco" path="res://assets/textures/doubledoor.png" id="35_61r3e"]
 [ext_resource type="Texture2D" uid="uid://clgh7uvk826po" path="res://assets/characters/butler/models/Mormon_Butler.png" id="35_72mhh"]
+[ext_resource type="AudioStream" uid="uid://cx07bwogejc6q" path="res://assets/audio/bubblequest-player.ogg" id="35_i22aa"]
 [ext_resource type="QuadMesh" uid="uid://brn142eameasp" path="res://assets/models/doubledoor.tres" id="35_spnnr"]
+[ext_resource type="AudioStream" uid="uid://b62w28064mp2x" path="res://assets/audio/bubblequest-fan-002.ogg" id="36_c2337"]
 [ext_resource type="Texture2D" uid="uid://cxwwcsf73546t" path="res://assets/characters/einstein/models/EinsteinClosed.png" id="36_hld4b"]
 [ext_resource type="Texture2D" uid="uid://4bcyxhmupxbg" path="res://assets/textures/glassdoor.png" id="36_ro3kc"]
 [ext_resource type="Texture2D" uid="uid://3cmrb82w626r" path="res://assets/characters/frogbert/models/frogbert_base.png" id="37_g6y5i"]
+[ext_resource type="AudioStream" uid="uid://ca68yhguw5jny" path="res://assets/audio/bubblequest-fan-003.ogg" id="37_wr4pa"]
+[ext_resource type="AudioStream" uid="uid://dys1oxfplwcib" path="res://assets/audio/bubblequest-fan-004.ogg" id="38_bivov"]
 [ext_resource type="Texture2D" uid="uid://c4m4t0sfn2s68" path="res://assets/characters/the_twins/william/models/William.png" id="38_g6etb"]
 [ext_resource type="Texture2D" uid="uid://cgx08odp42f20" path="res://assets/textures/window.png" id="38_xjabr"]
 [ext_resource type="Texture2D" uid="uid://dhj16vp5i4df7" path="res://assets/characters/the_twins/walter/models/Walter.png" id="39_4jw35"]
+[ext_resource type="AudioStream" uid="uid://dih02o02x7ef3" path="res://assets/audio/bubblequest-fan-005.ogg" id="39_nr8x0"]
 [ext_resource type="Texture2D" uid="uid://cv73cyb6bhp3y" path="res://assets/textures/roundwindow.png" id="39_qcjc0"]
+[ext_resource type="AudioStream" uid="uid://0smf1ft0qeef" path="res://assets/audio/bubblequest-butler-001.ogg" id="41_ld2nv"]
+[ext_resource type="AudioStream" uid="uid://biq6e0kc3gkxa" path="res://assets/audio/bubblequest-butler-002.ogg" id="42_3wel6"]
+[ext_resource type="AudioStream" uid="uid://dw2nayfvddqii" path="res://assets/audio/bubblequest-butler-003.ogg" id="43_mg1e8"]
 [ext_resource type="Texture2D" uid="uid://bj4kltknbuu2" path="res://assets/textures/fun.png" id="43_p5lfm"]
 [ext_resource type="Texture2D" uid="uid://ds0tmooe8dhrx" path="res://assets/textures/trashcan.png" id="44_0gbll"]
+[ext_resource type="AudioStream" uid="uid://crt56j2kq5wt4" path="res://assets/audio/bubblequest-butler-004.ogg" id="44_1sslb"]
 [ext_resource type="PackedScene" uid="uid://co83dc4jiue4" path="res://scenes/rat_root.tscn" id="45_cqqkd"]
+[ext_resource type="AudioStream" uid="uid://5fj6aeeipvnw" path="res://assets/audio/bubblequest-butler-005.ogg" id="45_dda2q"]
 [ext_resource type="PackedScene" uid="uid://dbhh10qk8cld5" path="res://scenes/running_guy.tscn" id="46_r3aax"]
 [ext_resource type="PackedScene" uid="uid://df5gwwsxk0g8w" path="res://scenes/bubble_spawn_plane.tscn" id="47_np0fs"]
 
@@ -4435,12 +4446,7 @@ NAMEHERE = "Derranged Fan"
 DIALOGFILE = "res://assets/characters/fanboy/text_files/Deranged Fan.txt"
 CHOICEFILE = "res://assets/characters/fanboy/text_files/Deranged Fan Choices.txt"
 IMAGE = ExtResource("33_1l7in")
-
-[node name="brat" parent="NPCs" instance=ExtResource("32_8r0ja")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.8793, 0.5, 48.0287)
-NAMEHERE = "Charlotte"
-DIALOGFILE = "res://assets/characters/charlotte/text_files/Charlotte (normal)[HAS NO CHOICES].txt"
-IMAGE = ExtResource("34_xoqws")
+audioList = [ExtResource("34_nd3ks"), ExtResource("35_i22aa"), ExtResource("36_c2337"), ExtResource("37_wr4pa"), ExtResource("35_i22aa"), ExtResource("38_bivov"), ExtResource("35_i22aa"), ExtResource("39_nr8x0")]
 
 [node name="butler" parent="NPCs" instance=ExtResource("32_8r0ja")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.6209, 0.5, 53.1894)
@@ -4448,6 +4454,7 @@ NAMEHERE = "Alfred"
 DIALOGFILE = "res://assets/characters/butler/text_files/Alfred (butler).txt"
 CHOICEFILE = "res://assets/characters/butler/text_files/Alfred Choices (butler).txt"
 IMAGE = ExtResource("35_72mhh")
+audioList = [ExtResource("41_ld2nv"), ExtResource("35_i22aa"), ExtResource("42_3wel6"), ExtResource("43_mg1e8"), ExtResource("35_i22aa"), ExtResource("44_1sslb"), ExtResource("35_i22aa"), ExtResource("45_dda2q")]
 
 [node name="Einstein" parent="NPCs" instance=ExtResource("32_8r0ja")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -120.699, 2.58428, 58.7792)
@@ -4455,9 +4462,10 @@ NAMEHERE = "Einstein"
 DIALOGFILE = "res://assets/characters/einstein/text_files/Einstein.txt"
 CHOICEFILE = "res://assets/characters/einstein/text_files/Einstein Choices.txt"
 IMAGE = ExtResource("36_hld4b")
+audioList = [null, null, null, null, null, null, null, null, null, null, null, null]
 
 [node name="Chadwick" parent="NPCs" instance=ExtResource("32_8r0ja")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.98607, 0.875466, 76.4197)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.98012, 0.859093, 76.4138)
 NAMEHERE = "Chadwick"
 DIALOGFILE = "res://assets/characters/chadwick/text_files/Chadwick.txt"
 CHOICEFILE = "res://assets/characters/chadwick/text_files/Chadwick Choices.txt"
@@ -4480,6 +4488,11 @@ NAMEHERE = "Walter"
 DIALOGFILE = "res://assets/characters/the_twins/text_files/Walter and William.txt"
 CHOICEFILE = "res://assets/characters/the_twins/text_files/Walter and William Choices.txt"
 IMAGE = ExtResource("39_4jw35")
+
+[node name="Sprite3D" type="Sprite3D" parent="NPCs"]
+transform = Transform3D(0.0549837, 0, 0, 0, 0.0549837, 0, 0, 0, 0.0549837, -15.5989, 1.73028, 50.4397)
+billboard = 1
+texture = ExtResource("34_xoqws")
 
 [node name="plants" type="Node3D" parent="."]
 
