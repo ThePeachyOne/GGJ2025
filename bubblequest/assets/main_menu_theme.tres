@@ -20,7 +20,7 @@ corner_radius_bottom_right = 15
 corner_radius_bottom_left = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0rcdn"]
-bg_color = Color(3.85046e-07, 0.893543, 0.407127, 0)
+bg_color = Color(0, 0.894118, 0.407843, 0.0705882)
 border_width_left = 17
 border_width_top = 17
 border_width_right = 17
@@ -96,6 +96,8 @@ corner_radius_bottom_left = 50
 
 [resource]
 default_font = ExtResource("1_08nxp")
+Button/colors/font_outline_color = Color(0.151055, 0.747953, 0.786449, 1)
+Button/constants/outline_size = 10
 Button/font_sizes/font_size = 22
 Button/fonts/font = ExtResource("1_tkmo1")
 Button/styles/focus = SubResource("StyleBoxEmpty_uqywr")

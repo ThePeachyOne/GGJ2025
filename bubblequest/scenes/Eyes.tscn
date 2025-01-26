@@ -1,0 +1,90 @@
+[gd_scene load_steps=18 format=3 uid="uid://cmw2ulnpge05b"]
+
+[ext_resource type="Script" path="res://scripts/eyes.gd" id="1_dk2vh"]
+
+[sub_resource type="Curve" id="Curve_rsxrp"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_p3l5l"]
+curve = SubResource("Curve_rsxrp")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vor6v"]
+clearcoat_enabled = true
+clearcoat_roughness = 0.35
+clearcoat_texture = SubResource("CurveTexture_p3l5l")
+
+[sub_resource type="SphereMesh" id="SphereMesh_1u0sa"]
+material = SubResource("StandardMaterial3D_vor6v")
+
+[sub_resource type="Curve" id="Curve_ofcxt"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_hfag3"]
+curve = SubResource("Curve_ofcxt")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v68y3"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0.945098)
+clearcoat_enabled = true
+clearcoat_roughness = 0.28
+clearcoat_texture = SubResource("CurveTexture_hfag3")
+refraction_enabled = true
+refraction_scale = 0.35
+
+[sub_resource type="SphereMesh" id="SphereMesh_bk6ht"]
+material = SubResource("StandardMaterial3D_v68y3")
+
+[sub_resource type="Curve" id="Curve_yxonp"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_iqa5t"]
+curve = SubResource("Curve_yxonp")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t8xxc"]
+clearcoat_enabled = true
+clearcoat_roughness = 0.35
+clearcoat_texture = SubResource("CurveTexture_iqa5t")
+
+[sub_resource type="SphereMesh" id="SphereMesh_807rv"]
+material = SubResource("StandardMaterial3D_t8xxc")
+
+[sub_resource type="Curve" id="Curve_0f6su"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_56is5"]
+curve = SubResource("Curve_0f6su")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sq4bo"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0.945098)
+clearcoat_enabled = true
+clearcoat_roughness = 0.28
+clearcoat_texture = SubResource("CurveTexture_56is5")
+refraction_enabled = true
+refraction_scale = 0.35
+
+[sub_resource type="SphereMesh" id="SphereMesh_a6dbx"]
+material = SubResource("StandardMaterial3D_sq4bo")
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_dk2vh")
+
+[node name="The First Eye" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.514563, 0.2517, -0.819678, 0, 0.955946, 0.293544, 0.857452, -0.151047, 0.491894, -1, 0, 0)
+mesh = SubResource("SphereMesh_1u0sa")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="The First Eye"]
+transform = Transform3D(0.695136, 0, 0, 0, 0.695136, 0, 0, 0, 0.695136, 0, 0, 0.174718)
+mesh = SubResource("SphereMesh_bk6ht")
+
+[node name="The Second Eye" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.923168, -0.108372, 0.368803, -0.00327753, 0.957181, 0.28947, -0.384382, -0.268438, 0.883284, 1, 0, 0)
+mesh = SubResource("SphereMesh_807rv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="The Second Eye"]
+transform = Transform3D(0.695136, 0, 0, 0, 0.695136, 0, 0, 0, 0.695136, 0, 0, 0.174718)
+mesh = SubResource("SphereMesh_a6dbx")
