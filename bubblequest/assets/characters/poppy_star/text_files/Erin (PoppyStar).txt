@@ -1,0 +1,35 @@
+Erin: Um, who are you? I’ve never seen you.
+Player: I’m new in town! Wandering around, stuck in a bubble, you know any way I can fix that?
+Erin: I don’t know…
+Erin: Why would I know? Leave me alone, back off.
+Player: Whoa, it’s okay, what’s got you all jumpy?
+Erin: You really don’t know?
+Erin: You don’t recognize me?
+Player: No clue. Doesn’t ring a bell.
+Erin: Poppy?
+Player: *silence*
+Erin: I’m PoppyStar!
+Player: *silence*
+Erin: Really? Nothing? Okay…
+Erin: Never mind, I don’t want to talk about it.
+Erin: Mind if I rant?
+Player: Do I really have a choice, stranger?
+Erin: You don’t have anything better to do, you’re stuck in a bubble.
+Erin: So my managers, they’re gouging me for ‘more performances’ and ‘new content’ and ‘a fresh new look’ and it’s ridiculous!
+Erin: What we had was perfect! And now I want nothing to do with it!
+Erin: I want to settle down and… I don’t know, learn knitting or something.
+Player: What happened?
+Erin: I had this fan… *verbal shiver*
+Erin: I don’t even know who is it, they’re obsessed though.
+Erin: Like committedly obsessed.
+Erin: The amount of dangerous fan mail…
+Erin: It’s just not safe anymore. I want to be myself again.
+Erin: The big company wants a big break for the ‘newest highlight of progression’. 
+Erin: By changing my look and saying ‘I’m stronger than the haters and braver than the dangers.’
+Erin: But that’s not really me. I don’t know.
+<SPLIT>
+Erin: Yeah… I guess they’ll have to, thanks.
+<CHOICE>
+Erin: I mean it doesn’t hurt to try right?
+Erin: I’ll be free of their conniving at least, thank you.
+</SPLIT>

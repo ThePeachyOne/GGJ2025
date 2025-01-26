@@ -1,0 +1,14 @@
+Puppet Guy: Well hello there!
+Puppet Guy: How are you, it’s such a wonderful day!
+Puppet Guy: Do you wanna play a game?
+Puppet Guy: I love games, they are sooo fun!
+<SPLIT>
+Puppet Guy: Oh joy!
+Puppet Guy: Oh happy day!
+Puppet Guy: Ohhh but I have no idea what games we should play
+Puppet Guy: Maybe you should just go *sniffle*
+Player: Okay…
+<CHOICE>
+Puppet Guy: OHHHHHH HOW MEAN, HOW RUDE!
+Puppet Guy: Go away *sniffle* you’re no fun!
+</SPLIT>

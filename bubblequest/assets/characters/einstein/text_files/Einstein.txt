@@ -1,0 +1,13 @@
+Einstein: BARK… ehem…
+Einstein: Ah, greetings my bubble-wrapped acquaintance, hast thou pondered the physics of this hovering cyberspace before you?
+Player: Huh?
+Einstein: These floating sculptures of concrete, granite, and glass? Dost thou not contemplate the intermittent beauty and horror which each locale maintains?
+Player: Um…
+Einstein: Mine own thoughts are laden with such equivocal inquiries. Thou hast an obligation to speculate on the capacity of these locales to remain unscathed.
+Einstein: Wherefore dost I cogitate over this? For I am moderately at arraignment for these wonders. Mine own work hast traversed far and wide, across the Gold Road as well as into every Sunlit Path, simultaneously it is found breaching the Bridges of the Crescent. However, thou shall never bear witness to these alluring sensations if thou decide now to dally!
+Einstein: Wherefore dost thou tarry?
+<SPLIT>
+Einstein: Indubitably, my esteemed cavalier! Sojourn no longer and begin thine pilgrimage.
+<CHOICE>
+Einstein: Positively abysmal! Whether thou bide longer thou art no longer cherished here.
+</SPLIT>

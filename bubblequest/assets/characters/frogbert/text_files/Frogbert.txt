@@ -1,0 +1,12 @@
+Frogbert: Hey I don’t think I’ve met you before! *ribbit*
+Frogbert: It’s always good to meet someone new! *ribbit*
+Frogbert: So anyways how's it hoppin’? *ribbit*
+<SPLIT>
+Frogbert: That’s toad-ally awesome! *ribbit*
+Frogbert: I think… You should get going now! Hop to it! *ribbit*
+<CHOICE>
+Frogbert: That’s froggin’ boring… *ribbit*
+Player: What?
+Frogbert: Just frog-et about it… *ribbit*
+Frogbert: Hop along now…  *ribbit*
+</SPLIT>

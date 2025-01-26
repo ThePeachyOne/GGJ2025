@@ -1,0 +1,22 @@
+cow: Those who arrive first to the field get the freshest grain.
+Cow-IRL: Even the mightiest of Bulls can falter to the smallest of herding dogs.
+Big Hoss: Pure grain fear not the test of fire.
+cow: Do you know the works of Cowl Marks?
+Player: Hello to you too?
+Big Hoss: If his fields are united, separate them!
+Cow-IRL: Ponder and graze before you make a move, bubble biped.
+cow: Yes, do not bite the hand that provides the grain.
+Player: I’ve been searching for a way to escape this bubble, do you have that wisdom my astute cow acquaintances?
+Big Hoss: When able to graze, you must appear unable.
+Cow-IRL: Let your plans be dark as these fields at night.
+Big Hoss: Exactly, never trust a cow that doesn’t moo.
+cow: Moo!
+<SPLIT>
+Cow-IRL: Every field is conquered before it is trodden.
+cow: Ever present.
+Big Hoss: The true art of foraging is to subdue the grain without fighting.
+<CHOICE>
+cow: Yes, venture forth.
+Cow-IRL: If the herding dog has nipped your heels, do not retaliate.
+Big Hoss: You can thrive if you know when or when not to buck.
+</SPLIT>

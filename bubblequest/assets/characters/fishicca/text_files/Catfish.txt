@@ -1,0 +1,19 @@
+Catfish: Hmmm hellooo, you sure are a cutie!
+Catfish: What’s a cute bubble biped like yous doin’ here with lil’ ol’ me?
+Player: Um… I’m not um, interested…
+Catfish: Y’ain’t gotta love me back, just let me love ya all the same!
+Catfish: Plus, I ain’t gon’ pass up a charmin’ bein’ like yous!
+Player: There are um… other fish in the sea, literally.
+Catfish: But ain’t none as honeyed as you, sugar!
+Catfish: *pauses*
+Catfish: Well, there was one…
+Catfish: My dear Fishicca, I miss ‘er every day.
+Catfish: Stole’ away by that no good ol’ Bass.
+Catfish: I sure wish I could steal her right back and show her what she meant to me.
+Player: Why don’t you?
+Catfish: Bigger fish in a bigger pond, my sudsy pardner.
+<SPLIT>
+Catfish: Well, you’re sweet as pecan pie, dear. I’ll take my shot!
+<CHOICE>
+Catfish: Much like you, teehee.
+</SPLIT>

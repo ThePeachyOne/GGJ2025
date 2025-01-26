@@ -1,0 +1,9 @@
+Alfred: Good day, bubble connoisseur? How goes the venture?
+Player: It’s been an interesting day, and that isn’t a good thing.
+Alfred: Why the long face? At least you are not employed to service an insolent brat.
+Alfred: And at minimum wage no less! To think I tolerate such slander.
+<SPLIT>
+Alfred: Sadly, you’re truly wise my bubbled acquaintance. I will tolerate what I must for my loved ones.
+<CHOICE>
+Alfred: Maybe I’ll float away freely one day and leave all my cares behind, thank you, bubble friend.
+</SPLIT>

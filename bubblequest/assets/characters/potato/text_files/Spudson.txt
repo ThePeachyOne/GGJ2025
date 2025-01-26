@@ -1,0 +1,21 @@
+Spudson: is this computer running on Linux?
+<SPLIT>
+Spudson: Well you should have it running on Linux. 
+Spudson: It runs better. 
+Spudson: It's far more stable. 
+Spudson: It is infinitely more secure. 
+Spudson: Mostly has very little or no bloatware. 
+Spudson: Way more customization. 
+Spudson: Sure, I guess it's easier to use, but other than that and software support, it gets beat in every category. 
+Spudson: I would be surprised if you have any trouble seeing where the benefits are. Oh yeah, and it's free!
+<CHOICE>
+Spudson: I can’t believe you’d lie!
+Spudson: Well regardless you should have it running on Linux. 
+Spudson: It runs better. 
+Spudson: It's far more stable. 
+Spudson: It is infinitely more secure. 
+Spudson: Mostly has very little or no bloatware. 
+Spudson: Way more customization. 
+Spudson: Sure, I guess it's easier to use, but other than that and software support, it gets beat in every category. 
+Spudson: I would be surprised if you have any trouble seeing where the benefits are. Oh yeah, and it's free!
+</SPLIT>

@@ -1,0 +1,19 @@
+Charlotte: Hi…
+Player: Why the long face, kid?
+Charlotte: Mr. Alfred ran off and I don’ know what to do.
+Charlotte: *Sad noise*
+Charlotte: Mommy won’ be back for a loooooong time and I’m alone…
+Charlotte: Please, bubble person, I don’ know what to do.
+Charlotte: How am I gonna to get dresseded without help?
+Charlotte: And who else is gonna buy me candy?
+Charlotte: I just wanna go home, but I want to find Mr. Alfred too.
+Charlotte: He has to be all alone and scared, he don’ know where I am, he must be upset.
+Charlotte: I looked around our big house, an’ the city, an’ now out here, he’s not here.
+Charlotte: I don’t ‘member, I was cryin’ for more candy, then he just went *poof*.
+Player: I’m so sorry, Charlotte, is there anything I can do?
+Charlotte: I don’ know. I’m tired of lookin’ so I’m goin’ home.
+<SPLIT>
+Charlotte: Whatever, you’re not my boss.
+<CHOICE>
+Charlotte: Whatever, you’re not my boss.
+</SPLIT>
