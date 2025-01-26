@@ -4,16 +4,13 @@ extends CharacterBody3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
-@export var ROTATE_ADJUST = 0.003
+@export var ROTATE_ADJUST = 0.007
 var rot_x: float
 var rot_y: float
 
 #viewbob constants
 var bob_frequency
 var bob_amplitude
-var camera_default
-var bob_level = 0
-var bob_direction = 1
 
 func get_rotate_adjust():
 	return ROTATE_ADJUST
@@ -21,7 +18,6 @@ func get_rotate_adjust():
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	camera_default = $Camera3D.position
 
 func _unhandled_input(event):
 	match event.get_class():
@@ -33,11 +29,12 @@ func _unhandled_input(event):
 				rot_x += event.relative.y * (ROTATE_ADJUST/2)
 				rot_x = clamp(rot_x, -PI/2, PI/2)
 				transform.basis = Basis() # reset rotation
-				rotate_object_local(Vector3(0, 1, 0), -rot_y) #Always gonna be the global y axis.
-				rotate_object_local(Vector3(1, 0, 0), -rot_x)
+				rotate_object_local(Vector3(0,1,0),-rot_y) #Always gonna be the global y axis.
+				#rotate_object_local(Vector3(1, 0, 0), -rot_x)
+				
 		#"InputEventKey":
-		#	if Input.is_action_just_pressed("Escape"):
-		#		get_tree().quit()
+			#if Input.is_action_just_pressed("Escape"):
+			#	get_tree().quit()
 		
 	
 
@@ -62,11 +59,7 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 		
-	if velocity != Vector3(0,0,0):
-		bob_level += .1 * bob_direction
-		if bob_level > 2 or bob_level < -2:
-			bob_direction *= 1
-		$Camera3D.position.y = sin(bob_level * 2) * .05 
-	
+	#if velocity != 0:
+		#if
 
 	move_and_slide()
