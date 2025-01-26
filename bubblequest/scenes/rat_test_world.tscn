@@ -36,9 +36,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.1658, 2.73589, -2.32848)
 
 [node name="running_guy_root" parent="." instance=ExtResource("2_ur4se")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.189789, 1.83777, -16.9504)
+lower_bound = Vector2(-20, -20)
+upper_bound = Vector2(20, 20)
 
 [node name="rat_root" parent="." instance=ExtResource("1_wwh8q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0667, 1.0932, -16.4008)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.97894, 1.0932, -11.5695)
 
 [node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="."]
 transform = Transform3D(19.9223, 0, 0, 0, 1, 0, 0, 0, 5.53181, 0, 1.2063, 0)

@@ -13,7 +13,8 @@ func _process(delta):
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	if chase_object != null:
-		$NavigationAgent3D.target_position = chase_object.position
+		$NavigationAgent3D.target_position = chase_object.get_chase_point()
+		print(chase_object.position)
 	
 	var target = $NavigationAgent3D.get_next_path_position() - self.position
 	var direction = (transform.basis * Vector3(target.x, 0, target.z)).normalized()
@@ -25,3 +26,8 @@ func _process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 		
 	move_and_slide()
+	if self.position == $NavigationAgent3D.target_position:
+		$MeshInstance3D.look_at(Vector3($NavigationAgent3D.target_position.x,
+				self.position.y,
+				$NavigationAgent3D.target_position.z),
+				Vector3(0,1,0), false)

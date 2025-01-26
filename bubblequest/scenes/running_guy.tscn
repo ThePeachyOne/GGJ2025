@@ -1,8 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbhh10qk8cld5"]
+[gd_scene load_steps=8 format=3 uid="uid://dbhh10qk8cld5"]
 
 [ext_resource type="Script" path="res://scripts/running_guy.gd" id="1_m7ie0"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ygqtu"]
+albedo_color = Color(1, 0.196078, 0, 1)
+
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_dnxus"]
+material = SubResource("StandardMaterial3D_ygqtu")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qanbc"]
+albedo_color = Color(0.258824, 1, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1jar1"]
+material = SubResource("StandardMaterial3D_qanbc")
+size = Vector3(0.2, 0.2, 0.2)
+
+[sub_resource type="SphereMesh" id="SphereMesh_kauqn"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_imuyl"]
 
@@ -11,6 +24,15 @@ script = ExtResource("1_m7ie0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_dnxus")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(3.41766, 0, 0, 0, 1, 0, 0, 0, 2.44352, 0, 0.598228, -0.449502)
+mesh = SubResource("BoxMesh_1jar1")
+skeleton = NodePath("../..")
+
+[node name="follow_point" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.240455, 1.43602)
+mesh = SubResource("SphereMesh_kauqn")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 avoidance_enabled = true
