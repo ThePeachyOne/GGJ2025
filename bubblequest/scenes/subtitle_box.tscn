@@ -67,6 +67,7 @@ layout_mode = 2
 text = "Die Monster! You don't belong in this world!"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.2

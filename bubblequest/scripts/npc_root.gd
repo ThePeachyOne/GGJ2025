@@ -2,13 +2,20 @@ class_name npcRoot
 extends Area3D
 
 @export var ThreeDee : bool
+@export var potato : bool
+@export var fishicca : bool
+@export var rock : bool
+@export var jorb : bool
 
 var playerInArea = false
 var canActivateDialog = true
 @export var NAMEHERE = "badName"
 @export_file var DIALOGFILE = "res://assets/text/TEST_dracula_dialog.txt"
 @export_file var CHOICEFILE = "res://assets/text/TEST_choices.txt"
-@export var IMAGE : Texture2D
+@export var IMAGE = [] 
+var imageCount = 0
+var speakCount = 0 
+
 @export var audioList = []
 var audioCount = 0
 
@@ -31,11 +38,19 @@ func _ready():
 	
 	if ThreeDee:
 		$IMAGE_HERE.visible = false
+		if potato:
+			$potato.visible = true
+		if fishicca:
+			$potato.visible = true
+		if rock:
+			$potato.visible = true
+		if jorb:
+			$jorb.visible = true
+		
 	else:
-		$MODEL_HERE.visible = false
 		$IMAGE_HERE.mesh = $IMAGE_HERE.mesh.duplicate()
 		$IMAGE_HERE.mesh.material = $IMAGE_HERE.mesh.material.duplicate()
-		$IMAGE_HERE.mesh.material.albedo_texture = IMAGE
+		$IMAGE_HERE.mesh.material.albedo_texture = IMAGE[0]
 	
 
 
@@ -47,8 +62,12 @@ func _unhandled_key_input(event: InputEvent):
 	if event.is_action_pressed("Interact") and playerInArea and canActivateDialog: 
 		print("START DIALOG HERE")
 		canActivateDialog = false
+		$npcInteractText.visible = false
+		
 		$CutsceneManager.activate_dialog()
 		$npcSpeak.play()
+		$speakTimer.start()
+		
 		
 
 func _on_body_entered(body):
@@ -64,6 +83,8 @@ func _on_body_exited(body):
 
 func dialogAdvanced():
 	print("received")
+	$speakTimer.start()
+	
 	audioCount+=1
 	$npcSpeak.stream = audioList[audioCount]
 	$npcSpeak.play()		#figure out how to advance the audio index in the playlist
@@ -73,6 +94,17 @@ func bubbleNPC():
 	bubbled = true
 	$theBubble.visible = true
 	
-	
-	
-	
+func _on_speak_timer_timeout():
+	if imageCount == 0:
+		$IMAGE_HERE.mesh.material.albedo_texture = IMAGE[1]
+		imageCount = 1
+	else:
+		$IMAGE_HERE.mesh.material.albedo_texture = IMAGE[0]
+		imageCount = 0
+	if speakCount >= 10:
+		speakCount = 0
+	else:
+		speakCount+=1
+		$speakTimer.start()
+		
+		
