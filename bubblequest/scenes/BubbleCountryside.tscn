@@ -47,14 +47,14 @@ albedo_color = Color(0.735628, 0.542298, 0.239866, 1)
 material = SubResource("StandardMaterial3D_5a3ub")
 size = Vector3(50, 1, 15)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w0e28"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6ccmh"]
 transparency = 4
 albedo_texture = ExtResource("3_2doqg")
 uv1_offset = Vector3(0.5, 0.5, 0)
 uv1_triplanar = true
 
 [sub_resource type="QuadMesh" id="QuadMesh_y1add"]
-material = SubResource("StandardMaterial3D_w0e28")
+material = SubResource("StandardMaterial3D_6ccmh")
 size = Vector2(20, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_db4kw"]

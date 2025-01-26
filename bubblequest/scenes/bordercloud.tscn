@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://hyk6v0l227wm"]
+
+[ext_resource type="Texture2D" uid="uid://c7edfmkff8vge" path="res://assets/textures/cloud.png" id="1_bcfe0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1nb34"]
+size = Vector3(2.46576, 2.35229, 0.128265)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bc0oa"]
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_bcfe0")
+disable_receive_shadows = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_qvgkw"]
+material = SubResource("StandardMaterial3D_bc0oa")
+size = Vector2(3, 3)
+
+[node name="bordercloud" type="StaticBody3D"]
+transform = Transform3D(1, -4.23516e-22, -1.42109e-14, 2.11758e-21, 1, 0, 1.42109e-14, 7.10543e-15, 1, 0.981441, 1.54836, 2.88838)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 6.89909e-19, 2.13163e-14, -6.89909e-19, 1, 1.42113e-14, -2.13163e-14, -1.42113e-14, 1, 0.0472718, -0.0284355, 0.0408478)
+shape = SubResource("BoxShape3D_1nb34")
+
+[node name="Cloud138" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, -4.23516e-22, 0, -8.47033e-22, 1, 7.10543e-15, 0, 0, 1, 0, 2.98023e-07, 0)
+mesh = SubResource("QuadMesh_qvgkw")
+skeleton = NodePath("../../../..")

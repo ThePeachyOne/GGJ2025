@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=3 uid="uid://5y4y5gnt3qgo"]
+
+[ext_resource type="Texture2D" uid="uid://c7edfmkff8vge" path="res://assets/textures/cloud.png" id="1_3j8ue"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mjph8"]
+albedo_color = Color(1, 0.976471, 0.898039, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_f3cp8"]
+material = SubResource("StandardMaterial3D_mjph8")
+size = Vector2(20.665, 3.205)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_crvtn"]
+transparency = 4
+albedo_texture = ExtResource("1_3j8ue")
+
+[sub_resource type="QuadMesh" id="QuadMesh_p8u5b"]
+material = SubResource("StandardMaterial3D_crvtn")
+size = Vector2(3, 3)
+orientation = 1
+
+[node name="SideWalk" type="MeshInstance3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.38732, 0.501154, -14.6994)
+mesh = SubResource("PlaneMesh_f3cp8")
+
+[node name="Cloud69" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.267238, -2.72616e-08, -0.96363, -0.249406, 0.965926, -0.0691664, 0.930796, 0.258819, 0.258132, -7.4385, 0.018731, -1.22761)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud70" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.976672, 2.77526e-09, 0.214735, 0.0330737, 0.988068, -0.150428, -0.212173, 0.154021, 0.965018, -9.5331, -0.012248, -1.06273)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud78" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.998537, 7.61778e-08, -0.0540788, -0.0131616, 0.969932, -0.243022, 0.0524527, 0.243378, 0.968512, 9.44695, 0.052532, -1.40904)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud80" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.947769, -1.47233e-08, 0.318959, 0.0491263, 0.988068, 0.145976, -0.315153, 0.154021, -0.936459, 7.90155, -0.035821, -1.11048)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud81" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.267238, 1.43934e-08, -0.963631, -0.249406, 0.965926, -0.0691664, 0.930796, 0.258819, 0.258132, 6.00992, 0.018731, -1.42658)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud82" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.976672, 1.49817e-08, 0.214735, 0.0330737, 0.988068, -0.150428, -0.212173, 0.154021, 0.965018, 3.9153, -0.012248, -1.2617)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud83" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.857167, 1.43934e-08, -0.515038, -0.133302, 0.965926, 0.221851, 0.497489, 0.258819, -0.82796, 1.7332, 0.031943, -1.47589)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud84" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.965926, -1.03902e-08, -0.258819, -0.0398635, 0.988068, -0.148772, 0.255731, 0.154021, 0.9544, -0.3685, 0.039876, -1.59608)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud85" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.947768, 4.17444e-14, -0.318959, -0.0825527, 0.965926, 0.245301, 0.308091, 0.258819, -0.915474, -2.5076, 0.00345999, -1.36959)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud86" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.46793, -2.77149e-09, 0.883766, 0.136118, 0.988068, -0.0720709, -0.87322, 0.154021, 0.462346, -4.5496, 0.024579, -1.49795)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")
+
+[node name="Cloud87" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.161604, -1.61926e-08, -0.986856, -0.255417, 0.965926, 0.0418262, 0.953229, 0.258819, -0.156097, -6.6497, -0.013259, -1.30719)
+mesh = SubResource("QuadMesh_p8u5b")
+skeleton = NodePath("../../..")

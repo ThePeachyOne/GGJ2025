@@ -1,0 +1,205 @@
+[gd_scene load_steps=25 format=3 uid="uid://dn0c3gbjfexvi"]
+
+[ext_resource type="Script" path="res://scenes/house.gd" id="1_eys6j"]
+[ext_resource type="Texture2D" uid="uid://dv70hf4kf1tw3" path="res://assets/textures/brick.png" id="2_3yibo"]
+[ext_resource type="Shader" path="res://scenes/outline.gdshader" id="3_ru0io"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b0ii5"]
+render_priority = 0
+shader = ExtResource("3_ru0io")
+shader_parameter/color = Color(0, 0, 0, 1)
+shader_parameter/size = 1.01
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sv8wl"]
+next_pass = SubResource("ShaderMaterial_b0ii5")
+albedo_color = Color(0.932934, 0.902295, 0.694079, 1)
+albedo_texture = ExtResource("2_3yibo")
+uv1_scale = Vector3(0.3, 0.3, 0.3)
+uv1_triplanar = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oexby"]
+size = Vector3(10, 15, 30)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_pa57r"]
+material = SubResource("StandardMaterial3D_sv8wl")
+height = 15.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_gndon"]
+material = SubResource("StandardMaterial3D_sv8wl")
+height = 15.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_bqxay"]
+material = SubResource("StandardMaterial3D_sv8wl")
+height = 15.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_an4x5"]
+material = SubResource("StandardMaterial3D_sv8wl")
+height = 15.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_6t7d7"]
+material = SubResource("StandardMaterial3D_sv8wl")
+height = 10.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_8tup3"]
+material = SubResource("StandardMaterial3D_sv8wl")
+height = 10.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_1x55i"]
+material = SubResource("StandardMaterial3D_sv8wl")
+height = 10.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_16mhq"]
+material = SubResource("StandardMaterial3D_sv8wl")
+height = 10.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_t03x7"]
+material = SubResource("StandardMaterial3D_sv8wl")
+height = 30.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_hvvo4"]
+material = SubResource("StandardMaterial3D_sv8wl")
+height = 30.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_2hmq1"]
+material = SubResource("StandardMaterial3D_sv8wl")
+height = 30.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_818ii"]
+material = SubResource("StandardMaterial3D_sv8wl")
+height = 30.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_0oj43"]
+material = SubResource("StandardMaterial3D_sv8wl")
+size = Vector2(9, 14)
+
+[sub_resource type="QuadMesh" id="QuadMesh_64hff"]
+material = SubResource("StandardMaterial3D_sv8wl")
+size = Vector2(9, 14)
+
+[sub_resource type="QuadMesh" id="QuadMesh_70iwl"]
+material = SubResource("StandardMaterial3D_sv8wl")
+size = Vector2(9, 14)
+
+[sub_resource type="QuadMesh" id="QuadMesh_j7561"]
+material = SubResource("StandardMaterial3D_sv8wl")
+size = Vector2(9, 14)
+
+[sub_resource type="QuadMesh" id="QuadMesh_i4tly"]
+material = SubResource("StandardMaterial3D_sv8wl")
+size = Vector2(9, 29)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_ell5t"]
+material = SubResource("StandardMaterial3D_sv8wl")
+size = Vector2(9, 29)
+orientation = 1
+
+[node name="StaticBody3D" type="StaticBody3D"]
+script = ExtResource("1_eys6j")
+size = Vector3(10, 15, 30)
+material = SubResource("StandardMaterial3D_sv8wl")
+color = Color(0.932934, 0.902295, 0.694079, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.5, 0)
+shape = SubResource("BoxShape3D_oexby")
+
+[node name="pillars" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="pillars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 7.5, 14.5)
+mesh = SubResource("CapsuleMesh_pa57r")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="pillars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 7.5, 14.5)
+mesh = SubResource("CapsuleMesh_gndon")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="pillars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 7.5, -14.5)
+mesh = SubResource("CapsuleMesh_bqxay")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="pillars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 7.5, -14.5)
+mesh = SubResource("CapsuleMesh_an4x5")
+skeleton = NodePath("../..")
+
+[node name="lbars" type="Node3D" parent="."]
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="lbars"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 14.5, 14.5)
+mesh = SubResource("CapsuleMesh_6t7d7")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="lbars"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 14.5, -14.5)
+mesh = SubResource("CapsuleMesh_8tup3")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="lbars"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0.5, 14.5)
+mesh = SubResource("CapsuleMesh_1x55i")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="lbars"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0.5, -14.5)
+mesh = SubResource("CapsuleMesh_16mhq")
+skeleton = NodePath("../..")
+
+[node name="hbars" type="Node3D" parent="."]
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="hbars"]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 0, 4.37114e-08, 0, 1, -4.37114e-08, 4.5, 14.5, 0)
+mesh = SubResource("CapsuleMesh_t03x7")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="hbars"]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 0, 4.37114e-08, 0, 1, -4.37114e-08, -4.5, 14.5, 0)
+mesh = SubResource("CapsuleMesh_hvvo4")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="hbars"]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 0, 4.37114e-08, 0, 1, -4.37114e-08, 4.5, 0.5, 0)
+mesh = SubResource("CapsuleMesh_2hmq1")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="hbars"]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 0, 4.37114e-08, 0, 1, -4.37114e-08, -4.5, 0.5, 0)
+mesh = SubResource("CapsuleMesh_818ii")
+skeleton = NodePath("../..")
+
+[node name="lwalls" type="Node3D" parent="."]
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="lwalls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.5, 15)
+mesh = SubResource("QuadMesh_0oj43")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="lwalls"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 7.5, -15)
+mesh = SubResource("QuadMesh_64hff")
+skeleton = NodePath("../..")
+
+[node name="hwalls" type="Node3D" parent="."]
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="hwalls"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5, 7.5, 0)
+mesh = SubResource("QuadMesh_70iwl")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="hwalls"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -5, 7.5, 0)
+mesh = SubResource("QuadMesh_j7561")
+skeleton = NodePath("../..")
+
+[node name="caps" type="Node3D" parent="."]
+
+[node name="MeshInstance3D17" type="MeshInstance3D" parent="caps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15, 0)
+mesh = SubResource("QuadMesh_i4tly")
+
+[node name="MeshInstance3D18" type="MeshInstance3D" parent="caps"]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0)
+mesh = SubResource("QuadMesh_ell5t")

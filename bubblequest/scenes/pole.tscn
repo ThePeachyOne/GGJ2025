@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2lftkpk7ayju"]
+
+[ext_resource type="Texture2D" uid="uid://dwviw6rmwugtm" path="res://assets/textures/pole.png" id="1_015tu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t4fpr"]
+transparency = 4
+albedo_texture = ExtResource("1_015tu")
+billboard_mode = 2
+
+[sub_resource type="QuadMesh" id="QuadMesh_2yiq4"]
+material = SubResource("StandardMaterial3D_t4fpr")
+size = Vector2(4, 4)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_r4wct"]
+height = 4.0
+radius = 0.1
+
+[node name="pole" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7436, 2.48223, -3.65771)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("QuadMesh_2yiq4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_r4wct")

@@ -1,15 +1,63 @@
-[gd_scene load_steps=6 format=3 uid="uid://dpsy06y08shnc"]
+[gd_scene load_steps=13 format=3 uid="uid://dpsy06y08shnc"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ia6qt"]
+[ext_resource type="Shader" path="res://DogsToolkit/dither.gdshader" id="2_3vu8y"]
 [ext_resource type="Script" path="res://scripts/camera_3d.gd" id="2_8mvoo"]
 [ext_resource type="Script" path="res://DogsToolkit/BaseMenu.gd" id="2_pm1x2"]
+[ext_resource type="Shader" path="res://assets/shaders/bubble.gdshader" id="5_l1xkr"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_v533c"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3bwjs"]
+shader = ExtResource("2_3vu8y")
+shader_parameter/fog_color = null
+shader_parameter/resolution_downsampling = 2.0
+shader_parameter/bit_depth = 32.0
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xf067"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_3y102"]
 
+[sub_resource type="Environment" id="Environment_bpd4n"]
+background_mode = 1
+background_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l5hh6"]
+render_priority = 0
+shader = ExtResource("5_l1xkr")
+shader_parameter/fuwafuwa_speed = 1.5
+shader_parameter/fuwafuwa_size = 0.05
+shader_parameter/outline_color = Vector4(0.45, 0.7, 1, 1)
+shader_parameter/outline_ratio = 1.0
+shader_parameter/noise_speed = 0.2
+shader_parameter/noise_scale = 0.7
+
+[sub_resource type="SphereMesh" id="SphereMesh_by0lw"]
+material = SubResource("ShaderMaterial_l5hh6")
+flip_faces = true
+radius = 2.0
+height = 4.0
+
 [node name="player_root" type="CharacterBody3D" groups=["player"]]
 script = ExtResource("1_ia6qt")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ViewportTexture_v533c")
+
+[node name="Dither" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_3bwjs")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_xf067")
@@ -19,6 +67,8 @@ mesh = SubResource("CapsuleMesh_3y102")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.619315, 0)
+cull_mask = 1048573
+current = true
 script = ExtResource("2_8mvoo")
 
 [node name="BaseMenu" type="Control" parent="."]
@@ -32,3 +82,23 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_pm1x2")
 MenuStyle = 1
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+
+[node name="Node3D" type="Node3D" parent="SubViewport"]
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.619315, 0)
+cull_mask = 1047554
+environment = SubResource("Environment_bpd4n")
+current = true
+fov = 102.1
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="SubViewport/Node3D/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.36749)
+layers = 2
+sorting_offset = -100.0
+sorting_use_aabb_center = false
+mesh = SubResource("SphereMesh_by0lw")
+skeleton = NodePath("../../../..")
