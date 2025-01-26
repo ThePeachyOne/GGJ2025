@@ -20,6 +20,10 @@ signal dialog_box_advanced
 ## The Label corresponding to this SubtitleBox
 @onready var textBox: Label = $MarginContainer/Label
 
+## This is a String representation of the file.
+## It's here so I can parse out line indicators.
+var file_text: String
+
 ## A list of Strings separated by what text box they will appear in.
 var dialogList: PackedStringArray
 
@@ -46,6 +50,7 @@ var is_selecting_path: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	file_text = load_file_text()
 	dialogList = load_base_dialog()
 	dialogOptions = load_branch_dialog()
 	
@@ -133,28 +138,41 @@ func choose_path(option: int):
 	dialog_tick = -1
 	advance_text()
 	
-func load_base_dialog() -> PackedStringArray:
+## Load the sourceTextFile as a String and remove any lines starting with hashtags.
+func load_file_text() -> String:
 	var file = FileAccess.open(sourceTextPath, FileAccess.READ)
 	if file == null:
-		var temp_error_arr = PackedStringArray()
-		temp_error_arr.append("[FILE WAS NULL]")
-		return temp_error_arr
-	var content = file.get_as_text()
+		return "NULL"
 		
-	var dialog = content.get_slice("<SPLIT>", 0)
-	dialog = dialog.strip_edges()
-	dialog = dialog.split("\n")
+	var content = file.get_as_text()
+	var hashtag_parser = RegEx.new()
+	hashtag_parser.compile("(?:#\\d?).*\n?")
+	content = hashtag_parser.sub(content, "", true)
 	
 	file.close()
-	return dialog
 	
-func load_branch_dialog() -> PackedStringArray:
-	var file = FileAccess.open(sourceTextPath, FileAccess.READ)
-	if file == null:
+	return content
+
+## Load the dialog before branching.	
+func load_base_dialog() -> PackedStringArray:
+	if file_text == "NULL":
 		var temp_error_arr = PackedStringArray()
 		temp_error_arr.append("[FILE WAS NULL]")
 		return temp_error_arr
-	var content = file.get_as_text()
+		
+	var dialog = file_text.get_slice("<SPLIT>", 0)
+	dialog = dialog.strip_edges()
+	dialog = dialog.split("\n")
+
+	return dialog
+
+## Load the potential branching dialog.
+func load_branch_dialog() -> PackedStringArray:
+	if file_text == "NULL":
+		var temp_error_arr = PackedStringArray()
+		temp_error_arr.append("[FILE WAS NULL]")
+		return temp_error_arr
+	var content = file_text
 	
 	if not content.contains("<SPLIT>"):
 		var temp_error_arr = PackedStringArray()
