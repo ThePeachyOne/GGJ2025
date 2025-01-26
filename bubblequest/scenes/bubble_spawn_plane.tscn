@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://scripts/bubble_spawn_plane.gd" id="1_waoip"]
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_8rl1r"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_qxykj"]
 resource_local_to_scene = true
 
 [node name="BubbleSpawnPlane" type="MeshInstance3D"]
-transform = Transform3D(108.715, 0, 0, 0, 4.40821, 0, 0, 0, 110.136, 0, 0, 0)
-mesh = SubResource("PlaneMesh_8rl1r")
+transparency = 1.0
+mesh = SubResource("PlaneMesh_qxykj")
 script = ExtResource("1_waoip")
-num_spawners = 82
+num_spawners = 10
