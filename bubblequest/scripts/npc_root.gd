@@ -9,7 +9,7 @@ var canActivateDialog = true
 @export_file var DIALOGFILE = "res://assets/text/TEST_dracula_dialog.txt"
 @export_file var CHOICEFILE = "res://assets/text/TEST_choices.txt"
 @export var IMAGE : Texture2D
-@export var audioList = AudioStreamPlaylist
+@export var audioList = []
 var audioCount = 0
 
 var bubbled = false
@@ -27,7 +27,7 @@ func _ready():
 	
 	$CutsceneManager.one_file_box.dialog_box_advanced.connect(dialogAdvanced)
 	
-	$npcSpeak.stream = audioList
+	$npcSpeak.stream = audioList[audioCount]
 	
 	if ThreeDee:
 		$IMAGE_HERE.visible = false
@@ -65,6 +65,7 @@ func _on_body_exited(body):
 func dialogAdvanced():
 	print("received")
 	audioCount+=1
+	$npcSpeak.stream = audioList[audioCount]
 	$npcSpeak.play()		#figure out how to advance the audio index in the playlist
 	
 func bubbleNPC():
