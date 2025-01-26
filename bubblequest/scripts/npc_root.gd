@@ -9,6 +9,10 @@ var canActivateDialog = true
 @export_file var DIALOGFILE = "res://assets/text/TEST_dracula_dialog.txt"
 @export_file var CHOICEFILE = "res://assets/text/TEST_choices.txt"
 @export var IMAGE : Texture2D
+@export var audioList = AudioStreamPlaylist
+var audioCount = 0
+
+var bubbled = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,6 +24,10 @@ func _ready():
 	
 	$npcInteractText.mesh = $npcInteractText.mesh.duplicate()
 	$npcInteractText.mesh.text += NAMEHERE
+	
+	$CutsceneManager.one_file_box.dialog_box_advanced.connect(dialogAdvanced)
+	
+	$npcSpeak.stream = audioList
 	
 	if ThreeDee:
 		$IMAGE_HERE.visible = false
@@ -40,6 +48,7 @@ func _unhandled_key_input(event: InputEvent):
 		print("START DIALOG HERE")
 		canActivateDialog = false
 		$CutsceneManager.activate_dialog()
+		$npcSpeak.play()
 		
 
 func _on_body_entered(body):
@@ -53,8 +62,15 @@ func _on_body_exited(body):
 		playerInArea = false
 		$npcInteractText.visible = false
 
-#func customsignal():
-	#$CutsceneManager.one_file_box.dialog_box_advanced.connect(methodNAme)
+func dialogAdvanced():
+	print("received")
+	audioCount+=1
+	$npcSpeak.play()		#figure out how to advance the audio index in the playlist
+	
+func bubbleNPC():
+	print("bubbled!")
+	bubbled = true
+	$theBubble.visible = true
 	
 	
 	
