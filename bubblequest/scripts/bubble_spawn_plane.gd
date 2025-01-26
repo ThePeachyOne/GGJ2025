@@ -11,7 +11,7 @@ func _ready():
 	randomize()
 	var pos = position
 	var x_range: float = self.mesh.size.x/2
-	var z_range: float = self.mesh.size.z/2
+	var z_range: float = self.mesh.size.y/2
 	for i in range(num_spawners):
 		var instance = bubbleSpawner.instantiate()
 		pos.x = randf_range(position.x - x_range, position.x + x_range)
@@ -21,7 +21,7 @@ func _ready():
 		instance.preprocess = randf_range(0, 10)
 		add_child(instance)
 		#print(pos)
-	self.mesh.material.albedo_color.a = 0
+	#self.mesh.material.albedo_color.a = 0
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
