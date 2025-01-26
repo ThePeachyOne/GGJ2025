@@ -10,5 +10,3 @@ transform = Transform3D(108.715, 0, 0, 0, 4.40821, 0, 0, 0, 110.136, 0, 0, 0)
 mesh = SubResource("PlaneMesh_8rl1r")
 script = ExtResource("1_waoip")
 num_spawners = 82
-
-[node name="Camera3D" type="Camera3D" parent="."]
