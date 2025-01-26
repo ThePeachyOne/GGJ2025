@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://dbevkw7ic4o6f"]
+[gd_scene load_steps=37 format=3 uid="uid://dbevkw7ic4o6f"]
 
 [ext_resource type="PackedScene" uid="uid://dpsy06y08shnc" path="res://scenes/player.tscn" id="1_mjvoc"]
 [ext_resource type="PackedScene" uid="uid://boweijfs0ysdy" path="res://scenes/rock.tscn" id="2_fpxtt"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://ccsxm1qwioywp" path="res://scenes/cow.tscn" id="16_c2ws7"]
 [ext_resource type="PackedScene" uid="uid://ccbjumjt7a0oy" path="res://assets/characters/mr_beef/models/Cow-irl.glb" id="17_tpkwp"]
 [ext_resource type="Texture2D" uid="uid://bbi5lsmew1iu" path="res://assets/textures/town_destination_shot.png" id="17_vkap3"]
+[ext_resource type="Texture2D" uid="uid://pc53qfqoowrf" path="res://assets/textures/mountain_travel_point.JPG" id="18_ersc7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sg2e6"]
 
@@ -1132,3 +1133,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.3776, 0, -19.8989)
 
 [node name="Cow-irl" parent="." instance=ExtResource("17_tpkwp")]
 transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -29.4448, 0.431169, -18.058)
+
+[node name="Sprite3D3" type="Sprite3D" parent="."]
+transform = Transform3D(19.6988, 0, 0, 0, 19.6988, 0, 0, 0, 19.6988, 0, 43.1534, 148.218)
+texture = ExtResource("18_ersc7")
