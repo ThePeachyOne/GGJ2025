@@ -9,7 +9,7 @@
 [ext_resource type="Shader" path="res://assets/shaders/bubble.gdshader" id="6_kr44p"]
 [ext_resource type="PackedScene" uid="uid://bnds675i6pmgw" path="res://scenes/barn.tscn" id="7_mekcm"]
 [ext_resource type="PackedScene" uid="uid://i1v15jcmect3" path="res://scenes/big_rock.tscn" id="8_47pxs"]
-[ext_resource type="PackedScene" uid="uid://i8nivtxo5lvm" path="res://scenes/npc_root.tscn" id="10_aakfw"]
+[ext_resource type="PackedScene" uid="uid://biogpwdm4mp1k" path="res://scenes/npc_root.tscn" id="10_aakfw"]
 [ext_resource type="Texture2D" uid="uid://d0m0g5r24gu5r" path="res://icon.svg" id="11_8dfdf"]
 [ext_resource type="AudioStream" uid="uid://c3cx41n7l4fwq" path="res://assets/audio/eeaaooeeaa.ogg" id="12_35png"]
 [ext_resource type="AudioStream" uid="uid://mlmxf5cs831r" path="res://assets/audio/oobbeebboo.ogg" id="13_w6i7s"]

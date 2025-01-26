@@ -21,6 +21,7 @@ size = Vector3(40, 1, 40)
 [node name="rat_test_world" type="Node3D"]
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.83657, 0)
 navigation_mesh = SubResource("NavigationMesh_6wkwc")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D"]

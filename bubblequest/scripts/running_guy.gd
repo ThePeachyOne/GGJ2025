@@ -13,7 +13,9 @@ func distance( a,  b):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$NavigationAgent3D.target_position = Vector3(20, 0, 20)
+	$NavigationAgent3D.target_position = Vector3(randf_range(lower_bound.x,upper_bound.x),
+													 0,
+													 randf_range(lower_bound.y,upper_bound.y))
 	$MeshInstance3D.look_at(Vector3($NavigationAgent3D.target_position.x,
 			self.position.y,
 			$NavigationAgent3D.target_position.z),
@@ -50,6 +52,20 @@ func _process(delta):
 			self.position.y,
 			$NavigationAgent3D.target_position.z),
 			Vector3(0,1,0), false)
+			
+			
+	if $MeshInstance3D/RayCast3D.is_colliding():
+		var obj = $MeshInstance3D/RayCast3D.get_collider()
+		print(obj.get_class())
+		if obj.get_class() == "CharacterBody3D":
+			print("hooray")
+			$NavigationAgent3D.target_position = Vector3(randf_range(lower_bound.x,upper_bound.x),
+													 0,
+													 randf_range(lower_bound.y,upper_bound.y))
+			$MeshInstance3D.look_at(Vector3($NavigationAgent3D.target_position.x,
+				self.position.y,
+				$NavigationAgent3D.target_position.z),
+				Vector3(0,1,0), false)
 			
 			
 func get_chase_point():
