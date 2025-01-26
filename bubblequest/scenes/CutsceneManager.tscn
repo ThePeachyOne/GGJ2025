@@ -7,7 +7,6 @@
 
 [node name="CutsceneManager" type="Node"]
 script = ExtResource("1_ox8f1")
-universal_dialog_file = "res://assets/text/TEST_dialog.txt"
 toggle_type_by_char = true
 option_text_file = "res://assets/text/TEST_choices.txt"
 

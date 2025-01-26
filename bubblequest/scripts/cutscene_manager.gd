@@ -48,9 +48,8 @@ func _ready():
 	if load_dialog_by_actor:
 		_ready_by_actor()
 		return
-	
-	get_tree().call_group("Actor", "lose_subtitle_focus")
-	
+
+	#get_tree().call_group("Actor", "lose_subtitle_focus")
 	# Initialize the master text box.
 	one_file_box.sourceTextPath = universal_dialog_file
 	one_file_box.toggle_type_by_char = toggle_type_by_char
@@ -75,7 +74,6 @@ func _ready():
 		optionLabels[i].visible = true
 		optionLabels[i].text = dialog_options[i]
 	
-	activate_dialog()
 
 ## I did a very foolish thing and wasted a lot of time making something that worked really well.
 func _ready_by_actor():

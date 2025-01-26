@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dbevkw7ic4o6f"]
+[gd_scene load_steps=26 format=3 uid="uid://dbevkw7ic4o6f"]
 
 [ext_resource type="PackedScene" uid="uid://dpsy06y08shnc" path="res://scenes/player.tscn" id="1_mjvoc"]
 [ext_resource type="PackedScene" uid="uid://boweijfs0ysdy" path="res://scenes/rock.tscn" id="2_fpxtt"]
@@ -9,6 +9,7 @@
 [ext_resource type="Shader" path="res://assets/shaders/bubble.gdshader" id="6_kr44p"]
 [ext_resource type="PackedScene" uid="uid://bnds675i6pmgw" path="res://scenes/barn.tscn" id="7_mekcm"]
 [ext_resource type="PackedScene" uid="uid://i1v15jcmect3" path="res://scenes/big_rock.tscn" id="8_47pxs"]
+[ext_resource type="PackedScene" uid="uid://i8nivtxo5lvm" path="res://scenes/npc_root.tscn" id="10_aakfw"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sg2e6"]
 
@@ -785,3 +786,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.6183, 0.748153, -33.751)
 
 [node name="bush61" parent="bushes" instance=ExtResource("6_jk55g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.1818, 0.748153, -42.6068)
+
+[node name="npcRoot" parent="." instance=ExtResource("10_aakfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.26939, 1.39581, -103.653)
+
+[node name="npcRoot2" parent="." instance=ExtResource("10_aakfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.9232, 0.748155, -94.9321)
+
+[node name="npcRoot3" parent="." instance=ExtResource("10_aakfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.64228, 0.748155, -93.1527)
