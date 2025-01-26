@@ -81,6 +81,8 @@ func advance_text():
 	# Another piece that exists exclusively to prevent flying past array bounds if skipping fast.
 	if not $Timer.is_stopped():
 		$Timer.stop()
+		
+	dialog_box_advanced.emit()
 	# This method of switching paths is subject to change with a global handler.
 	if (dialog_tick >= dialogList.size()):
 		is_selecting_path = true
