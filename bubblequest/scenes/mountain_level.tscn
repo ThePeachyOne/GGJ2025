@@ -1,0 +1,237 @@
+[gd_scene load_steps=13 format=3 uid="uid://cue0xpmbj100w"]
+
+[ext_resource type="PackedScene" uid="uid://dpsy06y08shnc" path="res://scenes/player.tscn" id="1_x8gkx"]
+[ext_resource type="PackedScene" uid="uid://dmy2bu2572wqd" path="res://scenes/boulder.tscn" id="2_36i5k"]
+[ext_resource type="PackedScene" uid="uid://rl3rca7sfkns" path="res://scenes/big_ol_scissors.tscn" id="3_teu3d"]
+[ext_resource type="Shader" path="res://DogsToolkit/dither.gdshader" id="4_hijfi"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6mo23"]
+
+[sub_resource type="Sky" id="Sky_rqjvn"]
+sky_material = SubResource("ProceduralSkyMaterial_6mo23")
+
+[sub_resource type="Environment" id="Environment_31bfj"]
+background_mode = 2
+sky = SubResource("Sky_rqjvn")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ywio2"]
+albedo_color = Color(0.295866, 0.295867, 0.295866, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_0y7nj"]
+material = SubResource("StandardMaterial3D_ywio2")
+height = 0.2
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ojboj"]
+height = 0.203308
+radius = 254.664
+
+[sub_resource type="SphereMesh" id="SphereMesh_38u48"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5mwgk"]
+shader = ExtResource("4_hijfi")
+shader_parameter/fog_color = null
+shader_parameter/resolution_downsampling = 2.0
+shader_parameter/bit_depth = 32.0
+
+[node name="mountain_root" type="WorldEnvironment"]
+environment = SubResource("Environment_31bfj")
+
+[node name="player_root" parent="." instance=ExtResource("1_x8gkx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123.229, 0.885048, 13.5781)
+
+[node name="floor" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="floor"]
+transform = Transform3D(517.466, 0, 0, 0, 1, 0, 0, 0, 517.466, 0, 0, 0)
+mesh = SubResource("CylinderMesh_0y7nj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
+shape = SubResource("CylinderShape3D_ojboj")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 473.318, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+
+[node name="Boulder" parent="." instance=ExtResource("2_36i5k")]
+transform = Transform3D(52.263, 0, 0, 0, 52.263, 0, 0, 0, 52.263, -89.3228, -17.2978, -146.442)
+
+[node name="Boulder2" parent="." instance=ExtResource("2_36i5k")]
+transform = Transform3D(52.263, 0, 0, 0, 52.263, 0, 0, 0, 52.263, 80.8492, -8.76814, -171.749)
+
+[node name="Boulder3" parent="." instance=ExtResource("2_36i5k")]
+transform = Transform3D(52.263, 0, 0, 0, 52.263, 0, 0, 0, 52.263, 80.8492, -8.76814, -171.749)
+
+[node name="Boulder4" parent="." instance=ExtResource("2_36i5k")]
+transform = Transform3D(52.263, 0, 0, 0, 52.263, 0, 0, 0, 52.263, -177.724, -8.76814, -66.1848)
+
+[node name="Boulder5" parent="." instance=ExtResource("2_36i5k")]
+transform = Transform3D(52.263, 0, 0, 0, 52.263, 0, 0, 0, 52.263, -155.188, -16.0058, 95.1272)
+
+[node name="Boulder6" parent="." instance=ExtResource("2_36i5k")]
+transform = Transform3D(52.263, 0, 0, 0, 52.263, 0, 0, 0, 52.263, -154.002, -8.76814, 9.72674)
+
+[node name="Boulder7" parent="." instance=ExtResource("2_36i5k")]
+transform = Transform3D(52.263, 0, 0, 0, 52.263, 0, 0, 0, 52.263, -82.8351, -8.76814, -111.257)
+
+[node name="Boulder8" parent="." instance=ExtResource("2_36i5k")]
+transform = Transform3D(52.263, 0, 0, 0, 52.263, 0, 0, 0, 52.263, -131.466, -8.76814, 118.85)
+
+[node name="Boulder9" parent="." instance=ExtResource("2_36i5k")]
+transform = Transform3D(52.263, 0, 0, 0, 52.263, 0, 0, 0, 52.263, -80.4628, -2.25933, 185.272)
+
+[node name="Boulder10" parent="." instance=ExtResource("2_36i5k")]
+transform = Transform3D(52.263, 0, 0, 0, 52.263, 0, 0, 0, 52.263, -18.7847, -8.76814, 225.6)
+
+[node name="Boulder11" parent="." instance=ExtResource("2_36i5k")]
+transform = Transform3D(52.263, 0, 0, 0, 52.263, 0, 0, 0, 52.263, 90.3381, -8.76814, 190.017)
+
+[node name="Boulder12" parent="." instance=ExtResource("2_36i5k")]
+transform = Transform3D(52.263, 0, 0, 0, 52.263, 0, 0, 0, 52.263, 173.338, -8.76814, 120.017)
+
+[node name="Boulder13" parent="." instance=ExtResource("2_36i5k")]
+transform = Transform3D(52.263, 0, 0, 0, 52.263, 0, 0, 0, 52.263, 208.922, -8.76814, -67.39)
+
+[node name="Boulder14" parent="." instance=ExtResource("2_36i5k")]
+transform = Transform3D(52.263, 0, 0, 0, 52.263, 0, 0, 0, 52.263, 80.7053, -15.2666, -151.626)
+
+[node name="Boulder15" parent="." instance=ExtResource("2_36i5k")]
+transform = Transform3D(52.263, 0, 0, 0, 52.263, 0, 0, 0, 52.263, 202.991, -20.5235, 84.433)
+
+[node name="Boulder16" parent="." instance=ExtResource("2_36i5k")]
+transform = Transform3D(52.263, 0, 0, 0, 52.263, 0, 0, 0, 52.263, 224.341, -8.76814, 53.594)
+
+[node name="Boulder17" parent="." instance=ExtResource("2_36i5k")]
+transform = Transform3D(52.263, 0, 0, 0, 52.263, 0, 0, 0, 52.263, 60.657, -8.76814, -152.79)
+
+[node name="Mountain_Geo" type="Node3D" parent="."]
+transform = Transform3D(2.72833, 0, 0, 0, 2.72833, 0, 0, 0, 2.72833, 0, 0, 0)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Mountain_Geo"]
+transform = Transform3D(4.67479, -12.9964, 0, 8.09698, 7.50347, 0, 0, 0, 22.735, 35.3447, 0.0852714, 0)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Mountain_Geo/CSGCylinder3D"]
+transform = Transform3D(-6.64186e-08, 0.410792, 1.17634, 7.16721e-08, 0.147762, -1.26939, -1.24975, 0, -4.22916e-08, 0.216442, 1.06613, 0)
+operation = 2
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Mountain_Geo"]
+transform = Transform3D(4.04849, -11.2552, 11.3675, 8.09698, 7.50347, 0, -2.3374, 6.4982, 19.6891, 31.0313, 0.0852714, -17.18)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Mountain_Geo/CSGCylinder3D2"]
+transform = Transform3D(-6.64186e-08, 0.410792, 1.17634, 7.16721e-08, 0.147762, -1.26939, -1.24975, 0, -4.22916e-08, 0.216442, 1.06613, 0)
+operation = 2
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="Mountain_Geo"]
+transform = Transform3D(2.3374, -6.4982, 19.6891, 8.09698, 7.50347, -2.93391e-07, -4.04849, 11.2552, 11.3675, 17.5072, 0.0852714, -31.6317)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Mountain_Geo/CSGCylinder3D3"]
+transform = Transform3D(-6.64186e-08, 0.410792, 1.17634, 7.16721e-08, 0.147762, -1.26939, -1.24975, 0, -4.22916e-08, 0.216442, 1.06613, 0)
+operation = 2
+
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="Mountain_Geo"]
+transform = Transform3D(2.38419e-07, 0, 22.735, 8.09698, 7.50347, -1.89651e-06, -4.67479, 12.9964, -1.90735e-06, -0.87056, 0.0852695, -35.9364)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Mountain_Geo/CSGCylinder3D4"]
+transform = Transform3D(-6.64186e-08, 0.410792, 1.17634, 7.16721e-08, 0.147762, -1.26939, -1.24975, 0, -4.22916e-08, 0.216442, 1.06613, 0)
+operation = 2
+
+[node name="CSGCylinder3D5" type="CSGCylinder3D" parent="Mountain_Geo"]
+transform = Transform3D(-2.3374, 6.4982, 19.6891, 8.09698, 7.50347, -1.89651e-06, -4.04849, 11.2552, -11.3675, -17.463, 0.0852695, -28.5477)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Mountain_Geo/CSGCylinder3D5"]
+transform = Transform3D(-6.64186e-08, 0.410792, 1.17634, 7.16721e-08, 0.147762, -1.26939, -1.24975, 0, -4.22916e-08, 0.216442, 1.06613, 0)
+operation = 2
+
+[node name="CSGCylinder3D6" type="CSGCylinder3D" parent="Mountain_Geo"]
+transform = Transform3D(-4.04849, 11.2552, 11.3675, 8.09698, 7.50347, -1.35511e-06, -2.3374, 6.4982, -19.6891, -31.7608, 0.0852695, -14.3343)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Mountain_Geo/CSGCylinder3D6"]
+transform = Transform3D(-6.64186e-08, 0.410792, 1.17634, 7.16721e-08, 0.147762, -1.26939, -1.24975, 0, -4.22916e-08, 0.216442, 1.06613, 0)
+operation = 2
+
+[node name="CSGCylinder3D7" type="CSGCylinder3D" parent="Mountain_Geo"]
+transform = Transform3D(-4.67479, 12.9964, 0, 8.09698, 7.50347, -1.53666e-06, -7.15256e-07, -4.76837e-07, -22.735, -37.9938, 0.0852695, 5.27206)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Mountain_Geo/CSGCylinder3D7"]
+transform = Transform3D(-6.64186e-08, 0.410792, 1.17634, 7.16721e-08, 0.147762, -1.26939, -1.24975, 0, -4.22916e-08, 0.216442, 1.06613, 0)
+operation = 2
+
+[node name="CSGCylinder3D8" type="CSGCylinder3D" parent="Mountain_Geo"]
+transform = Transform3D(-4.04849, 11.2552, -11.3675, 8.09698, 7.50347, -1.53666e-06, 2.3374, -6.4982, -19.6891, -32.473, 0.0852695, 24.0561)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Mountain_Geo/CSGCylinder3D8"]
+transform = Transform3D(-6.64186e-08, 0.410792, 1.17634, 7.16721e-08, 0.147762, -1.26939, -1.24975, 0, -4.22916e-08, 0.216442, 1.06613, 0)
+operation = 2
+
+[node name="CSGCylinder3D9" type="CSGCylinder3D" parent="Mountain_Geo"]
+transform = Transform3D(-2.3374, 6.4982, -19.6891, 8.09698, 7.50347, -1.5156e-06, 4.04849, -11.2552, -11.3675, -18.6658, 0.0852695, 37.6877)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Mountain_Geo/CSGCylinder3D9"]
+transform = Transform3D(-6.64186e-08, 0.410792, 1.17634, 7.16721e-08, 0.147762, -1.26939, -1.24975, 0, -4.22916e-08, 0.216442, 1.06613, 0)
+operation = 2
+
+[node name="CSGCylinder3D10" type="CSGCylinder3D" parent="Mountain_Geo"]
+transform = Transform3D(-9.53674e-07, 4.76837e-07, -22.735, 8.09698, 7.50347, -1.51886e-06, 4.67479, -12.9964, 1.90735e-06, -0.737612, 0.0852695, 43.3533)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Mountain_Geo/CSGCylinder3D10"]
+transform = Transform3D(-6.64186e-08, 0.410792, 1.17634, 7.16721e-08, 0.147762, -1.26939, -1.24975, 0, -4.22916e-08, 0.216442, 1.06613, 0)
+operation = 2
+
+[node name="CSGCylinder3D11" type="CSGCylinder3D" parent="Mountain_Geo"]
+transform = Transform3D(2.3374, -6.4982, -19.6891, 8.09698, 7.50347, -1.51886e-06, 4.04849, -11.2552, 11.3675, 18.4789, 0.0852695, 38.7762)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Mountain_Geo/CSGCylinder3D11"]
+transform = Transform3D(-6.64186e-08, 0.410792, 1.17634, 7.16721e-08, 0.147762, -1.26939, -1.24975, 0, -4.22916e-08, 0.216442, 1.06613, 0)
+operation = 2
+
+[node name="CSGCylinder3D12" type="CSGCylinder3D" parent="Mountain_Geo"]
+transform = Transform3D(4.04849, -11.2552, -11.3675, 8.09698, 7.50347, -1.81877e-06, 2.3374, -6.4982, 19.6891, 30.4054, 0.00552511, 22.7851)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Mountain_Geo/CSGCylinder3D12"]
+transform = Transform3D(-6.64186e-08, 0.410792, 1.17634, 7.16721e-08, 0.147762, -1.26939, -1.24975, 0, -4.22916e-08, 0.216442, 1.06613, 0)
+operation = 2
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="Mountain_Geo/CSGCylinder3D12"]
+transform = Transform3D(0.350104, 0.662916, 0.326363, -0.377797, 0.23845, -0.352177, -0.166251, -5.09544e-08, 0.464931, -0.149395, 0.160475, -0.477729)
+operation = 2
+mesh = SubResource("SphereMesh_38u48")
+
+[node name="CSGCylinder3D13" type="CSGCylinder3D" parent="Mountain_Geo"]
+transform = Transform3D(59.685, -0.0517353, -15.506, 0.108094, 10.8678, -0.833887, 14.6401, 0.130655, 63.2214, -2.18727, 7.39604, 4.69335)
+use_collision = true
+height = 0.002
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Mountain_Geo/CSGCylinder3D13"]
+transform = Transform3D(0.236525, 0.19188, 1.69618, 0.206571, 0.378592, -0.160758, -1.20965, 0.102171, 0.304205, 0.103983, 0.972845, -0.0334297)
+operation = 2
+size = Vector3(1, 0.612793, 0.754501)
+
+[node name="BigOlScissors" parent="." instance=ExtResource("3_teu3d")]
+transform = Transform3D(7.83831, 0, 10.7648, 0, 13.3162, 0, -10.7648, 0, 7.83831, 1.39804, 25.5911, 11.5957)
+
+[node name="BigOlScissors2" parent="BigOlScissors" instance=ExtResource("3_teu3d")]
+transform = Transform3D(0.0658959, 0, -0.00542923, 0, 0.0661192, 0, 0.00542923, 0, 0.0658959, -0.0350181, -0.227094, 0.427736)
+
+[node name="Dither" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_5mwgk")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="BigOlScissors3" parent="." instance=ExtResource("3_teu3d")]
+transform = Transform3D(0.088833, 0.198134, -8.6607e-09, -0.00835572, 0.00374626, -0.216943, -0.197958, 0.0887539, 0.0091571, 6.69655, 20.2108, 16.5522)
