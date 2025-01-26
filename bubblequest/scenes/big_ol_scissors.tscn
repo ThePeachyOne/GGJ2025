@@ -1,12 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://rl3rca7sfkns"]
+[gd_scene load_steps=9 format=3 uid="uid://rl3rca7sfkns"]
+
+[ext_resource type="Material" uid="uid://chc7drbjwl82p" path="res://assets/textures/barnroof.tres" id="1_fhllk"]
+[ext_resource type="Material" path="res://assets/scissors.tres" id="2_c0bsg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_og7sd"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_qoyu4"]
+material = ExtResource("1_fhllk")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pfdi2"]
+albedo_color = Color(0.42145, 0.183941, 0.0628953, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ltc5j"]
+material = SubResource("StandardMaterial3D_pfdi2")
 
 [sub_resource type="BoxMesh" id="BoxMesh_8d2oj"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_t836t"]
+material = ExtResource("2_c0bsg")
 
 [node name="BigOlScissors" type="StaticBody3D"]
 
@@ -19,7 +30,7 @@ mesh = SubResource("CylinderMesh_qoyu4")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.763945, 0, 0, 0, 0.0840946, 0, 0, 0, 0.763945, 0, -0.192363, 0)
-mesh = SubResource("CylinderMesh_qoyu4")
+mesh = SubResource("CylinderMesh_ltc5j")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.42017, 0, 0, 0, 0.366294, 0, 0, 0, 0.42017, 0, 0.0868526, 0)
@@ -27,27 +38,33 @@ mesh = SubResource("CylinderMesh_qoyu4")
 
 [node name="CSGTorus3D" type="CSGTorus3D" parent="."]
 transform = Transform3D(1.40925, 0, 0, 0, -6.16002e-08, -1.40925, 0, 1.40925, -6.16002e-08, -0.056654, 1.47018, 0)
+material = ExtResource("2_c0bsg")
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="CSGTorus3D"]
 transform = Transform3D(0.650125, 1.10153, 0, 7.61454e-09, -1.79696e-07, 0.277598, 0.1742, -4.11095, -1.21342e-08, 0.503058, -1.18531e-07, -2.71166)
 mesh = SubResource("BoxMesh_8d2oj")
+material = ExtResource("2_c0bsg")
 
 [node name="CSGMesh3D2" type="CSGMesh3D" parent="CSGTorus3D"]
 transform = Transform3D(0.425822, 2.84905, -7.92763e-16, 1.86133e-08, -1.24536e-07, 0.388307, 0.425822, -2.84905, -1.69734e-08, 0.63735, -1.97519e-07, -4.5187)
 operation = 2
 mesh = SubResource("BoxMesh_8d2oj")
+material = ExtResource("2_c0bsg")
 
 [node name="CSGTorus3D2" type="CSGTorus3D" parent="."]
 transform = Transform3D(1.40925, 0, 0, 0, -6.16002e-08, -1.40925, 0, 1.40925, -6.16002e-08, -2.38175, 3.24399, -4.76837e-07)
+material = ExtResource("2_c0bsg")
 
 [node name="CSGMesh3D2" type="CSGMesh3D" parent="CSGTorus3D2"]
 transform = Transform3D(0.354799, 3.09164, 0, 2.6862e-08, -7.8023e-08, 0.277598, 0.61453, -1.78496, -1.21342e-08, 2.25521, -5.08268e-08, -1.16278)
 mesh = SubResource("BoxMesh_8d2oj")
+material = ExtResource("2_c0bsg")
 
 [node name="CSGMesh3D3" type="CSGMesh3D" parent="CSGTorus3D2"]
 transform = Transform3D(0.592564, 1.53387, 1.25322e-15, 1.49544e-08, -1.1613e-07, 0.514754, 0.342117, -2.65674, -2.25006e-08, 3.52061, 2.81376e-07, -1.30372)
 operation = 2
 mesh = SubResource("BoxMesh_8d2oj")
+material = ExtResource("2_c0bsg")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -2.25421e-08, 1, 0, -0.515703, -4.37114e-08, 0.602439, 4.75877, 0)
