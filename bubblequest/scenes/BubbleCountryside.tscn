@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://dbevkw7ic4o6f"]
+[gd_scene load_steps=36 format=3 uid="uid://dbevkw7ic4o6f"]
 
 [ext_resource type="PackedScene" uid="uid://dpsy06y08shnc" path="res://scenes/player.tscn" id="1_mjvoc"]
 [ext_resource type="PackedScene" uid="uid://boweijfs0ysdy" path="res://scenes/rock.tscn" id="2_fpxtt"]
@@ -14,8 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://dfaw6deuiirea" path="res://assets/characters/charlotte/models/rich_child1.png" id="13_h6u7r"]
 [ext_resource type="Texture2D" uid="uid://xg21r6dbi4m6" path="res://assets/characters/mr_beef/models/Office-Cow.png" id="14_k0sgn"]
 [ext_resource type="Texture2D" uid="uid://beem6y1x8v12p" path="res://assets/textures/tree.png" id="14_ynajd"]
-[ext_resource type="Texture2D" uid="uid://sstkeebfmpsm" path="res://assets/characters/mr_beef/models/Suitless-Cow.png" id="15_eoewa"]
-[ext_resource type="Texture2D" uid="uid://d3mfjr61nygg" path="res://assets/characters/mr_beef/models/Office-Cow-Alt.png" id="16_40i7f"]
+[ext_resource type="PackedScene" uid="uid://ccsxm1qwioywp" path="res://scenes/cow.tscn" id="16_c2ws7"]
+[ext_resource type="PackedScene" uid="uid://ccbjumjt7a0oy" path="res://assets/characters/mr_beef/models/Cow-irl.glb" id="17_tpkwp"]
+[ext_resource type="Texture2D" uid="uid://bbi5lsmew1iu" path="res://assets/textures/town_destination_shot.png" id="17_vkap3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sg2e6"]
 
@@ -1109,7 +1110,7 @@ IMAGE = ExtResource("13_h6u7r")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.958, 0.748155, 15.4419)
 
 [node name="Rock Guy" parent="." instance=ExtResource("10_aakfw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.3838, 0.748155, 111.721)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.7424, 0.748155, 111.721)
 
 [node name="Cow Gang Leader" parent="." instance=ExtResource("10_aakfw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.4693, 0.748155, -18.4828)
@@ -1118,10 +1119,16 @@ DIALOGFILE = "res://assets/characters/mr_beef/text_files/cow trio.txt"
 CHOICEFILE = "res://assets/characters/mr_beef/text_files/cow trio Choices.txt"
 IMAGE = ExtResource("14_k0sgn")
 
-[node name="npcRoot" parent="." instance=ExtResource("10_aakfw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.4818, 0.748155, -18.5862)
-IMAGE = ExtResource("15_eoewa")
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(14.5817, 0, 0, 0, 11.8427, 0, 0, 0, 0.283048, 0, 38.6548, -147.6)
+texture = ExtResource("17_vkap3")
 
-[node name="npcRoot2" parent="." instance=ExtResource("10_aakfw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.5048, 0.748155, -19.021)
-IMAGE = ExtResource("16_40i7f")
+[node name="cow" parent="." instance=ExtResource("16_c2ws7")]
+transform = Transform3D(2.63248, 0, 0, 0, 2.62295, 0, 0, 0, 1, -21.6993, 1.55248, -18.3699)
+billboard = 1
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.3776, 0, -19.8989)
+
+[node name="Cow-irl" parent="." instance=ExtResource("17_tpkwp")]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -29.4448, 0.431169, -18.058)

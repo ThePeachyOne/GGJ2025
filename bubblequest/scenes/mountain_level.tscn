@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cue0xpmbj100w"]
+[gd_scene load_steps=20 format=3 uid="uid://cue0xpmbj100w"]
 
 [ext_resource type="PackedScene" uid="uid://dpsy06y08shnc" path="res://scenes/player.tscn" id="1_x8gkx"]
 [ext_resource type="PackedScene" uid="uid://dmy2bu2572wqd" path="res://scenes/boulder.tscn" id="2_36i5k"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://scripts/big_ol_scissors.gd" id="5_hmx28"]
 [ext_resource type="PackedScene" uid="uid://biogpwdm4mp1k" path="res://scenes/npc_root.tscn" id="6_70fuv"]
 [ext_resource type="Texture2D" uid="uid://bj8xto4gb1cul" path="res://assets/characters/hobo_wizard/models/hobo_wizard.png" id="7_x46iq"]
+[ext_resource type="AudioStream" uid="uid://mlmxf5cs831r" path="res://assets/audio/oobbeebboo.ogg" id="9_0cl1q"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6mo23"]
 
@@ -859,3 +860,4 @@ NAMEHERE = "Hobo Wizard"
 DIALOGFILE = "res://assets/characters/hobo_wizard/text_files/Hobo (FINAL CHARACTER).txt"
 CHOICEFILE = "res://assets/characters/hobo_wizard/text_files/Hobo Choices (FINAL CHARACTER).txt"
 IMAGE = ExtResource("7_x46iq")
+audioList = [ExtResource("9_0cl1q")]
