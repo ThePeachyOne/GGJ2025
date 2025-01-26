@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b7grgf8ndq2cf"]
+[gd_scene load_steps=5 format=3 uid="uid://b7grgf8ndq2cf"]
 
 [ext_resource type="Theme" uid="uid://dpg2x1a15e835" path="res://assets/main_menu_theme.tres" id="1_hijcw"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="2_bibkn"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rs4gm"]
 
@@ -15,6 +16,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_hijcw")
+script = ExtResource("2_bibkn")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -75,3 +77,6 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_rs4gm")
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/separator = SubResource("StyleBoxEmpty_sl20y")
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/MarginContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

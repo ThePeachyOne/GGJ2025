@@ -1,9 +1,11 @@
-[gd_resource type="Theme" load_steps=7 format=3 uid="uid://dpg2x1a15e835"]
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://dpg2x1a15e835"]
 
 [ext_resource type="FontFile" uid="uid://ckbpaw5l5m7nw" path="res://assets/text/Modak-Regular.ttf" id="1_08nxp"]
 
 [sub_resource type="SystemFont" id="SystemFont_jrh1r"]
 font_names = PackedStringArray("Brush Script MT")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uqywr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dklev"]
 bg_color = Color(0.3, 0.813333, 1, 0.258824)
@@ -61,6 +63,7 @@ corner_radius_bottom_left = 50
 default_font = ExtResource("1_08nxp")
 Button/font_sizes/font_size = 22
 Button/fonts/font = SubResource("SystemFont_jrh1r")
+Button/styles/focus = SubResource("StyleBoxEmpty_uqywr")
 Button/styles/hover = SubResource("StyleBoxFlat_dklev")
 Button/styles/normal = SubResource("StyleBoxFlat_0rcdn")
 Button/styles/pressed = SubResource("StyleBoxFlat_yes2v")
