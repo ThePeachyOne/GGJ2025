@@ -1,10 +1,9 @@
 [gd_scene load_steps=4 format=3 uid="uid://dmy2bu2572wqd"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w7qj0"]
-albedo_color = Color(0.47788, 0.47788, 0.47788, 1)
+[ext_resource type="Material" uid="uid://dkn6kb1sta4ma" path="res://assets/mountain_mat.tres" id="1_2yvhf"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_hvuoa"]
-material = SubResource("StandardMaterial3D_w7qj0")
+material = ExtResource("1_2yvhf")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_h74tc"]
 

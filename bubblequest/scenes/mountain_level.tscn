@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cue0xpmbj100w"]
+[gd_scene load_steps=16 format=3 uid="uid://cue0xpmbj100w"]
 
 [ext_resource type="PackedScene" uid="uid://dpsy06y08shnc" path="res://scenes/player.tscn" id="1_x8gkx"]
 [ext_resource type="PackedScene" uid="uid://dmy2bu2572wqd" path="res://scenes/boulder.tscn" id="2_36i5k"]
@@ -34,11 +34,17 @@ shader_parameter/fog_color = null
 shader_parameter/resolution_downsampling = 2.0
 shader_parameter/bit_depth = 32.0
 
+[sub_resource type="CylinderMesh" id="CylinderMesh_y1c3m"]
+material = ExtResource("3_25e3v")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_suk7u"]
+size = Vector3(6.90308, 59.8139, 72.0299)
+
 [node name="mountain_root" type="WorldEnvironment"]
 environment = SubResource("Environment_31bfj")
 
 [node name="player_root" parent="." instance=ExtResource("1_x8gkx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 242.876, 0.885048, -2.54238)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 178.043, 0.885048, -2.54238)
 
 [node name="floor" type="StaticBody3D" parent="."]
 
@@ -246,10 +252,13 @@ operation = 2
 size = Vector3(1, 0.612793, 0.754501)
 material = ExtResource("3_25e3v")
 
-[node name="BigOlScissors" parent="." instance=ExtResource("3_teu3d")]
-transform = Transform3D(-2.06932, 0, 13.1384, 0, 13.316, 0, -13.1542, 0, -2.06683, 1.39804, 25.5911, 11.5957)
+[node name="BigOlScissors3" parent="Mountain_Geo" instance=ExtResource("3_teu3d")]
+transform = Transform3D(0.0325595, 0.072621, -1.07382e-09, -0.00306262, 0.00137312, -0.0795149, -0.0725565, 0.0325305, 0.00335634, 3.77703, 7.4926, 3.7716)
 
-[node name="BigOlScissors2" parent="BigOlScissors" instance=ExtResource("3_teu3d")]
+[node name="BigOlScissors" parent="Mountain_Geo" instance=ExtResource("3_teu3d")]
+transform = Transform3D(-0.758455, 0, 4.81556, 0, 4.88064, 0, -4.82135, 0, -0.757544, 0.512416, 9.37977, 4.25011)
+
+[node name="BigOlScissors2" parent="Mountain_Geo/BigOlScissors" instance=ExtResource("3_teu3d")]
 transform = Transform3D(0.0658959, 0, -0.00542923, 0, 0.0661192, 0, 0.00542923, 0, 0.0658959, -0.0350181, -0.227094, 0.427736)
 
 [node name="Dither" type="ColorRect" parent="."]
@@ -261,5 +270,581 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="BigOlScissors3" parent="." instance=ExtResource("3_teu3d")]
-transform = Transform3D(0.088833, 0.198134, -2.92973e-09, -0.00835584, 0.00374631, -0.216943, -0.197958, 0.0887539, 0.0091572, 10.305, 20.4423, 10.2902)
+[node name="volcanic_spikes" type="StaticBody3D" parent="."]
+
+[node name="border_spike" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(16.9709, 0, 0, 0, 48.9206, 18.9713, 0, -28.2443, 32.8593, 246.332, 26.904, -0.0420475)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike2" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(16.9709, 0, 0, 0, 48.9206, 18.9713, 0, -28.2443, 32.8593, 252.896, 26.904, -18.3726)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike3" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(16.9709, 0, 0, 0, 48.9206, 18.9713, 0, -28.2443, 32.8593, 239.438, 26.904, -43.3647)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike4" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(16.3926, -7.31017, 8.5046, 0, 48.9206, 18.9713, -4.3924, -27.2819, 31.7396, 236.875, 26.904, -87.5814)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike5" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 212.63, 26.904, -128.592)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike6" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 219.357, 26.904, -99.4412)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike7" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 187.964, 26.904, -155.5)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike8" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 174.51, 26.904, -186.893)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike9" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 154.329, 26.904, -190.631)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike10" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 126.329, 26.904, -212.631)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike11" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 141.278, 26.904, -184.227)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike12" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 102.41, 26.904, -225.337)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike13" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 75.4102, 26.904, -238.337)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike14" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 56.4102, 26.904, -248.337)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike15" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 33.2391, 26.904, -252.822)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike16" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 54.9153, 26.904, -231.146)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike17" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -16.8404, 26.904, -249.832)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike18" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 7.0782, 26.904, -237.126)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike19" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 18.0782, 26.904, -229.126)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike20" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 12.8461, 26.904, -256.034)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike21" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -27.5165, 26.904, -235.105)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike22" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -51.4351, 26.904, -252.297)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike23" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -41.7182, 26.904, -228.378)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike24" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -73.8587, 26.904, -245.57)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike25" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -88.8079, 26.904, -226.136)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike26" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -67.1316, 26.904, -220.156)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike27" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -70.8689, 26.904, -261.266)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike28" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -113.869, 26.904, -236.266)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike29" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -116.111, 26.904, -212.348)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike30" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -130.313, 26.904, -200.388)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike31" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -138.535, 26.904, -227.297)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike32" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -146.535, 26.904, -196.297)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike33" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -165.969, 26.904, -211.246)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike34" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -164.969, 26.904, -188.246)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike35" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -171.969, 26.904, -167.246)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike36" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -182.433, 26.904, -184.437)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike37" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -198.13, 26.904, -182.195)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike38" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -193.13, 26.904, -155.195)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike39" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -202.099, 26.904, -140.246)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike40" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -219.536, 26.904, -159.426)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike41" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -211.689, 26.904, -128.912)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike42" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -222.151, 26.904, -121.937)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike43" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -221.151, 26.904, -95.9375)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike44" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -245.151, 26.904, -107.937)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike45" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -233.818, 26.904, -76.5515)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike46" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -252.126, 26.904, -76.5515)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike47" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -233.818, 26.904, -51.2684)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike48" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -255.613, 26.904, -17.2669)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike49" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -255.613, 26.904, 20.2219)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike50" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -235.561, 26.904, 79.5065)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike51" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -210.278, 26.904, 131.816)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike52" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -175.278, 26.904, 162.816)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike53" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -137.278, 26.904, 193.816)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike54" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -85.84, 26.904, 212.125)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike55" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -67.5316, 26.904, 218.228)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike56" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -51.8386, 26.904, 219.1)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike57" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -53.5822, 26.904, 194.688)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike58" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -32.6583, 26.904, 193.816)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike59" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -22.6583, 26.904, 208.816)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike60" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -9.58083, 26.904, 226.253)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike61" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -9.58083, 26.904, 226.253)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike62" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 9.41917, 26.904, 217.253)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike63" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 37.4192, 26.904, 218.253)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike64" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 54.4192, 26.904, 211.253)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike65" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 62.2657, 26.904, 202.535)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike66" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 63.2657, 26.904, 185.535)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike67" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 84.2657, 26.904, 200.535)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike68" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 75.2657, 26.904, 167.535)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike69" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 107.266, 26.904, 188.535)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike70" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 135.266, 26.904, 167.535)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike71" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 161.266, 26.904, 150.535)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike72" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 190.266, 26.904, 114.535)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike73" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 213.805, 26.904, 76.1741)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike74" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 228.626, 26.904, 52.6346)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike75" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 239.626, 26.904, 13.6346)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike76" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 230.626, 26.904, -24.3654)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike77" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 229.626, 26.904, 20.6346)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike78" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 224.395, 26.904, 65.098)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike79" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -249.009, 26.904, -47.3683)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike80" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -242.035, 26.904, -20.3415)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike81" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -232.035, 26.904, 8.65851)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike82" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -227.676, 26.904, 37.429)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike83" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -231.163, 26.904, 63.5839)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike84" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -222.163, 26.904, 84.5839)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike85" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -208.163, 26.904, 100.584)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike86" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -208.163, 26.904, 100.584)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike87" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -204.163, 26.904, 149.584)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike88" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -161.495, 26.904, 183.123)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike89" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -125.495, 26.904, 200.123)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike90" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -106.315, 26.904, 208.842)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike91" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 26.2035, 26.904, 218.432)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike92" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 122.977, 26.904, 187.046)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike93" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 144.773, 26.904, 165.25)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike94" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 152.619, 26.904, 154.788)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike95" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 170.928, 26.904, 138.223)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike96" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 177.03, 26.904, 123.402)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike97" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 196.03, 26.904, 104.402)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike98" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 205.621, 26.904, 84.35)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike99" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, 128.027, 26.904, 169.79)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike100" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -195.973, 26.904, 124.79)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="border_spike101" type="MeshInstance3D" parent="volcanic_spikes"]
+transform = Transform3D(14.6972, -14.1222, 16.4296, -1.22135e-07, 48.9206, 18.9713, -8.48546, -24.4603, 28.457, -28.9726, 26.904, 222.79)
+mesh = SubResource("CylinderMesh_y1c3m")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="volcanic_spikes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 205.211, 29.5293, -8.03772)
+shape = SubResource("BoxShape3D_suk7u")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="volcanic_spikes"]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 192.703, 29.5293, -69.8679)
+shape = SubResource("BoxShape3D_suk7u")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="volcanic_spikes"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 151.269, 29.5293, -124.976)
+shape = SubResource("BoxShape3D_suk7u")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="volcanic_spikes"]
+transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, 91.2943, 29.5293, -158.079)
+shape = SubResource("BoxShape3D_suk7u")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="volcanic_spikes"]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 28.067, 29.5293, -171.983)
+shape = SubResource("BoxShape3D_suk7u")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="volcanic_spikes"]
+transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, -35.92, 29.5293, -164.509)
+shape = SubResource("BoxShape3D_suk7u")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="volcanic_spikes"]
+transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, -99.5264, 29.5293, -146.947)
+shape = SubResource("BoxShape3D_suk7u")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="volcanic_spikes"]
+transform = Transform3D(-0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, -0.866025, -147.983, 29.5293, -109.854)
+shape = SubResource("BoxShape3D_suk7u")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="volcanic_spikes"]
+transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, -183.905, 29.5293, -54.3958)
+shape = SubResource("BoxShape3D_suk7u")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="volcanic_spikes"]
+transform = Transform3D(-0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, -190.371, 29.5293, 10.8238)
+shape = SubResource("BoxShape3D_suk7u")
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="volcanic_spikes"]
+transform = Transform3D(-0.866026, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866026, -171.328, 29.5293, 73.7971)
+shape = SubResource("BoxShape3D_suk7u")
+
+[node name="CollisionShape3D12" type="CollisionShape3D" parent="volcanic_spikes"]
+transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -137.938, 29.5293, 128.521)
+shape = SubResource("BoxShape3D_suk7u")
+
+[node name="CollisionShape3D13" type="CollisionShape3D" parent="volcanic_spikes"]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -78.8656, 29.5293, 158.641)
+shape = SubResource("BoxShape3D_suk7u")
+
+[node name="CollisionShape3D14" type="CollisionShape3D" parent="volcanic_spikes"]
+transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, -13.3987, 29.5293, 167.402)
+shape = SubResource("BoxShape3D_suk7u")
+
+[node name="CollisionShape3D15" type="CollisionShape3D" parent="volcanic_spikes"]
+transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 48.5806, 29.5293, 155.12)
+shape = SubResource("BoxShape3D_suk7u")
+
+[node name="CollisionShape3D16" type="CollisionShape3D" parent="volcanic_spikes"]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 106.05, 29.5293, 129.45)
+shape = SubResource("BoxShape3D_suk7u")
+
+[node name="CollisionShape3D17" type="CollisionShape3D" parent="volcanic_spikes"]
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 152.842, 29.5293, 85.7737)
+shape = SubResource("BoxShape3D_suk7u")
+
+[node name="CollisionShape3D18" type="CollisionShape3D" parent="volcanic_spikes"]
+transform = Transform3D(0.645018, 0, -0.764168, 0, 1, 0, 0.764168, 0, 0.645018, 185.83, 29.1364, 45.6457)
+shape = SubResource("BoxShape3D_suk7u")
