@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://dbevkw7ic4o6f"]
+[gd_scene load_steps=33 format=3 uid="uid://dbevkw7ic4o6f"]
 
 [ext_resource type="PackedScene" uid="uid://dpsy06y08shnc" path="res://scenes/player.tscn" id="1_mjvoc"]
 [ext_resource type="PackedScene" uid="uid://boweijfs0ysdy" path="res://scenes/rock.tscn" id="2_fpxtt"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://d0m0g5r24gu5r" path="res://icon.svg" id="11_8dfdf"]
 [ext_resource type="AudioStream" uid="uid://c3cx41n7l4fwq" path="res://assets/audio/eeaaooeeaa.ogg" id="12_35png"]
 [ext_resource type="AudioStream" uid="uid://mlmxf5cs831r" path="res://assets/audio/oobbeebboo.ogg" id="13_w6i7s"]
+[ext_resource type="Texture2D" uid="uid://beem6y1x8v12p" path="res://assets/textures/tree.png" id="14_ynajd"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sg2e6"]
 
@@ -75,12 +76,16 @@ material = SubResource("ShaderMaterial_d6cbg")
 radius = 200.0
 height = 400.0
 
-[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_0y8y1"]
-loop = false
-fade_time = 0.0
-stream_count = 2
-stream_0 = ExtResource("12_35png")
-stream_1 = ExtResource("13_w6i7s")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rlx6c"]
+transparency = 4
+albedo_texture = ExtResource("14_ynajd")
+billboard_mode = 2
+
+[sub_resource type="QuadMesh" id="QuadMesh_y7bst"]
+material = SubResource("StandardMaterial3D_rlx6c")
+size = Vector2(7.5, 7.5)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_eynjq"]
 
 [node name="Node3D" type="WorldEnvironment"]
 environment = SubResource("Environment_3sn4s")
@@ -803,4 +808,292 @@ NAMEHERE = "fishman"
 DIALOGFILE = "res://assets/text/Fishicca.txt"
 CHOICEFILE = "res://assets/text/Fishicca Choices.txt"
 IMAGE = ExtResource("11_8dfdf")
-audioList = SubResource("AudioStreamPlaylist_0y8y1")
+audioList = [ExtResource("12_35png"), ExtResource("13_w6i7s")]
+
+[node name="trees" type="Node3D" parent="."]
+
+[node name="tree" type="StaticBody3D" parent="trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.82, 3.6499, -85.6911)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="trees/tree"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781595, 0)
+mesh = SubResource("QuadMesh_y7bst")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trees/tree"]
+shape = SubResource("CapsuleShape3D_eynjq")
+
+[node name="tree2" type="StaticBody3D" parent="trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.7471, 3.6499, -103.168)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="trees/tree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781595, 0)
+mesh = SubResource("QuadMesh_y7bst")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trees/tree2"]
+shape = SubResource("CapsuleShape3D_eynjq")
+
+[node name="tree3" type="StaticBody3D" parent="trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.5556, 3.6499, -107.545)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="trees/tree3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781595, 0)
+mesh = SubResource("QuadMesh_y7bst")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trees/tree3"]
+shape = SubResource("CapsuleShape3D_eynjq")
+
+[node name="tree4" type="StaticBody3D" parent="trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.9438, 3.6499, -87.2645)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="trees/tree4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781595, 0)
+mesh = SubResource("QuadMesh_y7bst")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trees/tree4"]
+shape = SubResource("CapsuleShape3D_eynjq")
+
+[node name="tree5" type="StaticBody3D" parent="trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.8287, 3.6499, -64.6443)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="trees/tree5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781595, 0)
+mesh = SubResource("QuadMesh_y7bst")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trees/tree5"]
+shape = SubResource("CapsuleShape3D_eynjq")
+
+[node name="tree6" type="StaticBody3D" parent="trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.2376, 3.6499, -32.2655)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="trees/tree6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781595, 0)
+mesh = SubResource("QuadMesh_y7bst")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trees/tree6"]
+shape = SubResource("CapsuleShape3D_eynjq")
+
+[node name="tree7" type="StaticBody3D" parent="trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.17, 3.6499, -14.4626)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="trees/tree7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781595, 0)
+mesh = SubResource("QuadMesh_y7bst")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trees/tree7"]
+shape = SubResource("CapsuleShape3D_eynjq")
+
+[node name="tree8" type="StaticBody3D" parent="trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.6698, 3.6499, -41.5768)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="trees/tree8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781595, 0)
+mesh = SubResource("QuadMesh_y7bst")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trees/tree8"]
+shape = SubResource("CapsuleShape3D_eynjq")
+
+[node name="tree9" type="StaticBody3D" parent="trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.6015, 3.6499, -10.4969)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="trees/tree9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781595, 0)
+mesh = SubResource("QuadMesh_y7bst")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trees/tree9"]
+shape = SubResource("CapsuleShape3D_eynjq")
+
+[node name="tree10" type="StaticBody3D" parent="trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.92, 3.6499, 12.9713)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="trees/tree10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781595, 0)
+mesh = SubResource("QuadMesh_y7bst")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trees/tree10"]
+shape = SubResource("CapsuleShape3D_eynjq")
+
+[node name="tree11" type="StaticBody3D" parent="trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.9816, 3.6499, 40.6018)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="trees/tree11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781595, 0)
+mesh = SubResource("QuadMesh_y7bst")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trees/tree11"]
+shape = SubResource("CapsuleShape3D_eynjq")
+
+[node name="tree12" type="StaticBody3D" parent="trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.7258, 3.6499, 73.7314)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="trees/tree12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781595, 0)
+mesh = SubResource("QuadMesh_y7bst")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trees/tree12"]
+shape = SubResource("CapsuleShape3D_eynjq")
+
+[node name="tree13" type="StaticBody3D" parent="trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.6389, 3.6499, 104.825)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="trees/tree13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781595, 0)
+mesh = SubResource("QuadMesh_y7bst")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trees/tree13"]
+shape = SubResource("CapsuleShape3D_eynjq")
+
+[node name="tree14" type="StaticBody3D" parent="trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.4494, 3.6499, 122.907)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="trees/tree14"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781595, 0)
+mesh = SubResource("QuadMesh_y7bst")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trees/tree14"]
+shape = SubResource("CapsuleShape3D_eynjq")
+
+[node name="tree15" type="StaticBody3D" parent="trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.4494, 3.6499, 124.907)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="trees/tree15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781595, 0)
+mesh = SubResource("QuadMesh_y7bst")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trees/tree15"]
+shape = SubResource("CapsuleShape3D_eynjq")
+
+[node name="tree16" type="StaticBody3D" parent="trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.7006, 3.6499, 71.5603)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="trees/tree16"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781595, 0)
+mesh = SubResource("QuadMesh_y7bst")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trees/tree16"]
+shape = SubResource("CapsuleShape3D_eynjq")
+
+[node name="tree17" type="StaticBody3D" parent="trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6392, 3.71412, 97.5969)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="trees/tree17"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781595, 0)
+mesh = SubResource("QuadMesh_y7bst")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trees/tree17"]
+shape = SubResource("CapsuleShape3D_eynjq")
+
+[node name="tree18" type="StaticBody3D" parent="trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.6692, 3.71412, 137.479)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="trees/tree18"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781595, 0)
+mesh = SubResource("QuadMesh_y7bst")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trees/tree18"]
+shape = SubResource("CapsuleShape3D_eynjq")
+
+[node name="tree19" type="StaticBody3D" parent="trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.4769, 3.71412, 116.753)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="trees/tree19"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781595, 0)
+mesh = SubResource("QuadMesh_y7bst")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trees/tree19"]
+shape = SubResource("CapsuleShape3D_eynjq")
+
+[node name="tree20" type="StaticBody3D" parent="trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.3894, 3.71412, 105.608)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="trees/tree20"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781595, 0)
+mesh = SubResource("QuadMesh_y7bst")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trees/tree20"]
+shape = SubResource("CapsuleShape3D_eynjq")
+
+[node name="tree21" type="StaticBody3D" parent="trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.8345, 3.71412, 88.8694)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="trees/tree21"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781595, 0)
+mesh = SubResource("QuadMesh_y7bst")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trees/tree21"]
+shape = SubResource("CapsuleShape3D_eynjq")
+
+[node name="tree22" type="StaticBody3D" parent="trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.7125, 3.71412, 92.4909)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="trees/tree22"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781595, 0)
+mesh = SubResource("QuadMesh_y7bst")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trees/tree22"]
+shape = SubResource("CapsuleShape3D_eynjq")
+
+[node name="tree23" type="StaticBody3D" parent="trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.7746, 3.71412, 70.403)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="trees/tree23"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781595, 0)
+mesh = SubResource("QuadMesh_y7bst")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trees/tree23"]
+shape = SubResource("CapsuleShape3D_eynjq")
+
+[node name="tree24" type="StaticBody3D" parent="trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.4724, 3.71412, 35.407)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="trees/tree24"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781595, 0)
+mesh = SubResource("QuadMesh_y7bst")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trees/tree24"]
+shape = SubResource("CapsuleShape3D_eynjq")
+
+[node name="tree25" type="StaticBody3D" parent="trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.9888, 3.71412, 10.5796)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="trees/tree25"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781595, 0)
+mesh = SubResource("QuadMesh_y7bst")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trees/tree25"]
+shape = SubResource("CapsuleShape3D_eynjq")
+
+[node name="tree26" type="StaticBody3D" parent="trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.8513, 3.71412, 5.98632)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="trees/tree26"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781595, 0)
+mesh = SubResource("QuadMesh_y7bst")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trees/tree26"]
+shape = SubResource("CapsuleShape3D_eynjq")
