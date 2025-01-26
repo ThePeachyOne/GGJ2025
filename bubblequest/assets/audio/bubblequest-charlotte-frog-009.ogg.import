@@ -2,7 +2,11 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
+<<<<<<< Updated upstream
 uid="uid://ciadxqf1navql"
+=======
+uid="uid://d3q1qh42qfuxh"
+>>>>>>> Stashed changes
 path="res://.godot/imported/bubblequest-charlotte-frog-009.ogg-5b44f0a7913649283c495220495230a6.oggvorbisstr"
 
 [deps]

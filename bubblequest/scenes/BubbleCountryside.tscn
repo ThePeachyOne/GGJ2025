@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=61 format=3 uid="uid://dbevkw7ic4o6f"]
+=======
+[gd_scene load_steps=54 format=3 uid="uid://dbevkw7ic4o6f"]
+>>>>>>> Stashed changes
 
 [ext_resource type="PackedScene" uid="uid://dpsy06y08shnc" path="res://scenes/player.tscn" id="1_mjvoc"]
 [ext_resource type="PackedScene" uid="uid://boweijfs0ysdy" path="res://scenes/rock.tscn" id="2_fpxtt"]
@@ -10,10 +14,13 @@
 [ext_resource type="PackedScene" uid="uid://bnds675i6pmgw" path="res://scenes/barn.tscn" id="7_mekcm"]
 [ext_resource type="PackedScene" uid="uid://i1v15jcmect3" path="res://scenes/big_rock.tscn" id="8_47pxs"]
 [ext_resource type="PackedScene" uid="uid://biogpwdm4mp1k" path="res://scenes/npc_root.tscn" id="10_aakfw"]
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://dhpflyxs7mjbt" path="res://assets/characters/poppy_star/models/poppy_star1.png" id="12_7pa34"]
 [ext_resource type="Texture2D" uid="uid://dfaw6deuiirea" path="res://assets/characters/charlotte/models/rich_child1.png" id="13_h6u7r"]
 [ext_resource type="Texture2D" uid="uid://cvwq40do028pg" path="res://assets/characters/poppy_star/models/poppy_star2.png" id="13_l0lj1"]
 [ext_resource type="Texture2D" uid="uid://xg21r6dbi4m6" path="res://assets/characters/mr_beef/models/Office-Cow.png" id="14_k0sgn"]
+=======
+>>>>>>> Stashed changes
 [ext_resource type="Texture2D" uid="uid://beem6y1x8v12p" path="res://assets/textures/tree.png" id="14_ynajd"]
 [ext_resource type="Texture2D" uid="uid://ddv34i3f5unxd" path="res://assets/characters/charlotte/models/rich_child2.png" id="15_f62bp"]
 [ext_resource type="AudioStream" uid="uid://ca07qgappylbp" path="res://assets/audio/bubblequest-cows-001.ogg" id="15_ufw76"]
@@ -1125,15 +1132,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.6686, 0.748155, 37.6652)
 NAMEHERE = "Poppy Star"
 DIALOGFILE = "res://assets/characters/poppy_star/text_files/Erin (PoppyStar).txt"
 CHOICEFILE = "res://assets/characters/poppy_star/text_files/Erin Choices (PoppyStar).txt"
+<<<<<<< Updated upstream
 IMAGE = [ExtResource("12_7pa34"), ExtResource("13_l0lj1")]
 audioList = [ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy")]
+=======
+IMAGE = []
+audioList = [null, null, null, null, null]
+>>>>>>> Stashed changes
 
 [node name="Charolette" parent="." instance=ExtResource("10_aakfw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5633, 0.748155, -100.727)
 DIALOGFILE = "res://assets/characters/charlotte/text_files/Charlotte (frogmode).txt"
 CHOICEFILE = "res://assets/characters/charlotte/text_files/Charlotte Choices (frogmode).txt"
+<<<<<<< Updated upstream
 IMAGE = [ExtResource("13_h6u7r"), ExtResource("15_f62bp")]
 audioList = [ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy")]
+=======
+IMAGE = []
+>>>>>>> Stashed changes
 
 [node name="Potato Guy" parent="." instance=ExtResource("10_aakfw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.958, 0.748155, 15.4419)
@@ -1152,7 +1168,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.4693, 0.748155, -18.4828)
 NAMEHERE = "Cow Trio"
 DIALOGFILE = "res://assets/characters/mr_beef/text_files/cow trio.txt"
 CHOICEFILE = "res://assets/characters/mr_beef/text_files/cow trio Choices.txt"
+<<<<<<< Updated upstream
 IMAGE = [ExtResource("16_40i7f"), ExtResource("14_k0sgn")]
+=======
+IMAGE = []
+>>>>>>> Stashed changes
 audioList = [ExtResource("15_ufw76"), ExtResource("16_y2jqg"), ExtResource("17_ei6ch"), ExtResource("18_qxkm5"), ExtResource("19_qmeyy"), ExtResource("19_1es5d"), ExtResource("20_n4w35"), ExtResource("21_tph82"), ExtResource("19_qmeyy"), ExtResource("22_38fie"), ExtResource("23_bkojd"), ExtResource("24_3kl55"), ExtResource("19_qmeyy"), ExtResource("25_anw44"), ExtResource("26_lwtx1"), ExtResource("27_bsso0"), ExtResource("19_qmeyy"), ExtResource("28_lddhb"), ExtResource("29_t2q6r"), ExtResource("19_qmeyy"), ExtResource("30_wou81"), ExtResource("31_hvkq3")]
 
 [node name="Sprite3D2" type="Sprite3D" parent="Cow Gang Leader"]

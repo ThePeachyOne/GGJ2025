@@ -2,7 +2,11 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
+<<<<<<< Updated upstream
 uid="uid://bjbjbkdipgrn2"
+=======
+uid="uid://dkaavl5j4ymxg"
+>>>>>>> Stashed changes
 path="res://.godot/imported/bubblequest-poppy-004.ogg-84a18f4cd7ec31229da0186b306f2d68.oggvorbisstr"
 
 [deps]
