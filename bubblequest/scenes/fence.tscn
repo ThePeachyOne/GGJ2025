@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://bo5j6f4vo1kfe"]
+
+[ext_resource type="Texture2D" uid="uid://ble00yi1ikgvs" path="res://assets/textures/fence.png" id="1_8viu2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ajyek"]
+transparency = 4
+albedo_texture = ExtResource("1_8viu2")
+
+[sub_resource type="QuadMesh" id="QuadMesh_bxg21"]
+material = SubResource("StandardMaterial3D_ajyek")
+size = Vector2(2.5, 2.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wny8m"]
+transparency = 4
+albedo_texture = ExtResource("1_8viu2")
+
+[sub_resource type="QuadMesh" id="QuadMesh_va4ui"]
+material = SubResource("StandardMaterial3D_wny8m")
+size = Vector2(2.5, 2.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d2gkq"]
+size = Vector3(2.55, 2.5, 0.15)
+
+[node name="fence" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.05)
+mesh = SubResource("QuadMesh_bxg21")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -0.05)
+mesh = SubResource("QuadMesh_va4ui")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.000797272)
+shape = SubResource("BoxShape3D_d2gkq")

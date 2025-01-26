@@ -12,6 +12,8 @@ var rot_y: float
 var bob_frequency
 var bob_amplitude
 
+func get_rotate_adjust():
+	return ROTATE_ADJUST
 
 
 func _ready():
@@ -57,7 +59,6 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 		
-	#if velocity != 0:
-		#if
+
 
 	move_and_slide()

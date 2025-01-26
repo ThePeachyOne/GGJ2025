@@ -1,10 +1,10 @@
 extends Camera3D
 
 var rot_x = 0
-var ROTATE_ADJUST = 0.007
+var ROTATE_ADJUST 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	ROTATE_ADJUST = self.get_parent().get_rotate_adjust()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

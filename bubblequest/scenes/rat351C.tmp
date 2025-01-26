@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://chhdefcsfhmlm"]
+
+[ext_resource type="PackedScene" uid="uid://co83dc4jiue4" path="res://scenes/rat_root.tscn" id="1_wwh8q"]
+[ext_resource type="PackedScene" uid="uid://dbhh10qk8cld5" path="res://scenes/running_guy.tscn" id="2_ur4se"]
+[ext_resource type="PackedScene" uid="uid://dpsy06y08shnc" path="res://scenes/player.tscn" id="4_jw75m"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_6wkwc"]
+vertices = PackedVector3Array(-19.5, 1, -19.5, -19.5, 1, 19.5, 19.5, 1, 19.5, 19.5, 1, -19.5)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fqisp"]
+albedo_color = Color(0, 0.443137, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_d1j8p"]
+material = SubResource("StandardMaterial3D_fqisp")
+size = Vector3(40, 1, 40)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h6hrq"]
+size = Vector3(40, 1, 40)
+
+[node name="rat_test_world" type="Node3D"]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_6wkwc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/StaticBody3D"]
+mesh = SubResource("BoxMesh_d1j8p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_h6hrq")
+
+[node name="player_root" parent="." instance=ExtResource("4_jw75m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.1658, 2.73589, -2.32848)
+
+[node name="running_guy_root" parent="." instance=ExtResource("2_ur4se")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.189789, 1.83777, -16.9504)
+
+[node name="rat_root" parent="." instance=ExtResource("1_wwh8q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0667, 1.0932, -16.1714)
+
+[node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="."]
+transform = Transform3D(19.9223, 0, 0, 0, 1, 0, 0, 0, 5.53181, 0, 1.2063, 0)
