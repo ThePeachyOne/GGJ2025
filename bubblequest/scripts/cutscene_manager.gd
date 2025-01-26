@@ -4,12 +4,28 @@ signal choosing_option
 signal option_chosen
 signal change_speaker(new_speaker: Actor)
 
+@export_category("Record of my Shame")
+## Nothing here is used if this is toggled off.
+@export var load_dialog_by_actor: bool = false
+## The path to the dialog file that will be used by the child SubtitleBox
+@export_file("*.txt") var universal_dialog_file: String
+## Enable or disable this text box printing by character.
+@export var toggle_type_by_char: bool = false
+## Control how fast the dialog box scrolls when type by character is toggled on.
+@export_range(1, 10, 1.0) var type_speed = 1
+## The color of the text in the subtitle box.
+@export var text_color: Color = Color.WHITE
+@export_category("")
+
 ## A file containing the text for the dialog boxes.
 @export_file("*.txt") var option_text_file: String
 
 @onready var _temp_actors: Array[Node] = get_tree().get_nodes_in_group("Actor")
 ## The list of Actors in this cutscene.
 var actors: Array[Actor]
+
+## This displays all text here if load_actor_by_dialog is off. It's disabled otherwise.
+@onready var one_file_box: SubtitleBox = $SubtitleBox
 
 ## The dialog path options that will be displayed in the text boxes. 
 ## Might be deleted later.
@@ -26,7 +42,40 @@ var speaking_actor: Actor = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	# Access the dialog option file and save for later use.
+	if load_dialog_by_actor:
+		_ready_by_actor()
+		return
+	
+	get_tree().call_group("Actor", "lose_subtitle_focus")
+	
+	# Initialize the master text box.
+	one_file_box.visible = true
+	one_file_box.sourceTextPath = universal_dialog_file
+	one_file_box.toggle_type_by_char = toggle_type_by_char
+	one_file_box.type_speed = type_speed
+	one_file_box.set_text_color(text_color)
+	
+	one_file_box._ready()
+	
+	option_chosen.connect(one_file_box.choose_path)
+	
+	one_file_box.hit_branch.connect(display_options)
+	one_file_box.out_of_dialog.connect(end_cutscene)
+	
+	var file = FileAccess.open(option_text_file, FileAccess.READ)
+	var temp_dialog_options = file.get_as_text().split("~")
+	for o in temp_dialog_options:
+		dialog_options.append(o.strip_edges())
+	
+	# Set the option text for later use.
+	var optionLabels = $MarginContainer/MarginContainer/HBoxContainer.get_children()
+	for i in range(dialog_options.size()):
+		optionLabels[i].visible = true
+		optionLabels[i].text = dialog_options[i]
+
+## I did a very foolish thing and wasted a lot of time making something that worked really well.
+func _ready_by_actor():
+		# Access the dialog option file and save for later use.
 	var file = FileAccess.open(option_text_file, FileAccess.READ)
 	var temp_dialog_options = file.get_as_text().split("~")
 	for o in temp_dialog_options:
@@ -58,7 +107,6 @@ func _ready():
 		#print(a.name)
 		#print(a.subtitles.dialogList)
 		#print(a.subtitles.dialogOptions)
-	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -69,7 +117,10 @@ func _unhandled_key_input(event: InputEvent):
 	if not is_awaiting_selection and event.is_pressed():
 		match event.keycode:
 			KEY_Q:
-				get_tree().call_group("Actor", "advance_textbox")
+				if load_dialog_by_actor:
+					get_tree().call_group("Actor", "advance_textbox")
+				else:
+					one_file_box.advance_text()
 			KEY_MINUS:
 				change_speaker.emit(actors[0])
 			KEY_EQUAL:
@@ -86,11 +137,23 @@ func _unhandled_key_input(event: InputEvent):
 				selected_option = 2
 		if (selected_option >= 0 and selected_option < dialog_options.size() ):
 			option_chosen.emit(selected_option) 
+			$MarginContainer.visible = false
+			is_awaiting_selection = false
+			if not load_dialog_by_actor:
+				one_file_box.visible = true
 	
 ## Toggle between the two label holders to display the options that the player can select.
 ##
 ## This will dynamically scale the size of the text boxes based on how many options are presented.
 ##
 func display_options():
-	$MarginContainer/HBoxContainer.visible = true
-	
+	$MarginContainer.visible = true
+	is_awaiting_selection = true
+	if not load_dialog_by_actor:
+		one_file_box.visible = false
+		
+## Whatever happens when a cutscene ends, put it here.
+func end_cutscene():
+	get_tree().call_group("Actor", "lose_dialog_focus")
+	one_file_box.visible = false
+	$MarginContainer.visible = false

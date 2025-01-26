@@ -1,0 +1,30 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://cuahqqxr1ktia"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v7m3h"]
+
+[sub_resource type="Gradient" id="Gradient_sk08j"]
+offsets = PackedFloat32Array(0, 0.546468, 1)
+colors = PackedColorArray(0.57257, 0.4526, 0.62, 1, 0.57257, 0.4526, 0.62, 0.333333, 0.57257, 0.4526, 0.62, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_l1l0g"]
+gradient = SubResource("Gradient_sk08j")
+fill_from = Vector2(1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3yumi"]
+texture = SubResource("GradientTexture2D_l1l0g")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7lmvt"]
+texture = SubResource("GradientTexture2D_l1l0g")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xbfv2"]
+texture = SubResource("GradientTexture2D_l1l0g")
+
+[sub_resource type="SystemFont" id="SystemFont_oungo"]
+font_names = PackedStringArray("Old English Text MT", "Onyx")
+
+[resource]
+default_font = SubResource("SystemFont_oungo")
+Label/styles/normal = SubResource("StyleBoxEmpty_v7m3h")
+MarginContainer/styles/background = SubResource("StyleBoxTexture_3yumi")
+Panel/styles/panel = SubResource("StyleBoxTexture_7lmvt")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_xbfv2")

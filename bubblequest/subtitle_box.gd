@@ -18,7 +18,7 @@ signal dialog_box_advanced
 @export_range(1, 10, 1.0) var type_speed = 1
 
 ## The Label corresponding to this SubtitleBox
-@onready var textBox: Label = $MarginContainer/Label
+@onready var textBox: Label = $Panel/MarginContainer/Label
 
 ## This is a String representation of the file.
 ## It's here so I can parse out line indicators.
@@ -47,6 +47,9 @@ var char_tick: int = 0
 ## Toggle for if we're ready to choose our path.
 var is_selecting_path: bool = false
 
+## Flip this when we've branched so we know when to end.
+var has_branched: bool = false
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -54,8 +57,8 @@ func _ready():
 	dialogList = load_base_dialog()
 	dialogOptions = load_branch_dialog()
 	
-	$MarginContainer/Label.label_settings = LabelSettings.new()
-	$MarginContainer/Label.label_settings.resource_local_to_scene = true
+	$Panel/MarginContainer/Label.label_settings = LabelSettings.new()
+	$Panel/MarginContainer/Label.label_settings.resource_local_to_scene = true
 	if toggle_type_by_char:
 		textBox.text = ""
 		$Timer.timeout.connect(advance_char)
@@ -78,6 +81,11 @@ func advance_text():
 	# This method of switching paths is subject to change with a global handler.
 	if (dialog_tick >= dialogList.size()):
 		is_selecting_path = true
+		if not has_branched:
+			hit_branch.emit()
+		else:
+			out_of_dialog.emit()
+			
 		#display_options()
 		return
 	
@@ -108,11 +116,12 @@ func advance_char():
 ##
 ## This will dynamically scale the size of the text boxes based on how many options are presented.
 ##
+## Currently depreciated. Do not use. Functionality moved to CutsceneManager.
 func display_options():
-	$MarginContainer/Label.visible = false
-	$MarginContainer/HBoxContainer.visible = true
+	$Panel/MarginContainer/Label.visible = false
+	$Panel/MarginContainer/HBoxContainer.visible = true
 	
-	var optionLabels = $MarginContainer/HBoxContainer.get_children()
+	var optionLabels = $Panel/MarginContainer/HBoxContainer.get_children()
 	for i in range(dialogOptions.size()):
 		optionLabels[i].visible = 1
 		
@@ -122,10 +131,10 @@ func display_options():
 func choose_path(option: int):
 	if option < 0: return
 	
-	$MarginContainer/Label.visible = true
-	$MarginContainer/HBoxContainer.visible = false
+	$Panel/MarginContainer/Label.visible = true
+	$Panel/MarginContainer/HBoxContainer.visible = false
 	
-	var optionLabels = $MarginContainer/HBoxContainer.get_children()
+	var optionLabels = $Panel/MarginContainer/HBoxContainer.get_children()
 	for l in optionLabels:
 		l.visible = false
 		
@@ -135,6 +144,7 @@ func choose_path(option: int):
 	#print(temp)
 	dialogList = temp
 	is_selecting_path = false
+	has_branched = true
 	dialog_tick = -1
 	advance_text()
 	
@@ -189,6 +199,8 @@ func load_branch_dialog() -> PackedStringArray:
 ## Look at the .txt file given and split on newline.
 ##
 ## Subject to adding further functionality.
+##
+## Do not use. Functionality split up for legibility.
 func load_file():
 	var file = FileAccess.open(sourceTextPath, FileAccess.READ)
 	if file == null:
@@ -229,4 +241,4 @@ func load_file():
 	
 ## A helper function to change the color of the text in the textbox.
 func set_text_color(color: Color):
-	$MarginContainer/Label.label_settings.font_color = color
+	$Panel/MarginContainer/Label.label_settings.font_color = color

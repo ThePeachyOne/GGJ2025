@@ -8,6 +8,7 @@ script = ExtResource("1_f2ijj")
 sourceTextPath = "res://assets/text/TEST_richter_dialog.txt"
 
 [node name="SubtitleBox" parent="." instance=ExtResource("2_lki5m")]
+visible = false
 sourceTextPath = ""
 toggle_type_by_char = false
 type_speed = 1
