@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://cue0xpmbj100w"]
+[gd_scene load_steps=17 format=3 uid="uid://cue0xpmbj100w"]
 
 [ext_resource type="PackedScene" uid="uid://dpsy06y08shnc" path="res://scenes/player.tscn" id="1_x8gkx"]
 [ext_resource type="PackedScene" uid="uid://dmy2bu2572wqd" path="res://scenes/boulder.tscn" id="2_36i5k"]
 [ext_resource type="Material" uid="uid://dkn6kb1sta4ma" path="res://assets/mountain_mat.tres" id="3_25e3v"]
 [ext_resource type="PackedScene" uid="uid://rl3rca7sfkns" path="res://scenes/big_ol_scissors.tscn" id="3_teu3d"]
 [ext_resource type="Shader" path="res://DogsToolkit/dither.gdshader" id="4_hijfi"]
+[ext_resource type="PackedScene" uid="uid://biogpwdm4mp1k" path="res://scenes/npc_root.tscn" id="6_70fuv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6mo23"]
 
@@ -848,3 +849,6 @@ shape = SubResource("BoxShape3D_suk7u")
 [node name="CollisionShape3D18" type="CollisionShape3D" parent="volcanic_spikes"]
 transform = Transform3D(0.645018, 0, -0.764168, 0, 1, 0, 0.764168, 0, 0.645018, 185.83, 29.1364, 45.6457)
 shape = SubResource("BoxShape3D_suk7u")
+
+[node name="npcRoot" parent="." instance=ExtResource("6_70fuv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.181, 0.616965, 36.4989)

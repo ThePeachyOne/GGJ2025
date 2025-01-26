@@ -31,6 +31,10 @@ skeleton = NodePath("../..")
 [node name="follow_point" type="Node3D" parent="MeshInstance3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.240455, 1.43602)
 
+[node name="RayCast3D" type="RayCast3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.481709, 0)
+target_position = Vector3(0, 0, -1.5)
+
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 avoidance_enabled = true
 

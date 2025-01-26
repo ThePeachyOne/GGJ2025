@@ -5,7 +5,7 @@ var chase_object
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	chase_object = get_node("/root/rat_test_world/running_guy_root")
+	chase_object = get_node("/root/Bubbleton/running_guy_root")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

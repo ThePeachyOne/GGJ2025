@@ -1,4 +1,4 @@
-[gd_scene load_steps=182 format=3 uid="uid://beu4ays7fse4n"]
+[gd_scene load_steps=185 format=3 uid="uid://beu4ays7fse4n"]
 
 [ext_resource type="Script" path="res://scenes/bubbleton.gd" id="1_j5pd1"]
 [ext_resource type="PackedScene" uid="uid://dpsy06y08shnc" path="res://scenes/player.tscn" id="1_s3dw0"]
@@ -7,19 +7,19 @@
 [ext_resource type="Shader" path="res://scenes/outline.gdshader" id="5_edj2h"]
 [ext_resource type="PackedScene" uid="uid://btvgogf85adqn" path="res://scenes/bubble_spout.tscn" id="5_ful0u"]
 [ext_resource type="Texture2D" uid="uid://dguaenmaohlac" path="res://assets/textures/tunnel.png" id="6_1ukck"]
-[ext_resource type="PackedScene" uid="uid://dn0c3gbjfexvi" path="res://scenes/tall_house.tscn" id="6_bd1tb"]
+[ext_resource type="PackedScene" path="res://scenes/tall_house.tscn" id="6_bd1tb"]
 [ext_resource type="Texture2D" uid="uid://dv70hf4kf1tw3" path="res://assets/textures/brick.png" id="7_rumpl"]
-[ext_resource type="PackedScene" uid="uid://5y4y5gnt3qgo" path="res://scenes/side_walk.tscn" id="9_ab0kg"]
+[ext_resource type="PackedScene" path="res://scenes/side_walk.tscn" id="9_ab0kg"]
 [ext_resource type="Shader" path="res://assets/shaders/bubble.gdshader" id="9_jq0ns"]
-[ext_resource type="PackedScene" uid="uid://hyk6v0l227wm" path="res://scenes/bordercloud.tscn" id="10_wy4ro"]
+[ext_resource type="PackedScene" path="res://scenes/bordercloud.tscn" id="10_wy4ro"]
 [ext_resource type="Texture2D" uid="uid://dlxq86oocrrbg" path="res://assets/textures/glassbuilding.png" id="12_0kym7"]
-[ext_resource type="PackedScene" uid="uid://b2lftkpk7ayju" path="res://scenes/pole.tscn" id="12_7bki5"]
+[ext_resource type="PackedScene" path="res://scenes/pole.tscn" id="12_7bki5"]
 [ext_resource type="Texture2D" uid="uid://fn6c11062dmo" path="res://assets/textures/water.png" id="12_355e8"]
 [ext_resource type="Texture2D" uid="uid://ctg1s50kfcg8e" path="res://assets/textures/windowedbuilding.png" id="12_jug7b"]
 [ext_resource type="Texture2D" uid="uid://dcja4nenv1st5" path="res://assets/textures/water2.png" id="13_t3exq"]
 [ext_resource type="Texture2D" uid="uid://d1n4rnlpltote" path="res://assets/textures/water3.png" id="14_i64op"]
 [ext_resource type="Texture2D" uid="uid://ckxtsknl4l0g7" path="res://assets/textures/vertwindowbuilding.png" id="14_jgf1o"]
-[ext_resource type="Material" uid="uid://cjl3tguv7smdx" path="res://assets/outline.tres" id="15_n2c3r"]
+[ext_resource type="Material" uid="uid://7bm81h12q512" path="res://assets/outline.tres" id="15_n2c3r"]
 [ext_resource type="Texture2D" uid="uid://5j2kbweccm2k" path="res://assets/textures/fountain.png" id="16_j2qko"]
 [ext_resource type="Texture2D" uid="uid://w2eyaau118ax" path="res://assets/textures/fountain2.png" id="17_0sa0v"]
 [ext_resource type="Texture2D" uid="uid://15spn52qd4qr" path="res://assets/textures/fountain3.png" id="18_idpkg"]
@@ -38,12 +38,14 @@
 [ext_resource type="Texture2D" uid="uid://cg28ewbarlmm5" path="res://assets/textures/door.png" id="34_87btl"]
 [ext_resource type="Texture2D" uid="uid://b6418glnpc7wt" path="res://assets/textures/countryside.png" id="34_416b5"]
 [ext_resource type="Texture2D" uid="uid://lnv1d3n7upco" path="res://assets/textures/doubledoor.png" id="35_61r3e"]
-[ext_resource type="QuadMesh" uid="uid://dtfhm3612fnea" path="res://assets/models/doubledoor.tres" id="35_spnnr"]
+[ext_resource type="QuadMesh" uid="uid://brn142eameasp" path="res://assets/models/doubledoor.tres" id="35_spnnr"]
 [ext_resource type="Texture2D" uid="uid://4bcyxhmupxbg" path="res://assets/textures/glassdoor.png" id="36_ro3kc"]
 [ext_resource type="Texture2D" uid="uid://cgx08odp42f20" path="res://assets/textures/window.png" id="38_xjabr"]
 [ext_resource type="Texture2D" uid="uid://cv73cyb6bhp3y" path="res://assets/textures/roundwindow.png" id="39_qcjc0"]
 [ext_resource type="Texture2D" uid="uid://bj4kltknbuu2" path="res://assets/textures/fun.png" id="43_p5lfm"]
 [ext_resource type="Texture2D" uid="uid://ds0tmooe8dhrx" path="res://assets/textures/trashcan.png" id="44_0gbll"]
+[ext_resource type="PackedScene" uid="uid://co83dc4jiue4" path="res://scenes/rat_root.tscn" id="45_cqqkd"]
+[ext_resource type="PackedScene" uid="uid://dbhh10qk8cld5" path="res://scenes/running_guy.tscn" id="46_r3aax"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xivfm"]
 sky_top_color = Color(0.320077, 0.47232, 0.983131, 1)
@@ -190,6 +192,10 @@ albedo_color = Color(1, 0.976471, 0.898039, 1)
 material = SubResource("StandardMaterial3D_86crp")
 size = Vector2(17.665, 16.755)
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_m88wl"]
+vertices = PackedVector3Array(-8.34805, -0.450729, -8.12903, -8.34805, -0.450729, 8.62097, 7.40195, -0.450729, 8.62097, 7.40195, -0.450729, -8.12903)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+
 [sub_resource type="SphereShape3D" id="SphereShape3D_3y6pe"]
 radius = 20.0
 
@@ -229,35 +235,35 @@ shader = ExtResource("5_edj2h")
 shader_parameter/color = Color(0, 0, 0, 1)
 shader_parameter/size = 1.01
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tr100"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yrrpb"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.932934, 0.902295, 0.694079, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vqk6l"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hkgjp"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.530961, 0.429109, 0.517072, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lfea5"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n0uc0"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.957896, 0.338717, 0.876763, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5qgqp"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p826l"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.341542, 0.735164, 0.356238, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8airk"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p47th"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.351437, 0.655716, 0.943383, 1)
 albedo_texture = ExtResource("7_rumpl")
@@ -276,119 +282,119 @@ material = SubResource("StandardMaterial3D_jjuka")
 size = Vector2(3, 3)
 orientation = 1
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_78iuw"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vvg3b"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.878353, 0.538072, 0.314552, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o24lv"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0jd13"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.878353, 0.538072, 0.314552, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pxftw"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u4awf"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.878353, 0.538072, 0.314552, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wssjg"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s8uo7"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.878353, 0.538072, 0.314552, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c2fi0"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_etg18"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.875904, 0.561795, 0.989407, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_182c8"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_obqtv"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.506077, 0.722398, 0.987234, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l2i2j"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m1jxb"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.20025, 0.634496, 0.54183, 1)
 albedo_texture = ExtResource("12_0kym7")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wq8f6"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y7bae"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.20025, 0.634496, 0.54183, 1)
 albedo_texture = ExtResource("12_0kym7")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tpue4"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jgpus"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.942686, 0.867617, 0, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uty4y"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u5ctq"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.997466, 0.537965, 0.721485, 1)
 albedo_texture = ExtResource("12_jug7b")
 uv1_scale = Vector3(0.145, 0.145, 0.145)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m1j6c"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mw7ku"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.984049, 0.610741, 3.85046e-07, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_doedn"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fyhsa"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.368624, 0.798852, 0.682019, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_msid3"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lduos"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.744753, 0.650461, 0.934603, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pbdhn"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_spept"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.744753, 0.650461, 0.934603, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_utrnj"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xdv4j"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.971454, 0.60373, 0.39902, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hwbyd"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5wctx"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.962157, 0.614806, 0.33833, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fv2at"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_apcqf"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0, 0.855984, 0.163987, 1)
 albedo_texture = ExtResource("12_jug7b")
@@ -396,7 +402,7 @@ uv1_scale = Vector3(0.06, 0.06, 0.06)
 uv1_offset = Vector3(-0.145, -0.045, 0)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ost53"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g8ilc"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.744753, 0.650461, 0.934603, 1)
 albedo_texture = ExtResource("12_jug7b")
@@ -404,105 +410,105 @@ uv1_scale = Vector3(0.075, 0.075, 0.075)
 uv1_offset = Vector3(0, 0.01, 0)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2kyiu"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0kgdl"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(1, 0.268368, 0.726714, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8n3ym"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8t5jc"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0, 0.71015, 0.638877, 1)
 albedo_texture = ExtResource("14_jgf1o")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pr2cu"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iyivw"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0, 0.855984, 0.163987, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_28g7d"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qhyug"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hwx4b"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y5w2f"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_06t0t"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ubeh8"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_23yy7"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n15fu"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5d43g"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gwrtg"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rbxmm"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jpytd"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.499184, 0.172677, 1, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y7kfa"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nbpma"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.898039, 0.933333, 0.988235, 1)
 albedo_texture = ExtResource("14_jgf1o")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kal8c"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w4v6m"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
-albedo_color = Color(0.898039, 0.933333, 0.988235, 1)
+albedo_color = Color(0.626548, 0.158899, 0.341145, 1)
 albedo_texture = ExtResource("14_jgf1o")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bjcjm"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3pnl8"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.80568, 0.676586, 0.625601, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ueyj"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xlwah"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.58734, 0.779334, 0.373638, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bxe2i"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3oj6o"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.309169, 0.684084, 0.870579, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f6njf"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xyak0"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.676495, 0.720712, 0.744886, 1)
 albedo_texture = ExtResource("12_jug7b")
@@ -510,7 +516,7 @@ uv1_scale = Vector3(0.13, 0.13, 0.13)
 uv1_offset = Vector3(0, -0.02, 0)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pysrf"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nijvu"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.783385, 0.721766, 7.70092e-07, 1)
 albedo_texture = ExtResource("7_rumpl")
@@ -529,7 +535,7 @@ material = SubResource("StandardMaterial3D_15476")
 size = Vector2(3, 3)
 orientation = 1
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_41bgl"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xcyx3"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.506077, 0.722398, 0.987234, 1)
 albedo_texture = ExtResource("12_0kym7")
@@ -655,43 +661,43 @@ orientation = 1
 [sub_resource type="BoxShape3D" id="BoxShape3D_658em"]
 size = Vector3(1.9259, 1.47217, 1.26086)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_djxea"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_agcpq"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_texture = ExtResource("25_5n0fn")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2fxe4"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ppv1a"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_texture = ExtResource("25_5n0fn")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f2w2w"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vu6tm"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_texture = ExtResource("25_5n0fn")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f6xm6"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bkuxr"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_texture = ExtResource("25_5n0fn")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l1fab"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oprnx"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_texture = ExtResource("25_5n0fn")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bwknr"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vkofa"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_texture = ExtResource("25_5n0fn")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rm5rg"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r4xca"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_texture = ExtResource("25_5n0fn")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
@@ -1175,7 +1181,7 @@ shape = SubResource("CylinderShape3D_563v4")
 mesh = SubResource("CylinderMesh_b6ua2")
 
 [node name="player_root" parent="." instance=ExtResource("1_s3dw0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.357, 2, 62.9376)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.7223, 2, 84.6938)
 
 [node name="Lamps" type="Node3D" parent="."]
 
@@ -1660,11 +1666,6 @@ transform = Transform3D(2.23517e-07, 0, -1, 0, 1, 0, 1, 0, 2.23517e-07, -13.9619
 mesh = SubResource("PlaneMesh_1kbjm")
 skeleton = NodePath("../..")
 
-[node name="CloudGround8" type="MeshInstance3D" parent="sidewalks"]
-transform = Transform3D(2.23517e-07, 0, -1, 0, 1, 0, 1, 0, 2.23517e-07, -7.14037, 0.50115, 88.5299)
-mesh = SubResource("PlaneMesh_1kbjm")
-skeleton = NodePath("../..")
-
 [node name="CloudGround9" type="MeshInstance3D" parent="sidewalks"]
 transform = Transform3D(-0.5, 0, -0.866026, 0, 1, 0, 0.866026, 0, -0.5, -88.6521, 0.501148, 92.6171)
 mesh = SubResource("PlaneMesh_1kbjm")
@@ -1714,6 +1715,15 @@ skeleton = NodePath("../..")
 transform = Transform3D(-0.964571, 0, -0.263823, 0, 1, 0, 0.263823, 0, -0.964571, -135.061, 0.501146, 7.50141)
 mesh = SubResource("PlaneMesh_1kbjm")
 skeleton = NodePath("../..")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="sidewalks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.66982, 1.45188, 88.3264)
+navigation_mesh = SubResource("NavigationMesh_m88wl")
+
+[node name="CloudGround8" type="MeshInstance3D" parent="sidewalks/NavigationRegion3D"]
+transform = Transform3D(2.23517e-07, 0, -1, 0, 1, 0, 1, 0, 2.23517e-07, -0.470545, -0.950729, 0.203468)
+mesh = SubResource("PlaneMesh_1kbjm")
+skeleton = NodePath("../../..")
 
 [node name="BubbleHouses" type="Node3D" parent="."]
 
@@ -2775,12 +2785,12 @@ skeleton = NodePath("../../../../..")
 [node name="StaticBody3D" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7553, 0, 12.4538)
 size = Vector3(16, 20, 16)
-material = SubResource("StandardMaterial3D_tr100")
+material = SubResource("StandardMaterial3D_yrrpb")
 
 [node name="StaticBody3D13" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.14866, 0, 39.4538)
 size = Vector3(16, 7, 16)
-material = SubResource("StandardMaterial3D_vqk6l")
+material = SubResource("StandardMaterial3D_hkgjp")
 color = Color(0.530961, 0.429109, 0.517072, 1)
 
 [node name="pole" parent="BoxHouses/StaticBody3D13" instance=ExtResource("12_7bki5")]
@@ -2792,19 +2802,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.0599, 2.48223, 0.0825043)
 [node name="StaticBody3D14" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.14866, 0, 51.5312)
 size = Vector3(16, 10, 8)
-material = SubResource("StandardMaterial3D_lfea5")
+material = SubResource("StandardMaterial3D_n0uc0")
 color = Color(0.957896, 0.338717, 0.876763, 1)
 
 [node name="StaticBody3D15" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.14866, 0, 59.5312)
 size = Vector3(16, 10, 8)
-material = SubResource("StandardMaterial3D_5qgqp")
+material = SubResource("StandardMaterial3D_p826l")
 color = Color(0.341542, 0.735164, 0.356238, 1)
 
 [node name="StaticBody3D16" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.14866, 0, 70.5312)
 size = Vector3(16, 10, 8)
-material = SubResource("StandardMaterial3D_8airk")
+material = SubResource("StandardMaterial3D_p47th")
 color = Color(0.351437, 0.655716, 0.943383, 1)
 
 [node name="pole" parent="BoxHouses/StaticBody3D16" instance=ExtResource("12_7bki5")]
@@ -2821,205 +2831,205 @@ skeleton = NodePath("../../..")
 [node name="StaticBody3D17" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.14866, 0, 78.5312)
 size = Vector3(16, 15, 8)
-material = SubResource("StandardMaterial3D_78iuw")
+material = SubResource("StandardMaterial3D_vvg3b")
 color = Color(0.878353, 0.538072, 0.314552, 1)
 
 [node name="StaticBody3D19" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.148661, 0, 89.5312)
 size = Vector3(16, 15, 8)
-material = SubResource("StandardMaterial3D_o24lv")
+material = SubResource("StandardMaterial3D_0jd13")
 color = Color(0.878353, 0.538072, 0.314552, 1)
 
 [node name="StaticBody3D34" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, -123.779, 7.62939e-06, 19.6691)
 size = Vector3(16, 15, 8)
-material = SubResource("StandardMaterial3D_pxftw")
+material = SubResource("StandardMaterial3D_u4awf")
 color = Color(0.878353, 0.538072, 0.314552, 1)
 
 [node name="StaticBody3D35" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -133.369, 7.62939e-06, 26.3799)
 size = Vector3(16, 15, 8)
-material = SubResource("StandardMaterial3D_wssjg")
+material = SubResource("StandardMaterial3D_s8uo7")
 color = Color(0.878353, 0.538072, 0.314552, 1)
 
 [node name="StaticBody3D2" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9862, 0, -14.9368)
 size = Vector3(30, 10, 16)
-material = SubResource("StandardMaterial3D_c2fi0")
+material = SubResource("StandardMaterial3D_etg18")
 color = Color(0.875904, 0.561795, 0.989407, 1)
 
 [node name="StaticBody3D3" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.5278, 0, 22.2091)
 size = Vector3(15, 10, 30)
-material = SubResource("StandardMaterial3D_182c8")
+material = SubResource("StandardMaterial3D_obqtv")
 color = Color(0.506077, 0.722398, 0.987234, 1)
 
 [node name="StaticBody3D18" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.5278, 0, 62.2091)
 size = Vector3(15, 30, 30)
-material = SubResource("StandardMaterial3D_l2i2j")
+material = SubResource("StandardMaterial3D_m1jxb")
 color = Color(0.20025, 0.634496, 0.54183, 1)
 
 [node name="StaticBody3D24" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -48.0725, 0, 70.2091)
 size = Vector3(15, 30, 30)
-material = SubResource("StandardMaterial3D_wq8f6")
+material = SubResource("StandardMaterial3D_y7bae")
 color = Color(0.20025, 0.634496, 0.54183, 1)
 
 [node name="StaticBody3D20" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.4253, 0, 95.9279)
 size = Vector3(15, 10, 30)
-material = SubResource("StandardMaterial3D_tpue4")
+material = SubResource("StandardMaterial3D_jgpus")
 color = Color(0.942686, 0.867617, 0, 1)
 
 [node name="StaticBody3D4" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.6399, 0, -14.4024)
 size = Vector3(15, 20, 15)
-material = SubResource("StandardMaterial3D_uty4y")
+material = SubResource("StandardMaterial3D_u5ctq")
 color = Color(0.997466, 0.537965, 0.721485, 1)
 
 [node name="StaticBody3D5" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72.0059, 0, 0.586279)
 size = Vector3(15, 10, 30)
-material = SubResource("StandardMaterial3D_m1j6c")
+material = SubResource("StandardMaterial3D_mw7ku")
 color = Color(0.984049, 0.610741, 3.85046e-07, 1)
 
 [node name="StaticBody3D6" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -82.9735, 0, -46.8892)
 size = Vector3(15, 7, 30)
-material = SubResource("StandardMaterial3D_doedn")
+material = SubResource("StandardMaterial3D_fyhsa")
 color = Color(0.368624, 0.798852, 0.682019, 1)
 
 [node name="StaticBody3D7" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -89.6649, 0, -33.1837)
 size = Vector3(7, 10, 7)
-material = SubResource("StandardMaterial3D_msid3")
+material = SubResource("StandardMaterial3D_lduos")
 color = Color(0.744753, 0.650461, 0.934603, 1)
 
 [node name="StaticBody3D28" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -124.475, 0, -94.3848)
 size = Vector3(8, 10, 8)
-material = SubResource("StandardMaterial3D_pbdhn")
+material = SubResource("StandardMaterial3D_spept")
 color = Color(0.744753, 0.650461, 0.934603, 1)
 
 [node name="StaticBody3D30" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -112.247, 0, -106.926)
 size = Vector3(30, 20, 8)
-material = SubResource("StandardMaterial3D_utrnj")
+material = SubResource("StandardMaterial3D_xdv4j")
 color = Color(0.971454, 0.60373, 0.39902, 1)
 
 [node name="StaticBody3D8" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -96.2308, 0, -53.4831)
 size = Vector3(7, 10, 10)
-material = SubResource("StandardMaterial3D_hwbyd")
+material = SubResource("StandardMaterial3D_5wctx")
 color = Color(0.962157, 0.614806, 0.33833, 1)
 
 [node name="StaticBody3D9" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -106.562, 0, -50.9304)
 size = Vector3(14, 12, 10)
-material = SubResource("StandardMaterial3D_fv2at")
+material = SubResource("StandardMaterial3D_apcqf")
 color = Color(0, 0.855984, 0.163987, 1)
 
 [node name="StaticBody3D36" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.54187, 0, 0.840463, 0, 1, 0, -0.840463, 0, 0.54187, -99.4352, 0, 86.6364)
 size = Vector3(7, 10, 7)
-material = SubResource("StandardMaterial3D_ost53")
+material = SubResource("StandardMaterial3D_g8ilc")
 color = Color(0.744753, 0.650461, 0.934603, 1)
 
 [node name="StaticBody3D38" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.54187, 0, 0.840463, 0, 1, 0, -0.840463, 0, 0.54187, -92.2026, 0, 96.7441)
 size = Vector3(16, 10, 16)
-material = SubResource("StandardMaterial3D_2kyiu")
+material = SubResource("StandardMaterial3D_0kgdl")
 color = Color(1, 0.268368, 0.726714, 1)
 
 [node name="StaticBody3D39" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.54187, 0, 0.840463, 0, 1, 0, -0.840463, 0, 0.54187, -75.7825, -9.53674e-07, 97.1696)
 size = Vector3(12, 15, 12)
-material = SubResource("StandardMaterial3D_8n3ym")
+material = SubResource("StandardMaterial3D_8t5jc")
 color = Color(0, 0.71015, 0.638877, 1)
 
 [node name="StaticBody3D37" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.54187, 0, 0.840463, 0, 1, 0, -0.840463, 0, 0.54187, -105.486, 0, 80.1048)
 size = Vector3(14, 15, 10)
-material = SubResource("StandardMaterial3D_pr2cu")
+material = SubResource("StandardMaterial3D_iyivw")
 color = Color(0, 0.855984, 0.163987, 1)
 
 [node name="StaticBody3D11" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -106.712, -4.29153e-06, 4.1485)
 size = Vector3(14, 12, 10)
-material = SubResource("StandardMaterial3D_28g7d")
+material = SubResource("StandardMaterial3D_qhyug")
 color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 
 [node name="StaticBody3D12" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, -75.6693, -4.29153e-06, -81.0399)
 size = Vector3(20, 12, 15)
-material = SubResource("StandardMaterial3D_hwx4b")
+material = SubResource("StandardMaterial3D_y5w2f")
 color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 
 [node name="StaticBody3D21" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -90.7728, -4.29153e-06, -76.4715)
 size = Vector3(20, 12, 15)
-material = SubResource("StandardMaterial3D_06t0t")
+material = SubResource("StandardMaterial3D_ubeh8")
 color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 
 [node name="StaticBody3D22" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -88.6264, -3.33786e-06, -91.3269)
 size = Vector3(20, 12, 15)
-material = SubResource("StandardMaterial3D_23yy7")
+material = SubResource("StandardMaterial3D_n15fu")
 color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 
 [node name="StaticBody3D23" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(-0.188119, 0, -0.982146, 0, 1, 0, 0.982146, 0, -0.188119, -94.1836, -3.33786e-06, -84.2923)
 size = Vector3(10, 12, 15)
-material = SubResource("StandardMaterial3D_5d43g")
+material = SubResource("StandardMaterial3D_gwrtg")
 color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 
 [node name="StaticBody3D25" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(-0.944623, 0, -0.328157, 0, 1, 0, 0.328157, 0, -0.944623, -122.95, -1.43051e-06, -63.5941)
 size = Vector3(10, 8, 7)
-material = SubResource("StandardMaterial3D_rbxmm")
+material = SubResource("StandardMaterial3D_jpytd")
 color = Color(0.499184, 0.172677, 1, 1)
 
 [node name="StaticBody3D26" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.328157, 0, -0.944623, 0, 1, 0, 0.944623, 0, 0.328157, -137.349, -3.33786e-06, -75.8029)
 size = Vector3(20, 24, 30)
-material = SubResource("StandardMaterial3D_y7kfa")
+material = SubResource("StandardMaterial3D_nbpma")
 color = Color(0.898039, 0.933333, 0.988235, 1)
 
 [node name="StaticBody3D27" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.944623, 0, 0.328157, 0, 1, 0, -0.328157, 0, 0.944623, -142.869, -3.33786e-06, -68.3505)
 size = Vector3(15, 24, 30)
-material = SubResource("StandardMaterial3D_kal8c")
+material = SubResource("StandardMaterial3D_w4v6m")
 color = Color(0.626548, 0.158899, 0.341145, 1)
 
 [node name="StaticBody3D10" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -116.317, 0, -32.5115)
 size = Vector3(14, 15, 40)
-material = SubResource("StandardMaterial3D_bjcjm")
+material = SubResource("StandardMaterial3D_3pnl8")
 color = Color(0.80568, 0.676586, 0.625601, 1)
 
 [node name="StaticBody3D29" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -147.075, 3.8147e-06, -40.8665)
 size = Vector3(14, 10, 20)
-material = SubResource("StandardMaterial3D_4ueyj")
+material = SubResource("StandardMaterial3D_xlwah")
 color = Color(0.58734, 0.779334, 0.373638, 1)
 
 [node name="StaticBody3D31" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -141.412, 3.8147e-06, -27.0144)
 size = Vector3(10, 7, 10)
-material = SubResource("StandardMaterial3D_bxe2i")
+material = SubResource("StandardMaterial3D_3oj6o")
 color = Color(0.309169, 0.684084, 0.870579, 1)
 
 [node name="StaticBody3D33" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -138.869, 3.8147e-06, -17.4102)
 size = Vector3(10, 7, 10)
-material = SubResource("StandardMaterial3D_f6njf")
+material = SubResource("StandardMaterial3D_xyak0")
 color = Color(0.676495, 0.720712, 0.744886, 1)
 
 [node name="StaticBody3D32" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -135.389, 3.8147e-06, 1.92549)
 size = Vector3(15, 12, 15)
-material = SubResource("StandardMaterial3D_pysrf")
+material = SubResource("StandardMaterial3D_nijvu")
 color = Color(0.783385, 0.721766, 7.70092e-07, 1)
 
 [node name="Cloud138" type="MeshInstance3D" parent="BoxHouses"]
@@ -3030,7 +3040,7 @@ skeleton = NodePath("../../..")
 [node name="StaticBody3D40" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -109.652, 0, -79.1573)
 size = Vector3(15, 50, 30)
-material = SubResource("StandardMaterial3D_41bgl")
+material = SubResource("StandardMaterial3D_xcyx3")
 color = Color(0.506077, 0.722398, 0.987234, 1)
 
 [node name="fountain" type="StaticBody3D" parent="."]
@@ -3745,43 +3755,43 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.3534, 1.273, -36.9652)
 [node name="libary" parent="." instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -140.998, -9.53674e-07, 56.9955)
 size = Vector3(32, 20, 32)
-material = SubResource("StandardMaterial3D_djxea")
+material = SubResource("StandardMaterial3D_agcpq")
 color = Color(1, 1, 1, 1)
 
 [node name="StaticBody3D37" parent="libary" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1978, 0, -0.20076)
 size = Vector3(20, 1, 20)
-material = SubResource("StandardMaterial3D_2fxe4")
+material = SubResource("StandardMaterial3D_ppv1a")
 color = Color(1, 1, 1, 1)
 
 [node name="StaticBody3D38" parent="libary" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1978, 0.673466, -0.20076)
 size = Vector3(19, 1, 19)
-material = SubResource("StandardMaterial3D_f2w2w")
+material = SubResource("StandardMaterial3D_vu6tm")
 color = Color(1, 1, 1, 1)
 
 [node name="StaticBody3D39" parent="libary" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1978, 1.46601, -0.20076)
 size = Vector3(18, 1, 18)
-material = SubResource("StandardMaterial3D_f6xm6")
+material = SubResource("StandardMaterial3D_bkuxr")
 color = Color(1, 1, 1, 1)
 
 [node name="StaticBody3D40" parent="libary" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1978, 11.8094, -0.20076)
 size = Vector3(24, 1, 24)
-material = SubResource("StandardMaterial3D_l1fab")
+material = SubResource("StandardMaterial3D_oprnx")
 color = Color(1, 1, 1, 1)
 
 [node name="StaticBody3D41" parent="libary" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1978, 12.4829, -0.20076)
 size = Vector3(23, 1, 23)
-material = SubResource("StandardMaterial3D_bwknr")
+material = SubResource("StandardMaterial3D_vkofa")
 color = Color(1, 1, 1, 1)
 
 [node name="StaticBody3D42" parent="libary" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1978, 13.2754, -0.20076)
 size = Vector3(22, 1, 22)
-material = SubResource("StandardMaterial3D_rm5rg")
+material = SubResource("StandardMaterial3D_r4xca")
 color = Color(1, 1, 1, 1)
 
 [node name="column" type="StaticBody3D" parent="libary"]
@@ -5374,5 +5384,13 @@ texture = ExtResource("44_0gbll")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="trash cans/trashcan13"]
 shape = SubResource("CylinderShape3D_3hg7v")
+
+[node name="rat_root" parent="." instance=ExtResource("45_cqqkd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.89711, 1.144, 84.0701)
+
+[node name="running_guy_root" parent="." instance=ExtResource("46_r3aax")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.65848, 1.46632, 92.7467)
+lower_bound = Vector2(-5, 83)
+upper_bound = Vector2(-10, 94)
 
 [connection signal="body_entered" from="gateway" to="gateway" method="_on_body_entered"]
