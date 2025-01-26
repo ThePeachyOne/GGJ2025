@@ -1,0 +1,33 @@
+Hobo: At last…
+Player: What is this place?
+Hobo: You have journeyed upon my esteemed spire. *Gestures to cardboard box next to him*
+Hobo: It's okay to go slowly until you stop.
+Player: Um.. Thanks?
+Hobo: The only way to deal with a free world is to be so free that your existence is a weakness.
+Player: Oh? Oh. This hill is lonely, have you heard of The Edge?
+Hobo: There are magics I wield more dangerous than a simple Edge.
+Hobo: Let come what comes, let go what goes. See what remains.
+Player: So you’ve heard? Where? It must be near.
+Hobo: It is not the journey that is most important, but the direction.
+Player: I thought it was “It’s not the destination that matters, but the journey”? But you know of it! Where?!
+Hobo: Life is short and we have never too much time for gladdening the hearts of those who are traveling the dark journey with us. Oh be swift to love, make haste to be kind.
+Player: That sounds… completely unrelated…
+Hobo: You never know what you’ll get, but you know what you see.
+Player: Um, are you okay?
+Hobo: This whole life is one big fish bowl and swimming is our only purpose.
+Player: Oh, um, where’s the hospital?
+Hobo: There is no location worthwhile, and no journey that matters, only true enlightenment.
+Player: Can you point? Just point the way.
+Hobo: Reality is but a means to escape, the truest sight to behold is within the eyes of the beholder.
+Player: Well, that at least made some sense.
+Hobo: History repeats itself, first as tragedy, second as farce.
+Player: And…. here we are again, never mind I should move on.
+Hobo: The Edge hovers near but do not relish to hasten the end.
+Hobo: *whispers* And you can only approach it on your upkeep.
+Player: What? Upkeep? What kind of end? Uh oh.
+Hobo: All things excellent are as difficult as they are rare.
+<SPLIT>
+Hobo: The decision is made, find your final quarry at the end of the hill.
+<CHOICE>
+Hobo: The decision is made, find your final quarry at the end of the hill.
+</SPLIT>

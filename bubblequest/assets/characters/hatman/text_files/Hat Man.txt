@@ -1,0 +1,10 @@
+Hat Man: *Stares*
+Player: Wh-What’s going on?
+Hat Man: *Stares*
+<SPLIT>
+Hat Man: *Stares*
+Player: *Screams*
+<CHOICE>
+Hat Man: *Stares*
+Player: *Screams*
+</SPLIT>

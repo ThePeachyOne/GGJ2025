@@ -1,0 +1,9 @@
+Deranged Fan: Oh! Have you seen her? I know you have! She’s the best!
+Player: Who is what?
+Deranged Fan: The one and only PoppyStar! She’s so perfect! I love her more than anyone!
+Deranged Fan: I heard she’s coming here! I heard she’s hiding! Oh, I’m gonna find her!
+<SPLIT>
+Deranged Fan: I will! I will!
+<CHOICE>
+Deranged Fan: No, she’s so close, I’m sure!
+</SPLIT>

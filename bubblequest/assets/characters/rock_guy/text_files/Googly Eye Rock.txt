@@ -1,0 +1,9 @@
+Rock: *plastic rattle*
+Rock: *rock noises*
+Player: Ummm… Hi?
+Rock: *plastic rattle*
+<SPLIT>
+Rock: *content rock noises*
+<CHOICE>
+Rock: *angry rock noises*
+</SPLIT>
