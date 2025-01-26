@@ -1,0 +1,7 @@
+Fishicca: glub glub…
+Fishicca: Glub.. glub.
+<SPLIT>
+Fishicca: glub…
+<CHOICE>
+Fishicca: glub glub glub! (panicked)
+</SPLIT>
