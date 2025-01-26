@@ -1,22 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://b7grgf8ndq2cf"]
+[gd_scene load_steps=4 format=3 uid="uid://sd7y6y3icpsn"]
 
-[ext_resource type="Theme" uid="uid://dpg2x1a15e835" path="res://assets/main_menu_theme.tres" id="1_hijcw"]
-[ext_resource type="Script" path="res://scripts/main_menu.gd" id="2_bibkn"]
+[ext_resource type="Theme" uid="uid://dpg2x1a15e835" path="res://assets/main_menu_theme.tres" id="1_mb4mj"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rs4gm"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7u7ms"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sl20y"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nle7x"]
 
-[node name="BaseMenu" type="Control"]
-process_mode = 3
+[node name="OptionsMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_hijcw")
-script = ExtResource("2_bibkn")
+theme = ExtResource("1_mb4mj")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -29,7 +26,7 @@ grow_vertical = 2
 [node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxEmpty_rs4gm")
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7u7ms")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -39,7 +36,7 @@ size_flags_stretch_ratio = 2.0
 
 [node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
-text = "BUBBLEQUEST"
+text = "OPTIONS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -49,34 +46,37 @@ layout_mode = 2
 [node name="VSeparator" type="VSeparator" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxEmpty_rs4gm")
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7u7ms")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.0
+theme_override_constants/separation = 10
+alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="CheckBox" type="CheckBox" parent="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Play" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/MarginContainer"]
+[node name="CheckButton" type="CheckButton" parent="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-text = "Play
-"
 
-[node name="Quit" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="HScrollBar" type="HScrollBar" parent="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-text = "Quit"
+
+[node name="HScrollBar2" type="HSlider" parent="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Spawn Your Mother"
 
 [node name="VSeparator2" type="VSeparator" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxEmpty_rs4gm")
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7u7ms")
 
 [node name="VSeparator2" type="VSeparator" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxEmpty_sl20y")
-
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/MarginContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+theme_override_styles/separator = SubResource("StyleBoxEmpty_nle7x")

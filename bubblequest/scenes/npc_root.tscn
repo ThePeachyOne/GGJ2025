@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://i8nivtxo5lvm"]
+[gd_scene load_steps=10 format=3 uid="uid://i8nivtxo5lvm"]
 
 [ext_resource type="Script" path="res://scripts/npc_root.gd" id="1_b5o2r"]
 [ext_resource type="PackedScene" uid="uid://bmhon2p6ohvc3" path="res://scenes/CutsceneManager.tscn" id="2_brwsu"]
+[ext_resource type="Texture2D" uid="uid://owr74ehs64nb" path="res://assets/textures/badIMG.png" id="2_xvs6q"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sqtds"]
 transparency = 4
@@ -22,8 +23,11 @@ billboard_mode = 1
 material = SubResource("StandardMaterial3D_7rcnc")
 text = "Press E to interact with "
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_scduu"]
+
 [node name="npcRoot" type="Area3D"]
 script = ExtResource("1_b5o2r")
+IMAGE = ExtResource("2_xvs6q")
 
 [node name="IMAGE_HERE" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
@@ -42,6 +46,10 @@ mesh = SubResource("TextMesh_3qkh2")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
 
 [node name="CutsceneManager" parent="." instance=ExtResource("2_brwsu")]
+
+[node name="npcCollision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_scduu")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

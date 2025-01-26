@@ -1,9 +1,10 @@
-[gd_resource type="Theme" load_steps=7 format=3 uid="uid://dpg2x1a15e835"]
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://dpg2x1a15e835"]
 
 [ext_resource type="FontFile" uid="uid://ckbpaw5l5m7nw" path="res://assets/text/Modak-Regular.ttf" id="1_08nxp"]
+[ext_resource type="FontFile" uid="uid://bs0ihnwet2u1r" path="res://assets/text/Matemasie-Regular.ttf" id="1_tkmo1"]
+[ext_resource type="Texture2D" uid="uid://d3ed6g4wnovf6" path="res://assets/textures/soap_bubble.png" id="2_x1gyo"]
 
-[sub_resource type="SystemFont" id="SystemFont_jrh1r"]
-font_names = PackedStringArray("Brush Script MT")
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uqywr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dklev"]
 bg_color = Color(0.3, 0.813333, 1, 0.258824)
@@ -60,9 +61,13 @@ corner_radius_bottom_left = 50
 [resource]
 default_font = ExtResource("1_08nxp")
 Button/font_sizes/font_size = 22
-Button/fonts/font = SubResource("SystemFont_jrh1r")
+Button/fonts/font = ExtResource("1_tkmo1")
+Button/styles/focus = SubResource("StyleBoxEmpty_uqywr")
 Button/styles/hover = SubResource("StyleBoxFlat_dklev")
 Button/styles/normal = SubResource("StyleBoxFlat_0rcdn")
 Button/styles/pressed = SubResource("StyleBoxFlat_yes2v")
+HSlider/icons/grabber = ExtResource("2_x1gyo")
+HSlider/icons/grabber_disabled = null
+HSlider/icons/grabber_highlight = ExtResource("2_x1gyo")
 Label/font_sizes/font_size = 51
 Label/styles/normal = SubResource("StyleBoxFlat_43lr6")
