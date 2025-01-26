@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://dbevkw7ic4o6f"]
+[gd_scene load_steps=39 format=3 uid="uid://dbevkw7ic4o6f"]
 
 [ext_resource type="PackedScene" uid="uid://dpsy06y08shnc" path="res://scenes/player.tscn" id="1_mjvoc"]
 [ext_resource type="PackedScene" uid="uid://boweijfs0ysdy" path="res://scenes/rock.tscn" id="2_fpxtt"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://ccsxm1qwioywp" path="res://scenes/cow.tscn" id="16_c2ws7"]
 [ext_resource type="PackedScene" uid="uid://ccbjumjt7a0oy" path="res://assets/characters/mr_beef/models/Cow-irl.glb" id="17_tpkwp"]
 [ext_resource type="Texture2D" uid="uid://bbi5lsmew1iu" path="res://assets/textures/town_destination_shot.png" id="17_vkap3"]
+[ext_resource type="Script" path="res://scenes/volcano_gateway.gd" id="18_dejnm"]
 [ext_resource type="Texture2D" uid="uid://pc53qfqoowrf" path="res://assets/textures/mountain_travel_point.JPG" id="18_ersc7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sg2e6"]
@@ -90,6 +91,9 @@ material = SubResource("StandardMaterial3D_rlx6c")
 size = Vector2(7.5, 7.5)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_eynjq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wak5f"]
+size = Vector3(222.172, 65.9825, 11.76)
 
 [node name="Node3D" type="WorldEnvironment"]
 environment = SubResource("Environment_3sn4s")
@@ -1134,6 +1138,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.3776, 0, -19.8989)
 [node name="Cow-irl" parent="." instance=ExtResource("17_tpkwp")]
 transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -29.4448, 0.431169, -18.058)
 
-[node name="Sprite3D3" type="Sprite3D" parent="."]
+[node name="Area3D" type="Area3D" parent="."]
+script = ExtResource("18_dejnm")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Area3D"]
 transform = Transform3D(19.6988, 0, 0, 0, 19.6988, 0, 0, 0, 19.6988, 0, 43.1534, 148.218)
 texture = ExtResource("18_ersc7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.760651, 32.4913, 145.841)
+shape = SubResource("BoxShape3D_wak5f")
