@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://dbevkw7ic4o6f"]
+[gd_scene load_steps=96 format=3 uid="uid://dbevkw7ic4o6f"]
 
 [ext_resource type="PackedScene" uid="uid://dpsy06y08shnc" path="res://scenes/player.tscn" id="1_mjvoc"]
 [ext_resource type="PackedScene" uid="uid://boweijfs0ysdy" path="res://scenes/rock.tscn" id="2_fpxtt"]
@@ -14,32 +14,68 @@
 [ext_resource type="Texture2D" uid="uid://dfaw6deuiirea" path="res://assets/characters/charlotte/models/rich_child1.png" id="13_h6u7r"]
 [ext_resource type="Texture2D" uid="uid://cvwq40do028pg" path="res://assets/characters/poppy_star/models/poppy_star2.png" id="13_l0lj1"]
 [ext_resource type="Texture2D" uid="uid://xg21r6dbi4m6" path="res://assets/characters/mr_beef/models/Office-Cow.png" id="14_k0sgn"]
+[ext_resource type="AudioStream" uid="uid://d2emr44g6nt1" path="res://assets/audio/bubblequest-poppy-001.ogg" id="14_nkkcb"]
 [ext_resource type="Texture2D" uid="uid://beem6y1x8v12p" path="res://assets/textures/tree.png" id="14_ynajd"]
 [ext_resource type="AudioStream" uid="uid://ca07qgappylbp" path="res://assets/audio/bubblequest-cows-001.ogg" id="15_ufw76"]
 [ext_resource type="Texture2D" uid="uid://d3mfjr61nygg" path="res://assets/characters/mr_beef/models/Office-Cow-Alt.png" id="16_40i7f"]
 [ext_resource type="PackedScene" uid="uid://ccsxm1qwioywp" path="res://scenes/cow.tscn" id="16_c2ws7"]
+[ext_resource type="AudioStream" uid="uid://cer7ehcc52yj2" path="res://assets/audio/bubblequest-poppy-002.ogg" id="16_dunk0"]
 [ext_resource type="Texture2D" uid="uid://c10dmkwyh6vct" path="res://assets/characters/charlotte/models/rich_child3.png" id="16_guuim"]
 [ext_resource type="AudioStream" uid="uid://c2uv24us4iil7" path="res://assets/audio/bubblequest-cows-002.ogg" id="16_y2jqg"]
 [ext_resource type="AudioStream" uid="uid://cx32ckuu6j6k3" path="res://assets/audio/bubblequest-cows-003.ogg" id="17_ei6ch"]
+[ext_resource type="AudioStream" uid="uid://bxb0ws00llx6v" path="res://assets/audio/bubblequest-charlotte-frog-001.ogg" id="17_njm2s"]
 [ext_resource type="PackedScene" uid="uid://ccbjumjt7a0oy" path="res://assets/characters/mr_beef/models/Cow-irl.glb" id="17_tpkwp"]
 [ext_resource type="Texture2D" uid="uid://bbi5lsmew1iu" path="res://assets/textures/town_destination_shot.png" id="17_vkap3"]
+[ext_resource type="AudioStream" uid="uid://b7j0tq0vvhwc2" path="res://assets/audio/bubblequest-poppy-003.ogg" id="17_we3la"]
+[ext_resource type="AudioStream" uid="uid://by56xt515y722" path="res://assets/audio/bubblequest-charlotte-frog-002.ogg" id="18_dageq"]
 [ext_resource type="Script" path="res://scenes/volcano_gateway.gd" id="18_dejnm"]
 [ext_resource type="Texture2D" uid="uid://pc53qfqoowrf" path="res://assets/textures/mountain_travel_point.JPG" id="18_ersc7"]
+[ext_resource type="AudioStream" uid="uid://dg1ihrug3pema" path="res://assets/audio/bubblequest-poppy-004.ogg" id="18_pykvf"]
 [ext_resource type="AudioStream" uid="uid://duu7rjmqotj0l" path="res://assets/audio/bubblequest-cows-004.ogg" id="18_qxkm5"]
 [ext_resource type="AudioStream" uid="uid://dop7qrs0esclr" path="res://assets/audio/bubblequest-cows-005.ogg" id="19_1es5d"]
+[ext_resource type="AudioStream" uid="uid://dqao4vviwhef" path="res://assets/audio/bubblequest-poppy-005.ogg" id="19_17ee6"]
+[ext_resource type="AudioStream" uid="uid://mu2ipbu7di8w" path="res://assets/audio/bubblequest-charlotte-frog-003.ogg" id="19_lm3va"]
 [ext_resource type="AudioStream" uid="uid://cx07bwogejc6q" path="res://assets/audio/bubblequest-player.ogg" id="19_qmeyy"]
+[ext_resource type="AudioStream" uid="uid://cyaih5iq44xjn" path="res://assets/audio/bubblequest-poppy-006.ogg" id="20_n3boa"]
 [ext_resource type="AudioStream" uid="uid://eku3d4iw6lbf" path="res://assets/audio/bubblequest-cows-006.ogg" id="20_n4w35"]
+[ext_resource type="AudioStream" uid="uid://b3ghw1rm4oltg" path="res://assets/audio/bubblequest-charlotte-frog-004.ogg" id="20_uw70a"]
+[ext_resource type="AudioStream" uid="uid://dcaccrf0ssgbw" path="res://assets/audio/bubblequest-poppy-007.ogg" id="21_kxjit"]
 [ext_resource type="AudioStream" uid="uid://1trb768ejbi" path="res://assets/audio/bubblequest-cows-007.ogg" id="21_tph82"]
+[ext_resource type="AudioStream" uid="uid://dow2emluxf1an" path="res://assets/audio/bubblequest-charlotte-frog-005.ogg" id="21_vlrov"]
+[ext_resource type="AudioStream" uid="uid://yg7ey2eva624" path="res://assets/audio/bubblequest-poppy-008.ogg" id="22_30bcr"]
 [ext_resource type="AudioStream" uid="uid://dygaijdm68ih2" path="res://assets/audio/bubblequest-cows-008.ogg" id="22_38fie"]
+[ext_resource type="AudioStream" uid="uid://dxhs3icftig8d" path="res://assets/audio/bubblequest-charlotte-frog-006.ogg" id="22_nw48g"]
+[ext_resource type="AudioStream" uid="uid://bq4425wkiaf0x" path="res://assets/audio/bubblequest-poppy-009.ogg" id="23_2jp8n"]
 [ext_resource type="AudioStream" uid="uid://6g4s1job1mn4" path="res://assets/audio/bubblequest-cows-009.ogg" id="23_bkojd"]
+[ext_resource type="AudioStream" uid="uid://du8eyg44u1kwo" path="res://assets/audio/bubblequest-charlotte-frog-007.ogg" id="23_m1gc8"]
 [ext_resource type="AudioStream" uid="uid://bdtavni3fce56" path="res://assets/audio/bubblequest-cows-010.ogg" id="24_3kl55"]
+[ext_resource type="AudioStream" uid="uid://y27gyve6nhth" path="res://assets/audio/bubblequest-charlotte-frog-008.ogg" id="24_jpny7"]
+[ext_resource type="AudioStream" uid="uid://ch5jsmwf5y8g0" path="res://assets/audio/bubblequest-poppy-010.ogg" id="24_ld5st"]
 [ext_resource type="AudioStream" uid="uid://ch58oipwmkfhh" path="res://assets/audio/bubblequest-cows-011.ogg" id="25_anw44"]
+[ext_resource type="AudioStream" uid="uid://d0txblrli2i43" path="res://assets/audio/bubblequest-poppy-011.ogg" id="25_hqkwl"]
+[ext_resource type="AudioStream" uid="uid://cl4ufdjxkj15n" path="res://assets/audio/bubblequest-charlotte-frog-009.ogg" id="25_t7d2v"]
+[ext_resource type="AudioStream" uid="uid://bva1ts5411sdt" path="res://assets/audio/bubblequest-poppy-012.ogg" id="26_8krj7"]
+[ext_resource type="AudioStream" uid="uid://bv0q8ce7an7gw" path="res://assets/audio/bubblequest-charlotte-frog-010.ogg" id="26_fmohp"]
 [ext_resource type="AudioStream" uid="uid://de8ratugtsmkb" path="res://assets/audio/bubblequest-cows-012.ogg" id="26_lwtx1"]
 [ext_resource type="AudioStream" uid="uid://c2uld28uvf6kf" path="res://assets/audio/bubblequest-cows-013.ogg" id="27_bsso0"]
+[ext_resource type="AudioStream" uid="uid://dua6yx65agvwj" path="res://assets/audio/bubblequest-poppy-013.ogg" id="27_d0w62"]
+[ext_resource type="AudioStream" uid="uid://bu7waene25mx6" path="res://assets/audio/bubblequest-charlotte-frog-011.ogg" id="27_xnxhb"]
 [ext_resource type="AudioStream" uid="uid://c15j0mp7yjgte" path="res://assets/audio/bubblequest-cows-014.ogg" id="28_lddhb"]
+[ext_resource type="AudioStream" uid="uid://bc77b5r1rn1wi" path="res://assets/audio/bubblequest-charlotte-frog-012.ogg" id="28_ni15y"]
+[ext_resource type="AudioStream" uid="uid://hcrhws5cpbnm" path="res://assets/audio/bubblequest-poppy-014.ogg" id="28_svi23"]
 [ext_resource type="AudioStream" uid="uid://cuullxgv3d8ge" path="res://assets/audio/bubblequest-cows-015.ogg" id="29_t2q6r"]
+[ext_resource type="AudioStream" uid="uid://dnsxnmaxanm7i" path="res://assets/audio/bubblequest-poppy-015.ogg" id="29_xxv2b"]
+[ext_resource type="AudioStream" uid="uid://bdii02itvtu8" path="res://assets/audio/bubblequest-poppy-016.ogg" id="30_b1r27"]
 [ext_resource type="AudioStream" uid="uid://dxcb1q1l1jmmr" path="res://assets/audio/bubblequest-cows-016.ogg" id="30_wou81"]
+[ext_resource type="AudioStream" uid="uid://dck112j4f2lik" path="res://assets/audio/bubblequest-poppy-017.ogg" id="31_7i3rm"]
 [ext_resource type="AudioStream" uid="uid://r3vq0170inlw" path="res://assets/audio/bubblequest-cows-017.ogg" id="31_hvkq3"]
+[ext_resource type="AudioStream" uid="uid://ckxoxh46tx52g" path="res://assets/audio/bubblequest-poppy-018.ogg" id="32_c34hs"]
+[ext_resource type="AudioStream" uid="uid://bcfgoflwpr17n" path="res://assets/audio/bubblequest-poppy-019.ogg" id="33_wjcts"]
+[ext_resource type="AudioStream" uid="uid://qnlwr866j1jw" path="res://assets/audio/bubblequest-poppy-020.ogg" id="34_8pxl7"]
+[ext_resource type="AudioStream" uid="uid://d0y6xqlw3rj6i" path="res://assets/audio/bubblequest-poppy-021.ogg" id="35_afwcy"]
+[ext_resource type="AudioStream" uid="uid://dbrm6madwaoki" path="res://assets/audio/bubblequest-poppy-022.ogg" id="36_pe3wt"]
+[ext_resource type="AudioStream" uid="uid://bfr5bcjvel16r" path="res://assets/audio/bubblequest-poppy-023.ogg" id="37_15ui3"]
+[ext_resource type="AudioStream" uid="uid://b8hrldd6u70pm" path="res://assets/audio/bubblequest-poppy-024.ogg" id="38_1t5me"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sg2e6"]
 
@@ -120,13 +156,14 @@ size = Vector3(222.172, 65.9825, 11.76)
 environment = SubResource("Environment_3sn4s")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.44214, -0.0698611, 0.89422, -0.76016, 0.5, 0.414917, -0.476097, -0.863203, 0.167964, 0, 17.2528, 0)
+transform = Transform3D(-0.442141, 0.0698618, -0.894221, -0.76016, 0.5, 0.414917, 0.476097, 0.863204, -0.167964, -17.0965, 17.2528, -69.631)
 shadow_enabled = true
 
 [node name="player_root" parent="." instance=ExtResource("1_mjvoc")]
-transform = Transform3D(-0.970612, 0, 0.240651, 0, 1, 0, -0.240651, 0, -0.970612, 12.582, 4.58604, -111.944)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.6785, 4.58604, 42.313)
 
 [node name="grass" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -17.0965, 0, -69.631)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="grass"]
 transform = Transform3D(1.49631, 0, 0, 0, 1.49631, 0, 0, 0, 1.49631, 0, 0, 0)
@@ -136,19 +173,21 @@ shape = SubResource("BoxShape3D_u6nne")
 mesh = SubResource("BoxMesh_ejo8b")
 
 [node name="road" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -17.0965, 0, -69.631)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.8908, 0.081, 0)
 mesh = SubResource("BoxMesh_r2tjy")
 
 [node name="driveway" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -17.0965, 0, -69.631)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="driveway"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.2084, 0.081, 0)
 mesh = SubResource("BoxMesh_lxlxe")
 
 [node name="treeWall" type="StaticBody3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -74.314, 12.593, 0)
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 57.2175, 12.593, -69.631)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="treeWall"]
 transform = Transform3D(14.974, 0, -5.68434e-14, 0, 14.974, 0, 5.68434e-14, 0, 14.974, 0, -4.529, 0)
@@ -160,7 +199,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.231476)
 shape = SubResource("BoxShape3D_db4kw")
 
 [node name="treeWall2" type="StaticBody3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 74.314, 12.593, 0)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -91.4105, 12.593, -69.631)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="treeWall2"]
 transform = Transform3D(14.974, 0, -5.68434e-14, 0, 14.974, 0, 5.68434e-14, 0, 14.974, 0, -4.529, 0)
@@ -172,7 +211,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.231476)
 shape = SubResource("BoxShape3D_db4kw")
 
 [node name="Cow fences" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.215, 0.5, -10.556)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -14.8815, 0.5, -59.075)
 
 [node name="fenceSegment" parent="Cow fences" instance=ExtResource("4_56q7h")]
 
@@ -372,7 +411,7 @@ transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -42.4244
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.3749, 1.21122, -0.003479)
 
 [node name="Barn fences" type="Node3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -43.6782, 0.5, 10.1686)
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 26.5817, 0.5, -79.7996)
 
 [node name="fenceSegment" parent="Barn fences" instance=ExtResource("4_56q7h")]
 
@@ -572,16 +611,16 @@ transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -42.4244
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.7191, 1.21122, -0.003479)
 
 [node name="barn" parent="." instance=ExtResource("7_mekcm")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -23.0127, 0.338943, 41.8351)
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 5.91621, 0.338943, -111.466)
 
 [node name="shaderBubble" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -333.55)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -17.0965, 0, 263.919)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="shaderBubble"]
 mesh = SubResource("SphereMesh_xjjdv")
 
 [node name="rocks" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.8918, 1.74186, -106.284)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 15.7953, 1.74186, 36.653)
 
 [node name="rock" parent="rocks" instance=ExtResource("2_fpxtt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
@@ -614,6 +653,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.0023, 0, 221.287)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.591, 0, 223.969)
 
 [node name="bigRocks" type="Node3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -17.0965, 0, -69.631)
 
 [node name="bigRock" parent="bigRocks" instance=ExtResource("8_47pxs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.1613, 0.493642, -95.1953)
@@ -646,7 +686,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.9007, 0.493637, 83.8065)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.622, 0.493641, 124.126)
 
 [node name="bushes" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.23776, 0)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -17.0965, -0.23776, -69.631)
 
 [node name="bush" parent="bushes" instance=ExtResource("6_jk55g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.8331, 0.748155, -62.8082)
@@ -832,6 +872,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.6183, 0.748153, -33.751)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.1818, 0.748153, -42.6068)
 
 [node name="trees" type="Node3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -17.0965, 0, -69.631)
 
 [node name="tree" type="StaticBody3D" parent="trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.82, 3.6499, -85.6911)
@@ -1120,30 +1161,30 @@ skeleton = NodePath("../..")
 shape = SubResource("CapsuleShape3D_eynjq")
 
 [node name="Poppy Star" parent="." instance=ExtResource("10_aakfw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.6686, 0.748155, 37.6652)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 21.5721, 0.748155, -107.296)
 NAMEHERE = "Poppy Star"
 DIALOGFILE = "res://assets/characters/poppy_star/text_files/Erin (PoppyStar).txt"
 CHOICEFILE = "res://assets/characters/poppy_star/text_files/Erin Choices (PoppyStar).txt"
 IMAGE = [ExtResource("12_7pa34"), ExtResource("13_l0lj1")]
 MAX_lines = 34
-audioList = [ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy")]
+audioList = [ExtResource("14_nkkcb"), ExtResource("19_qmeyy"), ExtResource("16_dunk0"), ExtResource("17_we3la"), ExtResource("19_qmeyy"), ExtResource("18_pykvf"), ExtResource("19_17ee6"), ExtResource("19_qmeyy"), ExtResource("20_n3boa"), ExtResource("19_qmeyy"), ExtResource("21_kxjit"), ExtResource("19_qmeyy"), ExtResource("22_30bcr"), ExtResource("23_2jp8n"), ExtResource("24_ld5st"), ExtResource("19_qmeyy"), ExtResource("25_hqkwl"), ExtResource("26_8krj7"), ExtResource("27_d0w62"), ExtResource("28_svi23"), ExtResource("19_qmeyy"), ExtResource("29_xxv2b"), ExtResource("30_b1r27"), ExtResource("31_7i3rm"), ExtResource("32_c34hs"), ExtResource("33_wjcts"), ExtResource("34_8pxl7"), ExtResource("35_afwcy"), ExtResource("19_qmeyy"), ExtResource("36_pe3wt"), ExtResource("19_qmeyy"), ExtResource("37_15ui3"), ExtResource("38_1t5me")]
 
 [node name="Charolette" parent="." instance=ExtResource("10_aakfw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5633, 0.748155, -100.727)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -31.6598, 0.748155, 31.096)
 DIALOGFILE = "res://assets/characters/charlotte/text_files/Charlotte (frogmode).txt"
 CHOICEFILE = "res://assets/characters/charlotte/text_files/Charlotte Choices (frogmode).txt"
 IMAGE = [ExtResource("13_h6u7r"), ExtResource("16_guuim")]
-MAX_lines = 18
-audioList = [ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy"), ExtResource("19_qmeyy")]
+MAX_lines = 16
+audioList = [ExtResource("17_njm2s"), ExtResource("19_qmeyy"), ExtResource("18_dageq"), ExtResource("19_lm3va"), ExtResource("20_uw70a"), ExtResource("21_vlrov"), ExtResource("22_nw48g"), ExtResource("23_m1gc8"), ExtResource("24_jpny7"), ExtResource("25_t7d2v"), ExtResource("26_fmohp"), ExtResource("19_qmeyy"), ExtResource("27_xnxhb"), ExtResource("19_qmeyy"), ExtResource("28_ni15y"), ExtResource("19_qmeyy"), ExtResource("28_ni15y"), ExtResource("19_qmeyy")]
 
 [node name="Cow Gang Leader" parent="." instance=ExtResource("10_aakfw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.4693, 0.748155, -18.4828)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8.37282, 0.748155, -51.1482)
 NAMEHERE = "Cow Trio"
 DIALOGFILE = "res://assets/characters/mr_beef/text_files/cow trio.txt"
 CHOICEFILE = "res://assets/characters/mr_beef/text_files/cow trio Choices.txt"
 IMAGE = [ExtResource("16_40i7f"), ExtResource("14_k0sgn")]
 MAX_lines = 22
-audioList = [ExtResource("15_ufw76"), ExtResource("16_y2jqg"), ExtResource("17_ei6ch"), ExtResource("18_qxkm5"), ExtResource("19_qmeyy"), ExtResource("19_1es5d"), ExtResource("20_n4w35"), ExtResource("21_tph82"), ExtResource("19_qmeyy"), ExtResource("22_38fie"), ExtResource("23_bkojd"), ExtResource("24_3kl55"), ExtResource("19_qmeyy"), ExtResource("25_anw44"), ExtResource("26_lwtx1"), ExtResource("27_bsso0"), ExtResource("19_qmeyy"), ExtResource("28_lddhb"), ExtResource("29_t2q6r"), ExtResource("19_qmeyy"), ExtResource("30_wou81"), ExtResource("31_hvkq3"), ExtResource("19_qmeyy")]
+audioList = [ExtResource("15_ufw76"), ExtResource("16_y2jqg"), ExtResource("17_ei6ch"), ExtResource("18_qxkm5"), ExtResource("19_qmeyy"), ExtResource("19_1es5d"), ExtResource("20_n4w35"), ExtResource("21_tph82"), ExtResource("19_qmeyy"), ExtResource("22_38fie"), ExtResource("23_bkojd"), ExtResource("24_3kl55"), ExtResource("25_anw44"), ExtResource("19_qmeyy"), ExtResource("26_lwtx1"), ExtResource("27_bsso0"), ExtResource("19_qmeyy"), ExtResource("28_lddhb"), ExtResource("29_t2q6r"), ExtResource("19_qmeyy"), ExtResource("30_wou81"), ExtResource("31_hvkq3"), ExtResource("19_qmeyy")]
 
 [node name="Sprite3D2" type="Sprite3D" parent="Cow Gang Leader"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9083, -0.748155, -1.4161)
@@ -1153,13 +1194,14 @@ transform = Transform3D(2.63248, 0, 0, 0, 2.62295, 0, 0, 0, 1, 3.77, 0.804325, 0
 billboard = 1
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(14.5817, 0, 0, 0, 11.8427, 0, 0, 0, 0.283048, 0, 38.6548, -147.6)
+transform = Transform3D(-14.5817, 0, -2.47448e-08, 0, 11.8427, 0, 1.27477e-06, 0, -0.283048, -17.0965, 38.6548, 77.969)
 texture = ExtResource("17_vkap3")
 
 [node name="Cow-irl" parent="." instance=ExtResource("17_tpkwp")]
-transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -29.4448, 0.431169, -18.058)
+transform = Transform3D(-0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866025, 12.3483, 0.431169, -51.573)
 
 [node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -17.0965, 0, -69.631)
 script = ExtResource("18_dejnm")
 
 [node name="Sprite3D3" type="Sprite3D" parent="Area3D"]
@@ -1171,5 +1213,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.760651, 32.4913, 145.841)
 shape = SubResource("BoxShape3D_wak5f")
 
 [node name="Bubblequest-player" type="AudioStreamPlayer3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.8262, 0.748155, -8.40794)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.72972, 0.748155, -61.223)
 stream = ExtResource("19_qmeyy")
