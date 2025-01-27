@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-[gd_scene load_steps=200 format=3 uid="uid://beu4ays7fse4n"]
-=======
-[gd_scene load_steps=219 format=3 uid="uid://beu4ays7fse4n"]
->>>>>>> Stashed changes
+[gd_scene load_steps=243 format=3 uid="uid://beu4ays7fse4n"]
 
 [ext_resource type="Script" path="res://scenes/bubbleton.gd" id="1_j5pd1"]
 [ext_resource type="PackedScene" uid="uid://dpsy06y08shnc" path="res://scenes/player.tscn" id="1_s3dw0"]
@@ -38,10 +34,12 @@
 [ext_resource type="Texture2D" uid="uid://gsw6tpux4vin" path="res://assets/textures/train.png" id="29_nqw0w"]
 [ext_resource type="PackedScene" uid="uid://biogpwdm4mp1k" path="res://scenes/npc_root.tscn" id="32_8r0ja"]
 [ext_resource type="PackedScene" uid="uid://d0t1bub4kejlp" path="res://scenes/fence_segment.tscn" id="32_fd55a"]
+[ext_resource type="Texture2D" uid="uid://bdwf4svf0r1im" path="res://assets/characters/fanboy/models/fan_boy1.png" id="33_ips1l"]
 [ext_resource type="Texture2D" uid="uid://do8oyyttkjs3c" path="res://assets/textures/gateway.png" id="33_k4kh4"]
 [ext_resource type="Script" path="res://scenes/gateway.gd" id="33_q4km1"]
 [ext_resource type="Texture2D" uid="uid://cg28ewbarlmm5" path="res://assets/textures/door.png" id="34_87btl"]
 [ext_resource type="Texture2D" uid="uid://b6418glnpc7wt" path="res://assets/textures/countryside.png" id="34_416b5"]
+[ext_resource type="Texture2D" uid="uid://bdxxxh3ic04x4" path="res://assets/characters/fanboy/models/fan_boy2.png" id="34_b88t0"]
 [ext_resource type="AudioStream" uid="uid://cu0qi0a8085dx" path="res://assets/audio/bubblequest-fan-001.ogg" id="34_nd3ks"]
 [ext_resource type="Texture2D" uid="uid://dfaw6deuiirea" path="res://assets/characters/charlotte/models/rich_child1.png" id="34_xoqws"]
 [ext_resource type="Texture2D" uid="uid://lnv1d3n7upco" path="res://assets/textures/doubledoor.png" id="35_61r3e"]
@@ -55,6 +53,7 @@
 [ext_resource type="AudioStream" uid="uid://dih02o02x7ef3" path="res://assets/audio/bubblequest-fan-005.ogg" id="39_nr8x0"]
 [ext_resource type="Texture2D" uid="uid://cv73cyb6bhp3y" path="res://assets/textures/roundwindow.png" id="39_qcjc0"]
 [ext_resource type="AudioStream" uid="uid://0smf1ft0qeef" path="res://assets/audio/bubblequest-butler-001.ogg" id="41_ld2nv"]
+[ext_resource type="Texture2D" uid="uid://clgh7uvk826po" path="res://assets/characters/butler/models/Mormon_Butler.png" id="41_tlh26"]
 [ext_resource type="AudioStream" uid="uid://biq6e0kc3gkxa" path="res://assets/audio/bubblequest-butler-002.ogg" id="42_3wel6"]
 [ext_resource type="AudioStream" uid="uid://dw2nayfvddqii" path="res://assets/audio/bubblequest-butler-003.ogg" id="43_mg1e8"]
 [ext_resource type="Texture2D" uid="uid://bj4kltknbuu2" path="res://assets/textures/fun.png" id="43_p5lfm"]
@@ -63,22 +62,47 @@
 [ext_resource type="PackedScene" uid="uid://co83dc4jiue4" path="res://scenes/rat_root.tscn" id="45_cqqkd"]
 [ext_resource type="AudioStream" uid="uid://5fj6aeeipvnw" path="res://assets/audio/bubblequest-butler-005.ogg" id="45_dda2q"]
 [ext_resource type="PackedScene" uid="uid://dbhh10qk8cld5" path="res://scenes/running_guy.tscn" id="46_r3aax"]
-[ext_resource type="Texture2D" uid="uid://cxwwcsf73546t" path="res://assets/characters/einstein/models/EinsteinClosed.png" id="47_bh0os"]
-[ext_resource type="AudioStream" uid="uid://duumlk4prhpjj" path="res://assets/audio/bubblequest-einstein-001.ogg" id="47_jshcb"]
+[ext_resource type="Texture2D" uid="uid://cxwwcsf73546t" path="res://assets/characters/einstein/models/EinsteinClosed.png" id="47_igojg"]
 [ext_resource type="PackedScene" uid="uid://df5gwwsxk0g8w" path="res://scenes/bubble_spawn_plane.tscn" id="47_np0fs"]
-<<<<<<< Updated upstream
-=======
-[ext_resource type="Texture2D" uid="uid://bsd38i8t8fmft" path="res://assets/characters/chadwick/models/chadwick2.png" id="47_vuv5x"]
-[ext_resource type="Texture2D" uid="uid://btru8y8somovh" path="res://assets/characters/chadwick/models/chad.png" id="48_6wbbm"]
-[ext_resource type="Texture2D" uid="uid://ycwq0tuwcfx6" path="res://assets/characters/einstein/models/EinsteinTalk.png" id="48_p5l7d"]
-[ext_resource type="AudioStream" uid="uid://bxhwclqws41jq" path="res://assets/audio/bubblequest-einstein-002.ogg" id="48_xx3b4"]
-[ext_resource type="Texture2D" uid="uid://sdnh3cvb1k7e" path="res://assets/characters/frogbert/models/frog.png" id="49_0huwi"]
-[ext_resource type="AudioStream" uid="uid://drvc5c1k1wpxt" path="res://assets/audio/bubblequest-einstein-003.ogg" id="49_ws5ab"]
-[ext_resource type="AudioStream" uid="uid://dxxif4okvtmn" path="res://assets/audio/bubblequest-einstein-004.ogg" id="50_01wiy"]
-[ext_resource type="AudioStream" uid="uid://chp1puktwyu5g" path="res://assets/audio/bubblequest-einstein-005.ogg" id="51_gpgjb"]
-[ext_resource type="AudioStream" uid="uid://y1xqf4svstp1" path="res://assets/audio/bubblequest-einstein-006.ogg" id="52_7h6w8"]
-[ext_resource type="AudioStream" uid="uid://jsv4e2pcer8j" path="res://assets/audio/bubblequest-einstein-007.ogg" id="53_4xl1l"]
->>>>>>> Stashed changes
+[ext_resource type="Texture2D" uid="uid://ycwq0tuwcfx6" path="res://assets/characters/einstein/models/EinsteinTalk.png" id="48_apy34"]
+[ext_resource type="AudioStream" uid="uid://d0e1dg3brr8vo" path="res://assets/audio/bubblequest-einstein-001.ogg" id="49_ip3s2"]
+[ext_resource type="AudioStream" uid="uid://ct63uqgkaooq4" path="res://assets/audio/bubblequest-einstein-002.ogg" id="50_fg1tg"]
+[ext_resource type="AudioStream" uid="uid://di5ayr4gwtxu4" path="res://assets/audio/bubblequest-einstein-003.ogg" id="51_pb24j"]
+[ext_resource type="AudioStream" uid="uid://do3o1t4m86ogl" path="res://assets/audio/bubblequest-einstein-004.ogg" id="52_5jtod"]
+[ext_resource type="AudioStream" uid="uid://bkdrr3i7xeg6a" path="res://assets/audio/bubblequest-einstein-005.ogg" id="53_ctx8j"]
+[ext_resource type="AudioStream" uid="uid://brrbt3s5l3oep" path="res://assets/audio/bubblequest-einstein-007.ogg" id="54_u2twm"]
+[ext_resource type="AudioStream" uid="uid://bcvapn152t51l" path="res://assets/audio/bubblequest-einstein-006.ogg" id="55_lmdq6"]
+[ext_resource type="Texture2D" uid="uid://bsd38i8t8fmft" path="res://assets/characters/chadwick/models/chadwick2.png" id="56_6jqrt"]
+[ext_resource type="Texture2D" uid="uid://btru8y8somovh" path="res://assets/characters/chadwick/models/chad.png" id="57_te2y2"]
+[ext_resource type="AudioStream" uid="uid://b0ukn4rxfmuml" path="res://assets/audio/bubblequest-chadwick-001.ogg" id="58_6dw04"]
+[ext_resource type="AudioStream" uid="uid://b58rutj4l4cah" path="res://assets/audio/bubblequest-chadwick-002.ogg" id="59_ykvpg"]
+[ext_resource type="AudioStream" uid="uid://cln8lw46mejjs" path="res://assets/audio/bubblequest-chadwick-003.ogg" id="60_x4ntv"]
+[ext_resource type="AudioStream" uid="uid://cithbsf1gmn5w" path="res://assets/audio/bubblequest-chadwick-004.ogg" id="61_bymj3"]
+[ext_resource type="AudioStream" uid="uid://bkmhot3rierqa" path="res://assets/audio/bubblequest-chadwick-005.ogg" id="62_rjyxk"]
+[ext_resource type="AudioStream" uid="uid://btm540ki5bd0r" path="res://assets/audio/bubblequest-chadwick-006.ogg" id="63_urtjb"]
+[ext_resource type="AudioStream" uid="uid://boiq6vgwrlb8w" path="res://assets/audio/bubblequest-chadwick-007.ogg" id="64_oo7jr"]
+[ext_resource type="AudioStream" uid="uid://m2a65p5jdkil" path="res://assets/audio/bubblequest-chadwick-008.ogg" id="65_woxxj"]
+[ext_resource type="AudioStream" uid="uid://cnu1lxyy4edru" path="res://assets/audio/bubblequest-chadwick-009.ogg" id="66_w74g6"]
+[ext_resource type="AudioStream" uid="uid://cephojptyqlu" path="res://assets/audio/bubblequest-chadwick-010.ogg" id="67_hlvh0"]
+[ext_resource type="AudioStream" uid="uid://5u77ydbo0dxj" path="res://assets/audio/bubblequest-chadwick-011.ogg" id="68_r6iou"]
+[ext_resource type="AudioStream" uid="uid://sersmv0o0hte" path="res://assets/audio/bubblequest-chadwick-012.ogg" id="69_p1kfp"]
+[ext_resource type="AudioStream" uid="uid://xntybxmg8xfa" path="res://assets/audio/bubblequest-chadwick-013.ogg" id="70_il8er"]
+[ext_resource type="AudioStream" uid="uid://cde81g3kc2vjr" path="res://assets/audio/bubblequest-chadwick-014.ogg" id="71_s1e4f"]
+[ext_resource type="AudioStream" uid="uid://qtgw5pdk31m3" path="res://assets/audio/bubblequest-chadwick-015.ogg" id="72_1a0s3"]
+[ext_resource type="AudioStream" uid="uid://bfkywnykoyd0e" path="res://assets/audio/bubblequest-chadwick-016.ogg" id="73_x6m2l"]
+[ext_resource type="AudioStream" uid="uid://cbwe8xxnpnsh2" path="res://assets/audio/bubblequest-chadwick-017.ogg" id="74_g3fqk"]
+[ext_resource type="AudioStream" uid="uid://c3hoc0qfwqan3" path="res://assets/audio/bubblequest-chadwick-018.ogg" id="75_03c0p"]
+[ext_resource type="AudioStream" uid="uid://3lujsf3en2sy" path="res://assets/audio/bubblequest-chadwick-019.ogg" id="76_4rrd8"]
+[ext_resource type="AudioStream" uid="uid://iyi8j3d3kqad" path="res://assets/audio/bubblequest-chadwick-020.ogg" id="77_2drrv"]
+[ext_resource type="Texture2D" uid="uid://sdnh3cvb1k7e" path="res://assets/characters/frogbert/models/frog.png" id="78_rc7mw"]
+[ext_resource type="AudioStream" uid="uid://cbe6ucytcjkxc" path="res://assets/audio/bubblequest-frogbert-001.ogg" id="79_c7fcq"]
+[ext_resource type="AudioStream" uid="uid://mbroemhehdad" path="res://assets/audio/bubblequest-frogbert-002.ogg" id="80_uncd2"]
+[ext_resource type="AudioStream" uid="uid://b02hdstekekqh" path="res://assets/audio/bubblequest-frogbert-003.ogg" id="81_33bga"]
+[ext_resource type="AudioStream" uid="uid://bocm3hvpl6ykk" path="res://assets/audio/bubblequest-frogbert-004.ogg" id="82_7bc43"]
+[ext_resource type="AudioStream" uid="uid://cn8j30x0kjcuk" path="res://assets/audio/bubblequest-frogbert-005.ogg" id="83_y5x0f"]
+[ext_resource type="AudioStream" uid="uid://dcsju3aimpm5f" path="res://assets/audio/bubblequest-frogbert-006.ogg" id="84_1e1at"]
+[ext_resource type="AudioStream" uid="uid://duygv2ldimqyo" path="res://assets/audio/bubblequest-frogbert-007.ogg" id="85_bdfbd"]
+[ext_resource type="AudioStream" uid="uid://khuu0oh5q16c" path="res://assets/audio/bubblequest-frogbert-008.ogg" id="86_u5hbd"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xivfm"]
 sky_top_color = Color(0.320077, 0.47232, 0.983131, 1)
@@ -268,55 +292,35 @@ shader = ExtResource("5_edj2h")
 shader_parameter/color = Color(0, 0, 0, 1)
 shader_parameter/size = 1.01
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3akkq"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s6vfw"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5rj6b"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.932934, 0.902295, 0.694079, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q57p6"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ej6y7"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uami5"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.530961, 0.429109, 0.517072, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y23tj"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o08fb"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fu4e4"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.957896, 0.338717, 0.876763, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ny4cr"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w5tsg"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xtsoq"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.341542, 0.735164, 0.356238, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4yu7i"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sdoqa"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_esk7u"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.351437, 0.655716, 0.943383, 1)
 albedo_texture = ExtResource("7_rumpl")
@@ -335,187 +339,119 @@ material = SubResource("StandardMaterial3D_jjuka")
 size = Vector2(3, 3)
 orientation = 1
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yr00f"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gybnu"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qjl34"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.878353, 0.538072, 0.314552, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a4ymp"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wf6ii"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6a7qm"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.878353, 0.538072, 0.314552, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_umxcy"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kyrqa"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5lc4v"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.878353, 0.538072, 0.314552, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oy8sy"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ivgnf"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aq1po"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.878353, 0.538072, 0.314552, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7lp0k"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h3cv2"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hp3nt"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.875904, 0.561795, 0.989407, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w4rrl"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_somt5"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kkflg"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.506077, 0.722398, 0.987234, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jg67c"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6yhso"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kixif"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.20025, 0.634496, 0.54183, 1)
 albedo_texture = ExtResource("12_0kym7")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8r06k"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0va8r"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_doeaw"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.20025, 0.634496, 0.54183, 1)
 albedo_texture = ExtResource("12_0kym7")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y4w08"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uw35p"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gg72t"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.942686, 0.867617, 0, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ip1d5"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ru006"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rcqq0"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.997466, 0.537965, 0.721485, 1)
 albedo_texture = ExtResource("12_jug7b")
 uv1_scale = Vector3(0.145, 0.145, 0.145)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vprxg"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lwuhq"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_goxrt"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.984049, 0.610741, 3.85046e-07, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_apq4t"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5215c"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f0hla"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.368624, 0.798852, 0.682019, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5q0qj"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f85yp"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lel6f"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.744753, 0.650461, 0.934603, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a6m4v"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ehp25"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_exehf"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.744753, 0.650461, 0.934603, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_drut1"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j3k3l"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_infa4"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.971454, 0.60373, 0.39902, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_khs1h"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7aing"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5wk30"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.962157, 0.614806, 0.33833, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ab7f"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x3pn6"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gx2bm"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0, 0.855984, 0.163987, 1)
 albedo_texture = ExtResource("12_jug7b")
@@ -523,11 +459,7 @@ uv1_scale = Vector3(0.06, 0.06, 0.06)
 uv1_offset = Vector3(-0.145, -0.045, 0)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lebe3"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3geie"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pi5de"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.744753, 0.650461, 0.934603, 1)
 albedo_texture = ExtResource("12_jug7b")
@@ -535,165 +467,105 @@ uv1_scale = Vector3(0.075, 0.075, 0.075)
 uv1_offset = Vector3(0, 0.01, 0)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pqa8r"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1edgl"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_giawf"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(1, 0.268368, 0.726714, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_54sw3"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v3pfj"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_655fe"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0, 0.71015, 0.638877, 1)
 albedo_texture = ExtResource("14_jgf1o")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fyeek"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xwdey"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4rd51"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0, 0.855984, 0.163987, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kao0b"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_opche"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cgppj"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fpa70"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6und5"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_00kfc"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wr62w"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wm4xo"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1vkk6"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_42o04"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_onuxr"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tksoy"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oqulc"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jslmc"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7qrdw"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s4lnu"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aom2g"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2xnhw"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.499184, 0.172677, 1, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p28b8"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pdiqm"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e1v7v"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.898039, 0.933333, 0.988235, 1)
 albedo_texture = ExtResource("14_jgf1o")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u4axu"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_np7u2"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_teqm2"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.626548, 0.158899, 0.341145, 1)
 albedo_texture = ExtResource("14_jgf1o")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cnxwl"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jv62u"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ktnc"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.80568, 0.676586, 0.625601, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3wpgq"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wfrv0"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x5vai"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.58734, 0.779334, 0.373638, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_02yje"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uk30l"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_emx2x"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.309169, 0.684084, 0.870579, 1)
 albedo_texture = ExtResource("7_rumpl")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kmcr2"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5bw77"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ytd5"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.676495, 0.720712, 0.744886, 1)
 albedo_texture = ExtResource("12_jug7b")
@@ -701,11 +573,7 @@ uv1_scale = Vector3(0.13, 0.13, 0.13)
 uv1_offset = Vector3(0, -0.02, 0)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0x0ib"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l2ilj"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2yqpd"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.783385, 0.721766, 7.70092e-07, 1)
 albedo_texture = ExtResource("7_rumpl")
@@ -724,11 +592,7 @@ material = SubResource("StandardMaterial3D_15476")
 size = Vector2(3, 3)
 orientation = 1
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3l5ff"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iyi68"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_01t1h"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_color = Color(0.506077, 0.722398, 0.987234, 1)
 albedo_texture = ExtResource("12_0kym7")
@@ -854,71 +718,43 @@ orientation = 1
 [sub_resource type="BoxShape3D" id="BoxShape3D_658em"]
 size = Vector3(1.9259, 1.47217, 1.26086)
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q5mpu"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hhqr1"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c38ou"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_texture = ExtResource("25_5n0fn")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e2d1g"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_us3vi"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_riwsp"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_texture = ExtResource("25_5n0fn")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fcif8"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_at61f"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_702nf"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_texture = ExtResource("25_5n0fn")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dmea1"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f0vyk"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1wstb"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_texture = ExtResource("25_5n0fn")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i1kq6"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_onff3"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wlgtf"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_texture = ExtResource("25_5n0fn")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3dnmu"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hrxnt"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nep8v"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_texture = ExtResource("25_5n0fn")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-<<<<<<< Updated upstream
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nqnko"]
-=======
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_spha3"]
->>>>>>> Stashed changes
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_toh6w"]
 next_pass = SubResource("ShaderMaterial_b0ii5")
 albedo_texture = ExtResource("25_5n0fn")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
@@ -3010,20 +2846,12 @@ skeleton = NodePath("../../../../..")
 [node name="StaticBody3D" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7553, 0, 12.4538)
 size = Vector3(16, 20, 16)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_3akkq")
-=======
-material = SubResource("StandardMaterial3D_s6vfw")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_5rj6b")
 
 [node name="StaticBody3D13" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.14866, 0, 39.4538)
 size = Vector3(16, 7, 16)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_q57p6")
-=======
-material = SubResource("StandardMaterial3D_ej6y7")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_uami5")
 color = Color(0.530961, 0.429109, 0.517072, 1)
 
 [node name="pole" parent="BoxHouses/StaticBody3D13" instance=ExtResource("12_7bki5")]
@@ -3035,31 +2863,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.0599, 2.48223, 0.0825043)
 [node name="StaticBody3D14" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.14866, 0, 51.5312)
 size = Vector3(16, 10, 8)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_y23tj")
-=======
-material = SubResource("StandardMaterial3D_o08fb")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_fu4e4")
 color = Color(0.957896, 0.338717, 0.876763, 1)
 
 [node name="StaticBody3D15" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.14866, 0, 59.5312)
 size = Vector3(16, 10, 8)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_ny4cr")
-=======
-material = SubResource("StandardMaterial3D_w5tsg")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_xtsoq")
 color = Color(0.341542, 0.735164, 0.356238, 1)
 
 [node name="StaticBody3D16" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.14866, 0, 70.5312)
 size = Vector3(16, 10, 8)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_4yu7i")
-=======
-material = SubResource("StandardMaterial3D_sdoqa")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_esk7u")
 color = Color(0.351437, 0.655716, 0.943383, 1)
 
 [node name="pole" parent="BoxHouses/StaticBody3D16" instance=ExtResource("12_7bki5")]
@@ -3076,341 +2892,205 @@ skeleton = NodePath("../../..")
 [node name="StaticBody3D17" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.14866, 0, 78.5312)
 size = Vector3(16, 15, 8)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_yr00f")
-=======
-material = SubResource("StandardMaterial3D_gybnu")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_qjl34")
 color = Color(0.878353, 0.538072, 0.314552, 1)
 
 [node name="StaticBody3D19" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.148661, 0, 89.5312)
 size = Vector3(16, 15, 8)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_a4ymp")
-=======
-material = SubResource("StandardMaterial3D_wf6ii")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_6a7qm")
 color = Color(0.878353, 0.538072, 0.314552, 1)
 
 [node name="StaticBody3D34" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, -123.779, 7.62939e-06, 19.6691)
 size = Vector3(16, 15, 8)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_umxcy")
-=======
-material = SubResource("StandardMaterial3D_kyrqa")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_5lc4v")
 color = Color(0.878353, 0.538072, 0.314552, 1)
 
 [node name="StaticBody3D35" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -133.369, 7.62939e-06, 26.3799)
 size = Vector3(16, 15, 8)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_oy8sy")
-=======
-material = SubResource("StandardMaterial3D_ivgnf")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_aq1po")
 color = Color(0.878353, 0.538072, 0.314552, 1)
 
 [node name="StaticBody3D2" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9862, 0, -14.9368)
 size = Vector3(30, 10, 16)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_7lp0k")
-=======
-material = SubResource("StandardMaterial3D_h3cv2")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_hp3nt")
 color = Color(0.875904, 0.561795, 0.989407, 1)
 
 [node name="StaticBody3D3" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.5278, 0, 22.2091)
 size = Vector3(15, 10, 30)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_w4rrl")
-=======
-material = SubResource("StandardMaterial3D_somt5")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_kkflg")
 color = Color(0.506077, 0.722398, 0.987234, 1)
 
 [node name="StaticBody3D18" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.5278, 0, 62.2091)
 size = Vector3(15, 30, 30)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_jg67c")
-=======
-material = SubResource("StandardMaterial3D_6yhso")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_kixif")
 color = Color(0.20025, 0.634496, 0.54183, 1)
 
 [node name="StaticBody3D24" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -48.0725, 0, 70.2091)
 size = Vector3(15, 30, 30)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_8r06k")
-=======
-material = SubResource("StandardMaterial3D_0va8r")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_doeaw")
 color = Color(0.20025, 0.634496, 0.54183, 1)
 
 [node name="StaticBody3D20" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.4253, 0, 95.9279)
 size = Vector3(15, 10, 30)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_y4w08")
-=======
-material = SubResource("StandardMaterial3D_uw35p")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_gg72t")
 color = Color(0.942686, 0.867617, 0, 1)
 
 [node name="StaticBody3D4" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.6399, 0, -14.4024)
 size = Vector3(15, 20, 15)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_ip1d5")
-=======
-material = SubResource("StandardMaterial3D_ru006")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_rcqq0")
 color = Color(0.997466, 0.537965, 0.721485, 1)
 
 [node name="StaticBody3D5" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72.0059, 0, 0.586279)
 size = Vector3(15, 10, 30)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_vprxg")
-=======
-material = SubResource("StandardMaterial3D_lwuhq")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_goxrt")
 color = Color(0.984049, 0.610741, 3.85046e-07, 1)
 
 [node name="StaticBody3D6" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -82.9735, 0, -46.8892)
 size = Vector3(15, 7, 30)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_apq4t")
-=======
-material = SubResource("StandardMaterial3D_5215c")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_f0hla")
 color = Color(0.368624, 0.798852, 0.682019, 1)
 
 [node name="StaticBody3D7" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -89.6649, 0, -33.1837)
 size = Vector3(7, 10, 7)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_5q0qj")
-=======
-material = SubResource("StandardMaterial3D_f85yp")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_lel6f")
 color = Color(0.744753, 0.650461, 0.934603, 1)
 
 [node name="StaticBody3D28" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -124.475, 0, -94.3848)
 size = Vector3(8, 10, 8)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_a6m4v")
-=======
-material = SubResource("StandardMaterial3D_ehp25")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_exehf")
 color = Color(0.744753, 0.650461, 0.934603, 1)
 
 [node name="StaticBody3D30" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -112.247, 0, -106.926)
 size = Vector3(30, 20, 8)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_drut1")
-=======
-material = SubResource("StandardMaterial3D_j3k3l")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_infa4")
 color = Color(0.971454, 0.60373, 0.39902, 1)
 
 [node name="StaticBody3D8" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -96.2308, 0, -53.4831)
 size = Vector3(7, 10, 10)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_khs1h")
-=======
-material = SubResource("StandardMaterial3D_7aing")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_5wk30")
 color = Color(0.962157, 0.614806, 0.33833, 1)
 
 [node name="StaticBody3D9" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -106.562, 0, -50.9304)
 size = Vector3(14, 12, 10)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_2ab7f")
-=======
-material = SubResource("StandardMaterial3D_x3pn6")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_gx2bm")
 color = Color(0, 0.855984, 0.163987, 1)
 
 [node name="StaticBody3D36" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.54187, 0, 0.840463, 0, 1, 0, -0.840463, 0, 0.54187, -99.4352, 0, 86.6364)
 size = Vector3(7, 10, 7)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_lebe3")
-=======
-material = SubResource("StandardMaterial3D_3geie")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_pi5de")
 color = Color(0.744753, 0.650461, 0.934603, 1)
 
 [node name="StaticBody3D38" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.54187, 0, 0.840463, 0, 1, 0, -0.840463, 0, 0.54187, -92.2026, 0, 96.7441)
 size = Vector3(16, 10, 16)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_pqa8r")
-=======
-material = SubResource("StandardMaterial3D_1edgl")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_giawf")
 color = Color(1, 0.268368, 0.726714, 1)
 
 [node name="StaticBody3D39" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.54187, 0, 0.840463, 0, 1, 0, -0.840463, 0, 0.54187, -75.7825, -9.53674e-07, 97.1696)
 size = Vector3(12, 15, 12)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_54sw3")
-=======
-material = SubResource("StandardMaterial3D_v3pfj")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_655fe")
 color = Color(0, 0.71015, 0.638877, 1)
 
 [node name="StaticBody3D37" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.54187, 0, 0.840463, 0, 1, 0, -0.840463, 0, 0.54187, -105.486, 0, 80.1048)
 size = Vector3(14, 15, 10)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_fyeek")
-=======
-material = SubResource("StandardMaterial3D_xwdey")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_4rd51")
 color = Color(0, 0.855984, 0.163987, 1)
 
 [node name="StaticBody3D11" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -106.712, -4.29153e-06, 4.1485)
 size = Vector3(14, 12, 10)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_kao0b")
-=======
-material = SubResource("StandardMaterial3D_opche")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_cgppj")
 color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 
 [node name="StaticBody3D12" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, -75.6693, -4.29153e-06, -81.0399)
 size = Vector3(20, 12, 15)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_fpa70")
-=======
-material = SubResource("StandardMaterial3D_6und5")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_00kfc")
 color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 
 [node name="StaticBody3D21" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -90.7728, -4.29153e-06, -76.4715)
 size = Vector3(20, 12, 15)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_wr62w")
-=======
-material = SubResource("StandardMaterial3D_wm4xo")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_1vkk6")
 color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 
 [node name="StaticBody3D22" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -88.6264, -3.33786e-06, -91.3269)
 size = Vector3(20, 12, 15)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_42o04")
-=======
-material = SubResource("StandardMaterial3D_onuxr")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_tksoy")
 color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 
 [node name="StaticBody3D23" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(-0.188119, 0, -0.982146, 0, 1, 0, 0.982146, 0, -0.188119, -94.1836, -3.33786e-06, -84.2923)
 size = Vector3(10, 12, 15)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_oqulc")
-=======
-material = SubResource("StandardMaterial3D_jslmc")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_7qrdw")
 color = Color(0.790933, 0.184437, 2.88785e-07, 1)
 
 [node name="StaticBody3D25" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(-0.944623, 0, -0.328157, 0, 1, 0, 0.328157, 0, -0.944623, -122.95, -1.43051e-06, -63.5941)
 size = Vector3(10, 8, 7)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_s4lnu")
-=======
-material = SubResource("StandardMaterial3D_aom2g")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_2xnhw")
 color = Color(0.499184, 0.172677, 1, 1)
 
 [node name="StaticBody3D26" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.328157, 0, -0.944623, 0, 1, 0, 0.944623, 0, 0.328157, -137.349, -3.33786e-06, -75.8029)
 size = Vector3(20, 24, 30)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_p28b8")
-=======
-material = SubResource("StandardMaterial3D_pdiqm")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_e1v7v")
 color = Color(0.898039, 0.933333, 0.988235, 1)
 
 [node name="StaticBody3D27" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.944623, 0, 0.328157, 0, 1, 0, -0.328157, 0, 0.944623, -142.869, -3.33786e-06, -68.3505)
 size = Vector3(15, 24, 30)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_u4axu")
-=======
-material = SubResource("StandardMaterial3D_np7u2")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_teqm2")
 color = Color(0.626548, 0.158899, 0.341145, 1)
 
 [node name="StaticBody3D10" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -116.317, 0, -32.5115)
 size = Vector3(14, 15, 40)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_cnxwl")
-=======
-material = SubResource("StandardMaterial3D_jv62u")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_5ktnc")
 color = Color(0.80568, 0.676586, 0.625601, 1)
 
 [node name="StaticBody3D29" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -147.075, 3.8147e-06, -40.8665)
 size = Vector3(14, 10, 20)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_3wpgq")
-=======
-material = SubResource("StandardMaterial3D_wfrv0")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_x5vai")
 color = Color(0.58734, 0.779334, 0.373638, 1)
 
 [node name="StaticBody3D31" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -141.412, 3.8147e-06, -27.0144)
 size = Vector3(10, 7, 10)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_02yje")
-=======
-material = SubResource("StandardMaterial3D_uk30l")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_emx2x")
 color = Color(0.309169, 0.684084, 0.870579, 1)
 
 [node name="StaticBody3D33" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -138.869, 3.8147e-06, -17.4102)
 size = Vector3(10, 7, 10)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_kmcr2")
-=======
-material = SubResource("StandardMaterial3D_5bw77")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_3ytd5")
 color = Color(0.676495, 0.720712, 0.744886, 1)
 
 [node name="StaticBody3D32" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -135.389, 3.8147e-06, 1.92549)
 size = Vector3(15, 12, 15)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_0x0ib")
-=======
-material = SubResource("StandardMaterial3D_l2ilj")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_2yqpd")
 color = Color(0.783385, 0.721766, 7.70092e-07, 1)
 
 [node name="Cloud138" type="MeshInstance3D" parent="BoxHouses"]
@@ -3421,11 +3101,7 @@ skeleton = NodePath("../../..")
 [node name="StaticBody3D40" parent="BoxHouses" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -109.652, 0, -79.1573)
 size = Vector3(15, 50, 30)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_3l5ff")
-=======
-material = SubResource("StandardMaterial3D_iyi68")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_01t1h")
 color = Color(0.506077, 0.722398, 0.987234, 1)
 
 [node name="fountain" type="StaticBody3D" parent="."]
@@ -4140,71 +3816,43 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.3534, 1.273, -36.9652)
 [node name="libary" parent="." instance=ExtResource("6_bd1tb")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -140.998, -9.53674e-07, 56.9955)
 size = Vector3(32, 20, 32)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_q5mpu")
-=======
-material = SubResource("StandardMaterial3D_hhqr1")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_c38ou")
 color = Color(1, 1, 1, 1)
 
 [node name="StaticBody3D37" parent="libary" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1978, 0, -0.20076)
 size = Vector3(20, 1, 20)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_e2d1g")
-=======
-material = SubResource("StandardMaterial3D_us3vi")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_riwsp")
 color = Color(1, 1, 1, 1)
 
 [node name="StaticBody3D38" parent="libary" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1978, 0.673466, -0.20076)
 size = Vector3(19, 1, 19)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_fcif8")
-=======
-material = SubResource("StandardMaterial3D_at61f")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_702nf")
 color = Color(1, 1, 1, 1)
 
 [node name="StaticBody3D39" parent="libary" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1978, 1.46601, -0.20076)
 size = Vector3(18, 1, 18)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_dmea1")
-=======
-material = SubResource("StandardMaterial3D_f0vyk")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_1wstb")
 color = Color(1, 1, 1, 1)
 
 [node name="StaticBody3D40" parent="libary" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1978, 11.8094, -0.20076)
 size = Vector3(24, 1, 24)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_i1kq6")
-=======
-material = SubResource("StandardMaterial3D_onff3")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_wlgtf")
 color = Color(1, 1, 1, 1)
 
 [node name="StaticBody3D41" parent="libary" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1978, 12.4829, -0.20076)
 size = Vector3(23, 1, 23)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_3dnmu")
-=======
-material = SubResource("StandardMaterial3D_hrxnt")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_nep8v")
 color = Color(1, 1, 1, 1)
 
 [node name="StaticBody3D42" parent="libary" instance=ExtResource("6_bd1tb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1978, 13.2754, -0.20076)
 size = Vector3(22, 1, 22)
-<<<<<<< Updated upstream
-material = SubResource("StandardMaterial3D_nqnko")
-=======
-material = SubResource("StandardMaterial3D_spha3")
->>>>>>> Stashed changes
+material = SubResource("StandardMaterial3D_toh6w")
 color = Color(1, 1, 1, 1)
 
 [node name="column" type="StaticBody3D" parent="libary"]
@@ -4834,57 +4482,57 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92.0702, 0.5, -41.7991)
 NAMEHERE = "Derranged Fan"
 DIALOGFILE = "res://assets/characters/fanboy/text_files/Deranged Fan.txt"
 CHOICEFILE = "res://assets/characters/fanboy/text_files/Deranged Fan Choices.txt"
-IMAGE = []
-audioList = [ExtResource("34_nd3ks"), ExtResource("35_i22aa"), ExtResource("36_c2337"), ExtResource("37_wr4pa"), ExtResource("35_i22aa"), ExtResource("38_bivov"), ExtResource("35_i22aa"), ExtResource("39_nr8x0")]
+IMAGE = [ExtResource("33_ips1l"), ExtResource("34_b88t0")]
+MAX_lines = 8
+audioList = [ExtResource("34_nd3ks"), ExtResource("35_i22aa"), ExtResource("36_c2337"), ExtResource("37_wr4pa"), ExtResource("35_i22aa"), ExtResource("38_bivov"), ExtResource("35_i22aa"), ExtResource("39_nr8x0"), ExtResource("35_i22aa")]
 
 [node name="butler" parent="NPCs" instance=ExtResource("32_8r0ja")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.6209, 0.5, 53.1894)
 NAMEHERE = "Alfred"
 DIALOGFILE = "res://assets/characters/butler/text_files/Alfred (butler).txt"
 CHOICEFILE = "res://assets/characters/butler/text_files/Alfred Choices (butler).txt"
-<<<<<<< Updated upstream
-IMAGE = []
-audioList = [ExtResource("41_ld2nv"), ExtResource("35_i22aa"), ExtResource("42_3wel6"), ExtResource("43_mg1e8"), ExtResource("35_i22aa"), ExtResource("44_1sslb"), ExtResource("35_i22aa"), ExtResource("45_dda2q")]
-=======
-IMAGE = [ExtResource("35_72mhh"), ExtResource("35_72mhh")]
+IMAGE = [ExtResource("41_tlh26"), ExtResource("41_tlh26")]
 MAX_lines = 8
 audioList = [ExtResource("41_ld2nv"), ExtResource("35_i22aa"), ExtResource("42_3wel6"), ExtResource("43_mg1e8"), ExtResource("35_i22aa"), ExtResource("44_1sslb"), ExtResource("35_i22aa"), ExtResource("45_dda2q"), ExtResource("35_i22aa")]
->>>>>>> Stashed changes
 
 [node name="Einstein" parent="NPCs" instance=ExtResource("32_8r0ja")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -120.699, 2.58428, 58.7792)
 NAMEHERE = "Einstein"
 DIALOGFILE = "res://assets/characters/einstein/text_files/Einstein.txt"
 CHOICEFILE = "res://assets/characters/einstein/text_files/Einstein Choices.txt"
-IMAGE = [ExtResource("47_bh0os"), ExtResource("48_p5l7d")]
-MAX_lines = 13
-audioList = [ExtResource("47_jshcb"), ExtResource("48_xx3b4"), ExtResource("35_i22aa"), ExtResource("49_ws5ab"), ExtResource("35_i22aa"), ExtResource("50_01wiy"), ExtResource("35_i22aa"), ExtResource("51_gpgjb"), ExtResource("35_i22aa"), ExtResource("53_4xl1l"), ExtResource("52_7h6w8"), ExtResource("35_i22aa"), ExtResource("35_i22aa"), ExtResource("35_i22aa")]
+IMAGE = [ExtResource("47_igojg"), ExtResource("48_apy34")]
+MAX_lines = 11
+audioList = [ExtResource("49_ip3s2"), ExtResource("50_fg1tg"), ExtResource("35_i22aa"), ExtResource("51_pb24j"), ExtResource("35_i22aa"), ExtResource("52_5jtod"), ExtResource("35_i22aa"), ExtResource("53_ctx8j"), ExtResource("35_i22aa"), ExtResource("54_u2twm"), ExtResource("55_lmdq6"), ExtResource("35_i22aa")]
 
 [node name="Chadwick" parent="NPCs" instance=ExtResource("32_8r0ja")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.98012, 0.859093, 76.4138)
 NAMEHERE = "Chadwick"
 DIALOGFILE = "res://assets/characters/chadwick/text_files/Chadwick.txt"
 CHOICEFILE = "res://assets/characters/chadwick/text_files/Chadwick Choices.txt"
-IMAGE = []
+IMAGE = [ExtResource("56_6jqrt"), ExtResource("57_te2y2")]
+MAX_lines = 23
+audioList = [ExtResource("58_6dw04"), ExtResource("59_ykvpg"), ExtResource("60_x4ntv"), ExtResource("35_i22aa"), ExtResource("61_bymj3"), ExtResource("62_rjyxk"), ExtResource("63_urtjb"), ExtResource("35_i22aa"), ExtResource("64_oo7jr"), ExtResource("65_woxxj"), ExtResource("66_w74g6"), ExtResource("67_hlvh0"), ExtResource("68_r6iou"), ExtResource("69_p1kfp"), ExtResource("70_il8er"), ExtResource("71_s1e4f"), ExtResource("72_1a0s3"), ExtResource("73_x6m2l"), ExtResource("35_i22aa"), ExtResource("74_g3fqk"), ExtResource("75_03c0p"), ExtResource("76_4rrd8"), ExtResource("77_2drrv"), ExtResource("35_i22aa")]
 
 [node name="Frogbert" parent="NPCs" instance=ExtResource("32_8r0ja")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.828, 0.5, -93.4078)
 NAMEHERE = "Frogbert"
 DIALOGFILE = "res://assets/characters/frogbert/text_files/Frogbert.txt"
 CHOICEFILE = "res://assets/characters/frogbert/text_files/Frogbert Choices.txt"
-IMAGE = []
+IMAGE = [ExtResource("78_rc7mw"), ExtResource("78_rc7mw")]
+MAX_lines = 9
+audioList = [ExtResource("79_c7fcq"), ExtResource("80_uncd2"), ExtResource("81_33bga"), ExtResource("35_i22aa"), ExtResource("82_7bc43"), ExtResource("83_y5x0f"), ExtResource("84_1e1at"), ExtResource("85_bdfbd"), ExtResource("86_u5hbd"), ExtResource("35_i22aa")]
 
 [node name="William" parent="NPCs" instance=ExtResource("32_8r0ja")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -129.506, 0.5, -66.1871)
+visible = false
 NAMEHERE = "William"
-IMAGE = []
 
 [node name="Walter" parent="NPCs" instance=ExtResource("32_8r0ja")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -132.392, 0.5, -65.4013)
+visible = false
 NAMEHERE = "Walter"
 DIALOGFILE = "res://assets/characters/the_twins/text_files/Walter and William.txt"
 CHOICEFILE = "res://assets/characters/the_twins/text_files/Walter and William Choices.txt"
-IMAGE = []
 
 [node name="Sprite3D" type="Sprite3D" parent="NPCs"]
 transform = Transform3D(0.0549837, 0, 0, 0, 0.0549837, 0, 0, 0, 0.0549837, -15.5989, 1.73028, 50.4397)

@@ -63,6 +63,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label" type="Label" parent="Panel/MarginContainer"]
+custom_minimum_size = Vector2(1024, 10)
 layout_mode = 2
 text = "Die Monster! You don't belong in this world!"
 horizontal_alignment = 1

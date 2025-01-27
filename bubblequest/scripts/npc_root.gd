@@ -89,6 +89,7 @@ func dialogAdvanced():
 	audioCount+=1
 	if audioCount > MAX_lines:
 		audioCount = MAX_lines
+	
 	$npcSpeak.stream = audioList[audioCount]
 	$npcSpeak.play()		#figure out how to advance the audio index in the playlist
 	

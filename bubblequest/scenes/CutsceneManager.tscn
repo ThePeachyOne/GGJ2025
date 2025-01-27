@@ -46,24 +46,30 @@ layout_mode = 2
 
 [node name="Option 1" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer"]
 visible = false
+custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 size_flags_horizontal = 3
 text = "This is some text."
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Option 2" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer"]
 visible = false
+custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 size_flags_horizontal = 3
 text = "This is some different text."
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Option 3" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer"]
 visible = false
+custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Your mother."
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
