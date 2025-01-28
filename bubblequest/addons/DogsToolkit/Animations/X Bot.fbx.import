@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://8634cfiduy6a"
-path="res://.godot/imported/X Bot.fbx-abee532a6ac24a8b0d581861e382c640.scn"
+path="res://.godot/imported/X Bot.fbx-cce585a3b66e505849d304d9fc77f0ae.scn"
 
 [deps]
 
-source_file="res://DogsToolkit/Animations/X Bot.fbx"
-dest_files=["res://.godot/imported/X Bot.fbx-abee532a6ac24a8b0d581861e382c640.scn"]
+source_file="res://addons/DogsToolkit/Animations/X Bot.fbx"
+dest_files=["res://.godot/imported/X Bot.fbx-cce585a3b66e505849d304d9fc77f0ae.scn"]
 
 [params]
 

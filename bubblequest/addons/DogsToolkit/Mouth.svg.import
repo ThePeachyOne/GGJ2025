@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2k86f1rx1ibu"
-path="res://.godot/imported/AudioStreamPlayer3D.svg-8804ec9ee4f6b0693c7e145adebaf001.ctex"
+uid="uid://bgiaw8dibxd70"
+path="res://.godot/imported/Mouth.svg-5ddf0fe4e929f5ec3eaaefb381cbd5af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://DogsToolkit/AudioStreamPlayer3D.svg"
-dest_files=["res://.godot/imported/AudioStreamPlayer3D.svg-8804ec9ee4f6b0693c7e145adebaf001.ctex"]
+source_file="res://addons/DogsToolkit/Mouth.svg"
+dest_files=["res://.godot/imported/Mouth.svg-5ddf0fe4e929f5ec3eaaefb381cbd5af.ctex"]
 
 [params]
 

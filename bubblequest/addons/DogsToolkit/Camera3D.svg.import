@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyh2nsesdv2le"
-path="res://.godot/imported/Window.svg-3f3b9d2295bed53503302810126962b8.ctex"
+uid="uid://ccx7ln4ehq5qo"
+path="res://.godot/imported/Camera3D.svg-7af63023ffbfc6defb767e6d329bade9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://DogsToolkit/Window.svg"
-dest_files=["res://.godot/imported/Window.svg-3f3b9d2295bed53503302810126962b8.ctex"]
+source_file="res://addons/DogsToolkit/Camera3D.svg"
+dest_files=["res://.godot/imported/Camera3D.svg-7af63023ffbfc6defb767e6d329bade9.ctex"]
 
 [params]
 

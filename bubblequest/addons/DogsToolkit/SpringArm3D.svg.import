@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3470hoypt1cj"
-path="res://.godot/imported/bayer4tile8.png-f4ec74b4d4dfea8d3e77ee6bbd5b279d.ctex"
+uid="uid://b007pgkt777v5"
+path="res://.godot/imported/SpringArm3D.svg-b3fcc51aadfe17de70867e171e6c8674.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://DogsToolkit/bayer4tile8.png"
-dest_files=["res://.godot/imported/bayer4tile8.png-f4ec74b4d4dfea8d3e77ee6bbd5b279d.ctex"]
+source_file="res://addons/DogsToolkit/SpringArm3D.svg"
+dest_files=["res://.godot/imported/SpringArm3D.svg-b3fcc51aadfe17de70867e171e6c8674.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

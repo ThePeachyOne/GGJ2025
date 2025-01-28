@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be21jij3mqagw"
-path="res://.godot/imported/Eye.svg-ef63b294c7775dbd7d2ce2fb710a11d0.ctex"
+uid="uid://cyh2nsesdv2le"
+path="res://.godot/imported/Window.svg-f5a5655e200d57eb75c4f68420703b55.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://DogsToolkit/Eye.svg"
-dest_files=["res://.godot/imported/Eye.svg-ef63b294c7775dbd7d2ce2fb710a11d0.ctex"]
+source_file="res://addons/DogsToolkit/Window.svg"
+dest_files=["res://.godot/imported/Window.svg-f5a5655e200d57eb75c4f68420703b55.ctex"]
 
 [params]
 

@@ -2,7 +2,7 @@
 .godot/
 
 # Godot Git Plugin ignore
-addons/
+addons/godot-git-plugin/
 
 # Godot-specific ignores
 .import/

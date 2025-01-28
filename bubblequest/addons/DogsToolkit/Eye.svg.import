@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btr1522ira243"
-path="res://.godot/imported/MoCap_Marker.svg-825c9fa5682bf2c78147f7b82c03fa7c.ctex"
+uid="uid://be21jij3mqagw"
+path="res://.godot/imported/Eye.svg-3036f8959ae5aef5d4158315b070cac3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://DogsToolkit/MoCap_Marker.svg"
-dest_files=["res://.godot/imported/MoCap_Marker.svg-825c9fa5682bf2c78147f7b82c03fa7c.ctex"]
+source_file="res://addons/DogsToolkit/Eye.svg"
+dest_files=["res://.godot/imported/Eye.svg-3036f8959ae5aef5d4158315b070cac3.ctex"]
 
 [params]
 

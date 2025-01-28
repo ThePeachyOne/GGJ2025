@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b007pgkt777v5"
-path="res://.godot/imported/SpringArm3D.svg-8c9777e810710f9f2111afdff3a1c632.ctex"
+uid="uid://8hwo2hasup17"
+path="res://.godot/imported/Button.svg-922aa71c70b351bc0419070467fe44b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://DogsToolkit/SpringArm3D.svg"
-dest_files=["res://.godot/imported/SpringArm3D.svg-8c9777e810710f9f2111afdff3a1c632.ctex"]
+source_file="res://addons/DogsToolkit/Button.svg"
+dest_files=["res://.godot/imported/Button.svg-922aa71c70b351bc0419070467fe44b6.ctex"]
 
 [params]
 

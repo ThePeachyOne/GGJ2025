@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgiaw8dibxd70"
-path="res://.godot/imported/Mouth.svg-aa82481c0fcc83fd1d7c458b3cc66ee4.ctex"
+uid="uid://bd77x3gnklefr"
+path="res://.godot/imported/Dialogue.svg-b986d9f6fc35f142d6d8507284366977.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://DogsToolkit/Mouth.svg"
-dest_files=["res://.godot/imported/Mouth.svg-aa82481c0fcc83fd1d7c458b3cc66ee4.ctex"]
+source_file="res://addons/DogsToolkit/Dialogue.svg"
+dest_files=["res://.godot/imported/Dialogue.svg-b986d9f6fc35f142d6d8507284366977.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8hwo2hasup17"
-path="res://.godot/imported/Button.svg-5598e1594a67bd87ad92abec88096cdb.ctex"
+uid="uid://c2k86f1rx1ibu"
+path="res://.godot/imported/AudioStreamPlayer3D.svg-0608793441ed4c843ac153a37d304d0d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://DogsToolkit/Button.svg"
-dest_files=["res://.godot/imported/Button.svg-5598e1594a67bd87ad92abec88096cdb.ctex"]
+source_file="res://addons/DogsToolkit/AudioStreamPlayer3D.svg"
+dest_files=["res://.godot/imported/AudioStreamPlayer3D.svg-0608793441ed4c843ac153a37d304d0d.ctex"]
 
 [params]
 
