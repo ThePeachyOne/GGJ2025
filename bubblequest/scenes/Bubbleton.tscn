@@ -108,7 +108,7 @@
 [ext_resource type="AudioStream" uid="uid://vmht30b2v0ok" path="res://assets/audio/bubblequest-railyard-ambience.ogg" id="106_4buv3"]
 [ext_resource type="AudioStream" uid="uid://0rhe3e1swy1t" path="res://assets/audio/bubblequest-fountain.ogg" id="107_oaaog"]
 [ext_resource type="Theme" uid="uid://cuahqqxr1ktia" path="res://assets/text_theme.tres" id="108_ck858"]
-[ext_resource type="Script" path="res://addons/DogsToolkit/dialogueManager.gd" id="109_wboew"]
+[ext_resource type="Script" path="res://DogsToolkit/dialogueManager.gd" id="109_sc3eo"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xivfm"]
 sky_top_color = Color(0.320077, 0.47232, 0.983131, 1)
@@ -5601,7 +5601,7 @@ max_distance = 40.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96.3194, 1.45942, 64.0517)
 mesh = SubResource("CapsuleMesh_hp0lw")
 
-[node name="DialogueManager" type="Label" parent="newSuperNPC" node_paths=PackedStringArray("SpatialAudioSource")]
+[node name="DialogueManager" type="Label" parent="newSuperNPC"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -5611,14 +5611,7 @@ theme = ExtResource("108_ck858")
 horizontal_alignment = 1
 vertical_alignment = 2
 autowrap_mode = 2
-script = ExtResource("109_wboew")
-text_mode = 1
-text_array = PackedStringArray("res://assets/characters/butler/text_files/Alfred (butler).txt")
-use_audio = true
-audio_array = Array[AudioStream]([ExtResource("41_ld2nv"), null, ExtResource("42_3wel6"), ExtResource("43_mg1e8"), ExtResource("44_1sslb")])
-SpatialAudioSource = NodePath("..")
-auto_advance = true
-advance_wait = 10.0
+script = ExtResource("109_sc3eo")
 
 [connection signal="body_entered" from="gateway" to="gateway" method="_on_body_entered"]
 [connection signal="body_entered" from="park ambience" to="park ambience" method="_on_body_entered"]
