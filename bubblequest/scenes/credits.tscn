@@ -127,7 +127,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 6
 theme_type_variation = &"CreditsLabel"
-text = "Connor Adkins - Level Design, Programmer"
+text = "Dog-Sama - Level Design, Sound Design"
 
 [node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
