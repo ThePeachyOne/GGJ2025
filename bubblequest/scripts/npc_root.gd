@@ -16,6 +16,9 @@ var canActivateDialog = true
 var imageCount = 0
 var speakCount = 0 
 @export var MAX_lines = 50
+@export var split_line = 48
+#^this is the line of dialogue at which a question is posed
+#we can use the difference between this and MAX_lines to tell where to skip to in the audioList when we make a desicion
 
 @export var audioList = []
 @export var volume_db = 0
@@ -89,6 +92,8 @@ func dialogAdvanced():
 	$speakTimer.start()
 	
 	audioCount+=1
+	if audioCount == split_line:
+		audioCount = MAX_lines
 	if audioCount > MAX_lines:
 		audioCount = MAX_lines
 	

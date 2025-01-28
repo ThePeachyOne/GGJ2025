@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dcuj3suwndyg1" path="res://assets/textures/BubbleMaker2.png" id="4_x40sn"]
 [ext_resource type="Texture2D" uid="uid://cmgmp3ftbt0y5" path="res://assets/textures/BubbleMaker3.png" id="5_cmi2a"]
 [ext_resource type="AudioStream" uid="uid://d0bsqbuuv0tqc" path="res://assets/audio/bubblequest-bubble-fizz.ogg" id="6_bm87j"]
-[ext_resource type="Script" path="res://DogsToolkit/SpatializedAudioStreamPlayer3D.gd" id="6_ksj25"]
+[ext_resource type="Script" path="res://addons/DogsToolkit/SpatializedAudioStreamPlayer3D.gd" id="6_ksj25"]
 [ext_resource type="AudioStream" uid="uid://b16jvg06jd7sd" path="res://assets/audio/bubblequest-bubble-spawn.ogg" id="8_a3tab"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wirfj"]
