@@ -18,12 +18,14 @@ var speakCount = 0
 @export var MAX_lines = 50
 
 @export var audioList = []
+@export var volume_db = 0
 var audioCount = 0
 
 var bubbled = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$npcSpeak.volume_db = volume_db
 	
 	$CutsceneManager.universal_dialog_file = DIALOGFILE
 	$CutsceneManager.option_text_file = CHOICEFILE
