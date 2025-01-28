@@ -9,8 +9,9 @@ var rot_x: float
 var rot_y: float
 
 #viewbob constants
-var bob_frequency
+var bob_frequency = 0.5
 var bob_amplitude
+var step_timer = bob_frequency
 
 func get_rotate_adjust():
 	return ROTATE_ADJUST
@@ -45,8 +46,8 @@ func _physics_process(delta):
 		velocity += get_gravity() * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("Jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+	#if Input.is_action_just_pressed("Jump") and is_on_floor():
+	#	velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -55,6 +56,13 @@ func _physics_process(delta):
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
+		if not $AudioStreamPlayer.playing:
+			if step_timer <= 0:
+				$AudioStreamPlayer.pitch_scale = randf_range(0.8, 1.2)
+				$AudioStreamPlayer.play()
+				step_timer = bob_frequency
+			else:
+				step_timer -=delta
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)

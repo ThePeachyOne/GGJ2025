@@ -1,10 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://dpsy06y08shnc"]
+[gd_scene load_steps=16 format=3 uid="uid://dpsy06y08shnc"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ia6qt"]
 [ext_resource type="Shader" path="res://DogsToolkit/dither.gdshader" id="2_3vu8y"]
 [ext_resource type="Script" path="res://scripts/camera_3d.gd" id="2_8mvoo"]
 [ext_resource type="Script" path="res://DogsToolkit/BaseMenu.gd" id="2_pm1x2"]
 [ext_resource type="Shader" path="res://assets/shaders/bubble.gdshader" id="5_l1xkr"]
+[ext_resource type="AudioStream" uid="uid://cqx4h2bt45p1c" path="res://assets/audio/bubblequest-city-ambience.ogg" id="5_owsvy"]
+[ext_resource type="Script" path="res://DogsToolkit/SpatializedCamera3D.gd" id="5_r4y6a"]
+[ext_resource type="AudioStream" uid="uid://beycbyd2twjkd" path="res://assets/audio/footstep.wav" id="7_xe73w"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_v533c"]
 viewport_path = NodePath("SubViewport")
@@ -39,7 +42,7 @@ flip_faces = true
 radius = 2.0
 height = 4.0
 
-[node name="player_root" type="CharacterBody3D" groups=["player"]]
+[node name="player_root" type="CharacterBody3D" groups=["Player", "player"]]
 script = ExtResource("1_ia6qt")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -65,11 +68,15 @@ shape = SubResource("CapsuleShape3D_xf067")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_3y102")
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.619315, 0)
+script = ExtResource("2_8mvoo")
+
+[node name="SpatializedCamera3D2" type="Camera3D" parent="Camera"]
 cull_mask = 1048573
 current = true
-script = ExtResource("2_8mvoo")
+script = ExtResource("5_r4y6a")
+ambient_tone = ExtResource("5_owsvy")
 
 [node name="BaseMenu" type="Control" parent="."]
 process_mode = 2
@@ -102,3 +109,7 @@ sorting_offset = -100.0
 sorting_use_aabb_center = false
 mesh = SubResource("SphereMesh_by0lw")
 skeleton = NodePath("../../../..")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_xe73w")
+volume_db = 5.0

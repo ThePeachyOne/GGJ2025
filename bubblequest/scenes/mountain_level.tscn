@@ -1,10 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://cue0xpmbj100w"]
+[gd_scene load_steps=21 format=3 uid="uid://cue0xpmbj100w"]
 
+[ext_resource type="Script" path="res://scenes/ambience_changer.gd" id="1_qde3l"]
 [ext_resource type="PackedScene" uid="uid://dpsy06y08shnc" path="res://scenes/player.tscn" id="1_x8gkx"]
+[ext_resource type="AudioStream" uid="uid://urufnspksb2b" path="res://assets/audio/bubblequest-volcano ambience.ogg" id="2_6sq46"]
 [ext_resource type="PackedScene" uid="uid://dmy2bu2572wqd" path="res://scenes/boulder.tscn" id="2_36i5k"]
 [ext_resource type="Material" uid="uid://dkn6kb1sta4ma" path="res://assets/mountain_mat.tres" id="3_25e3v"]
 [ext_resource type="PackedScene" uid="uid://rl3rca7sfkns" path="res://scenes/big_ol_scissors.tscn" id="3_teu3d"]
-[ext_resource type="Shader" path="res://DogsToolkit/dither.gdshader" id="4_hijfi"]
 [ext_resource type="Script" path="res://scripts/big_ol_scissors.gd" id="5_hmx28"]
 [ext_resource type="PackedScene" uid="uid://biogpwdm4mp1k" path="res://scenes/npc_root.tscn" id="6_70fuv"]
 [ext_resource type="Texture2D" uid="uid://bj8xto4gb1cul" path="res://assets/characters/hobo_wizard/models/hobo_wizard.png" id="7_x46iq"]
@@ -19,6 +20,9 @@ sky_material = SubResource("ProceduralSkyMaterial_6mo23")
 background_mode = 2
 sky = SubResource("Sky_rqjvn")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_huejd"]
+size = Vector3(20, 5, 5)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ywio2"]
 albedo_color = Color(0.295866, 0.295867, 0.295866, 1)
 
@@ -32,12 +36,6 @@ radius = 258.725
 
 [sub_resource type="SphereMesh" id="SphereMesh_38u48"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_5mwgk"]
-shader = ExtResource("4_hijfi")
-shader_parameter/fog_color = null
-shader_parameter/resolution_downsampling = 2.0
-shader_parameter/bit_depth = 32.0
-
 [sub_resource type="CylinderMesh" id="CylinderMesh_y1c3m"]
 material = ExtResource("3_25e3v")
 
@@ -46,6 +44,14 @@ size = Vector3(6.90308, 59.8139, 72.0299)
 
 [node name="mountain_root" type="WorldEnvironment"]
 environment = SubResource("Environment_31bfj")
+
+[node name="volcano ambience3" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 178.043, 0.885048, -2.54238)
+script = ExtResource("1_qde3l")
+ambience = ExtResource("2_6sq46")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="volcano ambience3"]
+shape = SubResource("BoxShape3D_huejd")
 
 [node name="player_root" parent="." instance=ExtResource("1_x8gkx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 178.043, 0.885048, -2.54238)
@@ -265,15 +271,6 @@ transform = Transform3D(-0.758455, 0, 4.81556, 0, 4.88064, 0, -4.82135, 0, -0.75
 
 [node name="BigOlScissors2" parent="Mountain_Geo/BigOlScissors" instance=ExtResource("3_teu3d")]
 transform = Transform3D(0.0658959, 0, -0.00542923, 0, 0.0661192, 0, 0.00542923, 0, 0.0658959, -0.0350181, -0.227094, 0.427736)
-
-[node name="Dither" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_5mwgk")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
 
 [node name="volcanic_spikes" type="StaticBody3D" parent="."]
 
@@ -862,3 +859,5 @@ CHOICEFILE = "res://assets/characters/hobo_wizard/text_files/Hobo Choices (FINAL
 IMAGE = [ExtResource("7_x46iq"), ExtResource("7_x46iq")]
 MAX_lines = 32
 audioList = [ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l"), ExtResource("8_gtc0l")]
+
+[connection signal="body_entered" from="volcano ambience3" to="volcano ambience3" method="_on_body_entered"]

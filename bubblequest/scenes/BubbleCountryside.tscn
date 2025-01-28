@@ -1,4 +1,4 @@
-[gd_scene load_steps=96 format=3 uid="uid://dbevkw7ic4o6f"]
+[gd_scene load_steps=99 format=3 uid="uid://dbevkw7ic4o6f"]
 
 [ext_resource type="PackedScene" uid="uid://dpsy06y08shnc" path="res://scenes/player.tscn" id="1_mjvoc"]
 [ext_resource type="PackedScene" uid="uid://boweijfs0ysdy" path="res://scenes/rock.tscn" id="2_fpxtt"]
@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://beem6y1x8v12p" path="res://assets/textures/tree.png" id="14_ynajd"]
 [ext_resource type="AudioStream" uid="uid://ca07qgappylbp" path="res://assets/audio/bubblequest-cows-001.ogg" id="15_ufw76"]
 [ext_resource type="Texture2D" uid="uid://d3mfjr61nygg" path="res://assets/characters/mr_beef/models/Office-Cow-Alt.png" id="16_40i7f"]
-[ext_resource type="PackedScene" uid="uid://ccsxm1qwioywp" path="res://scenes/cow.tscn" id="16_c2ws7"]
+[ext_resource type="PackedScene" path="res://scenes/cow.tscn" id="16_c2ws7"]
 [ext_resource type="AudioStream" uid="uid://cer7ehcc52yj2" path="res://assets/audio/bubblequest-poppy-002.ogg" id="16_dunk0"]
 [ext_resource type="Texture2D" uid="uid://c10dmkwyh6vct" path="res://assets/characters/charlotte/models/rich_child3.png" id="16_guuim"]
 [ext_resource type="AudioStream" uid="uid://c2uv24us4iil7" path="res://assets/audio/bubblequest-cows-002.ogg" id="16_y2jqg"]
@@ -76,6 +76,8 @@
 [ext_resource type="AudioStream" uid="uid://dbrm6madwaoki" path="res://assets/audio/bubblequest-poppy-022.ogg" id="36_pe3wt"]
 [ext_resource type="AudioStream" uid="uid://bfr5bcjvel16r" path="res://assets/audio/bubblequest-poppy-023.ogg" id="37_15ui3"]
 [ext_resource type="AudioStream" uid="uid://b8hrldd6u70pm" path="res://assets/audio/bubblequest-poppy-024.ogg" id="38_1t5me"]
+[ext_resource type="Script" path="res://scenes/ambience_changer.gd" id="77_ja2h4"]
+[ext_resource type="AudioStream" uid="uid://cai5ptfnt17jc" path="res://assets/audio/bubblequest-countryside-ambience.ogg" id="78_lr8dh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sg2e6"]
 
@@ -151,6 +153,9 @@ size = Vector2(7.5, 7.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wak5f"]
 size = Vector3(222.172, 65.9825, 11.76)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bikji"]
+size = Vector3(20, 5, 5)
 
 [node name="Node3D" type="WorldEnvironment"]
 environment = SubResource("Environment_3sn4s")
@@ -1215,3 +1220,13 @@ shape = SubResource("BoxShape3D_wak5f")
 [node name="Bubblequest-player" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.72972, 0.748155, -61.223)
 stream = ExtResource("19_qmeyy")
+
+[node name="countryside ambience" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.3702, 0, 42.0427)
+script = ExtResource("77_ja2h4")
+ambience = ExtResource("78_lr8dh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="countryside ambience"]
+shape = SubResource("BoxShape3D_bikji")
+
+[connection signal="body_entered" from="countryside ambience" to="countryside ambience" method="_on_body_entered"]

@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cvn7ciptxkatl"]
+[gd_scene load_steps=7 format=3 uid="uid://cvn7ciptxkatl"]
 
 [ext_resource type="Texture2D" uid="uid://degdiji2vpnbe" path="res://assets/textures/lamp.png" id="1_1euht"]
+[ext_resource type="AudioStream" uid="uid://btbytuvhwemrp" path="res://assets/audio/bubblequest-lamp.ogg" id="2_fr7y4"]
+[ext_resource type="Script" path="res://DogsToolkit/SpatializedAudioStreamPlayer3D.gd" id="3_1wmv3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_88f25"]
 transparency = 4
@@ -30,3 +32,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65937, 0)
 light_color = Color(1, 0.946408, 0.786112, 1)
 light_energy = 7.465
 omni_range = 20.0
+
+[node name="SpatializedAudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.927781, 0)
+stream = ExtResource("2_fr7y4")
+autoplay = true
+max_distance = 5.0
+script = ExtResource("3_1wmv3")

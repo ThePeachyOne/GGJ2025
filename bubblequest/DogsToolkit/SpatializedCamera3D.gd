@@ -26,6 +26,7 @@ var r2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	add_to_group("SpatializedCamera3DsSpecialAwesomeSuperGroup")
 	var efec = -1
 	for i in range(AudioServer.get_bus_effect_count(0)):
 		if AudioServer.get_bus_effect(0,i) is AudioEffectPanner:

@@ -1,4 +1,4 @@
-extends Camera3D
+extends Node3D
 
 var rot_x = 0
 var ROTATE_ADJUST 

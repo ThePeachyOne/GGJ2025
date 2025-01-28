@@ -27,20 +27,20 @@ func _ready() -> void:
 	var temp2
 	if AudioServer.get_bus_index("Muffled")==-1:
 		AudioServer.add_bus()
-		AudioServer.set_bus_name(temp+1, "Muffled")
-		AudioServer.set_bus_volume_db(temp+1, 0)
-		AudioServer.set_bus_send(temp+1, bus)
+		AudioServer.set_bus_name(temp, "Muffled")
+		AudioServer.set_bus_volume_db(temp, 0)
+		AudioServer.set_bus_send(temp, bus)
 		temp2 = AudioEffectLowPassFilter.new()
 		temp2.cutoff_hz = 2000
 		temp2.resonance = 0.5
 		temp2.db = AudioEffectFilter.FILTER_6DB
-		AudioServer.add_bus_effect(temp+1, temp2)
-	temp = AudioServer.bus_count
+		AudioServer.add_bus_effect(temp, temp2)
+		temp = AudioServer.bus_count
 	if AudioServer.get_bus_index("Far")==-1:
 		AudioServer.add_bus()
-		AudioServer.set_bus_name(temp+1, "Far")
-		AudioServer.set_bus_volume_db(temp+1, -6)
-		AudioServer.set_bus_send(temp+1, bus)
+		AudioServer.set_bus_name(temp, "Far")
+		AudioServer.set_bus_volume_db(temp, -6)
+		AudioServer.set_bus_send(temp, bus)
 		temp2 = AudioEffectReverb.new()
 		temp2.room_size = 0.8
 		temp2.damping = 0.5
@@ -48,18 +48,19 @@ func _ready() -> void:
 		temp2.hipass = 0
 		temp2.dry = 1
 		temp2.wet = 0.5
-		AudioServer.add_bus_effect(temp+1, temp2)
-	temp = AudioServer.bus_count
+		AudioServer.add_bus_effect(temp, temp2)
+		temp = AudioServer.bus_count
 	if AudioServer.get_bus_index("Far & Muffled")==-1:
 		AudioServer.add_bus()
-		AudioServer.set_bus_name(temp+1, "Far & Muffled")
-		AudioServer.set_bus_volume_db(temp+1, -26)
-		AudioServer.set_bus_send(temp+1, "Far")
+		AudioServer.set_bus_name(temp, "Far & Muffled")
+		AudioServer.set_bus_volume_db(temp, -26)
+		AudioServer.set_bus_send(temp, "Far")
 		temp2 = AudioEffectLowPassFilter.new()
 		temp2.cutoff_hz = 2000
 		temp2.resonance = 0.5
 		temp2.db = AudioEffectFilter.FILTER_6DB
-		AudioServer.add_bus_effect(temp+1, temp2)
+		AudioServer.add_bus_effect(temp, temp2)
+		temp = AudioServer.bus_count
 
 
 func _physics_process(_delta):
