@@ -7,6 +7,7 @@ const JUMP_VELOCITY = 4.5
 @export var ROTATE_ADJUST = 0.007
 var rot_x: float
 var rot_y: float
+var can_move = true
 
 #viewbob constants
 var bob_frequency = 0.5
@@ -21,21 +22,22 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _unhandled_input(event):
-	match event.get_class():
-		"InputEventMouseMotion":
-			if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-				#Move the mouse side to side to rotate around the GLOBAL y axis.
-				rot_y += event.relative.x * ROTATE_ADJUST
-				#Move the mouse forwards and backwards to rotate on the local x axis.
-				rot_x += event.relative.y * (ROTATE_ADJUST/2)
-				rot_x = clamp(rot_x, -PI/2, PI/2)
-				transform.basis = Basis() # reset rotation
-				rotate_object_local(Vector3(0,1,0),-rot_y) #Always gonna be the global y axis.
-				#rotate_object_local(Vector3(1, 0, 0), -rot_x)
-				
-		#"InputEventKey":
-			#if Input.is_action_just_pressed("Escape"):
-			#	get_tree().quit()
+	if can_move:
+		match event.get_class():
+			"InputEventMouseMotion":
+				if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+					#Move the mouse side to side to rotate around the GLOBAL y axis.
+					rot_y += event.relative.x * ROTATE_ADJUST
+					#Move the mouse forwards and backwards to rotate on the local x axis.
+					rot_x += event.relative.y * (ROTATE_ADJUST/2)
+					rot_x = clamp(rot_x, -PI/2, PI/2)
+					transform.basis = Basis() # reset rotation
+					rotate_object_local(Vector3(0,1,0),-rot_y) #Always gonna be the global y axis.
+					#rotate_object_local(Vector3(1, 0, 0), -rot_x)
+					
+			#"InputEventKey":
+				#if Input.is_action_just_pressed("Escape"):
+				#	get_tree().quit()
 		
 	
 
@@ -56,7 +58,7 @@ func _physics_process(delta):
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
-		if not $AudioStreamPlayer.playing:
+		if not $AudioStreamPlayer.playing and can_move:
 			if step_timer <= 0:
 				$AudioStreamPlayer.pitch_scale = randf_range(0.8, 1.2)
 				$AudioStreamPlayer.play()
@@ -68,5 +70,5 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 		
 
-
-	move_and_slide()
+	if can_move:
+		move_and_slide()

@@ -76,6 +76,7 @@ script = ExtResource("2_8mvoo")
 cull_mask = 1048573
 current = true
 script = ExtResource("5_r4y6a")
+volume_db = -110
 ambient_tone = ExtResource("5_owsvy")
 
 [node name="BaseMenu" type="Control" parent="."]

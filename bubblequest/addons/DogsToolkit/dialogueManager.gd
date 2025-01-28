@@ -6,6 +6,7 @@ extends Label
 @export var start_line_index = 0
 @export var delimiter = "\n"
 @export var end_signal = "<SPLIT>"
+@export var text_display_retarget : Node
 
 @export_category("Sound")
 @export var use_audio = false
@@ -68,7 +69,10 @@ func _process(delta: float) -> void:
 	if writing:
 		display_timer -= delta
 		if not active_line.is_empty() and display_timer<=0:
-			text += active_line[0]
+			if not text_display_retarget:
+				text += active_line[0]
+			else: 
+				text_display_retarget.text += active_line[0]
 			active_line = active_line.trim_prefix(active_line[0])
 			display_timer = display_delay
 		elif active_line.is_empty():
@@ -100,7 +104,10 @@ func advance_text():
 	finished = false
 	if current_line<text_array.size()-1:
 		current_line += 1
-		text = ""
+		if not text_display_retarget:
+			text = ""
+		else: 
+			text_display_retarget.text = ""
 		active_line = text_array[current_line]
 		writing = true
 		if use_audio and audio_array.size() > current_line:
@@ -113,14 +120,20 @@ func advance_text():
 			else:
 				animation_player.play(idle_pose)
 	else:
-		text = ""
+		if not text_display_retarget:
+			text = ""
+		else: 
+			text_display_retarget.text = ""
 		finished = true
 
 
 func display_text(dialogue_index:int):
 	if dialogue_index>=0 and dialogue_index<text_array.size():
 		current_line = dialogue_index
-		text = ""
+		if not text_display_retarget:
+			text = ""
+		else: 
+			text_display_retarget.text = ""
 		active_line = text_array[current_line]
 		writing = true
 		if use_audio:
@@ -130,7 +143,10 @@ func display_text(dialogue_index:int):
 
 func display_new_text(dialogue:String, audio:AudioStream=null, animation:String="DEFAULTVALUEOMGITSTHEDEFAULTVALUEANDITSSUPERCRINGE"):
 		current_line = text_array.size()
-		text = ""
+		if not text_display_retarget:
+			text = ""
+		else: 
+			text_display_retarget.text = ""
 		active_line = dialogue
 		writing = true
 		if use_audio and audio!=null:

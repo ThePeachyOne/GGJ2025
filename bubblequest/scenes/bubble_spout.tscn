@@ -21,6 +21,7 @@ linear_accel_max = 0.999998
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bi7us"]
 transparency = 1
+albedo_color = Color(1, 1, 1, 0.254902)
 albedo_texture = ExtResource("1_yhx34")
 billboard_mode = 3
 particles_anim_h_frames = 1

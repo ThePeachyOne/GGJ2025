@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://beem6y1x8v12p" path="res://assets/textures/tree.png" id="14_ynajd"]
 [ext_resource type="AudioStream" uid="uid://ca07qgappylbp" path="res://assets/audio/bubblequest-cows-001.ogg" id="15_ufw76"]
 [ext_resource type="Texture2D" uid="uid://d3mfjr61nygg" path="res://assets/characters/mr_beef/models/Office-Cow-Alt.png" id="16_40i7f"]
-[ext_resource type="PackedScene" path="res://scenes/cow.tscn" id="16_c2ws7"]
+[ext_resource type="PackedScene" uid="uid://ccsxm1qwioywp" path="res://scenes/cow.tscn" id="16_c2ws7"]
 [ext_resource type="AudioStream" uid="uid://cer7ehcc52yj2" path="res://assets/audio/bubblequest-poppy-002.ogg" id="16_dunk0"]
 [ext_resource type="Texture2D" uid="uid://c10dmkwyh6vct" path="res://assets/characters/charlotte/models/rich_child3.png" id="16_guuim"]
 [ext_resource type="AudioStream" uid="uid://c2uv24us4iil7" path="res://assets/audio/bubblequest-cows-002.ogg" id="16_y2jqg"]
