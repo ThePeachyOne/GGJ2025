@@ -119,7 +119,7 @@ func _ready_by_actor():
 		#print(a.subtitles.dialogOptions)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 ## The majority of this is just for testing purposes.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://biogpwdm4mp1k"]
+[gd_scene load_steps=20 format=3 uid="uid://biogpwdm4mp1k"]
 
 [ext_resource type="Script" path="res://scripts/npc_root.gd" id="1_b5o2r"]
 [ext_resource type="PackedScene" uid="uid://bmhon2p6ohvc3" path="res://scenes/CutsceneManager.tscn" id="2_brwsu"]
@@ -8,6 +8,7 @@
 [ext_resource type="Shader" path="res://assets/shaders/bubble.gdshader" id="4_sxsow"]
 [ext_resource type="PackedScene" uid="uid://sy65mpydskjb" path="res://assets/models/potato.glb" id="6_0ei10"]
 [ext_resource type="Texture2D" uid="uid://calqlh0t7ymfj" path="res://assets/textures/THEJORB.png" id="7_7fhig"]
+[ext_resource type="PackedScene" uid="uid://cxkm3ldluc2rh" path="res://assets/characters/fishicca/models/FishTuah.fbx" id="9_65yui"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sqtds"]
 transparency = 4
@@ -28,7 +29,8 @@ billboard_mode = 1
 material = SubResource("StandardMaterial3D_7rcnc")
 text = "Press E to interact with "
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_scduu"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_rc61i"]
+radius = 1.95536
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pdry2"]
 render_priority = 0
@@ -72,9 +74,11 @@ mesh = SubResource("TextMesh_3qkh2")
 
 [node name="CutsceneManager" parent="." instance=ExtResource("2_brwsu")]
 
-[node name="npcCollision" type="CollisionShape3D" parent="."]
+[node name="npcBody" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-shape = SubResource("CapsuleShape3D_scduu")
+
+[node name="npcCollision" type="CollisionShape3D" parent="npcBody"]
+shape = SubResource("SphereShape3D_rc61i")
 
 [node name="npcSpeak" type="AudioStreamPlayer" parent="."]
 
@@ -96,6 +100,12 @@ skeleton = NodePath("../potato")
 [node name="speakTimer" type="Timer" parent="."]
 wait_time = 0.2
 
+[node name="fishicca" parent="." instance=ExtResource("9_65yui")]
+transform = Transform3D(0.241922, 0, 0.970296, 0, 1, 0, -0.970296, 0, 0.241922, -0.275244, 0, 0.144775)
+visible = false
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="bubbled" from="CutsceneManager" to="." method="_on_cutscene_manager_bubbled"]
+[connection signal="option_chosen" from="CutsceneManager" to="." method="_on_cutscene_manager_option_chosen"]
 [connection signal="timeout" from="speakTimer" to="." method="_on_speak_timer_timeout"]

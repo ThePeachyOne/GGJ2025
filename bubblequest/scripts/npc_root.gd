@@ -15,6 +15,9 @@ var canActivateDialog = true
 @export var IMAGE = [] 
 var imageCount = 0
 var speakCount = 0 
+
+var speaking = false	#To be used when the character is speaking, used for speaking/extra animations
+
 @export var MAX_lines = 50
 @export var split_line = 48
 #^this is the line of dialogue at which a question is posed
@@ -24,6 +27,8 @@ var speakCount = 0
 @export var volume_db = 0
 var audioCount = 0
 
+var chosen_value = -1		#returned value from the player's choice. 0 is nonbubbled choice, 1 is bubbled choice
+var playerChose = false
 var bubbled = false
 
 # Called when the node enters the scene tree for the first time.
@@ -47,7 +52,7 @@ func _ready():
 		if potato:
 			$potato.visible = true
 		if fishicca:
-			$potato.visible = true
+			$fishicca.visible = true
 		if rock:
 			$potato.visible = true
 		if jorb:
@@ -61,7 +66,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 func _unhandled_key_input(event: InputEvent):
@@ -79,7 +84,8 @@ func _unhandled_key_input(event: InputEvent):
 func _on_body_entered(body):
 	if body.is_in_group("player"):
 		playerInArea = true
-		$npcInteractText.visible = true
+		if canActivateDialog:
+			$npcInteractText.visible = true
 	
 
 func _on_body_exited(body):
@@ -92,13 +98,22 @@ func dialogAdvanced():
 	$speakTimer.start()
 	
 	audioCount+=1
+	
+	if playerChose:
+		if chosen_value == 0:
+			playerChose = false	#do nothing here
+		if chosen_value == 1:
+			audioCount = split_line + 1
+			playerChose = false			#add the option here for when the player makes a choice and choose the new audio
+			
+	
 	if audioCount == split_line:
 		audioCount = MAX_lines
 	if audioCount > MAX_lines:
 		audioCount = MAX_lines
 	
 	$npcSpeak.stream = audioList[audioCount]
-	$npcSpeak.play()		#figure out how to advance the audio index in the playlist
+	$npcSpeak.play()		
 	
 func bubbleNPC():
 	print("bubbled!")
@@ -119,3 +134,12 @@ func _on_speak_timer_timeout():
 		$speakTimer.start()
 		
 		
+
+
+func _on_cutscene_manager_bubbled():
+	bubbleNPC()
+
+
+func _on_cutscene_manager_option_chosen(chosen_int):
+	chosen_value = chosen_int
+	playerChose = true

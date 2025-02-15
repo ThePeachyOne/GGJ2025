@@ -4,7 +4,7 @@ extends CharacterBody3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
-@export var ROTATE_ADJUST = 0.007
+@export var ROTATE_ADJUST = 0.0035
 var rot_x: float
 var rot_y: float
 var can_move = true
