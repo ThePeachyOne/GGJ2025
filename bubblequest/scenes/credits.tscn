@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://uwym8ux2q6ic"]
 
 [ext_resource type="Theme" uid="uid://dpg2x1a15e835" path="res://assets/main_menu_theme.tres" id="1_8lswo"]
-[ext_resource type="Script" path="res://scripts/credits.gd" id="2_q0grp"]
+[ext_resource type="Script" uid="uid://d1gk37tklk4x1" path="res://scripts/credits.gd" id="2_q0grp"]
 [ext_resource type="Texture2D" uid="uid://b6418glnpc7wt" path="res://assets/textures/countryside.png" id="3_juxd1"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_67f6k"]

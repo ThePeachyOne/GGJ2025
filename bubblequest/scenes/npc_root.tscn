@@ -1,11 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://biogpwdm4mp1k"]
+[gd_scene load_steps=24 format=3 uid="uid://biogpwdm4mp1k"]
 
-[ext_resource type="Script" path="res://scripts/npc_root.gd" id="1_b5o2r"]
+[ext_resource type="Script" uid="uid://dqn7pgw0wntc0" path="res://scripts/npc_root.gd" id="1_b5o2r"]
 [ext_resource type="PackedScene" uid="uid://bmhon2p6ohvc3" path="res://scenes/CutsceneManager.tscn" id="2_brwsu"]
 [ext_resource type="Texture2D" uid="uid://owr74ehs64nb" path="res://assets/textures/badIMG.png" id="2_xvs6q"]
 [ext_resource type="Texture2D" uid="uid://ycwq0tuwcfx6" path="res://assets/characters/einstein/models/EinsteinTalk.png" id="3_tq6g2"]
 [ext_resource type="AudioStream" uid="uid://c3cx41n7l4fwq" path="res://assets/audio/eeaaooeeaa.ogg" id="3_yptra"]
-[ext_resource type="Shader" path="res://assets/shaders/bubble.gdshader" id="4_sxsow"]
+[ext_resource type="Shader" uid="uid://ba001p182l7yl" path="res://assets/shaders/bubble.gdshader" id="4_sxsow"]
 [ext_resource type="PackedScene" uid="uid://sy65mpydskjb" path="res://assets/models/potato.glb" id="6_0ei10"]
 [ext_resource type="Texture2D" uid="uid://calqlh0t7ymfj" path="res://assets/textures/THEJORB.png" id="7_7fhig"]
 [ext_resource type="PackedScene" uid="uid://cxkm3ldluc2rh" path="res://assets/characters/fishicca/models/FishTuah.fbx" id="9_65yui"]
@@ -54,6 +54,23 @@ texture_repeat = false
 [sub_resource type="SphereMesh" id="SphereMesh_pwbjg"]
 material = SubResource("StandardMaterial3D_iosy6")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0wamq"]
+shading_mode = 0
+billboard_mode = 1
+
+[sub_resource type="TextMesh" id="TextMesh_d5jrr"]
+material = SubResource("StandardMaterial3D_0wamq")
+text = "Press Q to advance conversation"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_niu6j"]
+shading_mode = 0
+billboard_mode = 1
+
+[sub_resource type="TextMesh" id="TextMesh_a0nx7"]
+material = SubResource("StandardMaterial3D_niu6j")
+text = "Press 1 or 2 to choose
+what to say"
+
 [node name="npcRoot" type="Area3D"]
 script = ExtResource("1_b5o2r")
 IMAGE = [ExtResource("2_xvs6q"), ExtResource("3_tq6g2")]
@@ -101,11 +118,22 @@ skeleton = NodePath("../potato")
 wait_time = 0.2
 
 [node name="fishicca" parent="." instance=ExtResource("9_65yui")]
-transform = Transform3D(0.241922, 0, 0.970296, 0, 1, 0, -0.970296, 0, 0.241922, -0.275244, 0, 0.144775)
+transform = Transform3D(0.120961, 0, 0.485148, 0, 0.5, 0, -0.485148, 0, 0.120961, -0.275244, 0.824892, 0.144775)
 visible = false
+
+[node name="npcTutoText" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.67892, 0)
+visible = false
+mesh = SubResource("TextMesh_d5jrr")
+
+[node name="npcChooseText" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.67892, 0)
+visible = false
+mesh = SubResource("TextMesh_a0nx7")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
 [connection signal="bubbled" from="CutsceneManager" to="." method="_on_cutscene_manager_bubbled"]
+[connection signal="choosing_option" from="CutsceneManager" to="." method="_on_cutscene_manager_choosing_option"]
 [connection signal="option_chosen" from="CutsceneManager" to="." method="_on_cutscene_manager_option_chosen"]
 [connection signal="timeout" from="speakTimer" to="." method="_on_speak_timer_timeout"]

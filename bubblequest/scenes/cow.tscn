@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ccsxm1qwioywp"]
 
 [ext_resource type="SpriteFrames" uid="uid://cjg4cdp7ue4jc" path="res://assets/sprites/cow_sprites.tres" id="1_nvnki"]
-[ext_resource type="Script" path="res://scripts/cow.gd" id="2_5ftqa"]
+[ext_resource type="Script" uid="uid://bl561qit0rstp" path="res://scripts/cow.gd" id="2_5ftqa"]
 
 [node name="cow" type="AnimatedSprite3D"]
 sprite_frames = ExtResource("1_nvnki")

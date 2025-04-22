@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://co83dc4jiue4"]
 
-[ext_resource type="Script" path="res://scripts/chaser_rat.gd" id="1_003na"]
+[ext_resource type="Script" uid="uid://bsq78w8fhg110" path="res://scripts/chaser_rat.gd" id="1_003na"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_os0d7"]
 albedo_color = Color(0.437244, 0.0642573, 4.81308e-08, 1)

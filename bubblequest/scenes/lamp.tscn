@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://degdiji2vpnbe" path="res://assets/textures/lamp.png" id="1_1euht"]
 [ext_resource type="AudioStream" uid="uid://btbytuvhwemrp" path="res://assets/audio/bubblequest-lamp.ogg" id="2_fr7y4"]
-[ext_resource type="Script" path="res://addons/DogsToolkit/SpatializedAudioStreamPlayer3D.gd" id="3_1wmv3"]
+[ext_resource type="Script" uid="uid://bvsj6wifrh1va" path="res://addons/DogsToolkit/SpatializedAudioStreamPlayer3D.gd" id="3_1wmv3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_88f25"]
 transparency = 4

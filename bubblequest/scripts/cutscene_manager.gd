@@ -171,6 +171,7 @@ func activate_dialog():
 func display_options():
 	$MarginContainer.visible = true
 	is_awaiting_selection = true
+	choosing_option.emit()
 	if not load_dialog_by_actor:
 		one_file_box.visible = false
 		

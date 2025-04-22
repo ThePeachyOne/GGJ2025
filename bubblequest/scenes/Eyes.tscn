@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://cmw2ulnpge05b"]
 
-[ext_resource type="Script" path="res://scripts/eyes.gd" id="1_dk2vh"]
+[ext_resource type="Script" uid="uid://ceagbypj6jw0v" path="res://scripts/eyes.gd" id="1_dk2vh"]
 
 [sub_resource type="Curve" id="Curve_rsxrp"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -74,7 +74,7 @@ material = SubResource("StandardMaterial3D_sq4bo")
 script = ExtResource("1_dk2vh")
 
 [node name="The First Eye" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.514563, 0.2517, -0.819678, 0, 0.955946, 0.293544, 0.857452, -0.151047, 0.491894, -1, 0, 0)
+transform = Transform3D(0.975004, 0.0595057, -0.21407, -0.000233147, 0.963742, 0.266833, 0.222186, -0.260113, 0.939667, -1, 0, 0)
 mesh = SubResource("SphereMesh_1u0sa")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="The First Eye"]
@@ -82,7 +82,7 @@ transform = Transform3D(0.695136, 0, 0, 0, 0.695136, 0, 0, 0, 0.695136, 0, 0, 0.
 mesh = SubResource("SphereMesh_bk6ht")
 
 [node name="The Second Eye" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.945406, 0.0880403, -0.313776, -0.0630608, 0.994041, 0.0889093, 0.319734, -0.0642685, 0.945325, 1, 0, 0)
+transform = Transform3D(0.975004, 0.0595057, -0.21407, -0.000233147, 0.963742, 0.266833, 0.222186, -0.260113, 0.939667, 1, 0, 0)
 mesh = SubResource("SphereMesh_807rv")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="The Second Eye"]

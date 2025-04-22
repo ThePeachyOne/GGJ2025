@@ -1,8 +1,8 @@
 [gd_scene load_steps=25 format=3 uid="uid://dn0c3gbjfexvi"]
 
-[ext_resource type="Script" path="res://scenes/house.gd" id="1_eys6j"]
+[ext_resource type="Script" uid="uid://k2ixe2ib66ow" path="res://scenes/house.gd" id="1_eys6j"]
 [ext_resource type="Texture2D" uid="uid://dv70hf4kf1tw3" path="res://assets/textures/brick.png" id="2_3yibo"]
-[ext_resource type="Shader" path="res://scenes/outline.gdshader" id="3_ru0io"]
+[ext_resource type="Shader" uid="uid://dvnepeicdxkg" path="res://scenes/outline.gdshader" id="3_ru0io"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_b0ii5"]
 render_priority = 0

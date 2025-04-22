@@ -1,8 +1,8 @@
 [gd_scene load_steps=20 format=4 uid="uid://d3ocjwtrfnau5"]
 
-[ext_resource type="Script" path="res://addons/DogsToolkit/MoCapStudio.gd" id="1_cks58"]
-[ext_resource type="Script" path="res://addons/DogsToolkit/MoCapBone.gd" id="2_l0rmv"]
-[ext_resource type="Script" path="res://addons/DogsToolkit/ik.gd" id="3_28ywr"]
+[ext_resource type="Script" uid="uid://cvo67oj4u73ce" path="res://addons/DogsToolkit/MoCapStudio.gd" id="1_cks58"]
+[ext_resource type="Script" uid="uid://delxbrjbxm473" path="res://addons/DogsToolkit/MoCapBone.gd" id="2_l0rmv"]
+[ext_resource type="Script" uid="uid://b1rn3xg681a1y" path="res://addons/DogsToolkit/ik.gd" id="3_28ywr"]
 [ext_resource type="Animation" uid="uid://dc2bpt8ai5j7p" path="res://addons/DogsToolkit/Animations/Take 001.tres" id="4_uq88u"]
 [ext_resource type="Animation" uid="uid://bjf7et31bh1aa" path="res://addons/DogsToolkit/Animations/NEWEST hope.res" id="5_vuqyx"]
 
@@ -729,10 +729,10 @@ tracks/34/keys = PackedFloat32Array(0, 1, 1.95012e-07, 2.97882e-08, -1.25355e-07
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oi1x1"]
 _data = {
-"NEWEST hope": ExtResource("5_vuqyx"),
-"RESET": SubResource("Animation_duoeo"),
-"Take 001": ExtResource("4_uq88u"),
-"mixamo_com": SubResource("Animation_sei46")
+&"NEWEST hope": ExtResource("5_vuqyx"),
+&"RESET": SubResource("Animation_duoeo"),
+&"Take 001": ExtResource("4_uq88u"),
+&"mixamo_com": SubResource("Animation_sei46")
 }
 
 [node name="MocapStudio" type="WorldEnvironment" node_paths=PackedStringArray("animation_player")]

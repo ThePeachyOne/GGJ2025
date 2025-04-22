@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://boalk1b5e0u00"
+uid="uid://vqh758r4xdo6"
 path.s3tc="res://.godot/imported/Cow-irl_cow-ortho.png-d9cda287cf8211b78c8eeaa58509a432.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "f8e7ad5639c0535f73fc013ac3577f15"
 }
 
 [deps]

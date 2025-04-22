@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c8f5iix2o0dfv"]
 
 [ext_resource type="Theme" uid="uid://cuahqqxr1ktia" path="res://assets/text_theme.tres" id="1_2u2l3"]
-[ext_resource type="Script" path="res://scripts/subtitle_box.gd" id="1_qmroq"]
+[ext_resource type="Script" uid="uid://lwxcn4lvqv3e" path="res://scripts/subtitle_box.gd" id="1_qmroq"]
 
 [node name="SubtitleBox" type="Control"]
 layout_mode = 3
